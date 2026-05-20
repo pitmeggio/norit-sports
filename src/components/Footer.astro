@@ -1,0 +1,53 @@
+---
+import Newsletter from "./Newsletter.astro";
+import { t, path, COMPANY, type Lang } from "../i18n/content";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const tr = t[lang];
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-newsletter">
+      <Newsletter lang={lang} variant="compact" />
+    </div>
+
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href={path(lang, "home")}>Norit <span>Sports</span></a>
+        <p style="margin-top:0.8rem; max-width:30ch;">{tr.home.heroTagline}</p>
+      </div>
+
+      <div>
+        <h4>{tr.footer.info}</h4>
+        <p>{COMPANY.address}</p>
+        <p>org. nr {COMPANY.orgNr}</p>
+        <p><a href={`mailto:${COMPANY.email}`}>{COMPANY.email}</a></p>
+        <p><a href={`tel:${COMPANY.phone.replace(/\s/g, "")}`}>{COMPANY.phone}</a></p>
+      </div>
+
+      <div>
+        <h4>{tr.footer.hours}</h4>
+        <p>{tr.footer.hoursDays}</p>
+        <p>{tr.footer.hoursTime}</p>
+      </div>
+
+      <div>
+        <h4>{tr.footer.follow}</h4>
+        <p><a href={COMPANY.instagram} target="_blank" rel="noopener">Instagram</a></p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© {year} Norit Sports</span>
+      <span class="footer-bottom__links">
+        <a href={path(lang, "privacy")}>{tr.privacyNav}</a>
+        <span>org. nr {COMPANY.orgNr}</span>
+      </span>
+    </div>
+  </div>
+</footer>

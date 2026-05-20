@@ -1,0 +1,149 @@
+---
+import Base from "../../layouts/Base.astro";
+import { t, COMPANY, CONTACT_ENDPOINT, type Lang } from "../../i18n/content";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const tr = t[lang];
+const c = tr.contact;
+const formAction = CONTACT_ENDPOINT || `mailto:${COMPANY.email}`;
+---
+
+<Base lang={lang} current="contact">
+  <section class="section">
+    <div class="container">
+      <p class="kicker" data-reveal>{c.kicker}</p>
+      <h1 class="section-title" style="margin-top:0.6rem;" data-reveal>{c.kicker}</h1>
+      <p class="lead" style="margin-top:1rem;" data-reveal>{c.intro}</p>
+
+      <div class="split" style="margin-top:3rem; align-items:start;">
+        <form
+          class="form"
+          data-contact
+          action={formAction}
+          method="post"
+          enctype={CONTACT_ENDPOINT ? undefined : "text/plain"}
+          data-endpoint={CONTACT_ENDPOINT}
+          data-msg-sending={c.formSending}
+          data-msg-success={c.formSuccess}
+          data-msg-error={c.formError}
+          data-msg-invalid={c.formInvalid}
+          novalidate
+        >
+          <div class="field">
+            <label for="name">{c.formName}</label>
+            <input id="name" name="name" type="text" required autocomplete="name" />
+          </div>
+          <div class="field">
+            <label for="email">{c.formEmail}</label>
+            <input id="email" name="email" type="email" required autocomplete="email" />
+          </div>
+          <div class="field">
+            <label for="message">{c.formMessage}</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button class="btn" type="submit">{c.formSubmit}</button>
+          <p class="form__status" data-status role="status" aria-live="polite"></p>
+        </form>
+
+        <div>
+          <h2 style="font-size:1.3rem; margin-bottom:1.5rem;">{c.detailsTitle}</h2>
+          <dl class="details">
+            <div>
+              <dt>{tr.footer.info}</dt>
+              <dd>{COMPANY.address}</dd>
+            </div>
+            <div>
+              <dt>Org. nr</dt>
+              <dd>{COMPANY.orgNr}</dd>
+            </div>
+            <div>
+              <dt>{c.formEmail}</dt>
+              <dd><a href={`mailto:${COMPANY.email}`}>{COMPANY.email}</a></dd>
+            </div>
+            <div>
+              <dt>{lang === "no" ? "Telefon" : "Phone"}</dt>
+              <dd><a href={`tel:${COMPANY.phone.replace(/\s/g, "")}`}>{COMPANY.phone}</a></dd>
+            </div>
+            <div>
+              <dt>{tr.footer.hours}</dt>
+              <dd>{tr.footer.hoursDays}, {tr.footer.hoursTime}</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<script>
+  const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const form = document.querySelector<HTMLFormElement>("[data-contact]");
+
+  if (form) {
+    const endpoint = form.dataset.endpoint || "";
+    const status = form.querySelector<HTMLElement>("[data-status]")!;
+    const btn = form.querySelector<HTMLButtonElement>('button[type="submit"]')!;
+    const msg = {
+      sending: form.dataset.msgSending || "Sending …",
+      success: form.dataset.msgSuccess || "Sent.",
+      error: form.dataset.msgError || "Something went wrong.",
+      invalid: form.dataset.msgInvalid || "Please check the fields.",
+    };
+
+    const setStatus = (text: string, state: "ok" | "err" | "pending" | "") => {
+      status.textContent = text;
+      status.dataset.state = state;
+    };
+
+    form.addEventListener("submit", async (e) => {
+      // No endpoint configured and falling back to mailto: let the browser handle it.
+      if (!endpoint && form.getAttribute("action")?.startsWith("mailto:")) {
+        // Still validate client-side before opening mail client.
+        const name = (form.elements.namedItem("name") as HTMLInputElement).value.trim();
+        const email = (form.elements.namedItem("email") as HTMLInputElement).value.trim();
+        const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value.trim();
+        if (!name || !message || !EMAIL_RE.test(email)) {
+          e.preventDefault();
+          setStatus(msg.invalid, "err");
+        }
+        return;
+      }
+
+      e.preventDefault();
+      const name = (form.elements.namedItem("name") as HTMLInputElement).value.trim();
+      const email = (form.elements.namedItem("email") as HTMLInputElement).value.trim();
+      const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value.trim();
+
+      if (!name || !message || !EMAIL_RE.test(email)) {
+        setStatus(msg.invalid, "err");
+        return;
+      }
+
+      btn.disabled = true;
+      setStatus(msg.sending, "pending");
+
+      try {
+        if (endpoint) {
+          const body = new FormData();
+          body.append("name", name);
+          body.append("email", email);
+          body.append("message", message);
+          const res = await fetch(endpoint, { method: "POST", body, headers: { Accept: "application/json" } });
+          if (!res.ok) throw new Error("bad response");
+        } else {
+          // Demo mode: no endpoint and no mailto — simulate success.
+          await new Promise((r) => setTimeout(r, 600));
+        }
+        form.reset();
+        setStatus(msg.success, "ok");
+      } catch {
+        setStatus(msg.error, "err");
+      } finally {
+        btn.disabled = false;
+      }
+    });
+  }
+</script>

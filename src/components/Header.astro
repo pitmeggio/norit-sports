@@ -1,0 +1,54 @@
+---
+import { t, path, type Lang, type RouteKey } from "../i18n/content";
+
+interface Props {
+  lang: Lang;
+  current: RouteKey;
+}
+const { lang, current } = Astro.props;
+const tr = t[lang];
+const other: Lang = lang === "no" ? "en" : "no";
+
+const links: { key: RouteKey; label: string }[] = [
+  { key: "maplus", label: tr.nav.brands },
+  { key: "videos", label: tr.nav.videos },
+  { key: "retail", label: tr.nav.retail },
+  { key: "partner", label: tr.nav.partner },
+  { key: "contact", label: tr.nav.contact },
+];
+---
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href={path(lang, "home")}>Norit <span>Sports</span></a>
+
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" data-nav-toggle>
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="primary-nav">
+      {
+        links.map((l) => (
+          <a href={path(lang, l.key)} aria-current={current === l.key ? "page" : undefined}>
+            {l.label}
+          </a>
+        ))
+      }
+      <span class="lang" aria-label="Language">
+        <a href={path("no", current)} aria-current={(lang === "no").toString()}>NO</a>
+        <span aria-hidden="true">/</span>
+        <a href={path("en", current)} aria-current={(lang === "en").toString()}>EN</a>
+      </span>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.querySelector("[data-nav-toggle]");
+  const nav = document.getElementById("primary-nav");
+  toggle?.addEventListener("click", () => {
+    const open = nav?.getAttribute("data-open") === "true";
+    nav?.setAttribute("data-open", (!open).toString());
+    toggle.setAttribute("aria-expanded", (!open).toString());
+  });
+</script>

@@ -1,0 +1,115 @@
+---
+import Base from "../../layouts/Base.astro";
+import Newsletter from "../../components/Newsletter.astro";
+import { t, path, type Lang } from "../../i18n/content";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const tr = t[lang];
+const h = tr.home;
+---
+
+<Base lang={lang} current="home">
+  <section class="hero-cover">
+    <div class="hero-cover__dots" aria-hidden="true"></div>
+    <span class="hero-cover__edge" aria-hidden="true">{lang === "no" ? "Ytelse — Skandinavia" : "Performance — Scandinavia"}</span>
+
+    <div class="container hero-cover__grid">
+      <div class="hero-cover__copy">
+        <span class="hero-cover__tag">
+          <img class="hero__mark" src="/images/logo-n.webp" alt="" aria-hidden="true" />
+          {h.heroEyebrow}
+        </span>
+        <h1 class="hero-cover__title">
+          <span class="ln"><span>Norit</span></span>
+          <span class="ln ln--soft"><span>Sports</span></span>
+        </h1>
+        <p class="hero-cover__lead">{h.heroTagline}</p>
+        <div class="hero-cover__actions">
+          <a class="btn" href={path(lang, "maplus")}>{h.exploreMaplus}</a>
+          <a class="btn btn--ghost" href={path(lang, "partner")}>{h.ctaButton}</a>
+        </div>
+      </div>
+
+      <figure class="hero-cover__media">
+        <img src="/images/hero.webp" alt="" fetchpriority="high" />
+        <figcaption>MAPLUS · Racing preparation</figcaption>
+      </figure>
+    </div>
+
+    <div class="hero-cover__meta">
+      <div class="container hero-cover__meta-inner">
+        <span>{h.strip[0]}</span>
+        <span class="hero-cover__disc">{lang === "no" ? "Ski · Sykkel · Tekstil" : "Ski · Bike · Textile"}</span>
+        <span class="hero-cover__meta-hide">{h.strip[1]}</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split split--offset">
+      <div class="stack" data-reveal>
+        <p class="kicker">{lang === "no" ? "Om oss" : "About"}</p>
+        <h2 class="section-title">{h.aboutKicker}</h2>
+        <p class="lead">{h.aboutBody}</p>
+      </div>
+      <div class="split__media fx-mono" data-reveal style="--reveal-delay:120ms;">
+        <img src="/images/action-1.webp" alt="" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-alt">
+    <div class="container">
+      <div class="stack" data-reveal>
+        <p class="kicker">{h.pillarsKicker}</p>
+        <h2 class="section-title">{h.pillarsTitle}</h2>
+      </div>
+      <div class="pillars">
+        {
+          h.pillars.map((p, i) => (
+            <div class="pillar" data-reveal style={`--reveal-delay:${i * 110}ms;`}>
+              <span class="pillar__num">{String(i + 1).padStart(2, "0")}</span>
+              <h3>{p.title}</h3>
+              <p>{p.desc}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <p class="kicker" data-reveal>{h.brandsKicker}</p>
+      <div class="split split--offset" style="margin-top:2rem;">
+        <div class="logo-box" data-reveal>
+          <img src="/images/maplus-logo.webp" alt="MAPLUS" loading="lazy" />
+        </div>
+        <div class="stack" data-reveal style="--reveal-delay:120ms;">
+          <span class="badge">{h.brandsBadge}</span>
+          <h2 class="section-title">MAPLUS</h2>
+          <p class="lead">{h.maplusDesc}</p>
+          <a class="btn" href={path(lang, "maplus")}>{h.exploreMaplus}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-ink cta-photo">
+    <img class="cta-photo__bg" src="/images/ski-2.webp" alt="" loading="lazy" />
+    <div class="container stack" style="max-width:760px; position:relative;">
+      <h2 class="section-title" data-reveal>{h.ctaTitle}</h2>
+      <p class="lead" data-reveal style="--reveal-delay:100ms;">{h.ctaBody}</p>
+      <a class="btn btn--accent" data-reveal style="--reveal-delay:200ms;" href={path(lang, "partner")}>{h.ctaButton}</a>
+    </div>
+  </section>
+
+  <section class="section bg-alt">
+    <div class="container" data-reveal>
+      <Newsletter lang={lang} variant="section" />
+    </div>
+  </section>
+</Base>

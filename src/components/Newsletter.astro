@@ -1,0 +1,104 @@
+---
+import { t, NEWSLETTER_ENDPOINT, type Lang } from "../i18n/content";
+
+interface Props {
+  lang: Lang;
+  variant?: "section" | "compact";
+}
+const { lang, variant = "section" } = Astro.props;
+const n = t[lang].newsletter;
+---
+
+<div
+  class:list={["newsletter", `newsletter--${variant}`]}
+  data-newsletter
+  data-endpoint={NEWSLETTER_ENDPOINT}
+  data-subject={lang === "no" ? "Nyhetsbrev-påmelding – norit-sports.no" : "Newsletter signup – norit-sports.no"}
+  data-msg-success={n.success}
+  data-msg-error={n.error}
+  data-msg-invalid={n.invalid}
+>
+  {
+    variant === "section" && (
+      <div class="newsletter__copy">
+        <p class="kicker">Newsletter</p>
+        <h2 class="section-title">{n.title}</h2>
+        <p class="lead">{n.subtitle}</p>
+      </div>
+    )
+  }
+  {variant === "compact" && <h4>{n.title}</h4>}
+
+  <form class="newsletter__form" novalidate>
+    <div class="newsletter__row">
+      <label class="sr-only" for={`nl-${variant}`}>{n.placeholder}</label>
+      <input
+        id={`nl-${variant}`}
+        type="email"
+        name="email"
+        required
+        autocomplete="email"
+        placeholder={n.placeholder}
+      />
+      <button class="btn" type="submit">{n.button}</button>
+    </div>
+    <p class="newsletter__note" data-note>{n.privacy}</p>
+  </form>
+</div>
+
+<script>
+  const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  document.querySelectorAll<HTMLElement>("[data-newsletter]").forEach((root) => {
+    const form = root.querySelector("form")!;
+    const input = form.querySelector<HTMLInputElement>('input[name="email"]')!;
+    const note = root.querySelector<HTMLElement>("[data-note]")!;
+    const endpoint = root.dataset.endpoint || "";
+    const subject = root.dataset.subject || "Newsletter signup";
+    const msg = {
+      success: root.dataset.msgSuccess || "Thanks!",
+      error: root.dataset.msgError || "Something went wrong.",
+      invalid: root.dataset.msgInvalid || "Invalid email.",
+    };
+    const defaultNote = note.textContent || "";
+
+    const setNote = (text: string, state: "ok" | "err" | "") => {
+      note.textContent = text;
+      note.dataset.state = state;
+    };
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const email = input.value.trim();
+      if (!EMAIL_RE.test(email)) {
+        setNote(msg.invalid, "err");
+        input.focus();
+        return;
+      }
+
+      const btn = form.querySelector("button")!;
+      btn.disabled = true;
+
+      try {
+        if (endpoint) {
+          const body = new FormData();
+          body.append("email", email);
+          body.append("type", "newsletter");
+          body.append("_subject", subject);
+          const res = await fetch(endpoint, { method: "POST", body, headers: { Accept: "application/json" } });
+          if (!res.ok) throw new Error("bad response");
+        } else {
+          // Demo mode: no endpoint configured yet.
+          await new Promise((r) => setTimeout(r, 500));
+        }
+        form.reset();
+        setNote(msg.success, "ok");
+      } catch {
+        setNote(msg.error, "err");
+      } finally {
+        btn.disabled = false;
+        setTimeout(() => setNote(defaultNote, ""), 6000);
+      }
+    });
+  });
+</script>

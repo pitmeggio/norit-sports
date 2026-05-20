@@ -1,0 +1,165 @@
+---
+import Base from "../../layouts/Base.astro";
+import { COMPANY, type Lang } from "../../i18n/content";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+
+const updated = lang === "no" ? "Sist oppdatert: mai 2026" : "Last updated: May 2026";
+
+type Section = { h: string; p: string[] };
+
+const content: Record<Lang, { title: string; intro: string; sections: Section[] }> = {
+  no: {
+    title: "Personvern",
+    intro:
+      "Denne personvernerklæringen forklarer hvordan Norit Sports samler inn og behandler personopplysninger når du bruker nettstedet vårt.",
+    sections: [
+      {
+        h: "Behandlingsansvarlig",
+        p: [
+          `Norit Sports, ${COMPANY.address}, org.nr ${COMPANY.orgNr}, er ansvarlig for behandlingen av personopplysningene dine. Kontakt: ${COMPANY.email}.`,
+        ],
+      },
+      {
+        h: "Hvilke opplysninger vi samler inn",
+        p: [
+          "Kontaktskjema: navn, e-postadresse og innholdet i meldingen din.",
+          "Nyhetsbrev: e-postadressen din når du melder deg på.",
+          "Vi samler ikke inn flere opplysninger enn det som er nødvendig.",
+        ],
+      },
+      {
+        h: "Formål og rettslig grunnlag",
+        p: [
+          "Opplysningene fra kontaktskjemaet brukes til å svare på henvendelsen din (berettiget interesse / oppfyllelse av avtale).",
+          "E-postadressen til nyhetsbrevet brukes til å sende deg nyheter, og behandles på grunnlag av ditt samtykke. Du kan når som helst melde deg av.",
+        ],
+      },
+      {
+        h: "Databehandlere",
+        p: [
+          "Kontaktskjemaet håndteres av Formspree (formspree.io), som videresender meldingene til oss.",
+          "Nyhetsbrevet håndteres av vår e-postleverandør når tjenesten er aktivert.",
+          "Disse leverandørene behandler opplysninger på våre vegne og i henhold til databehandleravtaler.",
+        ],
+      },
+      {
+        h: "Lagringstid",
+        p: [
+          "Vi lagrer opplysningene kun så lenge det er nødvendig for formålet de ble samlet inn for, eller så lenge loven krever det.",
+        ],
+      },
+      {
+        h: "Dine rettigheter",
+        p: [
+          `Du har rett til innsyn, retting, sletting, dataportabilitet, og til å protestere mot eller begrense behandlingen av opplysningene dine. Har du gitt samtykke – for eksempel til nyhetsbrev – kan du når som helst trekke det tilbake.`,
+          `Send en e-post til ${COMPANY.email} for å utøve rettighetene dine.`,
+          "Mener du at vi behandler personopplysninger i strid med regelverket, kan du klage til Datatilsynet (datatilsynet.no).",
+        ],
+      },
+      {
+        h: "Informasjonskapsler (cookies) og statistikk",
+        p: [
+          "Nettstedet bruker ingen sporings- eller markedsføringscookies.",
+          "For anonym, aggregert besøksstatistikk bruker vi Cloudflare Web Analytics – en personvernvennlig løsning som ikke bruker informasjonskapsler og ikke samler inn personopplysninger eller lager profiler av besøkende.",
+        ],
+      },
+      {
+        h: "Endringer i personvernerklæringen",
+        p: [
+          "Vi kan oppdatere denne erklæringen ved behov. Den til enhver tid gjeldende versjonen er tilgjengelig på denne siden.",
+        ],
+      },
+    ],
+  },
+  en: {
+    title: "Privacy",
+    intro:
+      "This privacy policy explains how Norit Sports collects and processes personal data when you use our website.",
+    sections: [
+      {
+        h: "Data controller",
+        p: [
+          `Norit Sports, ${COMPANY.address}, org. no ${COMPANY.orgNr}, is responsible for processing your personal data. Contact: ${COMPANY.email}.`,
+        ],
+      },
+      {
+        h: "What data we collect",
+        p: [
+          "Contact form: your name, email address and the content of your message.",
+          "Newsletter: your email address when you subscribe.",
+          "We do not collect more data than necessary.",
+        ],
+      },
+      {
+        h: "Purpose and legal basis",
+        p: [
+          "Contact form data is used to respond to your enquiry (legitimate interest / performance of an agreement).",
+          "The newsletter email address is used to send you news and is processed on the basis of your consent. You can unsubscribe at any time.",
+        ],
+      },
+      {
+        h: "Data processors",
+        p: [
+          "The contact form is handled by Formspree (formspree.io), which forwards messages to us.",
+          "The newsletter is handled by our email provider once the service is activated.",
+          "These providers process data on our behalf under data processing agreements.",
+        ],
+      },
+      {
+        h: "Retention",
+        p: [
+          "We keep data only as long as necessary for the purpose it was collected for, or as required by law.",
+        ],
+      },
+      {
+        h: "Your rights",
+        p: [
+          "You have the right to access, rectify, erase, port, object to and restrict the processing of your data. Where processing is based on consent – for example the newsletter – you can withdraw it at any time.",
+          `Email ${COMPANY.email} to exercise your rights.`,
+          "If you believe we process your personal data unlawfully, you may lodge a complaint with the Norwegian Data Protection Authority (Datatilsynet, datatilsynet.no).",
+        ],
+      },
+      {
+        h: "Cookies and analytics",
+        p: [
+          "This website uses no tracking or marketing cookies.",
+          "For anonymous, aggregated visitor statistics we use Cloudflare Web Analytics – a privacy-friendly solution that uses no cookies and does not collect personal data or build visitor profiles.",
+        ],
+      },
+      {
+        h: "Changes to this policy",
+        p: [
+          "We may update this policy when needed. The current version is always available on this page.",
+        ],
+      },
+    ],
+  },
+};
+
+const c = content[lang];
+---
+
+<Base lang={lang} current="privacy">
+  <section class="section">
+    <div class="container prose">
+      <h1 class="section-title">{c.title}</h1>
+      <p class="updated">{updated}</p>
+      <p class="lead" style="margin-top:1rem;">{c.intro}</p>
+
+      {
+        c.sections.map((s) => (
+          <div class="prose__block">
+            <h2>{s.h}</h2>
+            {s.p.map((para) => (
+              <p>{para}</p>
+            ))}
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</Base>

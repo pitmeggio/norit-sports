@@ -1,0 +1,109 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { t, path, COMPANY, CLOUDFLARE_ANALYTICS_TOKEN, type Lang, type RouteKey } from "../i18n/content";
+
+interface Props {
+  lang: Lang;
+  current: RouteKey;
+  ogImage?: string;
+}
+const { lang, current, ogImage = "/images/hero.webp" } = Astro.props;
+const tr = t[lang];
+const meta = tr.meta[current];
+
+const site = Astro.site ?? new URL("https://www.norit-sports.no");
+const canonical = new URL(path(lang, current), site).href;
+const noUrl = new URL(path("no", current), site).href;
+const enUrl = new URL(path("en", current), site).href;
+const ogImageUrl = new URL(ogImage, site).href;
+
+const orgJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: COMPANY.name,
+  url: site.href,
+  email: COMPANY.email,
+  telephone: COMPANY.phone,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Tenåsvegen 184",
+    postalCode: "2432",
+    addressLocality: "Slettås",
+    addressCountry: "NO",
+  },
+  description: meta.description,
+};
+---
+
+<!doctype html>
+<html lang={lang === "no" ? "nb" : "en"}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/webp" href="/images/logo-n.webp" />
+    <title>{meta.title}</title>
+    <meta name="description" content={meta.description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="nb" href={noUrl} />
+    <link rel="alternate" hreflang="en" href={enUrl} />
+    <link rel="alternate" hreflang="x-default" href={noUrl} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Norit Sports" />
+    <meta property="og:locale" content={lang === "no" ? "nb_NO" : "en_US"} />
+    <meta property="og:title" content={meta.title} />
+    <meta property="og:description" content={meta.description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script type="application/ld+json" set:html={JSON.stringify(orgJsonLd)} />
+  </head>
+  <body>
+    <Header lang={lang} current={current} />
+    <main>
+      <slot />
+    </main>
+    <Footer lang={lang} />
+
+    {
+      CLOUDFLARE_ANALYTICS_TOKEN && (
+        <script
+          defer
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon={`{"token": "${CLOUDFLARE_ANALYTICS_TOKEN}"}`}
+        />
+      )
+    }
+
+    <script>
+      const els = document.querySelectorAll("[data-reveal]");
+      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reduce || !("IntersectionObserver" in window)) {
+        els.forEach((el) => el.classList.add("is-visible"));
+      } else {
+        const io = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                io.unobserve(entry.target);
+              }
+            });
+          },
+          { rootMargin: "0px 0px -10% 0px", threshold: 0.1 }
+        );
+        els.forEach((el) => io.observe(el));
+      }
+    </script>
+  </body>
+</html>
