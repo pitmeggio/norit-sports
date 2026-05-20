@@ -13,3 +13,9 @@ _scrape/
 .DS_Store
 # logs
 npm-debug.log*
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
