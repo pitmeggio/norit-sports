@@ -7,7 +7,9 @@ export const DEFAULT_LANG: Lang = "no";
 // across languages; the English variants live under the /en/ prefix.
 export const ROUTES = {
   home: { no: "/", en: "/en/" },
+  brands: { no: "/merker", en: "/en/brands" },
   maplus: { no: "/maplus", en: "/en/maplus" },
+  efb: { no: "/efb-sport", en: "/en/efb-sport" },
   videos: { no: "/videos", en: "/en/videos" },
   retail: { no: "/forhandlere", en: "/en/retailers" },
   partner: { no: "/partner", en: "/en/partner" },
@@ -54,6 +56,30 @@ type Dict = {
     pillars: { title: string; desc: string }[];
     ticker: string[];
     strip: string[];
+    // New immersive sections
+    imHeroTitle: string;
+    imHeroSub: string;
+    imHeroPrimary: string;
+    imHeroSecondary: string;
+    imHeroMetaLeft: string;
+    imHeroMetaRight: string;
+    storyEyebrow: string;
+    storyQuote: string;
+    storyBody1: string;
+    storyBody2: string;
+    catEyebrow: string;
+    catTitle: string;
+    cats: { name: string; brand: "MAPLUS" | "EFB Sport"; img: string; brandKey: "maplus" | "efb" }[];
+    brandsEyebrow: string;
+    brandsSectionTitle: string;
+    prosEyebrow: string;
+    prosTitle: string;
+    prosIntro: string;
+    pros: { title: string; body: string; cta: string; hrefKey: "retail" | "partner" | "videos" }[];
+    closingEyebrow: string;
+    closingTitle: string;
+    closingButton: string;
+    closingSecondary: string;
     aboutKicker: string;
     aboutBody: string;
     brandsKicker: string;
@@ -105,6 +131,32 @@ type Dict = {
     teamsPoints: string[];
     ctaButton: string;
   };
+  brandsIndex: {
+    kicker: string;
+    title: string;
+    intro: string;
+    discoverLabel: string;
+    maplusBlurb: string;
+    efbBlurb: string;
+  };
+  efb: {
+    kicker: string;
+    intro: string;
+    brandKicker: string;
+    brandTitle: string;
+    brandBody1: string;
+    brandBody2: string;
+    facts: { value: string; label: string }[];
+    productsKicker: string;
+    productsTitle: string;
+    catInsoles: string;
+    catInsolesDesc: string;
+    catAccessories: string;
+    catAccessoriesDesc: string;
+    catLab: string;
+    catLabDesc: string;
+    visitSite: string;
+  };
   retail: {
     kicker: string;
     intro: string;
@@ -153,10 +205,20 @@ export const t: Record<Lang, Dict> = {
         description:
           "Norit Sports er et norsk distribusjonsselskap for tekniske, ytelsesdrevne sportsmerker. Offisiell distributør av MAPLUS skipreparering.",
       },
+      brands: {
+        title: "Merker – Offisielle distribuerte merker | Norit Sports",
+        description:
+          "Norit Sports er offisiell norsk distributør for MAPLUS (skipreparering) og EFB Sport (bootfitting og tilpassede såler).",
+      },
       maplus: {
         title: "MAPLUS – Skipreparering, sykkelpleie og tekstilpleie | Norit Sports",
         description:
           "Utforsk hele MAPLUS-utvalget: høytytende skipreparering, sykkelvedlikehold og tekstilpleie. Offisiell norsk distributør.",
+      },
+      efb: {
+        title: "EFB Sport – Bootfitting og tilpassede såler | Norit Sports",
+        description:
+          "EFB Sport: italienske tekniske løsninger for bootfitting, tilpassede såler og verkstedutstyr for skiverksteder. Offisiell skandinavisk distributør.",
       },
       videos: {
         title: "Tekniske videoer – MAPLUS bruksmetoder | Norit Sports",
@@ -204,6 +266,57 @@ export const t: Record<Lang, Dict> = {
       ],
       ticker: ["Presisjon", "Innovasjon", "Pålitelighet", "Skipreparering", "Sykkel", "Tekstil", "Skandinavia"],
       strip: ["Offisiell MAPLUS-distributør", "Teknisk støtte for lag og utøvere"],
+      imHeroTitle: "Profesjonelt utstyr for utøvere og teknikere.",
+      imHeroSub: "Norit Sports distribuerer utvalgte tekniske sportsmerker i Skandinavia – alpint, langrenn og bootfitting på høyeste nivå.",
+      imHeroPrimary: "Utforsk merkene",
+      imHeroSecondary: "Bli forhandler",
+      imHeroMetaLeft: "NORIT · EST. NORGE",
+      imHeroMetaRight: "ALPINT · LANGRENN · BOOTFITTING",
+      storyEyebrow: "Hvem vi er",
+      storyQuote: "Tekniske merker, nøye utvalgt. <em>For det nordiske markedet.</em>",
+      storyBody1:
+        "Vi jobber tett med skibutikker, bootfittere, lag og racing-lag i hele Norden. MAPLUS distribuerer vi i Norge; EFB Sport i hele Skandinavia.",
+      storyBody2:
+        "Ett kriterium: ville vi brukt det selv? Hvert produkt vi importerer er valgt for å heve standarden.",
+      catEyebrow: "Produkter",
+      catTitle: "Et utvalg bygget for ytelse.",
+      cats: [
+        { name: "Skipreparering", brand: "MAPLUS", img: "/images/ski-1.webp", brandKey: "maplus" },
+        { name: "Sykkelpleie", brand: "MAPLUS", img: "/images/bike-care.jpg", brandKey: "maplus" },
+        { name: "Tekstilpleie", brand: "MAPLUS", img: "/images/textile-care.jpg", brandKey: "maplus" },
+        { name: "Tilpassede såler", brand: "EFB Sport", img: "/images/efb/insoles-hero.jpg", brandKey: "efb" },
+        { name: "Tilbehør skistøvler", brand: "EFB Sport", img: "/images/efb/cat-tracks.jpg", brandKey: "efb" },
+        { name: "Verkstedutstyr", brand: "EFB Sport", img: "/images/efb/polishing-tools.jpg", brandKey: "efb" },
+      ],
+      brandsEyebrow: "Distribuerte merker",
+      brandsSectionTitle: "Utvalgte merker. Én partner i Norden.",
+      prosEyebrow: "For fagfolk",
+      prosTitle: "Bygget for verkstedet, utøveren og butikken.",
+      prosIntro: "Vi er en partner for de som lever av detaljer. Velg rollen din og finn det du trenger.",
+      pros: [
+        {
+          title: "For butikker",
+          body: "Bli forhandler. Komplett sortiment, faglig opplæring og markedsstøtte.",
+          cta: "Bli forhandler",
+          hrefKey: "retail",
+        },
+        {
+          title: "For lag og team",
+          body: "Produkter og teknisk service for racing og trening på høyeste nivå.",
+          cta: "Samarbeid",
+          hrefKey: "partner",
+        },
+        {
+          title: "For utøvere",
+          body: "Bruksvideoer og tekniske ressurser for å få mest mulig ut av utstyret ditt.",
+          cta: "Se videoer",
+          hrefKey: "videos",
+        },
+      ],
+      closingEyebrow: "La oss snakke",
+      closingTitle: "Klar til å løfte standarden? Vi er klare.",
+      closingButton: "Ta kontakt",
+      closingSecondary: "Eller skriv til info@norit-sports.no",
       aboutKicker: "Bygget rundt ytelse",
       aboutBody:
         "Norit Sports er et norsk distribusjonsselskap med fokus på tekniske og ytelsesdrevne sportsmerker. Vi jobber tett med utøvere, lag og forhandlere for å levere produkter bygget rundt presisjon, innovasjon og pålitelighet.",
@@ -258,6 +371,39 @@ export const t: Record<Lang, Dict> = {
         "GM line": "GM-serien",
         Cleaner: "Rens",
       },
+    },
+    brandsIndex: {
+      kicker: "Våre merker",
+      title: "Tekniske merker for utøvere og fagfolk",
+      intro:
+        "Vi distribuerer utvalgte tekniske sportsmerker i Skandinavia med fokus på ytelse, presisjon og fagkompetanse. MAPLUS i Norge, EFB Sport i hele Skandinavia.",
+      discoverLabel: "Utforsk merket",
+      maplusBlurb: "Skipreparering, sykkelvedlikehold og tekstilpleie. Kjemikompetanse på toppnivå, offisiell leverandør i verdenscupen.",
+      efbBlurb: "Bootfitting-tilbehør, tilpassede såler og verkstedutstyr. Profesjonell standard for skiverksteder og racing-lag.",
+    },
+    efb: {
+      kicker: "Merket vårt",
+      intro: "Italienske tekniske løsninger for bootfitting: tilpassede såler, tilbehør til skistøvler og profesjonelt verkstedutstyr.",
+      brandKicker: "Om EFB Sport",
+      brandTitle: "Italiensk håndverk for bootfitting",
+      brandBody1:
+        "EFB Sport er et italiensk selskap med base i Binasco, Milano, spesialisert på tekniske løsninger for skistøvler, bootfitting og tilpassede såler. De jobber med skiløpere, butikker og profesjonelle bootfitting-verksteder.",
+      brandBody2:
+        "Med produksjon 100 % Made in Italy har EFB full kontroll på materialer og kvalitet, og leverer i tillegg årlige bootfitting-kurs for forhandlere og fagfolk. Norit Sports er offisiell skandinavisk distributør.",
+      facts: [
+        { value: "100%", label: "Made in Italy" },
+        { value: "Bootfitting", label: "Spesialisert fokus" },
+        { value: "Binasco · MI", label: "Italiensk håndverk" },
+      ],
+      productsKicker: "Utforsk utvalget",
+      productsTitle: "Såler · Tilbehør · Verkstedutstyr",
+      catInsoles: "Tilpassede såler",
+      catInsolesDesc: "Custom Ski Race og Race R1 – såler tilpasset hver fot for maksimal ytelse og komfort på ski.",
+      catAccessories: "Tilbehør til skistøvler",
+      catAccessoriesDesc: "Sålebeskyttere, høyderegulering og bootlifts – tekniske detaljer som beskytter og forbedrer skistøvelen din.",
+      catLab: "Verkstedutstyr",
+      catLabDesc: "Støvelstativer, spredere, malere, stropper og fresemaskiner: alt et profesjonelt bootfitting-verksted trenger.",
+      visitSite: "Besøk efbsport.it",
     },
     retail: {
       kicker: "Forhandlere",
@@ -335,10 +481,20 @@ export const t: Record<Lang, Dict> = {
         description:
           "Norit Sports is a Norwegian distribution company for technical, performance-driven sports brands. Official distributor of MAPLUS ski preparation.",
       },
+      brands: {
+        title: "Brands – Officially distributed brands | Norit Sports",
+        description:
+          "Norit Sports is the official Norwegian distributor for MAPLUS (ski tuning) and EFB Sport (bootfitting & custom insoles).",
+      },
       maplus: {
         title: "MAPLUS – Ski tuning, bike care and textile care | Norit Sports",
         description:
           "Explore the full range of MAPLUS: high-performance ski tuning, bike maintenance and textile care. Official Norwegian distributor.",
+      },
+      efb: {
+        title: "EFB Sport – Bootfitting & custom insoles | Norit Sports",
+        description:
+          "EFB Sport: Italian technical solutions for bootfitting, custom insoles and workshop equipment for ski shops. Official Scandinavian distributor.",
       },
       videos: {
         title: "Technical videos – MAPLUS application methods | Norit Sports",
@@ -386,6 +542,57 @@ export const t: Record<Lang, Dict> = {
       ],
       ticker: ["Precision", "Innovation", "Reliability", "Ski tuning", "Bike", "Textile", "Scandinavia"],
       strip: ["Official MAPLUS distributor", "Technical support for teams and athletes"],
+      imHeroTitle: "Professional equipment for athletes and technicians.",
+      imHeroSub: "Norit Sports distributes selected technical sports brands across Scandinavia — alpine, cross-country and bootfitting at the highest level.",
+      imHeroPrimary: "Explore the brands",
+      imHeroSecondary: "Become a retailer",
+      imHeroMetaLeft: "NORIT · EST. NORWAY",
+      imHeroMetaRight: "ALPINE · CROSS-COUNTRY · BOOTFITTING",
+      storyEyebrow: "Who we are",
+      storyQuote: "Technical brands, carefully curated. <em>For the Nordic market.</em>",
+      storyBody1:
+        "We work closely with ski shops, bootfitters, teams and racing crews across the Nordics. MAPLUS in Norway, EFB Sport across all of Scandinavia.",
+      storyBody2:
+        "One rule: would we use it ourselves? Every product we import is chosen to raise the standard.",
+      catEyebrow: "Products",
+      catTitle: "A range built for performance.",
+      cats: [
+        { name: "Ski tuning", brand: "MAPLUS", img: "/images/ski-1.webp", brandKey: "maplus" },
+        { name: "Bike care", brand: "MAPLUS", img: "/images/bike-care.jpg", brandKey: "maplus" },
+        { name: "Textile care", brand: "MAPLUS", img: "/images/textile-care.jpg", brandKey: "maplus" },
+        { name: "Custom insoles", brand: "EFB Sport", img: "/images/efb/insoles-hero.jpg", brandKey: "efb" },
+        { name: "Boot accessories", brand: "EFB Sport", img: "/images/efb/cat-tracks.jpg", brandKey: "efb" },
+        { name: "Workshop equipment", brand: "EFB Sport", img: "/images/efb/polishing-tools.jpg", brandKey: "efb" },
+      ],
+      brandsEyebrow: "Distributed brands",
+      brandsSectionTitle: "Selected brands. One Nordic partner.",
+      prosEyebrow: "For professionals",
+      prosTitle: "Built for the workshop, the athlete and the shop floor.",
+      prosIntro: "We're a partner for those who live by the details. Pick your role and find what you need.",
+      pros: [
+        {
+          title: "For shops",
+          body: "Become a retailer. Full range, expert training and marketing support.",
+          cta: "Become a retailer",
+          hrefKey: "retail",
+        },
+        {
+          title: "For teams",
+          body: "Products and technical service for racing and elite training.",
+          cta: "Partner with us",
+          hrefKey: "partner",
+        },
+        {
+          title: "For athletes",
+          body: "Technique videos and technical resources to get the most out of your gear.",
+          cta: "Watch videos",
+          hrefKey: "videos",
+        },
+      ],
+      closingEyebrow: "Let's talk",
+      closingTitle: "Ready to raise the standard? We are.",
+      closingButton: "Get in touch",
+      closingSecondary: "Or email info@norit-sports.no",
       aboutKicker: "Built around performance",
       aboutBody:
         "Norit Sports is a Norwegian distribution company focused on technical and performance-driven sports brands. We work closely with athletes, teams and retailers to deliver products built around precision, innovation and reliability.",
@@ -440,6 +647,39 @@ export const t: Record<Lang, Dict> = {
         "GM line": "GM line",
         Cleaner: "Cleaner",
       },
+    },
+    brandsIndex: {
+      kicker: "Our brands",
+      title: "Technical brands for athletes and professionals",
+      intro:
+        "We distribute selected technical sports brands across Scandinavia, focused on performance, precision and craftsmanship. MAPLUS in Norway, EFB Sport across all of Scandinavia.",
+      discoverLabel: "Explore the brand",
+      maplusBlurb: "Ski tuning, bike maintenance and textile care. Top-tier chemistry expertise, official World Cup supplier.",
+      efbBlurb: "Bootfitting accessories, custom insoles and workshop equipment. Professional standard for ski shops and racing teams.",
+    },
+    efb: {
+      kicker: "Our brand",
+      intro: "Italian technical solutions for bootfitting: custom insoles, ski boot accessories and professional workshop equipment.",
+      brandKicker: "About EFB Sport",
+      brandTitle: "Italian craftsmanship for bootfitting",
+      brandBody1:
+        "EFB Sport is an Italian company based in Binasco, Milan, specialized in technical solutions for ski boots, bootfitting and custom insoles. They serve skiers, ski shops and professional bootfitting laboratories.",
+      brandBody2:
+        "With 100% Made in Italy manufacturing, EFB controls materials and quality end-to-end, and runs yearly bootfitting training for shops and professionals. Norit Sports is the official Scandinavian distributor.",
+      facts: [
+        { value: "100%", label: "Made in Italy" },
+        { value: "Bootfitting", label: "Specialized focus" },
+        { value: "Binasco · MI", label: "Italian craftsmanship" },
+      ],
+      productsKicker: "Explore the range",
+      productsTitle: "Insoles · Accessories · Lab equipment",
+      catInsoles: "Custom insoles",
+      catInsolesDesc: "Custom Ski Race and Race R1 — insoles shaped to each foot for maximum performance and comfort on snow.",
+      catAccessories: "Ski boot accessories",
+      catAccessoriesDesc: "Salvasuola Effeski, lifts and risers — technical details that protect and improve your ski boot.",
+      catLab: "Workshop equipment",
+      catLabDesc: "Boot stands, spreaders, lunettes, straps and milling machines: everything a professional bootfitting lab needs.",
+      visitSite: "Visit efbsport.it",
     },
     retail: {
       kicker: "Retailers",

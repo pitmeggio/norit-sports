@@ -49,6 +49,7 @@ const n = t[lang].newsletter;
 <script>
   const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+  function bindNewsletter() {
   document.querySelectorAll<HTMLElement>("[data-newsletter]").forEach((root) => {
     const form = root.querySelector("form")!;
     const input = form.querySelector<HTMLInputElement>('input[name="email"]')!;
@@ -101,4 +102,7 @@ const n = t[lang].newsletter;
       }
     });
   });
+  }
+
+  document.addEventListener("astro:page-load", bindNewsletter);
 </script>

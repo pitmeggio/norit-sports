@@ -10,7 +10,7 @@ const tr = t[lang];
 const other: Lang = lang === "no" ? "en" : "no";
 
 const links: { key: RouteKey; label: string }[] = [
-  { key: "maplus", label: tr.nav.brands },
+  { key: "brands", label: tr.nav.brands },
   { key: "videos", label: tr.nav.videos },
   { key: "retail", label: tr.nav.retail },
   { key: "partner", label: tr.nav.partner },
@@ -29,7 +29,15 @@ const links: { key: RouteKey; label: string }[] = [
     <nav class="nav" id="primary-nav">
       {
         links.map((l) => (
-          <a href={path(lang, l.key)} aria-current={current === l.key ? "page" : undefined}>
+          <a
+            href={path(lang, l.key)}
+            aria-current={
+              current === l.key ||
+              (l.key === "brands" && (current === "maplus" || current === "efb"))
+                ? "page"
+                : undefined
+            }
+          >
             {l.label}
           </a>
         ))
@@ -44,11 +52,13 @@ const links: { key: RouteKey; label: string }[] = [
 </header>
 
 <script>
-  const toggle = document.querySelector("[data-nav-toggle]");
-  const nav = document.getElementById("primary-nav");
-  toggle?.addEventListener("click", () => {
-    const open = nav?.getAttribute("data-open") === "true";
-    nav?.setAttribute("data-open", (!open).toString());
-    toggle.setAttribute("aria-expanded", (!open).toString());
+  document.addEventListener("astro:page-load", () => {
+    const toggle = document.querySelector("[data-nav-toggle]");
+    const nav = document.getElementById("primary-nav");
+    toggle?.addEventListener("click", () => {
+      const open = nav?.getAttribute("data-open") === "true";
+      nav?.setAttribute("data-open", (!open).toString());
+      toggle.setAttribute("aria-expanded", (!open).toString());
+    });
   });
 </script>

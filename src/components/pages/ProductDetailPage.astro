@@ -1,0 +1,139 @@
+---
+import Base from "../../layouts/Base.astro";
+import { t, path, type Lang } from "../../i18n/content";
+import { findProduct, productsByBrand, type ProductBrand } from "../../data/products";
+
+interface Props {
+  lang: Lang;
+  brand: ProductBrand;
+  slug: string;
+}
+const { lang, brand, slug } = Astro.props;
+const tr = t[lang];
+
+const product = findProduct(brand, slug);
+if (!product) {
+  return Astro.redirect(path(lang, brand));
+}
+const brandName = brand === "maplus" ? "MAPLUS" : "EFB Sport";
+
+// Suggest 4 related products from same line
+const related = productsByBrand(brand)
+  .filter((p) => p.lineHandle === product.lineHandle && p.slug !== product.slug)
+  .slice(0, 4);
+
+const T = {
+  no: {
+    backToList: "Tilbake til produktene",
+    askInfo: "Be om info / pris",
+    askInfoSub: "Vi svarer raskt. Beskriv mengde og bruk hvis aktuelt.",
+    line: "Serie",
+    type: "Type",
+    brand: "Merke",
+    related: "Andre produkter i samme serie",
+    description: "Beskrivelse",
+    askInfoBody: (n: string) => `Hei, jeg ønsker mer info om: ${n}`,
+  },
+  en: {
+    backToList: "Back to products",
+    askInfo: "Request info / price",
+    askInfoSub: "We reply quickly. Mention quantity or use case if relevant.",
+    line: "Line",
+    type: "Type",
+    brand: "Brand",
+    related: "More from the same line",
+    description: "Description",
+    askInfoBody: (n: string) => `Hi, I'd like more info about: ${n}`,
+  },
+}[lang];
+
+const contactUrl = `${path(lang, "contact")}?product=${encodeURIComponent(product.title)}&brand=${brand}`;
+---
+
+<Base lang={lang} current={brand} title={`${product.title} | ${brandName} | Norit Sports`} description={product.desc.slice(0, 160) || `${product.title} — ${product.lineTitle} — ${brandName}.`} ogImage={product.image ?? "/images/hero.webp"}>
+  <article class="prod-detail">
+    <div class="container container--wide">
+      <!-- Breadcrumb -->
+      <nav class="prod-breadcrumb">
+        <a href={path(lang, brand)}>{brandName}</a>
+        <span aria-hidden="true">›</span>
+        <a href={`${path(lang, brand)}/`}>{lang === "no" ? "Produkter" : "Products"}</a>
+        <span aria-hidden="true">›</span>
+        <span class="prod-breadcrumb__current">{product.title}</span>
+      </nav>
+
+      <div class="prod-detail__grid">
+        <!-- Media -->
+        <figure class="prod-detail__media" data-reveal>
+          {
+            product.image ? (
+              <img src={product.image} alt={product.title} fetchpriority="high" />
+            ) : (
+              <span class="prod-card__noimg">{brandName}</span>
+            )
+          }
+        </figure>
+
+        <!-- Info -->
+        <div class="prod-detail__info" data-reveal style="--reveal-delay:120ms;">
+          <span class="eyebrow">{product.lineTitle}</span>
+          <h1 class="prod-detail__title">{product.title}</h1>
+
+          {product.desc && <p class="lead prod-detail__desc">{product.desc}</p>}
+
+          <!-- Specs -->
+          <dl class="prod-specs">
+            <div>
+              <dt>{T.brand}</dt>
+              <dd>{brandName}</dd>
+            </div>
+            <div>
+              <dt>{T.line}</dt>
+              <dd>{product.lineTitle}</dd>
+            </div>
+            {
+              product.productType && (
+                <div>
+                  <dt>{T.type}</dt>
+                  <dd>{product.productType}</dd>
+                </div>
+              )
+            }
+          </dl>
+
+          <!-- CTA -->
+          <div class="prod-cta">
+            <a class="btn btn--accent" data-magnetic href={contactUrl}>{T.askInfo}</a>
+            <p class="tech prod-cta__sub">{T.askInfoSub}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Related products in same line -->
+      {
+        related.length > 0 && (
+          <section class="prod-related">
+            <p class="eyebrow">{T.related}</p>
+            <div class="prod-grid prod-grid--related">
+              {related.map((p) => (
+                <a class="prod-card" href={`${path(lang, brand)}/${p.slug}`}>
+                  <div class="prod-card__media">
+                    {p.image ? (
+                      <img src={p.image} alt={p.title} loading="lazy" />
+                    ) : (
+                      <span class="prod-card__noimg">{brandName}</span>
+                    )}
+                  </div>
+                  <div class="prod-card__body">
+                    <span class="tech prod-card__line">{p.lineTitle}</span>
+                    <h3 class="prod-card__title">{p.title}</h3>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </section>
+        )
+      }
+    </div>
+  </article>
+</Base>

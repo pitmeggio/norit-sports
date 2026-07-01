@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import { ClientRouter } from "astro:transitions";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { t, path, COMPANY, CLOUDFLARE_ANALYTICS_TOKEN, type Lang, type RouteKey } from "../i18n/content";
@@ -8,10 +9,16 @@ interface Props {
   lang: Lang;
   current: RouteKey;
   ogImage?: string;
+  title?: string;
+  description?: string;
 }
-const { lang, current, ogImage = "/images/hero.webp" } = Astro.props;
+const { lang, current, ogImage = "/images/hero.webp", title, description } = Astro.props;
 const tr = t[lang];
-const meta = tr.meta[current];
+const defaultMeta = tr.meta[current];
+const meta = {
+  title: title ?? defaultMeta.title,
+  description: description ?? defaultMeta.description,
+};
 
 const site = Astro.site ?? new URL("https://www.norit-sports.no");
 const canonical = new URL(path(lang, current), site).href;
@@ -62,13 +69,19 @@ const orgJsonLd = {
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@600;700;800;900&family=JetBrains+Mono:wght@500;600&display=swap"
       rel="stylesheet"
     />
 
     <script type="application/ld+json" set:html={JSON.stringify(orgJsonLd)} />
+
+    <ClientRouter />
   </head>
   <body>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="scroll-bar" aria-hidden="true"></div>
+    <div class="cursor" aria-hidden="true"></div>
+
     <Header lang={lang} current={current} />
     <main>
       <slot />
@@ -86,24 +99,159 @@ const orgJsonLd = {
     }
 
     <script>
-      const els = document.querySelectorAll("[data-reveal]");
-      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (reduce || !("IntersectionObserver" in window)) {
-        els.forEach((el) => el.classList.add("is-visible"));
-      } else {
-        const io = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("is-visible");
-                io.unobserve(entry.target);
-              }
-            });
-          },
-          { rootMargin: "0px 0px -10% 0px", threshold: 0.1 }
-        );
-        els.forEach((el) => io.observe(el));
+      // Per-page lifecycle: re-bind on every navigation (initial + ClientRouter swaps).
+      // Document/window listeners use an AbortController so we don't double-bind.
+      let pageAbort: AbortController | null = null;
+
+      function init() {
+        pageAbort?.abort();
+        pageAbort = new AbortController();
+        const signal = pageAbort.signal;
+        const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        // ---- Reveal on scroll
+        const reveals = document.querySelectorAll("[data-reveal]");
+        if (reduce || !("IntersectionObserver" in window)) {
+          reveals.forEach((el) => el.classList.add("is-visible"));
+        } else {
+          const io = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("is-visible");
+                  io.unobserve(entry.target);
+                }
+              });
+            },
+            { rootMargin: "0px 0px -10% 0px", threshold: 0.1 }
+          );
+          reveals.forEach((el) => io.observe(el));
+        }
+
+        if (reduce) return;
+
+        // ---- Scroll progress bar
+        const bar = document.querySelector<HTMLElement>(".scroll-bar");
+        if (bar) {
+          const updateBar = () => {
+            const max = document.documentElement.scrollHeight - window.innerHeight;
+            const pct = max > 0 ? window.scrollY / max : 0;
+            bar.style.transform = `scaleX(${pct})`;
+          };
+          window.addEventListener("scroll", updateBar, { passive: true, signal });
+          updateBar();
+        }
+
+        // ---- Animated counters: any element with data-count
+        const counters = document.querySelectorAll<HTMLElement>("[data-count]");
+        if (counters.length) {
+          const cio = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                const el = entry.target as HTMLElement;
+                const target = parseInt(el.dataset.count || "0", 10);
+                const suffix = el.dataset.suffix || "";
+                const start = performance.now();
+                const duration = 1300;
+                const animate = (now: number) => {
+                  const t = Math.min(1, (now - start) / duration);
+                  const eased = 1 - Math.pow(1 - t, 3);
+                  el.textContent = Math.round(eased * target) + suffix;
+                  if (t < 1) requestAnimationFrame(animate);
+                };
+                el.textContent = "0" + suffix;
+                requestAnimationFrame(animate);
+                cio.unobserve(el);
+              });
+            },
+            { threshold: 0.5 }
+          );
+          counters.forEach((el) => cio.observe(el));
+        }
+
+        // ---- Hero parallax
+        const heroImg = document.querySelector<HTMLElement>(".hero-cover__media img");
+        if (heroImg) {
+          const updateParallax = () => {
+            const y = Math.min(window.scrollY, 700);
+            heroImg.style.setProperty("--py", y * 0.18 + "px");
+          };
+          window.addEventListener("scroll", updateParallax, { passive: true, signal });
+          updateParallax();
+        }
+
+        // ---- Magnetic buttons (data-magnetic)
+        document.querySelectorAll<HTMLElement>("[data-magnetic]").forEach((btn) => {
+          btn.addEventListener(
+            "mousemove",
+            (e) => {
+              const rect = btn.getBoundingClientRect();
+              const x = e.clientX - rect.left - rect.width / 2;
+              const y = e.clientY - rect.top - rect.height / 2;
+              btn.style.transform = `translate(${x * 0.22}px, ${y * 0.4}px)`;
+            },
+            { signal }
+          );
+          btn.addEventListener(
+            "mouseleave",
+            () => {
+              btn.style.transform = "";
+            },
+            { signal }
+          );
+        });
+
+        // ---- Custom cursor pill over data-cursor elements (non-touch only)
+        const cursor = document.querySelector<HTMLElement>(".cursor");
+        if (cursor && window.matchMedia("(hover: hover)").matches) {
+          let cx = 0,
+            cy = 0,
+            tx = 0,
+            ty = 0,
+            rafId = 0;
+          const onMove = (e: MouseEvent) => {
+            tx = e.clientX;
+            ty = e.clientY;
+            if (!rafId) {
+              rafId = requestAnimationFrame(tick);
+            }
+          };
+          const tick = () => {
+            cx += (tx - cx) * 0.25;
+            cy += (ty - cy) * 0.25;
+            cursor.style.left = cx + "px";
+            cursor.style.top = cy + "px";
+            if (Math.abs(tx - cx) > 0.3 || Math.abs(ty - cy) > 0.3) {
+              rafId = requestAnimationFrame(tick);
+            } else {
+              rafId = 0;
+            }
+          };
+          document.addEventListener("mousemove", onMove, { passive: true, signal });
+
+          document.querySelectorAll<HTMLElement>("[data-cursor]").forEach((el) => {
+            const label = el.dataset.cursor || "View";
+            el.addEventListener(
+              "mouseenter",
+              () => {
+                cursor.textContent = label;
+                cursor.classList.add("is-active");
+              },
+              { signal }
+            );
+            el.addEventListener(
+              "mouseleave",
+              () => {
+                cursor.classList.remove("is-active");
+              },
+              { signal }
+            );
+          });
+        }
       }
+
+      document.addEventListener("astro:page-load", init);
     </script>
   </body>
 </html>

@@ -1,5 +1,6 @@
 ---
 import Base from "../../layouts/Base.astro";
+import PageHero from "../PageHero.astro";
 import { t, VIDEOS, type Lang } from "../../i18n/content";
 
 interface Props {
@@ -13,13 +14,17 @@ const categories = Array.from(new Set(VIDEOS.map((x) => x.category)));
 ---
 
 <Base lang={lang} current="videos">
-  <section class="section">
-    <div class="container">
-      <p class="kicker">{v.kicker}</p>
-      <h1 class="section-title" style="margin-top:0.6rem;">{v.kicker}</h1>
-      <p class="lead" style="margin-top:1rem;">{v.intro}</p>
+  <PageHero
+    eyebrow={v.kicker}
+    title={v.kicker}
+    lead={v.intro}
+    metaLeft={`${VIDEOS.length} ${lang === "no" ? "VIDEOER" : "VIDEOS"}`}
+    metaRight={lang === "no" ? "MAPLUS · BRUKSMETODER" : "MAPLUS · APPLICATION METHODS"}
+  />
 
-      <div class="filters" role="group" aria-label="Filter">
+  <section class="section" style="padding-top:0;">
+    <div class="container container--wide">
+      <div class="filters" role="group" aria-label="Filter" style="margin-top:0;">
         <button class="filter" data-filter="all" aria-pressed="true">{v.all}</button>
         {
           categories.map((c) => (
@@ -33,7 +38,7 @@ const categories = Array.from(new Set(VIDEOS.map((x) => x.category)));
       <div class="grid grid--3" style="margin-top:2.5rem;" id="video-grid">
         {
           VIDEOS.map((item) => (
-            <article class="video-card" data-category={item.category}>
+            <article class="video-card" data-category={item.category} data-reveal>
               <div class="video-card__frame">
                 <iframe
                   src={`https://www.youtube-nocookie.com/embed/${item.id}`}
@@ -57,15 +62,17 @@ const categories = Array.from(new Set(VIDEOS.map((x) => x.category)));
 </Base>
 
 <script>
-  const buttons = document.querySelectorAll<HTMLButtonElement>(".filter");
-  const cards = document.querySelectorAll<HTMLElement>("#video-grid [data-category]");
-  buttons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const f = btn.dataset.filter;
-      buttons.forEach((b) => b.setAttribute("aria-pressed", (b === btn).toString()));
-      cards.forEach((c) => {
-        const show = f === "all" || c.dataset.category === f;
-        c.style.display = show ? "" : "none";
+  document.addEventListener("astro:page-load", () => {
+    const buttons = document.querySelectorAll<HTMLButtonElement>(".filter");
+    const cards = document.querySelectorAll<HTMLElement>("#video-grid [data-category]");
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const f = btn.dataset.filter;
+        buttons.forEach((b) => b.setAttribute("aria-pressed", (b === btn).toString()));
+        cards.forEach((c) => {
+          const show = f === "all" || c.dataset.category === f;
+          c.style.display = show ? "" : "none";
+        });
       });
     });
   });

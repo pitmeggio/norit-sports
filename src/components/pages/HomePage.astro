@@ -1,6 +1,5 @@
 ---
 import Base from "../../layouts/Base.astro";
-import Newsletter from "../../components/Newsletter.astro";
 import { t, path, type Lang } from "../../i18n/content";
 
 interface Props {
@@ -12,104 +11,157 @@ const h = tr.home;
 ---
 
 <Base lang={lang} current="home">
-  <section class="hero-cover">
-    <div class="hero-cover__dots" aria-hidden="true"></div>
-    <span class="hero-cover__edge" aria-hidden="true">{lang === "no" ? "Ytelse — Skandinavia" : "Performance — Scandinavia"}</span>
+  <!-- ─────────────────────────────────── HERO (immersive, full-bleed) -->
+  <section class="hero-im">
+    <div class="hero-im__media">
+      <img src="/images/hero.webp" alt="" fetchpriority="high" />
+    </div>
 
-    <div class="container hero-cover__grid">
-      <div class="hero-cover__copy">
-        <span class="hero-cover__tag">
-          <img class="hero__mark" src="/images/logo-n.webp" alt="" aria-hidden="true" />
-          {h.heroEyebrow}
-        </span>
-        <h1 class="hero-cover__title">
-          <span class="ln"><span>Norit</span></span>
-          <span class="ln ln--soft"><span>Sports</span></span>
-        </h1>
-        <p class="hero-cover__lead">{h.heroTagline}</p>
-        <div class="hero-cover__actions">
-          <a class="btn" href={path(lang, "maplus")}>{h.exploreMaplus}</a>
-          <a class="btn btn--ghost" href={path(lang, "partner")}>{h.ctaButton}</a>
+    <div class="hero-im__inner">
+      <span class="hero-im__eyebrow">{h.heroEyebrow}</span>
+      <h1 class="hero-im__title">{h.imHeroTitle}</h1>
+      <p class="hero-im__sub">{h.imHeroSub}</p>
+      <div class="hero-im__actions">
+        <a class="btn btn--light" data-magnetic href={path(lang, "brands")}>{h.imHeroPrimary}</a>
+        <a class="btn btn--ghost-light" href={path(lang, "retail")}>{h.imHeroSecondary}</a>
+      </div>
+    </div>
+
+    <span class="hero-im__scroll">{h.heroScroll}<i></i></span>
+  </section>
+
+  <!-- ─────────────────────────────────── STORY -->
+  <section class="story">
+    <div class="container container--wide">
+      <p class="eyebrow" style="margin-bottom:clamp(2rem,4vw,3rem);" data-reveal>{h.storyEyebrow}</p>
+      <div class="story__inner">
+        <h2 class="story__quote" data-reveal set:html={h.storyQuote} />
+        <div class="story__aside" data-reveal style="--reveal-delay:120ms;">
+          <p>{h.storyBody1}</p>
         </div>
       </div>
-
-      <figure class="hero-cover__media">
-        <img src="/images/hero.webp" alt="" fetchpriority="high" />
-        <figcaption>MAPLUS · Racing preparation</figcaption>
-      </figure>
-    </div>
-
-    <div class="hero-cover__meta">
-      <div class="container hero-cover__meta-inner">
-        <span>{h.strip[0]}</span>
-        <span class="hero-cover__disc">{lang === "no" ? "Ski · Sykkel · Tekstil" : "Ski · Bike · Textile"}</span>
-        <span class="hero-cover__meta-hide">{h.strip[1]}</span>
-      </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container split split--offset">
-      <div class="stack" data-reveal>
-        <p class="kicker">{lang === "no" ? "Om oss" : "About"}</p>
-        <h2 class="section-title">{h.aboutKicker}</h2>
-        <p class="lead">{h.aboutBody}</p>
-      </div>
-      <div class="split__media fx-mono" data-reveal style="--reveal-delay:120ms;">
-        <img src="/images/action-1.webp" alt="" loading="lazy" />
-      </div>
+  <!-- ─────────────────────────────────── CATEGORIES (two brand blocks) -->
+  <section style="padding-block: clamp(3rem,6vw,5rem) 0;">
+    <div class="container container--wide">
+      <p class="eyebrow" data-reveal>{h.catEyebrow}</p>
+      <h2 class="display" style="margin-top:1.4rem; margin-bottom:clamp(2rem,4vw,3rem);" data-reveal>{h.catTitle}</h2>
     </div>
-  </section>
 
-  <section class="section bg-alt">
-    <div class="container">
-      <div class="stack" data-reveal>
-        <p class="kicker">{h.pillarsKicker}</p>
-        <h2 class="section-title">{h.pillarsTitle}</h2>
-      </div>
-      <div class="pillars">
-        {
-          h.pillars.map((p, i) => (
-            <div class="pillar" data-reveal style={`--reveal-delay:${i * 110}ms;`}>
-              <span class="pillar__num">{String(i + 1).padStart(2, "0")}</span>
-              <h3>{p.title}</h3>
-              <p>{p.desc}</p>
+    {
+      (["maplus", "efb"] as const).map((brandKey) => {
+        const brandCats = h.cats.filter((c) => c.brandKey === brandKey);
+        const brandName = brandCats[0]?.brand ?? "";
+        return (
+          <div class="cat-block">
+            <div class="container container--wide">
+              <div class="cat-block__head" data-reveal>
+                <span class="cat-block__brand">{brandName}</span>
+                <a class="cat-block__link" href={path(lang, brandKey)}>
+                  {lang === "no" ? "Se merket" : "View brand"}
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </div>
             </div>
+            <div class="cat-grid">
+              {
+                brandCats.map((c, i) => (
+                  <a class="cat-tile" href={path(lang, c.brandKey)} data-cursor={lang === "no" ? "Utforsk" : "Explore"} data-reveal style={`--reveal-delay:${i * 80}ms;`}>
+                    <img class="cat-tile__img" src={c.img} alt={c.name} loading="lazy" />
+                    <div class="cat-tile__body">
+                      <span class="cat-tile__num">{String(i + 1).padStart(2, "0")} / {String(brandCats.length).padStart(2, "0")}</span>
+                      <h3 class="cat-tile__name">{c.name}</h3>
+                    </div>
+                  </a>
+                ))
+              }
+            </div>
+          </div>
+        );
+      })
+    }
+  </section>
+
+  <!-- ─────────────────────────────────── DISTRIBUTED BRANDS -->
+  <section class="section">
+    <div class="container container--wide">
+      <p class="eyebrow" data-reveal>{h.brandsEyebrow}</p>
+      <h2 class="display" style="margin-top:1.4rem; margin-bottom:clamp(2rem,4vw,3rem);" data-reveal>{h.brandsSectionTitle}</h2>
+      <div class="grid grid--2">
+        <a class="brand-card" href={path(lang, "maplus")} data-cursor={lang === "no" ? "Utforsk" : "Explore"} data-reveal>
+          <div class="brand-card__photo">
+            <img src="/images/hero.webp" alt="" loading="lazy" />
+          </div>
+          <div class="brand-card__body">
+            <div class="brand-card__logo">
+              <img src="/images/maplus-logo.webp" alt="MAPLUS" loading="lazy" />
+            </div>
+            <p class="brand-card__blurb">{tr.brandsIndex.maplusBlurb}</p>
+            <span class="card__cta">
+              {tr.brandsIndex.discoverLabel}
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </a>
+        <a class="brand-card" href={path(lang, "efb")} data-cursor={lang === "no" ? "Utforsk" : "Explore"} data-reveal style="--reveal-delay:120ms;">
+          <div class="brand-card__photo">
+            <img src="/images/efb/insoles-hero.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="brand-card__body">
+            <div class="brand-card__logo">
+              <img src="/images/efb/logo.webp" alt="EFB Sport" loading="lazy" />
+            </div>
+            <p class="brand-card__blurb">{tr.brandsIndex.efbBlurb}</p>
+            <span class="card__cta">
+              {tr.brandsIndex.discoverLabel}
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────── FOR PROFESSIONALS (dark band) -->
+  <section class="pros">
+    <div class="container container--wide">
+      <p class="eyebrow eyebrow--light" data-reveal>{h.prosEyebrow}</p>
+      <div class="pros__head" style="margin-top:1.6rem;">
+        <h2 class="pros__title" data-reveal>{h.prosTitle}</h2>
+        <p class="pros__intro" data-reveal style="--reveal-delay:120ms;">{h.prosIntro}</p>
+      </div>
+      <div class="pros__grid">
+        {
+          h.pros.map((p, i) => (
+            <a class="pros-card" href={path(lang, p.hrefKey)} data-reveal style={`--reveal-delay:${i * 110}ms;`}>
+              <span class="pros-card__num">{String(i + 1).padStart(2, "0")} / 03</span>
+              <h3 class="pros-card__title">{p.title}</h3>
+              <p class="pros-card__body">{p.body}</p>
+              <span class="pros-card__cta">
+                {p.cta}
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </a>
           ))
         }
       </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <p class="kicker" data-reveal>{h.brandsKicker}</p>
-      <div class="split split--offset" style="margin-top:2rem;">
-        <div class="logo-box" data-reveal>
-          <img src="/images/maplus-logo.webp" alt="MAPLUS" loading="lazy" />
-        </div>
-        <div class="stack" data-reveal style="--reveal-delay:120ms;">
-          <span class="badge">{h.brandsBadge}</span>
-          <h2 class="section-title">MAPLUS</h2>
-          <p class="lead">{h.maplusDesc}</p>
-          <a class="btn" href={path(lang, "maplus")}>{h.exploreMaplus}</a>
-        </div>
+  <!-- ─────────────────────────────────── CLOSING CTA -->
+  <section class="closing">
+    <img class="closing__bg" src="/images/ski-2.webp" alt="" loading="lazy" />
+    <div class="container container--wide closing__inner">
+      <div>
+        <p class="eyebrow eyebrow--light" data-reveal>{h.closingEyebrow}</p>
+        <h2 class="closing__title" style="margin-top:1.6rem;" data-reveal>{h.closingTitle}</h2>
       </div>
-    </div>
-  </section>
-
-  <section class="section bg-ink cta-photo">
-    <img class="cta-photo__bg" src="/images/ski-2.webp" alt="" loading="lazy" />
-    <div class="container stack" style="max-width:760px; position:relative;">
-      <h2 class="section-title" data-reveal>{h.ctaTitle}</h2>
-      <p class="lead" data-reveal style="--reveal-delay:100ms;">{h.ctaBody}</p>
-      <a class="btn btn--accent" data-reveal style="--reveal-delay:200ms;" href={path(lang, "partner")}>{h.ctaButton}</a>
-    </div>
-  </section>
-
-  <section class="section bg-alt">
-    <div class="container" data-reveal>
-      <Newsletter lang={lang} variant="section" />
+      <div class="closing__aside" data-reveal style="--reveal-delay:120ms;">
+        <a class="btn btn--accent" data-magnetic href={path(lang, "contact")}>{h.closingButton}</a>
+        <p class="tech" style="color:rgba(255,255,255,0.6);">{h.closingSecondary}</p>
+      </div>
     </div>
   </section>
 </Base>

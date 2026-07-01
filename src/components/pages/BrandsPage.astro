@@ -1,0 +1,68 @@
+---
+import Base from "../../layouts/Base.astro";
+import PageHero from "../PageHero.astro";
+import { t, path, type Lang } from "../../i18n/content";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const tr = t[lang];
+const b = tr.brandsIndex;
+
+const brands = [
+  {
+    name: "MAPLUS",
+    blurb: b.maplusBlurb,
+    logo: "/images/maplus-logo.webp",
+    photo: "/images/hero.webp",
+    href: path(lang, "maplus"),
+    scope: lang === "no" ? "Norge" : "Norway",
+  },
+  {
+    name: "EFB Sport",
+    blurb: b.efbBlurb,
+    logo: "/images/efb/logo.webp",
+    photo: "/images/efb/insoles-hero.jpg",
+    href: path(lang, "efb"),
+    scope: lang === "no" ? "Skandinavia" : "Scandinavia",
+  },
+];
+---
+
+<Base lang={lang} current="brands">
+  <PageHero
+    eyebrow={b.kicker}
+    title={b.title}
+    lead={b.intro}
+    metaLeft={lang === "no" ? "TO MERKER · ÉN PARTNER" : "TWO BRANDS · ONE PARTNER"}
+    metaRight={lang === "no" ? "DISTRIBUSJON I NORDEN" : "DISTRIBUTION IN THE NORDICS"}
+  />
+
+  <section class="section" style="padding-top:0;">
+    <div class="container container--wide">
+      <div class="grid grid--2">
+        {
+          brands.map((br, i) => (
+            <a class="brand-card" href={br.href} data-cursor={lang === "no" ? "Utforsk" : "Explore"} data-reveal style={`--reveal-delay:${i * 120}ms;`}>
+              <div class="brand-card__photo">
+                <img src={br.photo} alt="" loading="lazy" />
+              </div>
+              <div class="brand-card__body">
+                <div class="brand-card__logo">
+                  <img src={br.logo} alt={br.name} loading="lazy" />
+                </div>
+                <span class="tech">{lang === "no" ? "Distribusjon" : "Distribution"} · {br.scope}</span>
+                <p class="brand-card__blurb">{br.blurb}</p>
+                <span class="card__cta">
+                  {b.discoverLabel}
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Base>

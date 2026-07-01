@@ -1,0 +1,27 @@
+---
+interface Props {
+  eyebrow: string;
+  title: string;
+  lead?: string;
+  metaLeft?: string;
+  metaRight?: string;
+}
+const { eyebrow, title, lead, metaLeft, metaRight } = Astro.props;
+const hasMeta = !!(metaLeft || metaRight);
+---
+
+<section class="page-hero">
+  <div class="container container--wide">
+    <span class="eyebrow" data-reveal>{eyebrow}</span>
+    <h1 class="display page-hero__title" data-reveal style="--reveal-delay:80ms;">{title}</h1>
+    {lead && <p class="lead page-hero__lead" data-reveal style="--reveal-delay:160ms;">{lead}</p>}
+    {
+      hasMeta && (
+        <div class="page-hero__meta" data-reveal style="--reveal-delay:240ms;">
+          {metaLeft && <span class="tech">{metaLeft}</span>}
+          {metaRight && <span class="tech">{metaRight}</span>}
+        </div>
+      )
+    }
+  </div>
+</section>

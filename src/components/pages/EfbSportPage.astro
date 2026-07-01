@@ -1,0 +1,114 @@
+---
+import Base from "../../layouts/Base.astro";
+import PageHero from "../PageHero.astro";
+import { t, path, type Lang } from "../../i18n/content";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const tr = t[lang];
+const e = tr.efb;
+
+const productsBase = `${path(lang, "efb")}/${lang === "no" ? "produkter" : "products"}`;
+const cats = [
+  { title: e.catInsoles, desc: e.catInsolesDesc, img: "/images/efb/boots-insoles.jpg", href: `${productsBase}?line=insoles` },
+  { title: e.catAccessories, desc: e.catAccessoriesDesc, img: "/images/efb/cat-tracks.jpg", href: `${productsBase}?line=accessories` },
+  { title: e.catLab, desc: e.catLabDesc, img: "/images/efb/boot-stretcher.jpg", href: `${productsBase}?line=workshop` },
+];
+---
+
+<Base lang={lang} current="efb">
+  <PageHero
+    eyebrow={e.kicker}
+    title="EFB Sport"
+    lead={e.intro}
+    metaLeft={lang === "no" ? "OFFISIELL SKANDINAVISK DISTRIBUTØR" : "OFFICIAL SCANDINAVIAN DISTRIBUTOR"}
+    metaRight={lang === "no" ? "BOOTFITTING · SÅLER · VERKSTED" : "BOOTFITTING · INSOLES · WORKSHOP"}
+  />
+
+  <!-- Quick CTA to full catalog -->
+  <section style="padding-block: 0 clamp(2rem,4vw,3rem);">
+    <div class="container container--wide">
+      <a class="btn btn--accent" data-magnetic href={`${path(lang, "efb")}/${lang === "no" ? "produkter" : "products"}`}>
+        {lang === "no" ? "Se hele EFB Sport-katalogen" : "Browse the full EFB Sport catalog"}
+        <span style="margin-left:0.5rem; font-family:var(--font-mono); font-size:0.72rem; opacity:0.85;">17 →</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Brand story -->
+  <section class="story" style="padding-top:0;">
+    <div class="container container--wide">
+      <p class="eyebrow" style="margin-bottom:clamp(2rem,4vw,3rem);" data-reveal>{e.brandKicker}</p>
+      <div class="story__inner">
+        <h2 class="story__quote" data-reveal>{e.brandTitle}</h2>
+        <div class="story__aside" data-reveal style="--reveal-delay:120ms;">
+          <p>{e.brandBody1}</p>
+          <p>{e.brandBody2}</p>
+          <dl class="facts" style="margin-top:1.4rem;">
+            {
+              e.facts.map((f) => {
+                const num = f.value.match(/^(\d+)(.*)$/);
+                return (
+                  <div class="fact">
+                    {num ? (
+                      <dt data-count={num[1]} data-suffix={num[2]}>{f.value}</dt>
+                    ) : (
+                      <dt>{f.value}</dt>
+                    )}
+                    <dd>{f.label}</dd>
+                  </div>
+                );
+              })
+            }
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hero product photo (cinematic insoles) -->
+  <section style="padding-block: 0 clamp(3rem,6vw,5rem);">
+    <figure class="showcase" data-reveal>
+      <img src="/images/efb/polishing-tools.jpg" alt="EFB Sport verkstedutstyr" loading="lazy" />
+      <figcaption>EFB Sport · Professional workshop</figcaption>
+    </figure>
+  </section>
+
+  <!-- Category tiles -->
+  <section style="padding-block: clamp(3rem,6vw,5rem) 0;">
+    <div class="container container--wide">
+      <p class="eyebrow" data-reveal>{e.productsKicker}</p>
+      <h2 class="display" style="margin-top:1.4rem; margin-bottom:clamp(2rem,4vw,3rem);" data-reveal>{e.productsTitle}</h2>
+    </div>
+    <div class="cat-grid">
+      {
+        cats.map((c, i) => (
+          <a class="cat-tile" href={c.href} data-cursor={lang === "no" ? "Utforsk" : "Explore"} data-reveal style={`--reveal-delay:${i * 80}ms;`}>
+            <img class="cat-tile__img" src={c.img} alt={c.title} loading="lazy" />
+            <div class="cat-tile__body">
+              <span class="cat-tile__num">{String(i + 1).padStart(2, "0")} / {String(cats.length).padStart(2, "0")}</span>
+              <h3 class="cat-tile__name">{c.title}</h3>
+              <span class="cat-tile__brand">{e.visitSite}</span>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- Retail CTA on dark -->
+  <section class="pros" style="padding-block: clamp(4rem,8vw,6rem);">
+    <div class="container container--wide">
+      <p class="eyebrow eyebrow--light" data-reveal>{tr.nav.retail}</p>
+      <div class="pros__head" style="margin-top:1.6rem;">
+        <h2 class="pros__title" data-reveal>{lang === "no" ? "Bli forhandler" : "Become a retailer"}</h2>
+        <div class="pros__intro" data-reveal style="--reveal-delay:120ms;">
+          <p>{lang === "no" ? "Vil du føre EFB Sport i butikken din? Vi gjør det enkelt å starte." : "Want to carry EFB Sport in your store? We make it easy to get started."}</p>
+          <a class="btn btn--light" data-magnetic style="margin-top:1.5rem;" href={path(lang, "retail")}>{lang === "no" ? "Mer informasjon" : "Learn more"}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

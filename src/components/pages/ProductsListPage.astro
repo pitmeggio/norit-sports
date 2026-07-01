@@ -1,0 +1,149 @@
+---
+import Base from "../../layouts/Base.astro";
+import PageHero from "../PageHero.astro";
+import { t, path, type Lang, type RouteKey } from "../../i18n/content";
+import { productsByBrand, MAPLUS_LINES, EFB_LINES, type ProductBrand } from "../../data/products";
+
+interface Props {
+  lang: Lang;
+  brand: ProductBrand;
+}
+const { lang, brand } = Astro.props;
+const tr = t[lang];
+
+const products = productsByBrand(brand);
+const lines = brand === "maplus" ? MAPLUS_LINES : EFB_LINES;
+const brandName = brand === "maplus" ? "MAPLUS" : "EFB Sport";
+const brandRoute: RouteKey = brand;
+
+const t_label = {
+  no: {
+    eyebrow: "Produkter",
+    title: `${brandName} produkter`,
+    intro: `Hele utvalget av ${brandName}-produkter — ${products.length} artikler. Filtrer etter serie, og klikk på et produkt for tekniske detaljer og forespørsel.`,
+    filter: "Filter",
+    all: "Alle",
+    showing: "Viser",
+    of: "av",
+    products: "produkter",
+    askInfo: "Be om info",
+    backToBrand: `Tilbake til ${brandName}`,
+  },
+  en: {
+    eyebrow: "Products",
+    title: `${brandName} products`,
+    intro: `The full ${brandName} range — ${products.length} items. Filter by line, click a product for technical details and to request info.`,
+    filter: "Filter",
+    all: "All",
+    showing: "Showing",
+    of: "of",
+    products: "products",
+    askInfo: "Request info",
+    backToBrand: `Back to ${brandName}`,
+  },
+}[lang];
+---
+
+<Base lang={lang} current={brandRoute} title={t_label.title + " | Norit Sports"} description={t_label.intro}>
+  <PageHero
+    eyebrow={t_label.eyebrow}
+    title={t_label.title}
+    lead={t_label.intro}
+    metaLeft={`${products.length} ${t_label.products.toUpperCase()}`}
+    metaRight={`${lines.length} ${lang === "no" ? "SERIER" : "LINES"}`}
+  />
+
+  <section class="section" style="padding-top:0;">
+    <div class="container container--wide">
+      <!-- Filter bar -->
+      <div class="prod-filters" data-prod-filters>
+        <button class="filter" data-line="all" aria-pressed="true">{t_label.all} <span class="prod-filters__count">({products.length})</span></button>
+        {
+          lines.map((l) => {
+            const cnt = products.filter((p) => p.lineHandle === l.handle).length;
+            return (
+              <button class="filter" data-line={l.handle} aria-pressed="false">
+                {l.title} <span class="prod-filters__count">({cnt})</span>
+              </button>
+            );
+          })
+        }
+      </div>
+
+      <p class="tech prod-count" data-prod-count style="margin-top:1.4rem;">{t_label.showing} {products.length} {t_label.of} {products.length}</p>
+
+      <!-- Product grid -->
+      <div class="prod-grid" id="prod-grid">
+        {
+          products.map((p, i) => (
+            <a
+              class="prod-card"
+              href={`${path(lang, brand)}/${p.slug}`}
+              data-line={p.lineHandle}
+              data-search={`${p.title} ${p.lineTitle} ${p.tags.join(" ")}`.toLowerCase()}
+            >
+              <div class="prod-card__media">
+                {p.image ? (
+                  <img src={p.image} alt={p.title} loading={i < 12 ? "eager" : "lazy"} />
+                ) : (
+                  <span class="prod-card__noimg">{brandName}</span>
+                )}
+              </div>
+              <div class="prod-card__body">
+                <span class="tech prod-card__line">{p.lineTitle}</span>
+                <h3 class="prod-card__title">{p.title}</h3>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Base>
+
+<script is:inline define:vars={{ allText: t_label.showing, ofText: t_label.of, productsText: t_label.products }}>
+  document.addEventListener("astro:page-load", () => {
+    const filters = document.querySelectorAll("[data-prod-filters] .filter");
+    const cards = document.querySelectorAll(".prod-card");
+    const counter = document.querySelector("[data-prod-count]");
+    const total = cards.length;
+
+    function applyFilter(filterValue) {
+      let active = null;
+      filters.forEach((b) => {
+        const match = b.dataset.line === filterValue;
+        b.setAttribute("aria-pressed", String(match));
+        if (match) active = b;
+      });
+      let visible = 0;
+      cards.forEach((c) => {
+        const show = filterValue === "all" || c.dataset.line === filterValue;
+        c.style.display = show ? "" : "none";
+        if (show) visible++;
+      });
+      if (counter) counter.textContent = `${allText} ${visible} ${ofText} ${total} ${productsText}`;
+      return active;
+    }
+
+    filters.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        applyFilter(btn.dataset.line);
+        // Update URL (without reload) for shareable filtered link
+        const url = new URL(window.location.href);
+        if (btn.dataset.line === "all") url.searchParams.delete("line");
+        else url.searchParams.set("line", btn.dataset.line);
+        history.replaceState(null, "", url);
+      });
+    });
+
+    // On load: read ?line=xxx from URL and apply
+    const params = new URLSearchParams(window.location.search);
+    const lineParam = params.get("line");
+    if (lineParam) {
+      const active = applyFilter(lineParam);
+      if (active) {
+        active.scrollIntoView({ block: "center", behavior: "auto" });
+      }
+    }
+  });
+</script>

@@ -1,5 +1,6 @@
 ---
 import Base from "../../layouts/Base.astro";
+import PageHero from "../PageHero.astro";
 import { t, path, RETAILERS, type Lang } from "../../i18n/content";
 
 interface Props {
@@ -11,33 +12,36 @@ const r = tr.retail;
 ---
 
 <Base lang={lang} current="retail">
-  <section class="section">
-    <div class="container">
-      <p class="kicker" data-reveal>{r.kicker}</p>
-      <h1 class="section-title" style="margin-top:0.6rem;" data-reveal>{r.becomeTitle}</h1>
-      <p class="lead" style="margin-top:1rem;" data-reveal>{r.intro}</p>
+  <PageHero
+    eyebrow={r.kicker}
+    title={r.becomeTitle}
+    lead={r.intro}
+    metaLeft={lang === "no" ? "FOR BUTIKKER" : "FOR STORES"}
+    metaRight={lang === "no" ? "MAPLUS · EFB SPORT" : "MAPLUS · EFB SPORT"}
+  />
 
-      <div class="split split--offset" style="margin-top:clamp(2.5rem,5vw,4rem);">
-        <div class="stack" data-reveal>
-          <p class="kicker">{r.becomeKicker}</p>
-          <h2 class="section-title">{r.becomeWhy}</h2>
-          <p class="lead">{r.becomeBody}</p>
+  <!-- Why partner — editorial story layout -->
+  <section class="story" style="padding-top:0;">
+    <div class="container container--wide">
+      <p class="eyebrow" style="margin-bottom:clamp(2rem,4vw,3rem);" data-reveal>{r.becomeKicker}</p>
+      <div class="story__inner">
+        <h2 class="story__quote" data-reveal>{r.becomeWhy}</h2>
+        <div class="story__aside" data-reveal style="--reveal-delay:120ms;">
+          <p>{r.becomeBody}</p>
           <ul class="ticks" style="margin-top:0.4rem;">
             {r.points.map((p) => <li>{p}</li>)}
           </ul>
-          <a class="btn" href={path(lang, "contact")} style="margin-top:0.6rem;">{r.cta}</a>
-        </div>
-        <div class="split__media fx-mono" data-reveal style="--reveal-delay:120ms;">
-          <img src="/images/ski-1.webp" alt="" loading="lazy" />
+          <a class="btn" style="margin-top:0.8rem;" href={path(lang, "contact")}>{r.cta}</a>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Where to buy section (retailers list / empty state) -->
   <section class="section bg-alt">
-    <div class="container">
-      <p class="kicker" data-reveal>{r.kicker}</p>
-      <h2 class="section-title" style="margin-top:0.6rem;" data-reveal>{r.whereTitle}</h2>
+    <div class="container container--wide">
+      <p class="eyebrow" data-reveal>{r.kicker}</p>
+      <h2 class="display" style="margin-top:1.4rem;" data-reveal>{r.whereTitle}</h2>
 
       {
         RETAILERS.length > 0 ? (
@@ -56,7 +60,7 @@ const r = tr.retail;
             ))}
           </div>
         ) : (
-          <div class="empty-state" data-reveal>
+          <div class="empty-state" data-reveal style="margin-top:2.5rem;">
             <p class="lead">{r.whereEmpty}</p>
             <a class="btn btn--ghost" href={path(lang, "contact")}>{r.cta}</a>
           </div>

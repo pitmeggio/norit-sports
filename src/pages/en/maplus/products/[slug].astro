@@ -1,0 +1,12 @@
+---
+import ProductDetailPage from "../../../../components/pages/ProductDetailPage.astro";
+import { productsByBrand } from "../../../../data/products";
+
+export function getStaticPaths() {
+  return productsByBrand("maplus").map((p) => ({ params: { slug: p.slug } }));
+}
+
+const { slug } = Astro.params;
+---
+
+<ProductDetailPage lang="en" brand="maplus" slug={slug!} />

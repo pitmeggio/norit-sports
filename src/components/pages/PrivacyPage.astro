@@ -1,5 +1,6 @@
 ---
 import Base from "../../layouts/Base.astro";
+import PageHero from "../PageHero.astro";
 import { COMPANY, type Lang } from "../../i18n/content";
 
 interface Props {
@@ -144,22 +145,28 @@ const c = content[lang];
 ---
 
 <Base lang={lang} current="privacy">
-  <section class="section">
-    <div class="container prose">
-      <h1 class="section-title">{c.title}</h1>
-      <p class="updated">{updated}</p>
-      <p class="lead" style="margin-top:1rem;">{c.intro}</p>
+  <PageHero
+    eyebrow={lang === "no" ? "Personvern" : "Privacy"}
+    title={c.title}
+    lead={c.intro}
+    metaLeft={updated.toUpperCase()}
+    metaRight={`GDPR · ${COMPANY.orgNr}`}
+  />
 
-      {
-        c.sections.map((s) => (
-          <div class="prose__block">
-            <h2>{s.h}</h2>
-            {s.p.map((para) => (
-              <p>{para}</p>
-            ))}
-          </div>
-        ))
-      }
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="prose">
+        {
+          c.sections.map((s) => (
+            <div class="prose__block" data-reveal>
+              <h2>{s.h}</h2>
+              {s.p.map((para) => (
+                <p>{para}</p>
+              ))}
+            </div>
+          ))
+        }
+      </div>
     </div>
   </section>
 </Base>
