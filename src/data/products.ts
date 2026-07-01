@@ -1,7 +1,9 @@
-// Auto-generated from MAPLUS Shopify API + EFB Sport site scrape (2026-06-30).
-// Regenerate via _scrape/ scripts when brand catalogs change.
+// Auto-generated from MAPLUS Shopify API + product pages + EFB Sport scrape (2026-07-01).
+// Specs are factual product data (temperature, snow type, size). Regenerate via _scrape/ scripts.
 
 export type ProductBrand = "maplus" | "efb";
+
+export type ProductSpec = { labelNo: string; labelEn: string; valueNo: string; valueEn: string };
 
 export type Product = {
   brand: ProductBrand;
@@ -13,6 +15,9 @@ export type Product = {
   desc: string;
   tags: string[];
   productType: string;
+  specs: ProductSpec[];
+  sku: string[];
+  format: string[];
 };
 
 export type ProductLine = { handle: string; title: string };
@@ -29,9 +34,14 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "textile",
     "lineTitle": "Tekstilpleie",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/DISPLAY_TEXTILE_MD0003.png?v=1775036886",
-    "desc": "COUNTER DISPLAY TEXTILE — MD0003 Espositore da banco Textile per negozi. Espositore a due ripiani studiato per poter tenere 12 prodotti della linea Textile Techwash-In. Dimensioni: 27 x 25 x 26 cm.",
+    "desc": "",
     "tags": [],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "MD0003"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -40,9 +50,14 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "bike",
     "lineTitle": "Sykkel",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/DISPLAY_BIKE_MD0003.png?v=1775036886",
-    "desc": "COUNTER DISPLAY BIKE — MD0003 Espositore da banco Bike per negozi. Espositore a due ripiani progettato per contenere due prodotti per tipo della linea Bike. Dimensioni: 27 x 25 x 26 cm.",
+    "desc": "",
     "tags": [],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "MD0003"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -51,7 +66,7 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "bike",
     "lineTitle": "Sykkel",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/BIKE_FRAME_PROTECT_MBK006_34889aa9-65a9-480e-9f3c-5b0b48a99549.png?v=1775053274",
-    "desc": "Protettore lucidante per telaio. Liquido sotto pressione. Lucidante protettivo per telai in carbonio, alluminio, acciaio e superfici verniciate. Crea un film anti-impronta che riduce aloni ed eventuali segni. Esalta la finitura e facilita…",
+    "desc": "",
     "tags": [
       "Bike",
       "frame",
@@ -60,7 +75,14 @@ export const PRODUCTS: Product[] = [
       "protettivo",
       "telaio"
     ],
-    "productType": "Bike Frame"
+    "productType": "Bike Frame",
+    "specs": [],
+    "sku": [
+      "MBK006"
+    ],
+    "format": [
+      "200 ml"
+    ]
   },
   {
     "brand": "maplus",
@@ -69,7 +91,7 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "bike",
     "lineTitle": "Sykkel",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/BIKE_FRAME_CLEANER_MBK001_a4b47636-26f0-42bc-b980-a143cac49046.png?v=1775053246",
-    "desc": "Pulitore per telaio. Liquido verde chiaro. Tensioattivi biodegradabili, pH neutro (6,5–7,5). Rimuove sporco, polvere, fango e residui oleosi. Pulizia profonda senza danneggiare vernici o componenti delicati. Sicuro su alluminio, carbonio,…",
+    "desc": "",
     "tags": [
       "Bike",
       "cleaner",
@@ -77,7 +99,14 @@ export const PRODUCTS: Product[] = [
       "pulitore",
       "telaio"
     ],
-    "productType": "Bike Frame"
+    "productType": "Bike Frame",
+    "specs": [],
+    "sku": [
+      "MBK001"
+    ],
+    "format": [
+      "500 ml"
+    ]
   },
   {
     "brand": "maplus",
@@ -86,7 +115,7 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "bike",
     "lineTitle": "Sykkel",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/BIKE_CHAIN_CLEANER_MBK005_a4294fbb-4fe0-4d27-a8b4-5d4c1ad0990f.png?v=1775053218",
-    "desc": "Pulitore per catena. Liquido sotto pressione, incolore. Miscela di solventi ad alta evaporazione. Rimuove grasso, olio e sporco in profondità. Evaporazione rapida, non lascia residui oleosi. Migliora la durata dei componenti e la…",
+    "desc": "",
     "tags": [
       "Bike",
       "catena",
@@ -94,7 +123,14 @@ export const PRODUCTS: Product[] = [
       "cleaner",
       "pulitore"
     ],
-    "productType": "Bike Chain"
+    "productType": "Bike Chain",
+    "specs": [],
+    "sku": [
+      "MBK005"
+    ],
+    "format": [
+      "400 ml"
+    ]
   },
   {
     "brand": "maplus",
@@ -103,7 +139,7 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "bike",
     "lineTitle": "Sykkel",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/BIKE_CHAIN_LUBE_COMPETITION_MBK004_63cf8bfb-f991-4cef-8e89-678b84abc3f5.png?v=1775053192",
-    "desc": "Lubrificante catena da agonismo. Liquido sotto pressione, incolore. Oli sintetici senza siliconi. Lubrificazione duratura e ad alta efficacia. Penetra in profondità nei perni e rulli. Protezione contro usura e corrosione. Resistente a…",
+    "desc": "",
     "tags": [
       "agonismo",
       "Bike",
@@ -112,7 +148,14 @@ export const PRODUCTS: Product[] = [
       "competition",
       "lubrificante"
     ],
-    "productType": "Bike Chain"
+    "productType": "Bike Chain",
+    "specs": [],
+    "sku": [
+      "MBK004"
+    ],
+    "format": [
+      "200 ml"
+    ]
   },
   {
     "brand": "maplus",
@@ -121,7 +164,7 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "bike",
     "lineTitle": "Sykkel",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/BIKE_CHAIN_LUBE_WET_MBK002_3d8b3442-5734-452c-bd8f-dcfc9c9cf613.png?v=1775053127",
-    "desc": "Lubrificante catena per condizioni bagnate. Liquido incolore, miscela di oli sintetici senza siliconi. Ideale per pioggia, neve e alta umidità. Crea un rivestimento resistente contro ruggine e usura. Mantiene catena fluida e silenziosa…",
+    "desc": "",
     "tags": [
       "Bike",
       "catena",
@@ -129,7 +172,14 @@ export const PRODUCTS: Product[] = [
       "lubrificante",
       "wet"
     ],
-    "productType": "Bike Chain"
+    "productType": "Bike Chain",
+    "specs": [],
+    "sku": [
+      "MBK002"
+    ],
+    "format": [
+      "150 ml"
+    ]
   },
   {
     "brand": "maplus",
@@ -138,7 +188,7 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "bike",
     "lineTitle": "Sykkel",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/BIKE_CHAIN_LUBE_DRY_MBK003_5ddcfc50-c0e9-451b-97e5-4bdb6204577b.png?v=1775053300",
-    "desc": "Lubrificante catena per condizioni asciutte. Liquido azzurro, profumato, a base di oli sintetici senza siliconi. Ideale per condizioni asciutte e polverose. Riduce attrito e rumore, migliora la fluidità della pedalata. Formula leggera, non…",
+    "desc": "",
     "tags": [
       "Bike",
       "catena",
@@ -146,7 +196,14 @@ export const PRODUCTS: Product[] = [
       "dry",
       "lubrificante"
     ],
-    "productType": "Bike Chain"
+    "productType": "Bike Chain",
+    "specs": [],
+    "sku": [
+      "MBK003"
+    ],
+    "format": [
+      "150 ml"
+    ]
   },
   {
     "brand": "maplus",
@@ -155,14 +212,21 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "textile",
     "lineTitle": "Tekstilpleie",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/TECHWASH-IN_MI0201_435621a3-673c-40df-84c5-b4c448f7a77a.png?v=1775053098",
-    "desc": "Eccellente idrorepellenza su fibre sintetiche e loro miscele con fibre cellulosiche. Prestazioni complete già a temperatura ambiente. Conferisce resistenza allo sporco acquoso e mantiene la traspirabilità del tessuto. Lascia una piacevole…",
+    "desc": "",
     "tags": [
       "Textile",
       "textile care",
       "wash-in",
       "waterproofing"
     ],
-    "productType": "Textile Care"
+    "productType": "Textile Care",
+    "specs": [],
+    "sku": [
+      "MI0201"
+    ],
+    "format": [
+      "500 ml"
+    ]
   },
   {
     "brand": "maplus",
@@ -171,9 +235,31 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "gm",
     "lineTitle": "GM",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/GMBOOSTSOLIDCOLD.png?v=1775053534",
-    "desc": "100% fluor-free FIS and IBU approved. Acceleratore solido altmente performante, massima accelerazione e lunga durata.",
+    "desc": "",
     "tags": [],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "-8° / -22℃",
+        "valueEn": "-8° / -22℃"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Per nevi trasformate o cadenti",
+        "valueEn": "Per nevi trasformate o cadenti"
+      }
+    ],
+    "sku": [
+      "MFF0860",
+      "MFF0860M"
+    ],
+    "format": [
+      "10 gr",
+      "10 gr Molibdeno"
+    ]
   },
   {
     "brand": "maplus",
@@ -182,9 +268,31 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "gm",
     "lineTitle": "GM",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/GMBOOSTSOLIDMED.png?v=1775053469",
-    "desc": "100% fluor-free FIS and IBU approved. Acceleratore solido altmente performante, massima accelerazione e lunga durata.",
+    "desc": "",
     "tags": [],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "-2° / -9℃",
+        "valueEn": "-2° / -9℃"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Per nevi trasformate o cadenti",
+        "valueEn": "Per nevi trasformate o cadenti"
+      }
+    ],
+    "sku": [
+      "MFF0861",
+      "MFF0861M"
+    ],
+    "format": [
+      "10 gr",
+      "10 gr Molibdeno"
+    ]
   },
   {
     "brand": "maplus",
@@ -193,9 +301,31 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "gm",
     "lineTitle": "GM",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/GMBOOSTSOLIDHOT.png?v=1775053506",
-    "desc": "100% fluor-free FIS and IBU approved. Acceleratore solido altmente performante, massima accelerazione e lunga durata.",
+    "desc": "",
     "tags": [],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "0° / -3℃",
+        "valueEn": "0° / -3℃"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Per nevi trasformate o cadenti",
+        "valueEn": "Per nevi trasformate o cadenti"
+      }
+    ],
+    "sku": [
+      "MFF0862",
+      "MFF0862M"
+    ],
+    "format": [
+      "10 gr",
+      "10 gr Molibdeno"
+    ]
   },
   {
     "brand": "maplus",
@@ -204,9 +334,29 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "gm",
     "lineTitle": "GM",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/gmblockracingbasecold_9cb0cba3-abcf-4e27-8688-924c1a241c07.png?v=1773052465",
-    "desc": "Dado con speciale formula FluorFree. La linea Racing Base è ideale per gli allenamenti e le competizioni del settore giovanile. Viene utilizzata come strato base su cui applicare scioline in polvere o prodotti GM BLOCK Performance in…",
+    "desc": "",
     "tags": [],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "-7° / -14℃",
+        "valueEn": "-7° / -14℃"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Per nevi trasformate o cadenti",
+        "valueEn": "Per nevi trasformate o cadenti"
+      }
+    ],
+    "sku": [
+      "MFF0196"
+    ],
+    "format": [
+      "20 gr"
+    ]
   },
   {
     "brand": "maplus",
@@ -215,9 +365,29 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "gm",
     "lineTitle": "GM",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/gmblockracingbasemed_c09a93a7-1c6c-45b5-9935-06120e04605c.png?v=1773052465",
-    "desc": "Dado con speciale formula FluorFree. La linea Racing Base è ideale per gli allenamenti e le competizioni del settore giovanile. Viene utilizzata come strato base su cui applicare scioline in polvere o prodotti GM BLOCK Performance in…",
+    "desc": "",
     "tags": [],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "-4° / -10℃",
+        "valueEn": "-4° / -10℃"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Per nevi trasformate o cadenti",
+        "valueEn": "Per nevi trasformate o cadenti"
+      }
+    ],
+    "sku": [
+      "MFF0197"
+    ],
+    "format": [
+      "20 gr"
+    ]
   },
   {
     "brand": "maplus",
@@ -226,9 +396,29 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "gm",
     "lineTitle": "GM",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/gmblockracingbasehot_6ed49551-913d-4d14-add1-92dd42cb1992.png?v=1773052465",
-    "desc": "Dado con speciale formula FluorFree. La linea Racing Base è ideale per gli allenamenti e le competizioni del settore giovanile. Viene utilizzata come strato base su cui applicare scioline in polvere o prodotti GM BLOCK Performance in…",
+    "desc": "",
     "tags": [],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "0° / -3℃",
+        "valueEn": "0° / -3℃"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Per nevi trasformate o cadenti",
+        "valueEn": "Per nevi trasformate o cadenti"
+      }
+    ],
+    "sku": [
+      "MFF0198"
+    ],
+    "format": [
+      "20 gr"
+    ]
   },
   {
     "brand": "maplus",
@@ -237,9 +427,29 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "gm",
     "lineTitle": "GM",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/gm_block_professional_cold_adcce48c-9154-4300-85fc-fe05b9f47aba.png?v=1773131945",
-    "desc": "Adatto a tutti i livelli di esperienza - dalle competizioni agli sci club, dai professionisti agli amatori. Dado con speciale formula FluorFree per la preparazione a freddo degli sci. Garantisce una preparazione rapida e non richiede…",
+    "desc": "",
     "tags": [],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "-7° / -14℃",
+        "valueEn": "-7° / -14℃"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Per nevi trasformate o cadenti",
+        "valueEn": "Per nevi trasformate o cadenti"
+      }
+    ],
+    "sku": [
+      "MFF0193"
+    ],
+    "format": [
+      "20 gr"
+    ]
   },
   {
     "brand": "maplus",
@@ -248,9 +458,29 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "gm",
     "lineTitle": "GM",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/gm_block_professional_med_cea574c4-ff21-476f-b789-ded7b06cec03.png?v=1773129501",
-    "desc": "Adatto a tutti i livelli di esperienza - dalle competizioni agli sci club, dai professionisti agli amatori. Dado con speciale formula FluorFree per la preparazione a freddo degli sci. Garantisce una preparazione rapida e non richiede…",
+    "desc": "",
     "tags": [],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "-4° / -10℃",
+        "valueEn": "-4° / -10℃"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Per nevi trasformate o cadenti",
+        "valueEn": "Per nevi trasformate o cadenti"
+      }
+    ],
+    "sku": [
+      "MFF0194"
+    ],
+    "format": [
+      "20 gr"
+    ]
   },
   {
     "brand": "maplus",
@@ -259,9 +489,29 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "gm",
     "lineTitle": "GM",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/gmblockprofessionalhot_10b9b237-8517-4fdd-ad2e-33a54f39aa0b.png?v=1773052465",
-    "desc": "Adatto a tutti i livelli di esperienza - dalle competizioni agli sci club, dai professionisti agli amatori. Dado con speciale formula FluorFree per la preparazione a freddo degli sci. Garantisce una preparazione rapida e non richiede…",
+    "desc": "",
     "tags": [],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "0° / -3℃",
+        "valueEn": "0° / -3℃"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Per nevi trasformate o cadenti",
+        "valueEn": "Per nevi trasformate o cadenti"
+      }
+    ],
+    "sku": [
+      "MFF0195"
+    ],
+    "format": [
+      "20 gr"
+    ]
   },
   {
     "brand": "maplus",
@@ -270,9 +520,29 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "gm",
     "lineTitle": "GM",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/gmblockperfromancecold_abb7390a-8b28-4e76-89cc-c31df6b81eeb.png?v=1773070917",
-    "desc": "Dado con formula speciale FluorFree per la preparazione a freddo degli sci da competizione. Utilizzato da numerose squadre di Coppa del Mondo in tutte le specialità, garantisce una preparazione rapida ed efficace. Non richiede l'uso del…",
+    "desc": "",
     "tags": [],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "-7° / -14℃",
+        "valueEn": "-7° / -14℃"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Per nevi trasformate o cadenti",
+        "valueEn": "Per nevi trasformate o cadenti"
+      }
+    ],
+    "sku": [
+      "MFF0190"
+    ],
+    "format": [
+      "20 gr"
+    ]
   },
   {
     "brand": "maplus",
@@ -281,9 +551,29 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "gm",
     "lineTitle": "GM",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/gmblockperformancemed_9e458ee8-89ff-4379-949d-c18834866599.png?v=1773070917",
-    "desc": "Dado con formula speciale FluorFree per la preparazione a freddo degli sci da competizione. Utilizzato da numerose squadre di Coppa del Mondo in tutte le specialità, garantisce una preparazione rapida ed efficace. Non richiede l'uso del…",
+    "desc": "",
     "tags": [],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "-4° / -10℃",
+        "valueEn": "-4° / -10℃"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Per nevi trasformate o cadenti",
+        "valueEn": "Per nevi trasformate o cadenti"
+      }
+    ],
+    "sku": [
+      "MFF0191"
+    ],
+    "format": [
+      "20 gr"
+    ]
   },
   {
     "brand": "maplus",
@@ -292,9 +582,29 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "gm",
     "lineTitle": "GM",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/gmblockperformancehot_2a2b38f0-169f-45d1-a664-0b8bdeb1a2db.png?v=1773070916",
-    "desc": "Dado con formula speciale FluorFree per la preparazione a freddo degli sci da competizione. Utilizzato da numerose squadre di Coppa del Mondo in tutte le specialità, garantisce una preparazione rapida ed efficace. Non richiede l'uso del…",
+    "desc": "",
     "tags": [],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "0° / -3℃",
+        "valueEn": "0° / -3℃"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Per nevi trasformate o cadenti",
+        "valueEn": "Per nevi trasformate o cadenti"
+      }
+    ],
+    "sku": [
+      "MFF0192"
+    ],
+    "format": [
+      "20 gr"
+    ]
   },
   {
     "brand": "maplus",
@@ -303,12 +613,38 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "block-line",
     "lineTitle": "Block Line",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/SPEED2.png?v=1773052464",
-    "desc": "100% no-fluoro, prodotto approvato da FIS e IBU. Speed 1 e Speed 2 sono scioline solide che garantiscono ottime performance, studiate per nevi calde e bagnate: umide, nuove e trasformate. Resistente all'abrasione e capace di mantenere la…",
+    "desc": "",
     "tags": [
       "30gr",
       "Umida nuova"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "-3° / -7℃",
+        "valueEn": "-3° / -7℃"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Per nevi trasformate o cadenti",
+        "valueEn": "Per nevi trasformate o cadenti"
+      },
+      {
+        "labelNo": "Bruk",
+        "labelEn": "Application",
+        "valueNo": "140℃",
+        "valueEn": "140℃"
+      }
+    ],
+    "sku": [
+      "MFF0304"
+    ],
+    "format": [
+      "30 gr"
+    ]
   },
   {
     "brand": "maplus",
@@ -317,9 +653,35 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "block-line",
     "lineTitle": "Block Line",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/SPEED1.png?v=1775053615",
-    "desc": "100% no-fluoro, prodotto approvato da FIS e IBU. Speed 1 e Speed 2 sono scioline solide che garantiscono ottime performance, studiate per nevi calde e bagnate: umide, nuove e trasformate. Resistente all'abrasione e capace di mantenere la…",
+    "desc": "",
     "tags": [],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "0° / -3℃",
+        "valueEn": "0° / -3℃"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Per nevi trasformate o cadenti",
+        "valueEn": "Per nevi trasformate o cadenti"
+      },
+      {
+        "labelNo": "Bruk",
+        "labelEn": "Application",
+        "valueNo": "140℃",
+        "valueEn": "140℃"
+      }
+    ],
+    "sku": [
+      "MFF0301"
+    ],
+    "format": [
+      "30 gr"
+    ]
   },
   {
     "brand": "maplus",
@@ -328,9 +690,12 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/PLEXISHARP.png?v=1761640463",
-    "desc": "Affilla-spatole manuale adatto a spatole in plexiglass da 3,4,5 mm di spessore. Lima da 100 mm inclusa CODE: SM00630N",
+    "desc": "",
     "tags": [],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -339,9 +704,12 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/BASE_EDGE_FILE_GUIDE_fd8b7611-c3e4-447e-83a2-cddf349160ab.png?v=1761640283",
-    "desc": "Affilatrice professionale per bordi di base. Facile da usare, presa salda, massima precisione. Risultati ottimali, minimo sforzo. Adatto a qualsiasi lima, pietra o diamante fino a 6 mm di spessore. Per sci e snowboard. CODE: 0,5° SM03051N…",
+    "desc": "",
     "tags": [],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -350,9 +718,12 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/SIDEWALLSHARP.png?v=1761638474",
-    "desc": "Togli fenolo ergonomico. Facile da usare, presa salda, massima precisione. Risultati ottimali, minimo sforzo. Posizione della lama e profondità di taglio regolabili. Per sci e snowboard.",
+    "desc": "",
     "tags": [],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -366,7 +737,14 @@ export const PRODUCTS: Product[] = [
       "Accessori",
       "Bag & Accessories"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "MA1005N"
+    ],
+    "format": [
+      "0,8x4 m"
+    ]
   },
   {
     "brand": "maplus",
@@ -380,7 +758,14 @@ export const PRODUCTS: Product[] = [
       "Accessori",
       "Bag & Accessories"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "MC0050N"
+    ],
+    "format": [
+      "Standard"
+    ]
   },
   {
     "brand": "maplus",
@@ -394,7 +779,14 @@ export const PRODUCTS: Product[] = [
       "Accessori",
       "Bag & Accessories"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "MC0006M"
+    ],
+    "format": [
+      "Black"
+    ]
   },
   {
     "brand": "maplus",
@@ -403,12 +795,19 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "xc-line",
     "lineTitle": "XC Line",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/GRIP_WAX_TANK_WITH_ROLLERS_cb5d9606-79bd-4633-8071-5916f3dbbc91.png?v=1761052268",
-    "desc": "Serbatoio cera Grip con rulli per macchina per sciolinatura hotbox.",
+    "desc": "",
     "tags": [
       "Accessori",
       "Hotbox"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "SV00014"
+    ],
+    "format": [
+      "Standard"
+    ]
   },
   {
     "brand": "maplus",
@@ -417,12 +816,19 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "xc-line",
     "lineTitle": "XC Line",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/GRIP_WAX_DIGITAL_HOTBOX_32e875e7-5a3c-4d3f-b54a-7a54472458c8.png?v=1761052265",
-    "desc": "Macchina per sciolinatura digitale hotbox. Dimensioni: 205×198×100 mm Peso: 4 kg Voltaggio: 220V/50Hz (Disponibile a 110V) Assorbimento: 0,7 kW Temp. di esercizio: 50° – 220°C Larghezza rullo: 100 mm",
+    "desc": "",
     "tags": [
       "Accessori",
       "Hotbox"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "SV00013"
+    ],
+    "format": [
+      "Standard"
+    ]
   },
   {
     "brand": "maplus",
@@ -431,9 +837,14 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/WORLD_CUP_PLEXI_SHARP_73751edf-a8eb-4869-b361-a1b9b7474f36.png?v=1761052262",
-    "desc": "Affilatrice per raschietto per cera. Utilizzabile per raschietto per cera in plexiglas da 3, 4, 5 mm di spessore. Lima per corpo da 100 mm inclusa”",
+    "desc": "",
     "tags": [],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "SM00630N"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -444,7 +855,12 @@ export const PRODUCTS: Product[] = [
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/SKI_FILE_CLAMP_b76c3d67-b778-4815-ba05-a76172731e5c.png?v=1761052259",
     "desc": "",
     "tags": [],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "MTO803"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -453,12 +869,23 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/WORLD_CUP_PLEXI_SHARP.png?v=1761037900",
-    "desc": "WORLD CUP PLEXI SHARP Affila spatole elettrico leggero, compatto, facile da usare, progettato esclusivamente per l’affilatura rapida e professionale di tutti i raschietti in plastica. Grazie alle sue caratteristiche tecniche innovative e…",
+    "desc": "",
     "tags": [
       "Accessori",
       "Edge sharpeners"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "SM00631-220",
+      "SM00631-110US",
+      "SM00631-110JP"
+    ],
+    "format": [
+      "220V",
+      "110V US plug",
+      "110V Japanese plug"
+    ]
   },
   {
     "brand": "maplus",
@@ -472,7 +899,20 @@ export const PRODUCTS: Product[] = [
       "Accessori",
       "Edge sharpeners"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "SQ0090V",
+      "SQ0089V",
+      "SQ0088V",
+      "SQ0087V"
+    ],
+    "format": [
+      "90°",
+      "89°",
+      "88°",
+      "87°"
+    ]
   },
   {
     "brand": "maplus",
@@ -486,7 +926,20 @@ export const PRODUCTS: Product[] = [
       "Accessori",
       "Edge sharpeners"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "SQ0088N",
+      "SQ0087N",
+      "SQ0086N",
+      "SQ0085N"
+    ],
+    "format": [
+      "88°",
+      "87°",
+      "86°",
+      "85°"
+    ]
   },
   {
     "brand": "maplus",
@@ -500,7 +953,14 @@ export const PRODUCTS: Product[] = [
       "Accessori",
       "Edge sharpeners"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "SM05125"
+    ],
+    "format": [
+      "Standard"
+    ]
   },
   {
     "brand": "maplus",
@@ -514,7 +974,14 @@ export const PRODUCTS: Product[] = [
       "Accessori",
       "Edge sharpeners"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "SM05130"
+    ],
+    "format": [
+      "Standard"
+    ]
   },
   {
     "brand": "maplus",
@@ -528,7 +995,14 @@ export const PRODUCTS: Product[] = [
       "Accessori",
       "Edge sharpeners"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "SM05120"
+    ],
+    "format": [
+      "Standard"
+    ]
   },
   {
     "brand": "maplus",
@@ -537,12 +1011,19 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/SIDEWALL_SHARP_WORLD_CUP_ebfea0d2-d02d-4652-826b-a1d265de31b4.png?v=1761052243",
-    "desc": "Toglifenolo WC professionale per pareti laterali. Facile da usare, presa salda, massima precisione. Risultati ottimali, minimo sforzo. Posizione della lama e profondità di taglio regolabili. Per sci e snowboard. CODE: SM05005N",
+    "desc": "",
     "tags": [
       "Accessori",
       "Edge sharpeners"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "SM03004"
+    ],
+    "format": [
+      "Standard"
+    ]
   },
   {
     "brand": "maplus",
@@ -551,12 +1032,19 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/ERGO_SHARP_b9c5f5c6-aa13-49d4-989c-a09a3798cf00.png?v=1761052239",
-    "desc": "Affilatrice laterale ergonomica: facile da usare, presa salda, massima precisione. Lima di ricambio 80 mm inclusa.",
+    "desc": "",
     "tags": [
       "Accessori",
       "Edge sharpeners"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "SM05002"
+    ],
+    "format": [
+      "Standard"
+    ]
   },
   {
     "brand": "maplus",
@@ -565,12 +1053,19 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/PRO_SHARP_512e022e-0e3b-4293-9531-a6149194dd49.png?v=1761052237",
-    "desc": "Affilatrice laterale professionale: presa salda, massima precisione. Adatta a qualsiasi lima, pietra o diamante fino a 8 mm. Lima da 80 mm inclusa.",
+    "desc": "",
     "tags": [
       "Accessori",
       "Edge sharpeners"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "SM05001"
+    ],
+    "format": [
+      "Standard"
+    ]
   },
   {
     "brand": "maplus",
@@ -579,12 +1074,19 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/RACING_SHARP_d5cd958e-ddb3-41b3-a9fd-e04380c9bc53.png?v=1761052232",
-    "desc": "Affilatrice laterale ergonomica: facile da usare, presa salda, massima precisione. Lima di ricambio 80 mm SM05104.",
+    "desc": "",
     "tags": [
       "Accessori",
       "Edge sharpeners"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "SM0506"
+    ],
+    "format": [
+      "Standard"
+    ]
   },
   {
     "brand": "maplus",
@@ -593,12 +1095,19 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/GROOVE_SCRAPER_41aecd24-38c9-45a2-b8ad-e678067a50e8.png?v=1761052229",
-    "desc": "Raschietto per rimuovere l’eccesso di sciolina dalla scanalatura dello sci nordico.",
+    "desc": "",
     "tags": [
       "Accessori",
       "Scrapers"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "MT0512"
+    ],
+    "format": [
+      "Standard"
+    ]
   },
   {
     "brand": "maplus",
@@ -607,12 +1116,19 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/ALL_OXIDE_STONE_b4f4e8b4-2af0-4511-a2f7-fbde8c6874f1.png?v=1761052227",
-    "desc": "Pietra abrasiva versatile per rimuovere ossidazione, ruggine e piccole imperfezioni dei bordi.",
+    "desc": "",
     "tags": [
       "Accessori",
       "Stones"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "BK00006"
+    ],
+    "format": [
+      "Standard"
+    ]
   },
   {
     "brand": "maplus",
@@ -621,12 +1137,19 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/GUMMY_STONE_ALLAROUND_42396c8e-bc49-4240-afc7-6caab0e52dca.png?v=1761052225",
-    "desc": "Rimuove sbavature, ruggine e ossidazione; leviga i bordi per miglior maneggevolezza.",
+    "desc": "",
     "tags": [
       "Accessori",
       "Stones"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "MP0015"
+    ],
+    "format": [
+      "Standard"
+    ]
   },
   {
     "brand": "maplus",
@@ -640,7 +1163,14 @@ export const PRODUCTS: Product[] = [
       "Accessori",
       "Stones"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "MP0003"
+    ],
+    "format": [
+      "Medium"
+    ]
   },
   {
     "brand": "maplus",
@@ -649,12 +1179,19 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/PRO_RS_NO-CHROME.png?v=1761037878",
-    "desc": "Queste lime beneficiano di dimensioni ideali e si adattano a un’affilatura molto precisa. Prodotte con un acciaio di prima qualità per garantire una qualità costante. Queste lime sono ottimizzate per offrire un'eccezionale capacità di…",
+    "desc": "",
     "tags": [
       "Accessori",
       "Ski files"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "ML0527"
+    ],
+    "format": [
+      "100 mm"
+    ]
   },
   {
     "brand": "maplus",
@@ -663,12 +1200,19 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": null,
-    "desc": "Queste lime beneficiano di dimensioni ideali e si adattano a un’affilatura molto precisa. Prodotte con un acciaio di prima qualità per garantire una qualità costante. Queste lime sono ottimizzate per offrire un'eccezionale capacità di…",
+    "desc": "",
     "tags": [
       "Accessori",
       "Ski files"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "ML0526"
+    ],
+    "format": [
+      "100 mm"
+    ]
   },
   {
     "brand": "maplus",
@@ -677,12 +1221,19 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/PRO_RS_NO-CHROME.png?v=1761037878",
-    "desc": "Queste lime beneficiano di dimensioni ideali e si adattano a un’affilatura molto precisa. Prodotte con un acciaio di prima qualità per garantire una qualità costante. Queste lime sono ottimizzate per offrire un'eccezionale capacità di…",
+    "desc": "",
     "tags": [
       "Accessori",
       "Ski files"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "ML0525"
+    ],
+    "format": [
+      "100 mm"
+    ]
   },
   {
     "brand": "maplus",
@@ -691,12 +1242,19 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/PROFESSIONAL_HARD_NO-CHROME.png?v=1761037878",
-    "desc": "Lime professionali non cromate: riferimento per presa fluida e costante, alta precisione.",
+    "desc": "",
     "tags": [
       "Accessori",
       "Ski files"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "ML0513"
+    ],
+    "format": [
+      "150 mm"
+    ]
   },
   {
     "brand": "maplus",
@@ -705,12 +1263,19 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": null,
-    "desc": "Lime professionali non cromate: riferimento per presa fluida e costante, alta precisione.",
+    "desc": "",
     "tags": [
       "Accessori",
       "Ski files"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "ML0512"
+    ],
+    "format": [
+      "200 mm"
+    ]
   },
   {
     "brand": "maplus",
@@ -719,12 +1284,19 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": null,
-    "desc": "Lime professionali non cromate: riferimento per presa fluida e costante, alta precisione.",
+    "desc": "",
     "tags": [
       "Accessori",
       "Ski files"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "ML0511"
+    ],
+    "format": [
+      "200 mm"
+    ]
   },
   {
     "brand": "maplus",
@@ -733,12 +1305,19 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/PROFESSIONAL_HARD_NO-CHROME.png?v=1761037878",
-    "desc": "Lime professionali cromate: riferimento per scorrevolezza e presa costante; protette dalla corrosione.",
+    "desc": "",
     "tags": [
       "Accessori",
       "Ski files"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "ML0503"
+    ],
+    "format": [
+      "150 mm"
+    ]
   },
   {
     "brand": "maplus",
@@ -747,12 +1326,19 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/PROFESSIONAL_HARD_CHROME.png?v=1761037878",
-    "desc": "Lime professionali cromate: riferimento per scorrevolezza e presa costante; protette dalla corrosione.",
+    "desc": "",
     "tags": [
       "Accessori",
       "Ski files"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "ML0502"
+    ],
+    "format": [
+      "200 mm"
+    ]
   },
   {
     "brand": "maplus",
@@ -761,12 +1347,19 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/PROFESSIONAL_HARD_CHROME.png?v=1761037878",
-    "desc": "Lime professionali cromate: riferimento per scorrevolezza e presa costante; protette dalla corrosione.",
+    "desc": "",
     "tags": [
       "Accessori",
       "Ski files"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "ML0501"
+    ],
+    "format": [
+      "200 mm"
+    ]
   },
   {
     "brand": "maplus",
@@ -775,12 +1368,19 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/SPARE_BODY_FILE_f4f4fb0f-211b-48d9-8760-bf7df8fcc629.png?v=1761052221",
-    "desc": "Lima radiale speciale in acciaio non cromato, studiata per la sgrossatura di sci e snowboard (lunghezza 300 mm).",
+    "desc": "",
     "tags": [
       "Accessori",
       "Ski files"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "ML0005"
+    ],
+    "format": [
+      "300 mm"
+    ]
   },
   {
     "brand": "maplus",
@@ -789,12 +1389,19 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/COMBI_FILE_MEDIUM_633c1049-5c17-4bca-a957-a63ebd39b559.png?v=1761037877",
-    "desc": "Realizzata in acciaio di alta qualità, è l'unica lima per sci dotata di due tagli: uno grosso, per garantire una presa aggressiva e decisa, e un taglio medio, per una regolazione più fine dei bordi. Ora, con la stessa lima, è possibile…",
+    "desc": "",
     "tags": [
       "Accessori",
       "Ski files"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "ML0530"
+    ],
+    "format": [
+      "80 mm"
+    ]
   },
   {
     "brand": "maplus",
@@ -803,12 +1410,19 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/LIMA_HARD_CHROME_COARSE.jpg?v=1755611823",
-    "desc": "Lima universale SUPER COARSE, con superfici cromate dure: soddisfa i requisiti tecnici degli skimen professionisti.",
+    "desc": "",
     "tags": [
       "Accessori",
       "Ski files"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "ML0004"
+    ],
+    "format": [
+      "200 mm"
+    ]
   },
   {
     "brand": "maplus",
@@ -817,12 +1431,19 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/HARD_CHROME_70aa550a-57ca-423c-92f8-cfa4d1202676.png?v=1761575711",
-    "desc": "Formato confezione • Cod. ML0003 - 200mm DESCRIZIONE Lima universale COARSE, con superfici cromate dure: soddisfa i requisiti tecnici degli skiman professionisti",
+    "desc": "",
     "tags": [
       "Accessori",
       "Ski files"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "ML0003"
+    ],
+    "format": [
+      "200 mm"
+    ]
   },
   {
     "brand": "maplus",
@@ -831,12 +1452,21 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/LIMA_HARD_CHROME_COARSE.jpg?v=1755611823",
-    "desc": "Lima universale FINE con superfici cromate dure: soddisfa i requisiti tecnici degli skimen professionisti.",
+    "desc": "",
     "tags": [
       "Accessori",
       "Ski files"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "ML0001",
+      "ML0002"
+    ],
+    "format": [
+      "150 mm",
+      "200 mm"
+    ]
   },
   {
     "brand": "maplus",
@@ -850,7 +1480,14 @@ export const PRODUCTS: Product[] = [
       "Accessori",
       "Speed fabrics rollers"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "MT0088"
+    ],
+    "format": [
+      "10 cm"
+    ]
   },
   {
     "brand": "maplus",
@@ -864,7 +1501,18 @@ export const PRODUCTS: Product[] = [
       "Accessori",
       "Speed fabrics rollers"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "MT0085N",
+      "MT0086N",
+      "MT0087N"
+    ],
+    "format": [
+      "10 cm",
+      "14 cm",
+      "20 cm"
+    ]
   },
   {
     "brand": "maplus",
@@ -878,7 +1526,18 @@ export const PRODUCTS: Product[] = [
       "Accessori",
       "Speed fabrics rollers"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "MT0072N",
+      "MT0077N",
+      "MT0082N"
+    ],
+    "format": [
+      "10 cm",
+      "14 cm",
+      "20 cm"
+    ]
   },
   {
     "brand": "maplus",
@@ -892,7 +1551,18 @@ export const PRODUCTS: Product[] = [
       "Accessori",
       "Speed fabrics rollers"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "MT0070",
+      "MT0075",
+      "MT0080"
+    ],
+    "format": [
+      "10 cm",
+      "14 cm",
+      "20 cm"
+    ]
   },
   {
     "brand": "maplus",
@@ -901,12 +1571,19 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/ROTO_BRUSH_BOX_0ebec56c-cfa5-4f46-a497-752f6f1fe3cc.png?v=1761052213",
-    "desc": "Solo per spazzole da 10 cm.",
+    "desc": "",
     "tags": [
       "Accessori",
       "Rotobrush"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "BMC0103"
+    ],
+    "format": [
+      "38 × 28 × 9 cm"
+    ]
   },
   {
     "brand": "maplus",
@@ -915,12 +1592,19 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "xc-line",
     "lineTitle": "XC Line",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/GRIPWAX_APPLICATION_KIT_9eb6d5c5-dc96-484d-9d5b-a5cd298bb05a.png?v=1761052207",
-    "desc": "Gripwax kit applicativo.",
+    "desc": "",
     "tags": [
       "Grip Wax",
       "XC Line"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "MW0SK050"
+    ],
+    "format": [
+      "Kit"
+    ]
   },
   {
     "brand": "maplus",
@@ -929,12 +1613,32 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "racing-base",
     "lineTitle": "Racing Base",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/SOFT_BASE_LIQUID_79bfa956-70fb-4d32-9256-989508b88490.png?v=1761052201",
-    "desc": "Sciolina liquida di nuova generazione. Eccezionali qualità tixotropiche. Adatta agli allenamenti e per grandi volumi di lavoro.",
+    "desc": "",
     "tags": [
       "Liquid Racing Base",
       "Racing base"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "0° / -10 °C",
+        "valueEn": "0° / -10 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Alle snøtyper",
+        "valueEn": "All snow types"
+      }
+    ],
+    "sku": [
+      "MFF0120"
+    ],
+    "format": [
+      "250 ml"
+    ]
   },
   {
     "brand": "maplus",
@@ -943,12 +1647,32 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "racing-base",
     "lineTitle": "Racing Base",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/ARCTIC_BASE_LIQUID_fe4a901b-1b57-4ceb-8a5f-96ca054a27dc.png?v=1761052194",
-    "desc": "Sciolina liquida di nuova generazione. Eccezionali qualità tixotropiche. Adatta agli allenamenti e per grandi volumi di lavoro.",
+    "desc": "",
     "tags": [
       "Liquid Racing Base",
       "Racing base"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "-10° / -20 °C",
+        "valueEn": "-10° / -20 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Alle snøtyper",
+        "valueEn": "All snow types"
+      }
+    ],
+    "sku": [
+      "MFF0121"
+    ],
+    "format": [
+      "250 ml"
+    ]
   },
   {
     "brand": "maplus",
@@ -957,12 +1681,40 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "racing-base",
     "lineTitle": "Racing Base",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/X-SOFT_BASE_SOLID_72143129-8955-4d26-93a7-82e74accfdde.png?v=1761052186",
-    "desc": "X-SOFT BASE Basso punto di fusione. Adatto alla saturazione profonda in forni o termocoperte. Utile per la rimessa ed il trasporto degli sci da gara.",
+    "desc": "",
     "tags": [
       "Racing base",
       "Solid Racing Base"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "-2° / 10 °C",
+        "valueEn": "-2° / 10 °C"
+      },
+      {
+        "labelNo": "Vokstype",
+        "labelEn": "Wax type",
+        "valueNo": "Cera da allenamento",
+        "valueEn": "Cera da allenamento"
+      },
+      {
+        "labelNo": "Bruk",
+        "labelEn": "Application",
+        "valueNo": "120 °C",
+        "valueEn": "120 °C"
+      }
+    ],
+    "sku": [
+      "MW0873",
+      "MW0878"
+    ],
+    "format": [
+      "250 g",
+      "1 kg (4x250g)"
+    ]
   },
   {
     "brand": "maplus",
@@ -971,12 +1723,19 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "bp10",
     "lineTitle": "BP10",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/BP10_MED_KIT_2_5ac6edaf-3ccc-4e3e-b3d8-c1e0a84f815b.png?v=1761908017",
-    "desc": "100% fluor-free FIS e IBU approved. Sciolina base di alta qualità, prodotta per i race addicted. Paraffina liquida base ad ampio raggio, per soddisfare le esigenze dei primi approcci alla sciolinatura ai professionisti.",
+    "desc": "",
     "tags": [
       "BP10",
       "BP10 Performance Kits"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "MW0201"
+    ],
+    "format": [
+      "75 ml"
+    ]
   },
   {
     "brand": "maplus",
@@ -985,12 +1744,32 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "bp10",
     "lineTitle": "BP10",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/BP10_MED_KIT_6280ddb9-9557-4503-8fd4-9d68fafaada2.png?v=1761908018",
-    "desc": "100% fluor-free FIS e IBU approved. Sciolina base di alta qualità, prodotta per i race addicted. Paraffina liquida base ad ampio raggio, per soddisfare le esigenze dei primi approcci alla sciolinatura ai professionisti.",
+    "desc": "",
     "tags": [
       "BP10",
       "BP10 Performance Kits"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "-9° / -2 °C",
+        "valueEn": "-9° / -2 °C"
+      },
+      {
+        "labelNo": "Luftfuktighet",
+        "labelEn": "Humidity",
+        "valueNo": "<40%",
+        "valueEn": "<40%"
+      }
+    ],
+    "sku": [
+      "MW0202"
+    ],
+    "format": [
+      "75 ml"
+    ]
   },
   {
     "brand": "maplus",
@@ -999,12 +1778,32 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "bp10",
     "lineTitle": "BP10",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/BP10_HOT_KIT_1e1723f7-d3a0-46cd-9fe3-67a948700290.png?v=1761908017",
-    "desc": "100% fluor-free FIS e IBU approved. Sciolina base di alta qualità, prodotta per i race addicted. Paraffina liquida base ad ampio raggio, per soddisfare le esigenze dei primi approcci alla sciolinatura ai professionisti.",
+    "desc": "",
     "tags": [
       "BP10",
       "BP10 Performance Kits"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "-3° / 0 °C",
+        "valueEn": "-3° / 0 °C"
+      },
+      {
+        "labelNo": "Luftfuktighet",
+        "labelEn": "Humidity",
+        "valueNo": "<40%",
+        "valueEn": "<40%"
+      }
+    ],
+    "sku": [
+      "MW0203"
+    ],
+    "format": [
+      "75 ml"
+    ]
   },
   {
     "brand": "maplus",
@@ -1013,12 +1812,19 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "bp10",
     "lineTitle": "BP10",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/BP10_LIQUID_KIT_a47fd57d-3d64-4a68-8802-f75243fe2c41.png?v=1761908027",
-    "desc": "100% fluor-free FIS e IBU approved. Sciolina base di alta qualità, prodotta per i race addicted. Paraffina liquida base ad ampio raggio, per soddisfare le esigenze dei primi approcci alla sciolinatura ai professionisti.",
+    "desc": "",
     "tags": [
       "BP10",
       "BP10 Performance Kits"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [
+      "MW0839"
+    ],
+    "format": [
+      "3 × 75 ml"
+    ]
   },
   {
     "brand": "maplus",
@@ -1027,12 +1833,48 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "bp10",
     "lineTitle": "BP10",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/BP10_LIQUID_COLD_150ML_aefc14bf-b514-4f4d-8860-1668768a00e4.png?v=1761052178",
-    "desc": "100% fluor-free FIS e IBU approved. Sciolina base di alta qualità, prodotta per i race addicted. Paraffina liquida base ad ampio raggio, per soddisfare le esigenze dei primi approcci alla sciolinatura ai professionisti.",
+    "desc": "",
     "tags": [
       "BP10",
       "BP10 Performance Liquid Wax base"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "-8° / -22 °C",
+        "valueEn": "-8° / -22 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Alle snøtyper",
+        "valueEn": "All snow types"
+      },
+      {
+        "labelNo": "Luftfuktighet",
+        "labelEn": "Humidity",
+        "valueNo": "<40%",
+        "valueEn": "<40%"
+      },
+      {
+        "labelNo": "Bruk",
+        "labelEn": "Application",
+        "valueNo": "Veloce e di facile applicazione",
+        "valueEn": "Veloce e di facile applicazione"
+      }
+    ],
+    "sku": [
+      "MW0830",
+      "MW0833",
+      "MW0836"
+    ],
+    "format": [
+      "75 ml",
+      "150 ml",
+      "0.5 L"
+    ]
   },
   {
     "brand": "maplus",
@@ -1041,12 +1883,48 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "bp10",
     "lineTitle": "BP10",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/BP10_LIQUID_MED_150ML_f91604c2-4ff9-45c6-a3ac-1ec854ff0b9a.png?v=1761052162",
-    "desc": "100% fluor-free FIS e IBU approved. Sciolina base di alta qualità, prodotta per i race addicted. Paraffina liquida base ad ampio raggio, per soddisfare le esigenze dei primi approcci alla sciolinatura ai professionisti.",
+    "desc": "",
     "tags": [
       "BP10",
       "BP10 Performance Liquid Wax base"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "-2° / -9 °C",
+        "valueEn": "-2° / -9 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Alle snøtyper",
+        "valueEn": "All snow types"
+      },
+      {
+        "labelNo": "Luftfuktighet",
+        "labelEn": "Humidity",
+        "valueNo": "<40%",
+        "valueEn": "<40%"
+      },
+      {
+        "labelNo": "Bruk",
+        "labelEn": "Application",
+        "valueNo": "Veloce e di facile applicazione",
+        "valueEn": "Veloce e di facile applicazione"
+      }
+    ],
+    "sku": [
+      "MW0831",
+      "MW0834",
+      "MW0837"
+    ],
+    "format": [
+      "75 ml",
+      "150 ml",
+      "0.5 L"
+    ]
   },
   {
     "brand": "maplus",
@@ -1055,12 +1933,48 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "bp10",
     "lineTitle": "BP10",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/BP10_LIQUID_HOT_150ML_2276c578-e26b-4635-b554-9dcf153b5aba.png?v=1761052148",
-    "desc": "100% fluor-free FIS e IBU approved. Sciolina base di alta qualità, prodotta per i race addicted. Paraffina liquida base ad ampio raggio, per soddisfare le esigenze dei primi approcci alla sciolinatura ai professionisti.",
+    "desc": "",
     "tags": [
       "BP10",
       "BP10 Performance Liquid Wax base"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "0° / -3 °C",
+        "valueEn": "0° / -3 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Alle snøtyper",
+        "valueEn": "All snow types"
+      },
+      {
+        "labelNo": "Luftfuktighet",
+        "labelEn": "Humidity",
+        "valueNo": "<40%",
+        "valueEn": "<40%"
+      },
+      {
+        "labelNo": "Bruk",
+        "labelEn": "Application",
+        "valueNo": "Veloce e di facile applicazione",
+        "valueEn": "Veloce e di facile applicazione"
+      }
+    ],
+    "sku": [
+      "MW0832",
+      "MW0835",
+      "MW0838"
+    ],
+    "format": [
+      "75 ml",
+      "150 ml",
+      "0.5 L"
+    ]
   },
   {
     "brand": "maplus",
@@ -1069,12 +1983,48 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "bp10",
     "lineTitle": "BP10",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/BP10_SOLID_VIOLET_100GR_b85d8b4f-94f1-47c7-be09-1bafe177adf6.png?v=1761052131",
-    "desc": "100% fluor-free FIS e IBU approved. Sciolina base di alta qualità, prodotta per i race addicted. Paraffina base ad ampio raggio, per soddisfare le esigenze dei primi approcci alla sciolinatura dei professionisti.",
+    "desc": "",
     "tags": [
       "BP10",
       "BP10 Performance Solid Wax base"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "-8° / -22 °C",
+        "valueEn": "-8° / -22 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Alle snøtyper",
+        "valueEn": "All snow types"
+      },
+      {
+        "labelNo": "Luftfuktighet",
+        "labelEn": "Humidity",
+        "valueNo": "<50%",
+        "valueEn": "<50%"
+      },
+      {
+        "labelNo": "Bruk",
+        "labelEn": "Application",
+        "valueNo": "145 °C",
+        "valueEn": "145 °C"
+      }
+    ],
+    "sku": [
+      "MW0300",
+      "MW0310",
+      "MW0320"
+    ],
+    "format": [
+      "100 g",
+      "250 g",
+      "1 kg (4x250g)"
+    ]
   },
   {
     "brand": "maplus",
@@ -1083,12 +2033,48 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "bp10",
     "lineTitle": "BP10",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/BP10_SOLID_RED_100GR_06144c8d-d8a9-4b7f-9c0c-b4a3c91b86eb.png?v=1761052125",
-    "desc": "100% fluor-free FIS e IBU approved. Sciolina base di alta qualità, prodotta per i race addicted. Paraffina base ad ampio raggio, per soddisfare le esigenze dei primi approcci alla sciolinatura dei professionisti.",
+    "desc": "",
     "tags": [
       "BP10",
       "BP10 Performance Solid Wax base"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "-2° / -9 °C",
+        "valueEn": "-2° / -9 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Alle snøtyper",
+        "valueEn": "All snow types"
+      },
+      {
+        "labelNo": "Luftfuktighet",
+        "labelEn": "Humidity",
+        "valueNo": "<50%",
+        "valueEn": "<50%"
+      },
+      {
+        "labelNo": "Bruk",
+        "labelEn": "Application",
+        "valueNo": "140 °C",
+        "valueEn": "140 °C"
+      }
+    ],
+    "sku": [
+      "MW0301",
+      "MW0311",
+      "MW0321"
+    ],
+    "format": [
+      "100 g",
+      "250 g",
+      "1 kg (4x250g)"
+    ]
   },
   {
     "brand": "maplus",
@@ -1097,12 +2083,48 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "bp10",
     "lineTitle": "BP10",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/BP10_SOLID_YELLOW_100GR_255f84a9-49cf-4739-ac81-9226e5597554.png?v=1761052119",
-    "desc": "100% fluor-free FIS e IBU approved. Sciolina base di alta qualità, prodotta per i race addicted. Paraffina base ad ampio raggio, per soddisfare le esigenze dei primi approcci alla sciolinatura dei professionisti.",
+    "desc": "",
     "tags": [
       "BP10",
       "BP10 Performance Solid Wax base"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "0° / -3 °C",
+        "valueEn": "0° / -3 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Alle snøtyper",
+        "valueEn": "All snow types"
+      },
+      {
+        "labelNo": "Luftfuktighet",
+        "labelEn": "Humidity",
+        "valueNo": "<50%",
+        "valueEn": "<50%"
+      },
+      {
+        "labelNo": "Bruk",
+        "labelEn": "Application",
+        "valueNo": "130 °C",
+        "valueEn": "130 °C"
+      }
+    ],
+    "sku": [
+      "MW0302",
+      "MW0312",
+      "MW0322"
+    ],
+    "format": [
+      "100 g",
+      "250 g",
+      "1 kg (4x250g)"
+    ]
   },
   {
     "brand": "maplus",
@@ -1111,12 +2133,46 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "gm",
     "lineTitle": "GM",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/GM_POWDER_COLD_569d4fb0-d381-4e69-847f-ed029cfda886.png?v=1761052114",
-    "desc": "100% fluor-free FIS and IBU approved. Acceleratore in polvere altamente performante, massima accelerazione e lunga durata.",
+    "desc": "",
     "tags": [
       "GM",
       "GM Powder Accelerator"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "-8° / -22 °C",
+        "valueEn": "-8° / -22 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Alle snøtyper",
+        "valueEn": "All snow types"
+      },
+      {
+        "labelNo": "Luftfuktighet",
+        "labelEn": "Humidity",
+        "valueNo": "50% - 80%",
+        "valueEn": "50% - 80%"
+      },
+      {
+        "labelNo": "Bruk",
+        "labelEn": "Application",
+        "valueNo": "160 °C",
+        "valueEn": "160 °C"
+      }
+    ],
+    "sku": [
+      "MFF0140",
+      "MFF0140M"
+    ],
+    "format": [
+      "25 g",
+      "25 gr Molibdeno"
+    ]
   },
   {
     "brand": "maplus",
@@ -1125,12 +2181,46 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "gm",
     "lineTitle": "GM",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/GM_POWDER_MED_166b1284-9bf0-43bd-aec8-fb35790c3edd.png?v=1761052106",
-    "desc": "100% fluor-free FIS and IBU approved. Acceleratore in polvere altamente performante, massima accelerazione e lunga durata.",
+    "desc": "",
     "tags": [
       "GM",
       "GM Powder Accelerator"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "-2° / -9 °C",
+        "valueEn": "-2° / -9 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Alle snøtyper",
+        "valueEn": "All snow types"
+      },
+      {
+        "labelNo": "Luftfuktighet",
+        "labelEn": "Humidity",
+        "valueNo": "50% - 90%",
+        "valueEn": "50% - 90%"
+      },
+      {
+        "labelNo": "Bruk",
+        "labelEn": "Application",
+        "valueNo": "160 °C",
+        "valueEn": "160 °C"
+      }
+    ],
+    "sku": [
+      "MFF0141",
+      "MFF0141M"
+    ],
+    "format": [
+      "25 g",
+      "25 gr Molibdeno"
+    ]
   },
   {
     "brand": "maplus",
@@ -1139,12 +2229,46 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "gm",
     "lineTitle": "GM",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/GM_POWDER_HOT_c60c6352-963b-46ab-a71b-cd12c6be5396.png?v=1761052101",
-    "desc": "100% fluor-free FIS and IBU approved. Acceleratore in polvere altamente performante, massima accelerazione e lunga durata.",
+    "desc": "",
     "tags": [
       "GM",
       "GM Powder Accelerator"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "0° / -3 °C",
+        "valueEn": "0° / -3 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Alle snøtyper",
+        "valueEn": "All snow types"
+      },
+      {
+        "labelNo": "Luftfuktighet",
+        "labelEn": "Humidity",
+        "valueNo": "50% - 100%",
+        "valueEn": "50% - 100%"
+      },
+      {
+        "labelNo": "Bruk",
+        "labelEn": "Application",
+        "valueNo": "160 °C",
+        "valueEn": "160 °C"
+      }
+    ],
+    "sku": [
+      "MFF0142",
+      "MFF0142M"
+    ],
+    "format": [
+      "25 g",
+      "25 gr Molibdeno"
+    ]
   },
   {
     "brand": "maplus",
@@ -1153,12 +2277,44 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "gm",
     "lineTitle": "GM",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/GMBOOSTCOLD.png?v=1761161106",
-    "desc": "100% fluor-free FIS and IBU approved. Acceleratore liquido altamente performante, massima accelerazione e lunga durata.",
+    "desc": "",
     "tags": [
       "GM",
       "GM BOOST Liquid Accelerator"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "-8° / -22 °C",
+        "valueEn": "-8° / -22 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Alle snøtyper",
+        "valueEn": "All snow types"
+      },
+      {
+        "labelNo": "Luftfuktighet",
+        "labelEn": "Humidity",
+        "valueNo": "50% - 80%",
+        "valueEn": "50% - 80%"
+      },
+      {
+        "labelNo": "Tørketid",
+        "labelEn": "Drying time",
+        "valueNo": "Veloce asciugatura e facile applicazione",
+        "valueEn": "Veloce asciugatura e facile applicazione"
+      }
+    ],
+    "sku": [
+      "MFF0150"
+    ],
+    "format": [
+      "75 ml"
+    ]
   },
   {
     "brand": "maplus",
@@ -1167,12 +2323,44 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "gm",
     "lineTitle": "GM",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/GM_BOOST_MED_9fe51576-6fda-472e-aa70-61158a62aa42.png?v=1761052090",
-    "desc": "100% fluor-free FIS and IBU approved. Acceleratore liquido altamente performante, massima accelerazione e lunga durata.",
+    "desc": "",
     "tags": [
       "GM",
       "GM BOOST Liquid Accelerator"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "-2° / -9 °C",
+        "valueEn": "-2° / -9 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Alle snøtyper",
+        "valueEn": "All snow types"
+      },
+      {
+        "labelNo": "Luftfuktighet",
+        "labelEn": "Humidity",
+        "valueNo": "50% - 90%",
+        "valueEn": "50% - 90%"
+      },
+      {
+        "labelNo": "Tørketid",
+        "labelEn": "Drying time",
+        "valueNo": "Veloce asciugatura e facile applicazione",
+        "valueEn": "Veloce asciugatura e facile applicazione"
+      }
+    ],
+    "sku": [
+      "MFF0151"
+    ],
+    "format": [
+      "75 ml"
+    ]
   },
   {
     "brand": "maplus",
@@ -1181,12 +2369,44 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "gm",
     "lineTitle": "GM",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/GM_BOOST_HOT_57ee9105-bcaa-4a6e-8e3f-0bdd7f66b5be.png?v=1761052085",
-    "desc": "100% fluor-free FIS and IBU approved. Acceleratore liquido altamente performante, massima accelerazione e lunga durata.",
+    "desc": "",
     "tags": [
       "GM",
       "GM BOOST Liquid Accelerator"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "0° / -3 °C",
+        "valueEn": "0° / -3 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Alle snøtyper",
+        "valueEn": "All snow types"
+      },
+      {
+        "labelNo": "Luftfuktighet",
+        "labelEn": "Humidity",
+        "valueNo": "60% - 100%",
+        "valueEn": "60% - 100%"
+      },
+      {
+        "labelNo": "Tørketid",
+        "labelEn": "Drying time",
+        "valueNo": "Veloce asciugatura e facile applicazione",
+        "valueEn": "Veloce asciugatura e facile applicazione"
+      }
+    ],
+    "sku": [
+      "MFF0152"
+    ],
+    "format": [
+      "75 ml"
+    ]
   },
   {
     "brand": "maplus",
@@ -1195,12 +2415,40 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "gm",
     "lineTitle": "GM",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/GM_GEL_COLD_75ML.png?v=1761067253",
-    "desc": "100% fluor-free FIS e IBU approved. Alte performance, ottimo prodotto qualità-prezzo.",
+    "desc": "",
     "tags": [
       "GM",
       "GM Race wax Gel"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "-8° / -22 °C",
+        "valueEn": "-8° / -22 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Alle snøtyper",
+        "valueEn": "All snow types"
+      },
+      {
+        "labelNo": "Luftfuktighet",
+        "labelEn": "Humidity",
+        "valueNo": "30% - 80%",
+        "valueEn": "30% - 80%"
+      }
+    ],
+    "sku": [
+      "MFF0130",
+      "MFF0136"
+    ],
+    "format": [
+      "75 ml",
+      "500 ml"
+    ]
   },
   {
     "brand": "maplus",
@@ -1209,12 +2457,40 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "gm",
     "lineTitle": "GM",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/GM_GEL_MED_75ML.png?v=1761066281",
-    "desc": "100% fluor-free FIS e IBU approved. Alte performance, ottimo prodotto qualità-prezzo.",
+    "desc": "",
     "tags": [
       "GM",
       "GM Race wax Gel"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "-2° / -9 °C",
+        "valueEn": "-2° / -9 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Alle snøtyper",
+        "valueEn": "All snow types"
+      },
+      {
+        "labelNo": "Luftfuktighet",
+        "labelEn": "Humidity",
+        "valueNo": "40% - 90%",
+        "valueEn": "40% - 90%"
+      }
+    ],
+    "sku": [
+      "MFF0131",
+      "MFF0137"
+    ],
+    "format": [
+      "75 ml",
+      "500 ml"
+    ]
   },
   {
     "brand": "maplus",
@@ -1223,12 +2499,39 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "gm",
     "lineTitle": "GM",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/GM_GEL_HOT_75ML.png?v=1761161007",
-    "desc": "100% no-fluoro, prodotto approvato da FIS e IBU. Alte performance, ottimo prodotto qualità-prezzo.",
+    "desc": "",
     "tags": [
       "GM",
       "GM Race wax Gel"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "0° / -3 °C",
+        "valueEn": "0° / -3 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Alle snøtyper",
+        "valueEn": "All snow types"
+      },
+      {
+        "labelNo": "Luftfuktighet",
+        "labelEn": "Humidity",
+        "valueNo": "50% - 100%",
+        "valueEn": "50% - 100%"
+      }
+    ],
+    "sku": [
+      "MFF0132"
+    ],
+    "format": [
+      "75 ml",
+      "500 ml"
+    ]
   },
   {
     "brand": "maplus",
@@ -1237,12 +2540,48 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "gm",
     "lineTitle": "GM",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/GM_RACE_WAX_SOLID_COLD_250gr_f9b58b2b-44ef-4e3c-86f0-615a8a2826ab.png?v=1761160913",
-    "desc": "100% fluor-free FIS e IBU approved. Alte performance e ottimo prodotto qualità-prezzo.",
+    "desc": "",
     "tags": [
       "GM",
       "GM Race wax Solid"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "-8° / -22 °C",
+        "valueEn": "-8° / -22 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Alle snøtyper",
+        "valueEn": "All snow types"
+      },
+      {
+        "labelNo": "Luftfuktighet",
+        "labelEn": "Humidity",
+        "valueNo": "40% - 90%",
+        "valueEn": "40% - 90%"
+      },
+      {
+        "labelNo": "Bruk",
+        "labelEn": "Application",
+        "valueNo": "150 °C",
+        "valueEn": "150 °C"
+      }
+    ],
+    "sku": [
+      "MFF0170",
+      "MFF0160",
+      "MFF0180"
+    ],
+    "format": [
+      "250 g",
+      "50 g",
+      "1 kg (4x250g)"
+    ]
   },
   {
     "brand": "maplus",
@@ -1251,12 +2590,48 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "gm",
     "lineTitle": "GM",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/GM_RACE_WAX_SOLID_MED_250gr_4b30d5cd-6a8c-4b71-9ec9-5274c25ff063.png?v=1761052067",
-    "desc": "100% fluor-free FIS e IBU approved. Alte performance e ottimo prodotto qualità-prezzo.",
+    "desc": "",
     "tags": [
       "GM",
       "GM Race wax Solid"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "-2° / -9 °C",
+        "valueEn": "-2° / -9 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Alle snøtyper",
+        "valueEn": "All snow types"
+      },
+      {
+        "labelNo": "Luftfuktighet",
+        "labelEn": "Humidity",
+        "valueNo": "40% - 90%",
+        "valueEn": "40% - 90%"
+      },
+      {
+        "labelNo": "Bruk",
+        "labelEn": "Application",
+        "valueNo": "130 °C",
+        "valueEn": "130 °C"
+      }
+    ],
+    "sku": [
+      "MFF0171",
+      "MFF0161",
+      "MFF0181"
+    ],
+    "format": [
+      "250 g",
+      "50 g",
+      "1 kg (4x250g)"
+    ]
   },
   {
     "brand": "maplus",
@@ -1265,12 +2640,48 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "gm",
     "lineTitle": "GM",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/GM_RACE_WAX_SOLID_HOT_250gr_bac9e981-3766-4735-9faa-ee5704750fef.png?v=1761160877",
-    "desc": "100% fluor-free FIS e IBU approved. Alte performance e ottimo prodotto qualità-prezzo.",
+    "desc": "",
     "tags": [
       "GM",
       "GM Race wax Solid"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "0° / -3 °C",
+        "valueEn": "0° / -3 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Alle snøtyper",
+        "valueEn": "All snow types"
+      },
+      {
+        "labelNo": "Luftfuktighet",
+        "labelEn": "Humidity",
+        "valueNo": "50% - 100%",
+        "valueEn": "50% - 100%"
+      },
+      {
+        "labelNo": "Bruk",
+        "labelEn": "Application",
+        "valueNo": "140 °C",
+        "valueEn": "140 °C"
+      }
+    ],
+    "sku": [
+      "MFF0172",
+      "MFF0162",
+      "MFF0182"
+    ],
+    "format": [
+      "250 g",
+      "50 g",
+      "1 kg (4x250g)"
+    ]
   },
   {
     "brand": "maplus",
@@ -1279,12 +2690,44 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "xcelerate",
     "lineTitle": "Xcelerate",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/xcelerate_pro_powder_cold_10gr.png?v=1758789540",
-    "desc": "100% fluor-free FIS and IBU approved. Acceleratori in polvere di ultima generazione, da tirare a freddo, incredibile facilità applicativa ed estremamante perfromanti. Massima accelerazione e resistenza all’abrasione.",
+    "desc": "",
     "tags": [
       "XCELERATE",
       "Xcelerate Pro Racing Powder Accelerator"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "-8° / -22 °C",
+        "valueEn": "-8° / -22 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Alle snøtyper",
+        "valueEn": "All snow types"
+      },
+      {
+        "labelNo": "Luftfuktighet",
+        "labelEn": "Humidity",
+        "valueNo": ">40%",
+        "valueEn": ">40%"
+      },
+      {
+        "labelNo": "Tørketid",
+        "labelEn": "Drying time",
+        "valueNo": "Non richiede l’utilizzo di ferro sciolinatore",
+        "valueEn": "Non richiede l’utilizzo di ferro sciolinatore"
+      }
+    ],
+    "sku": [
+      "MFF0240"
+    ],
+    "format": [
+      "10 g"
+    ]
   },
   {
     "brand": "maplus",
@@ -1293,12 +2736,44 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "xcelerate",
     "lineTitle": "Xcelerate",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/xcelerate_pro_powder_med_10gr.png?v=1758789564",
-    "desc": "100% fluor-free FIS and IBU approved. Acceleratori in polvere di ultima generazione, da tirare a freddo, incredibile facilità applicativa ed estremamante perfromanti. Massima accelerazione e resistenza all’abrasione.",
+    "desc": "",
     "tags": [
       "XCELERATE",
       "Xcelerate Pro Racing Powder Accelerator"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "-2° / -9 °C",
+        "valueEn": "-2° / -9 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Alle snøtyper",
+        "valueEn": "All snow types"
+      },
+      {
+        "labelNo": "Luftfuktighet",
+        "labelEn": "Humidity",
+        "valueNo": ">40%",
+        "valueEn": ">40%"
+      },
+      {
+        "labelNo": "Tørketid",
+        "labelEn": "Drying time",
+        "valueNo": "Non richiede l’utilizzo di ferro sciolinatore",
+        "valueEn": "Non richiede l’utilizzo di ferro sciolinatore"
+      }
+    ],
+    "sku": [
+      "MFF0241"
+    ],
+    "format": [
+      "10 g"
+    ]
   },
   {
     "brand": "maplus",
@@ -1307,12 +2782,44 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "xcelerate",
     "lineTitle": "Xcelerate",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/xcelerate_pro_powder_hot_10gr.png?v=1758789590",
-    "desc": "100% fluor-free FIS and IBU approved. Acceleratori in polvere di ultima generazione, da tirare a freddo, incredibile facilità applicativa ed estremamante perfromanti. Massima accelerazione e resistenza all’abrasione.",
+    "desc": "",
     "tags": [
       "XCELERATE",
       "Xcelerate Pro Racing Powder Accelerator"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "0° / -3 °C",
+        "valueEn": "0° / -3 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Alle snøtyper",
+        "valueEn": "All snow types"
+      },
+      {
+        "labelNo": "Luftfuktighet",
+        "labelEn": "Humidity",
+        "valueNo": ">40%",
+        "valueEn": ">40%"
+      },
+      {
+        "labelNo": "Tørketid",
+        "labelEn": "Drying time",
+        "valueNo": "Non richiede l’utilizzo di ferro sciolinatore",
+        "valueEn": "Non richiede l’utilizzo di ferro sciolinatore"
+      }
+    ],
+    "sku": [
+      "MFF0242"
+    ],
+    "format": [
+      "10 g"
+    ]
   },
   {
     "brand": "maplus",
@@ -1321,12 +2828,44 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "xcelerate",
     "lineTitle": "Xcelerate",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/xcelerate_pro_cold_liquid_75ml.png?v=1758789263",
-    "desc": "100% fluor-free FIS and IBU approved. Acceleratore liquido di ultima generazione, massima accelerazione e lunga durata, per tutte le condizioni. Con comodo applicatore in spugna. Molto apprezzato in Coppa del Mondo per le perfromance",
+    "desc": "",
     "tags": [
       "XCELERATE",
       "Xcelerate Pro Racing Liquid Accelerator"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "-12° / -22 °C",
+        "valueEn": "-12° / -22 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Alle snøtyper",
+        "valueEn": "All snow types"
+      },
+      {
+        "labelNo": "Luftfuktighet",
+        "labelEn": "Humidity",
+        "valueNo": ">40%",
+        "valueEn": ">40%"
+      },
+      {
+        "labelNo": "Tørketid",
+        "labelEn": "Drying time",
+        "valueNo": "Circa 40 min",
+        "valueEn": "Circa 40 min"
+      }
+    ],
+    "sku": [
+      "MFF0896"
+    ],
+    "format": [
+      "75 ml"
+    ]
   },
   {
     "brand": "maplus",
@@ -1335,12 +2874,44 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "xcelerate",
     "lineTitle": "Xcelerate",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/xcelerate_pro_med_liquid_75ml.png?v=1758789239",
-    "desc": "100% fluor-free FIS and IBU approved. Acceleratore liquido di ultima generazione, massima accelerazione e lunga durata, per tutte le condizioni. Con comodo applicatore in spugna. Molto apprezzato in Coppa del Mondo per le perfromance",
+    "desc": "",
     "tags": [
       "XCELERATE",
       "Xcelerate Pro Racing Liquid Accelerator"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "6° / -12 °C",
+        "valueEn": "6° / -12 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Alle snøtyper",
+        "valueEn": "All snow types"
+      },
+      {
+        "labelNo": "Luftfuktighet",
+        "labelEn": "Humidity",
+        "valueNo": ">40%",
+        "valueEn": ">40%"
+      },
+      {
+        "labelNo": "Tørketid",
+        "labelEn": "Drying time",
+        "valueNo": "Circa 40 min",
+        "valueEn": "Circa 40 min"
+      }
+    ],
+    "sku": [
+      "MFF0895"
+    ],
+    "format": [
+      "75 ml"
+    ]
   },
   {
     "brand": "maplus",
@@ -1349,12 +2920,44 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "xcelerate",
     "lineTitle": "Xcelerate",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/xcelerate_pro_hot_liquid_75ml.png?v=1758789208",
-    "desc": "100% fluor-free FIS and IBU approved. Acceleratore liquido di ultima generazione, massima accelerazione e lunga durata, per tutte le condizioni. Con comodo applicatore in spugna. Molto apprezzato in Coppa del Mondo per le perfromance",
+    "desc": "",
     "tags": [
       "XCELERATE",
       "Xcelerate Pro Racing Liquid Accelerator"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "0° / -5 °C",
+        "valueEn": "0° / -5 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Alle snøtyper",
+        "valueEn": "All snow types"
+      },
+      {
+        "labelNo": "Luftfuktighet",
+        "labelEn": "Humidity",
+        "valueNo": ">40%",
+        "valueEn": ">40%"
+      },
+      {
+        "labelNo": "Tørketid",
+        "labelEn": "Drying time",
+        "valueNo": "Circa 40 min",
+        "valueEn": "Circa 40 min"
+      }
+    ],
+    "sku": [
+      "MFF0894"
+    ],
+    "format": [
+      "75 ml"
+    ]
   },
   {
     "brand": "maplus",
@@ -1363,9 +2966,34 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "xcelerate",
     "lineTitle": "Xcelerate",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/xcelerate_pro_solid_race_wax_3_200gr.png?v=1758788675",
-    "desc": "100% fluor-free FIS and IBU approved. Scioline ad alte prestazioni. Una nuova composizione consente prestazioni di alto livello senza l’uso di fluoro. Prodotti dedicati all’uso agonistico con elevatissimo potere di scorrimento e protezione…",
+    "desc": "",
     "tags": [],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "-7 / -13 °C",
+        "valueEn": "-7 / -13 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Per nevi trasformate o cadentiPer nevi molto abrasive, water-injected, ghiacciate",
+        "valueEn": "Per nevi trasformate o cadentiPer nevi molto abrasive, water-injected, ghiacciate"
+      },
+      {
+        "labelNo": "Bruk",
+        "labelEn": "Application",
+        "valueNo": "140 °C",
+        "valueEn": "140 °C"
+      }
+    ],
+    "sku": [],
+    "format": [
+      "200g",
+      "50g"
+    ]
   },
   {
     "brand": "maplus",
@@ -1374,13 +3002,41 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "xcelerate",
     "lineTitle": "Xcelerate",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/xcelerate_pro_solid_race_wax_4_200gr.png?v=1758787993",
-    "desc": "100% fluor-free FIS and IBU approved. Scioline ad alte prestazioni. Una nuova composizione consente prestazioni di alto livello senza l’uso di fluoro. Prodotti dedicati all’uso agonistico con elevatissimo potere di scorrimento e protezione…",
+    "desc": "",
     "tags": [
       "Racing",
       "Solid Wax",
       "Xcelerate"
     ],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "-13 / -22 °C",
+        "valueEn": "-13 / -22 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Per nevi trasformate o cadentiPer nevi molto fredde, siano esse più o meno umide",
+        "valueEn": "Per nevi trasformate o cadentiPer nevi molto fredde, siano esse più o meno umide"
+      },
+      {
+        "labelNo": "Bruk",
+        "labelEn": "Application",
+        "valueNo": "140 °C",
+        "valueEn": "140 °C"
+      }
+    ],
+    "sku": [
+      "MFF0104",
+      "MFF0114"
+    ],
+    "format": [
+      "200g",
+      "50g"
+    ]
   },
   {
     "brand": "maplus",
@@ -1389,9 +3045,37 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "xcelerate",
     "lineTitle": "Xcelerate",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/xcelerate_pro_solid_race_wax_1_200gr_60d41fa3-c71a-46bb-be36-5b6b37db7a56.png?v=1761052382",
-    "desc": "100% fluor-free FIS and IBU approved. Scioline ad alte prestazioni. Una nuova composizione consente prestazioni di alto livello senza l’uso di fluoro. Prodotti dedicati all’uso agonistico con elevatissimo potere di scorrimento e protezione…",
+    "desc": "",
     "tags": [],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "0 / -3 °C",
+        "valueEn": "0 / -3 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Per nevi trasformate o cadentiPer nevi trasformate o cadenti",
+        "valueEn": "Per nevi trasformate o cadentiPer nevi trasformate o cadenti"
+      },
+      {
+        "labelNo": "Bruk",
+        "labelEn": "Application",
+        "valueNo": "130 °C",
+        "valueEn": "130 °C"
+      }
+    ],
+    "sku": [
+      "MFF0101",
+      "MFF0111"
+    ],
+    "format": [
+      "200g",
+      "50"
+    ]
   },
   {
     "brand": "maplus",
@@ -1400,9 +3084,37 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "xcelerate",
     "lineTitle": "Xcelerate",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/xcelerate_pro_solid_race_wax_2_200gr_eedec015-cbb9-4b95-ac2a-59b5424aae7d.png?v=1761052366",
-    "desc": "100% fluor-free FIS and IBU approved. Scioline ad alte prestazioni. Una nuova composizione consente prestazioni di alto livello senza l’uso di fluoro. Prodotti dedicati all’uso agonistico con elevatissimo potere di scorrimento e protezione…",
+    "desc": "",
     "tags": [],
-    "productType": ""
+    "productType": "",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "-2 / -8 °C",
+        "valueEn": "-2 / -8 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Per nevi trasformate o cadentiPer condizioni intermedie, nevi da fini a trasformate",
+        "valueEn": "Per nevi trasformate o cadentiPer condizioni intermedie, nevi da fini a trasformate"
+      },
+      {
+        "labelNo": "Bruk",
+        "labelEn": "Application",
+        "valueNo": "140 °C",
+        "valueEn": "140 °C"
+      }
+    ],
+    "sku": [
+      "MFF0102",
+      "MFF0112"
+    ],
+    "format": [
+      "200g",
+      "50g"
+    ]
   },
   {
     "brand": "maplus",
@@ -1411,11 +3123,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/f5ddf7bd97d01d87f4a7985398aea709_0bc53065-98a9-45c5-b432-67d81367f7e2.jpg?v=1755614383",
-    "desc": "Gancio per stand display. GANCIO PER STAND DISPLAY Formato confezione • Cod. MA1210 DESCRIZIONE Gancio per stand display.",
+    "desc": "",
     "tags": [
       "Espositore"
     ],
-    "productType": "Espositore"
+    "productType": "Espositore",
+    "specs": [],
+    "sku": [
+      "MA1210"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -1424,11 +3141,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/60959e8d8c34f5c00b9627dfd768f462_114132a5-2252-4eac-91c8-d00a9a61a68f.jpg?v=1755614383",
-    "desc": "Stand display. STAND DISPLAY Formato confezione • Cod. MA1140 DESCRIZIONE Stand display.",
+    "desc": "",
     "tags": [
       "Espositore"
     ],
-    "productType": "Espositore"
+    "productType": "Espositore",
+    "specs": [],
+    "sku": [
+      "MA1140"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -1437,11 +3159,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/f3051eb70b962b646ad926757115bce0_86b08333-4d85-42be-be45-1c13ec1183a9.jpg?v=1755614382",
-    "desc": "FELPA MAPLUS colore blu/oro FELPA MAPLUS Formato confezione • Cod. MA0022 - S-M-XL-XXL DESCRIZIONE FELPA MAPLUS colore blu/oro Taglie disponibili S - M - L - XL - XXL",
+    "desc": "",
     "tags": [
       "Accessori"
     ],
-    "productType": "Accessori"
+    "productType": "Accessori",
+    "specs": [],
+    "sku": [
+      "MA0022"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -1450,11 +3177,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/6964130a6e5a2ce8c5a7fab6251afd2e_cb532599-4231-4417-a571-488527d6e157.jpg?v=1755614381",
-    "desc": "FELPA MAPLUS colore nero/arancio FELPA MAPLUS Formato confezione • Cod. MA0020 - S-M-XL-XXL DESCRIZIONE FELPA MAPLUS colore nero/arancio Taglie disponibili S - M - L - XL - XXL",
+    "desc": "",
     "tags": [
       "Accessori"
     ],
-    "productType": "Accessori"
+    "productType": "Accessori",
+    "specs": [],
+    "sku": [
+      "MA0020"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -1463,11 +3195,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/6eb4b1a8ed68214ae7a4c86692674e4d_351f4a30-d276-4830-a0d4-8fb55ae9abc3.jpg?v=1755614380",
-    "desc": "XC RACE PANTALONI – DONNA XC PANTALONI RACE - DONNA Formato confezione • Cod. MA079003W- XS-S-M-L-XL DESCRIZIONE XC RACE PANTALONI – DONNA Size: XS-S-M-L-XL",
+    "desc": "",
     "tags": [
       "Accessori"
     ],
-    "productType": "Accessori"
+    "productType": "Accessori",
+    "specs": [],
+    "sku": [
+      "MA079003W"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -1476,11 +3213,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/85ca514f9886a96d3c067f991afcb736_030ecde6-0ed5-48fb-853e-09793f7053e8.jpg?v=1755614379",
-    "desc": "XC PANTALONI RACE - UOMO XC PANTALONI RACE - UOMO Formato confezione • Cod. MA079004M - S-M-L-XL-XXL DESCRIZIONE XC RACE JACKET - UOMO Size: S-M-L-XL-XXL",
+    "desc": "",
     "tags": [
       "Accessori"
     ],
-    "productType": "Accessori"
+    "productType": "Accessori",
+    "specs": [],
+    "sku": [
+      "MA079004M"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -1489,11 +3231,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/839998e06c2f41419e3797450bd73178_a85bfa1f-9699-416e-8f0f-0f574708a1e2.jpg?v=1755614378",
-    "desc": "Berretta MAPLUS. BERRETTA Formato confezione • Cod. MC0005M DESCRIZIONE Berretta MAPLUS.",
+    "desc": "",
     "tags": [
       "Accessori"
     ],
-    "productType": "Accessori"
+    "productType": "Accessori",
+    "specs": [],
+    "sku": [
+      "MC0005M"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -1502,11 +3249,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/64cf547a8aac0c429c1de171c29426f0_587f855c-f402-4c2c-9aa7-b597b764498a.jpg?v=1755614377",
-    "desc": "PANTALONI COPRITUTA UNISEX PANTALONI COPRITUTA UNISEX Formato confezione • Cod. MA079007U - XS-S-M-L-XL-XXL DESCRIZIONE PANTALONI COPRITUTA UNISEX Size: XS-S-M-L-XL-XXL",
+    "desc": "",
     "tags": [
       "Accessori"
     ],
-    "productType": "Accessori"
+    "productType": "Accessori",
+    "specs": [],
+    "sku": [
+      "MA079007U"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -1515,11 +3267,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/0bb2d4215d5de184c10e9f50ee1d9553_5fc2c606-9afe-492e-924d-494f576e780b.jpg?v=1755614377",
-    "desc": "XC GIACCA RACE - UOMO XC GIACCA RACE - UOMO Formato confezione • Cod. MA079002M - S-M-L-XL-XXL DESCRIZIONE XC GIACCA RACE - UOMO Size: S-M-L-XL-XXL",
+    "desc": "",
     "tags": [
       "Accessori"
     ],
-    "productType": "Accessori"
+    "productType": "Accessori",
+    "specs": [],
+    "sku": [
+      "MA079002M"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -1528,11 +3285,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/9e02b4257c05e19434bd28a1f3ded3e5_612bb36b-9255-4a5d-bc6a-efc50fcf646e.jpg?v=1755614376",
-    "desc": "XC GIACCA RACE - DONNA XC GIACCA RACE - DONNA Formato confezione • Cod. MA079001W - XS-S-M-L-XL DESCRIZIONE XC GIACCA RACE - DONNA MISURE: XS-S-M-L-XL",
+    "desc": "",
     "tags": [
       "Accessori"
     ],
-    "productType": "Accessori"
+    "productType": "Accessori",
+    "specs": [],
+    "sku": [
+      "MA079001W"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -1541,12 +3303,17 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/SKIMAN_APRON_COTTON.png?v=1761037879",
-    "desc": "GREMBIULE SKIMAN COTONE GREMBIULE SKIMAN COTONE Formato confezione • Cod. MA0003J DESCRIZIONE GREMBIULE SKIMAN COTONE",
+    "desc": "",
     "tags": [
       "Accessori",
       "Bag & Accessories"
     ],
-    "productType": "Accessori"
+    "productType": "Accessori",
+    "specs": [],
+    "sku": [
+      "MA0003J"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -1555,11 +3322,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/c5949b98a954ba20a6a6d17790280cde_e6a03379-0e9f-4a5f-b3bd-91b45499c31f.jpg?v=1755614374",
-    "desc": "XC GILET - UNISEX XC GILET - UNISEX Formato confezione • Cod. MA079006U - XS-S-M-XL-XXL DESCRIZIONE XC GILET - UNISEX",
+    "desc": "",
     "tags": [
       "Accessori"
     ],
-    "productType": "Accessori"
+    "productType": "Accessori",
+    "specs": [],
+    "sku": [
+      "MA079006U"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -1568,11 +3340,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/9fc5e2a09509b5613281f31393bb0737_bd63d69e-6edd-4eaf-8b3f-18d502b02623.jpg?v=1755614373",
-    "desc": "GIACCA COPRITUTA UNISEX GIACCA COPRITUTA UNISEX Formato confezione • Cod. MA079005U - XS - S-M-XL-XXL DESCRIZIONE GIACCA COPRITUTA UNISEX",
+    "desc": "",
     "tags": [
       "Accessori"
     ],
-    "productType": "Accessori"
+    "productType": "Accessori",
+    "specs": [],
+    "sku": [
+      "MA079005U"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -1581,11 +3358,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/9962afd4d7801adbe96e49a2f2eab69f_77252724-51bc-4d28-8720-0ea15c5fd4e0.jpg?v=1755614372",
-    "desc": "Marsupio Imbragatura Junior per insegnamento sci SKI HARNESS Formato confezione • Cod. MB0105 DESCRIZIONE Marsupio Imbragatura Junior per insegnamento sci",
+    "desc": "",
     "tags": [
       "Accessori"
     ],
-    "productType": "Accessori"
+    "productType": "Accessori",
+    "specs": [],
+    "sku": [
+      "MB0105"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -1594,11 +3376,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/753a82091bdf93df272697e1f26229c2_b5a39599-bbb9-463c-8056-927f41dc1a78.jpg?v=1755614370",
-    "desc": "Lega-sci MAPLUS con velcro per sci alpino. LEGASCI ALPINO RACING Formato confezione • Cod. MA0044 DESCRIZIONE Lega-sci MAPLUS con velcro per sci alpino.",
+    "desc": "",
     "tags": [
       "Accessori"
     ],
-    "productType": "Accessori"
+    "productType": "Accessori",
+    "specs": [],
+    "sku": [
+      "MA0044"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -1607,12 +3394,17 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/9911ecbea07a30e7c89fdadbe8a058e8_9bb7b38c-a93c-49a9-aa48-ddc0988318bb.jpg?v=1755614368",
-    "desc": "Lega-sci MAPLUS con velcro per sci alpino. LEGASCI ALPINO Formato confezione • Cod. MA0004M DESCRIZIONE Lega-sci MAPLUS con velcro per sci alpino.",
+    "desc": "",
     "tags": [
       "Accessori",
       "Bag & Accessories"
     ],
-    "productType": "Accessori"
+    "productType": "Accessori",
+    "specs": [],
+    "sku": [
+      "MA0004M"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -1621,12 +3413,17 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/XC_SKI_STRAP.png?v=1761037899",
-    "desc": "Lega-sci MAPLUS con velcro per sci da fondo. LEGASCI XC Formato confezione • Cod. MA0025M DESCRIZIONE Lega-sci MAPLUS con velcro per sci da fondo.",
+    "desc": "",
     "tags": [
       "Accessori",
       "Bag & Accessories"
     ],
-    "productType": "Accessori"
+    "productType": "Accessori",
+    "specs": [],
+    "sku": [
+      "MA0025M"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -1635,12 +3432,17 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/XC_RACING_CLIP.png?v=1761037900",
-    "desc": "Lega-sci MAPLUS da infilare per sci da fondo. LEGASCI NORDICO Formato confezione • Cod. MA0005M DESCRIZIONE Lega-sci MAPLUS da infilare per sci da fondo.",
+    "desc": "",
     "tags": [
       "Accessori",
       "Bag & Accessories"
     ],
-    "productType": "Accessori"
+    "productType": "Accessori",
+    "specs": [],
+    "sku": [
+      "MA0005M"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -1649,11 +3451,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/7ab716354432ee12f19b58c60471093b_a23ad9a6-18d3-4403-84bb-77175b68ab21.jpg?v=1755614366",
-    "desc": "Bandiera MAPLUS completa di accessori per il fissaggio. BANDIERA COMPLETA Formato confezione • Cod. MA1008MS – 55X250 cm • Cod. MA1008ML – 65X315 cm DESCRIZIONE Bandiera MAPLUS completa di accessori per il fissaggio.",
+    "desc": "",
     "tags": [
       "Accessori"
     ],
-    "productType": "Accessori"
+    "productType": "Accessori",
+    "specs": [],
+    "sku": [
+      "MA1008MS - MA1008ML"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -1662,11 +3469,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/f5207093f4bafcb21c0c017e46b49f6e_623ed6f2-6088-415c-903d-36bac531d6cb.jpg?v=1755614365",
-    "desc": "Striscia portasci MAPLUS con elastici di ritenuta per sci da fondo e alpino. STRISCIA PORTASCI Formato confezione • Cod. MA0015M DESCRIZIONE Striscia portasci MAPLUS con elastici di ritenuta per sci da fondo e alpino.",
+    "desc": "",
     "tags": [
       "Accessori"
     ],
-    "productType": "Accessori"
+    "productType": "Accessori",
+    "specs": [],
+    "sku": [
+      "MA0015M"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -1675,11 +3487,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/d383d2a7f18b38f50f531c6f6759cc5a_6b613df4-9592-4c60-ab64-d70806fc2055.jpg?v=1755614364",
-    "desc": "Striscione in TNT – 0,80 x 4 mt Striscione in TNT Formato confezione • Cod. MA1005M - 0,8 x 4mt DESCRIZIONE Striscione in TNT – 0,80 x 4 mt",
+    "desc": "",
     "tags": [
       "Accessori"
     ],
-    "productType": "Accessori"
+    "productType": "Accessori",
+    "specs": [],
+    "sku": [
+      "MA1005M"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -1688,12 +3505,17 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/c9e8d9069e929f4898939a62f1adcffd_bf6fda64-d452-4a40-8c01-3a772488103c.jpg?v=1755614363",
-    "desc": "Adesivi MAPLUS: • Cod. MA1001M: Dimensione 310x50 mm; • Cod. MA1002M: Dimensione 830x140 mm. ADESIVO Formato confezione • Cod. MA1001M • Cod. MA1002M DESCRIZIONE Adesivi MAPLUS: • Cod. MA1001M: Dimensione 310x50 mm; • Cod. MA1002M:…",
+    "desc": "",
     "tags": [
       "Accessori",
       "Bag & Accessories"
     ],
-    "productType": "Accessori"
+    "productType": "Accessori",
+    "specs": [],
+    "sku": [
+      "MA1001M"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -1702,12 +3524,17 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/f9bbdeb62248e2fc4418a6935e64cf4c_37be1c04-f2e4-4a92-bacd-7dd9576de9c8.jpg?v=1755614362",
-    "desc": "Nastro adesivo distaccabile per sci MAPLUS - Altezza 38 mm. NASTRO LEGASCI DISTACCABILE Formato confezione • Cod. MA1044M DESCRIZIONE Nastro adesivo distaccabile per sci MAPLUS - Altezza 38 mm.",
+    "desc": "",
     "tags": [
       "Accessori",
       "Bag & Accessories"
     ],
-    "productType": "Accessori"
+    "productType": "Accessori",
+    "specs": [],
+    "sku": [
+      "MA1044M"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -1716,12 +3543,17 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/SCOTCH.png?v=1761037878",
-    "desc": "Nastro adesivo per pacchi MAPLUS - Altezza 50 mm. NASTRO ADESIVO Formato confezione • Cod. MA1004M DESCRIZIONE Nastro adesivo per pacchi MAPLUS - Altezza 50 mm.",
+    "desc": "",
     "tags": [
       "Accessori",
       "Bag & Accessories"
     ],
-    "productType": "Accessori"
+    "productType": "Accessori",
+    "specs": [],
+    "sku": [
+      "MA1004M"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -1730,12 +3562,17 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/d382bd8ae87d9139df6458192532657c_cda034ea-be67-4461-80a3-4f607dc1f7e8.jpg?v=1755614360",
-    "desc": "Nastro adesivo di carta per sci MAPLUS - Altezza 50 mm. NASTRO ADESIVO DI CARTA Formato confezione • Cod. MA1014M DESCRIZIONE Nastro adesivo di carta per sci MAPLUS - Altezza 50 mm.",
+    "desc": "",
     "tags": [
       "Accessori",
       "Bag & Accessories"
     ],
-    "productType": "Accessori"
+    "productType": "Accessori",
+    "specs": [],
+    "sku": [
+      "MA1014M"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -1744,11 +3581,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/f8a458e18503c86603dc02339a944feb_f23a2add-6060-4cb0-8b5d-79d9b2a75f95.jpg?v=1755614358",
-    "desc": "Grembiule skiman in cotone con tasca centrale porta-oggetti. GREMBIULE SKIMAN Formato confezione • Cod. MA0003 DESCRIZIONE Grembiule skiman in cotone con tasca centrale porta-oggetti.",
+    "desc": "",
     "tags": [
       "Accessori"
     ],
-    "productType": "Accessori"
+    "productType": "Accessori",
+    "specs": [],
+    "sku": [
+      "MA0003M"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -1757,11 +3599,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/CAP.png?v=1761037877",
-    "desc": "Cappellino di cotone nero MAPLUS. CAPPELLINO Formato confezione • Cod. MC0050M DESCRIZIONE Cappellino di cotone nero MAPLUS.",
+    "desc": "",
     "tags": [
       "Accessori"
     ],
-    "productType": "Accessori"
+    "productType": "Accessori",
+    "specs": [],
+    "sku": [
+      "MC0050M"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -1770,11 +3617,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/c2be3493ce42ee658842d93c6d54529d_499a2f4b-fd4c-415d-931c-ccc23a0e8365.jpg?v=1755614355",
-    "desc": "T-shirt MAPLUS: • Cod. MA0009: maniche corte; • Cod. MA0019: maniche lunghe T-SHIRT Formato confezione • Cod. MA0009 - S-M-XL-XXL • Cod. MA0019 - S-M-XL-XXL DESCRIZIONE T-shirt MAPLUS: • Cod. MA0009: maniche corte; • Cod. MA0019: maniche…",
+    "desc": "",
     "tags": [
       "Accessori"
     ],
-    "productType": "Accessori"
+    "productType": "Accessori",
+    "specs": [],
+    "sku": [
+      "MA0009"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -1783,12 +3635,17 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/MAPLUS_JACKET.png?v=1761037879",
-    "desc": "Gicca MAPLUS. GIACCA Formato confezione • Cod. MA0322 - S-M-XL-XXL DESCRIZIONE Gicca MAPLUS.",
+    "desc": "",
     "tags": [
       "Accessori",
       "Bag & Accessories"
     ],
-    "productType": "Accessori"
+    "productType": "Accessori",
+    "specs": [],
+    "sku": [
+      "MA0322"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -1797,11 +3654,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/47359a90eed3ee35f2dab5a3c718abb3_41a69f45-cb13-47b1-a994-aa72aa41a6f7.jpg?v=1755614351",
-    "desc": "Rullo a disegno a W: • Cod. SM08008: Coarse - per bagnato e molto umido; • Cod. SM08009: Medium - per condizioni universali; • Cod. SM08010: Fine - per freddo. W Formato confezione • Cod. SM08008 • Cod. SM08009 • Cod. SM08010 DESCRIZIONE…",
+    "desc": "",
     "tags": [
       "Rigatore manuale per sci di fondo"
     ],
-    "productType": "Rigatore manuale per sci di fondo"
+    "productType": "Rigatore manuale per sci di fondo",
+    "specs": [],
+    "sku": [
+      "SM08008"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -1810,11 +3672,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/5a61d31ed794cb758475f6c89477dfed_b3b005e5-7069-43ae-b04b-5b8745af0ef3.jpg?v=1755614350",
-    "desc": "Rullo a disegno diagonale: • Cod. SM08005: Coarse - per bagnato e molto umido; • Cod. SM08006: Medium - per condizioni universali; • Cod. SM08007: Fine - per freddo. DIAGONAL Formato confezione • Cod. SM08005 • Cod. SM08006 • Cod. SM08007…",
+    "desc": "",
     "tags": [
       "Rigatore manuale per sci di fondo"
     ],
-    "productType": "Rigatore manuale per sci di fondo"
+    "productType": "Rigatore manuale per sci di fondo",
+    "specs": [],
+    "sku": [
+      "SM08005"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -1823,11 +3690,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/665e3353c5a0a1298b58f0408e39e998_113dfda1-9cf4-4b30-a673-befdfc051c03.jpg?v=1755614348",
-    "desc": "Rullo a disegno lineare: • Cod. SM08002: Coarse - per bagnato e molto umido; • Cod. SM08003: Medium - per condizioni universali; LINEAR Formato confezione • Cod. SM08002 • Cod. SM08003 • Cod. SM08004 DESCRIZIONE Rullo a disegno lineare: •…",
+    "desc": "",
     "tags": [
       "Rigatore manuale per sci di fondo"
     ],
-    "productType": "Rigatore manuale per sci di fondo"
+    "productType": "Rigatore manuale per sci di fondo",
+    "specs": [],
+    "sku": [
+      "SM08002"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -1836,11 +3708,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/3409e45349ec9f6b3397bfe10e87a1d0_adc8c0c7-a9f0-44ad-98f9-c73697256bb8.jpg?v=1755614348",
-    "desc": "Rigatore manuale racing per sci da fondo - incluso rullo a disegno diagonale medio SM08006. NORDIC SHARP Formato confezione • Cod. SM08001 DESCRIZIONE Rigatore manuale racing per sci da fondo - incluso rullo a disegno diagonale medio…",
+    "desc": "",
     "tags": [
       "Rigatore manuale per sci di fondo"
     ],
-    "productType": "Rigatore manuale per sci di fondo"
+    "productType": "Rigatore manuale per sci di fondo",
+    "specs": [],
+    "sku": [
+      "SM08001"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -1849,11 +3726,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/e88c403143ae0a81dde94b0909e552aa_2a45831b-b7b9-40c1-95c8-346c6eaaa1e7.jpg?v=1755614347",
-    "desc": "Affilatore World Cup per spatole. AFFILATORE WORLD CUP PER SPATOLE Formato confezione • Cod. SM00631-220 DESCRIZIONE Affilatore World Cup per spatole.",
+    "desc": "",
     "tags": [
       "Affilatori per lamine"
     ],
-    "productType": "Affilatori per lamine"
+    "productType": "Affilatori per lamine",
+    "specs": [],
+    "sku": [
+      "SM00631-220"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -1862,11 +3744,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/a955a3de9afa2794fbaf8cc2473586cb_6cde7273-b6a5-422f-95f3-84bf03b10cb5.jpg?v=1755614346",
-    "desc": "Disco diamantato grana Extra-Fine DISCO DIAMANTATO GRANA EXTA-FINE Formato confezione • Cod. SM09005 DESCRIZIONE Disco diamantato grana Extra-Fine",
+    "desc": "",
     "tags": [
       "Affilatori per lamine"
     ],
-    "productType": "Affilatori per lamine"
+    "productType": "Affilatori per lamine",
+    "specs": [],
+    "sku": [
+      "SM09005"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -1875,11 +3762,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/4c5025fc27e21ebeebad07703ddb77e0_8257849a-2562-4c42-8c43-fae6c15eb9da.jpg?v=1755614345",
-    "desc": "Disco diamantato grana Fine DISCO DIAMANTATO GRANA FINE Formato confezione • Cod. SM09004 DESCRIZIONE Disco diamantato grana Fine",
+    "desc": "",
     "tags": [
       "Affilatori per lamine"
     ],
-    "productType": "Affilatori per lamine"
+    "productType": "Affilatori per lamine",
+    "specs": [],
+    "sku": [
+      "SM09004"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -1888,11 +3780,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/bf26253d7b8f171dddb155f84ce1d562_d7241c26-a280-4375-9977-b50026099e00.jpg?v=1755614344",
-    "desc": "Disco diamantato grana Media DISCO DIAMANTATO GRANA MEDIA Formato confezione • Cod. SM09003 DESCRIZIONE Disco diamantato grana Media",
+    "desc": "",
     "tags": [
       "Affilatori per lamine"
     ],
-    "productType": "Affilatori per lamine"
+    "productType": "Affilatori per lamine",
+    "specs": [],
+    "sku": [
+      "SM09003"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -1901,11 +3798,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/1371abab3c4aabc3692f4afcfda574f7_64094244-40e6-4f00-8b4e-290eda28436d.jpg?v=1755614344",
-    "desc": "Disco diamantato grana Grossa DISCO DIAMANTATO GRANA GROSSA Formato confezione • Cod. SM09002 DESCRIZIONE Disco diamantato grana Grossa",
+    "desc": "",
     "tags": [
       "Affilatori per lamine"
     ],
-    "productType": "Affilatori per lamine"
+    "productType": "Affilatori per lamine",
+    "specs": [],
+    "sku": [
+      "SM09002"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -1914,12 +3816,23 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/ADJEUSTABLE_BASE_EDGE_FILE_GUIDE_c1073c79-2df0-47ea-9f73-d512cb4801c1.png?v=1761638303",
-    "desc": "GUIDA PER TUNING REGOLABILE Affilatrice per bordi di base. Facile da usare, presa salda, massima precisione. Risultati ottimali, minimo sforzo. Adatto a qualsiasi lima, pietra o diamante fino a 6 mm di spessore. Per sci e snowboard. CODE:…",
+    "desc": "",
     "tags": [
       "Accessori",
       "Edge sharpeners"
     ],
-    "productType": "Affilatori per lamine"
+    "productType": "Affilatori per lamine",
+    "specs": [],
+    "sku": [
+      "SM03051N",
+      "SM03052N",
+      "SM03053N"
+    ],
+    "format": [
+      "0.5°",
+      "0.75°",
+      "1°"
+    ]
   },
   {
     "brand": "maplus",
@@ -1928,11 +3841,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/8c4e7ddecfb739ef5c33c55621b27630_b8949fc8-a07e-47f8-921a-7eeb5ad9f46e.jpg?v=1755614342",
-    "desc": "Utensile circolare in metallo duro per qualsiasi toglifenolo. SM05125 LAMA IN METALLO DURO RAGGIO 3mm Formato confezione • Cod. SM05125 DESCRIZIONE Utensile circolare in metallo duro per qualsiasi toglifenolo.",
+    "desc": "",
     "tags": [
       "Affilatori per lamine"
     ],
-    "productType": "Affilatori per lamine"
+    "productType": "Affilatori per lamine",
+    "specs": [],
+    "sku": [
+      "SM05125"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -1941,11 +3859,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/463052dad9377fe2445d3b1bfb5f62a3_7d864b0c-aac6-49db-8751-8dc111400b0e.jpg?v=1755614341",
-    "desc": "Lima Ice Cut in acciaio cromato. LIMA DI RICAMBIO Formato confezione • Cod. SM05104 - 80mm - taglio bastard • Cod. SM05105 - 40mm - taglio bastard DESCRIZIONE Lima Ice Cut in acciaio cromato.",
+    "desc": "",
     "tags": [
       "Affilatori per lamine"
     ],
-    "productType": "Affilatori per lamine"
+    "productType": "Affilatori per lamine",
+    "specs": [],
+    "sku": [
+      "SM05104"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -1954,11 +3877,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/SPARE_BODY_FILE_1.png?v=1761640883",
-    "desc": "Lima a fresa di ricambio per Plexi Sharp SM00630. LIMA A FRESA DI RICAMBIO PER PLEXI SHARP Formato confezione • Cod. SM05101 DESCRIZIONE Lima a fresa di ricambio per Plexi Sharp SM00630.",
+    "desc": "",
     "tags": [
       "Affilatori per lamine"
     ],
-    "productType": "Affilatori per lamine"
+    "productType": "Affilatori per lamine",
+    "specs": [],
+    "sku": [
+      "SM05101"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -1967,11 +3895,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/a07bb170c4a36161aa1f8f4859c19794_64f1a441-24a9-4595-a55e-0e1a63df0371.jpg?v=1755614339",
-    "desc": "Affilatore laterale elettrico con dischi diamantati BRAVO SHARP Formato confezione • Cod. SM09001 DESCRIZIONE Affilatore laterale elettrico con dischi diamantati",
+    "desc": "",
     "tags": [
       "Affilatori per lamine"
     ],
-    "productType": "Affilatori per lamine"
+    "productType": "Affilatori per lamine",
+    "specs": [],
+    "sku": [
+      "SM09001"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -1980,11 +3913,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/aee44fc32e47f07b5fe3050745ad94ac_ba9912cf-b243-4910-9351-12c095860359.jpg?v=1755614338",
-    "desc": "Utensile circolare in metallo duro per qualsiasi toglifenolo. LAMA IN METALLO DURO PER ERGORAZON (CIRCOLARE) Formato confezione • Cod. SM05130 DESCRIZIONE Utensile circolare in metallo duro per qualsiasi toglifenolo.",
+    "desc": "",
     "tags": [
       "Affilatori per lamine"
     ],
-    "productType": "Affilatori per lamine"
+    "productType": "Affilatori per lamine",
+    "specs": [],
+    "sku": [
+      "SM05130"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -1993,11 +3931,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/7e58113966c67085953dd45e2ed189c9_231ea9e7-8f06-4b94-af0a-22b794204ecb.jpg?v=1755614337",
-    "desc": "Utensile squadrato in metallo duro per qualsiasi toglifenolo. LAMA IN METALLO DURO PER ERGORAZON (QUADRATA) Formato confezione • Cod. SM05120 DESCRIZIONE Utensile squadrato in metallo duro per qualsiasi toglifenolo.",
+    "desc": "",
     "tags": [
       "Affilatori per lamine"
     ],
-    "productType": "Affilatori per lamine"
+    "productType": "Affilatori per lamine",
+    "specs": [],
+    "sku": [
+      "SM05120"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2006,11 +3949,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/c36ca621a5bd9f22ed82eb87110f16dc_bd3ea561-fedc-4794-a307-4cc194a701b7.jpg?v=1755614336",
-    "desc": "Ski Vise Touring - solo morsa centrale. SKI VISE TOURING - SOLO MORSA CENTRALE Formato confezione • Cod. SM01007C DESCRIZIONE Ski Vise Touring - solo morsa centrale.",
+    "desc": "",
     "tags": [
       "Morse per sci e snowboard"
     ],
-    "productType": "Morse per sci e snowboard"
+    "productType": "Morse per sci e snowboard",
+    "specs": [],
+    "sku": [
+      "SM01007C"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2019,11 +3967,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/SKI_VISE_TOURING_88e8858b-3f98-4eb1-9c0d-b365a0c8049f.png?v=1761052333",
-    "desc": "Ski Vise Touring. SKI VISE TOURING Formato confezione • Cod. SM01007 DESCRIZIONE Ski Vise Touring.",
+    "desc": "",
     "tags": [
       "Morse per sci e snowboard"
     ],
-    "productType": "Morse per sci e snowboard"
+    "productType": "Morse per sci e snowboard",
+    "specs": [],
+    "sku": [
+      "SM01007"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2032,11 +3985,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/SKI_SUPPORT_bbe77527-fdf0-468f-9555-594dc2b3c940.png?v=1761052331",
-    "desc": "Ski Support. SKI SUPPORT Formato confezione • Cod. SM00695 DESCRIZIONE Ski Support.",
+    "desc": "",
     "tags": [
       "Morse per sci e snowboard"
     ],
-    "productType": "Morse per sci e snowboard"
+    "productType": "Morse per sci e snowboard",
+    "specs": [],
+    "sku": [
+      "SM00695"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2045,11 +4003,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/SKI_VISE_XXL_c382ca6a-ff25-4959-9386-68a9823f7a89.png?v=1761052328",
-    "desc": "Ski vise XXL. SKI VISE XXL Formato confezione • Cod. SM00994 DESCRIZIONE Ski vise XXL.",
+    "desc": "",
     "tags": [
       "Morse per sci e snowboard"
     ],
-    "productType": "Morse per sci e snowboard"
+    "productType": "Morse per sci e snowboard",
+    "specs": [],
+    "sku": [
+      "SM00994"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2058,11 +4021,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/SKI_VISE_24_HOURS.png?v=1761037879",
-    "desc": "Morsa universale per sci alpino a tre pezzi con speciale aggancio elastico centrale. SKI VISE 24 ORE Formato confezione • Cod. SM00650 DESCRIZIONE Morsa universale per sci alpino a tre pezzi con speciale aggancio elastico centrale.",
+    "desc": "",
     "tags": [
       "Morse per sci e snowboard"
     ],
-    "productType": "Morse per sci e snowboard"
+    "productType": "Morse per sci e snowboard",
+    "specs": [],
+    "sku": [
+      "SM00650"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2071,11 +4039,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/DOUBLE_WORKSHOP_SUPPORT_cfc568fc-b0cc-4d65-9e31-e9bed0283930.png?v=1761052325",
-    "desc": "Supporto doppio universale per sci e snowboard. DOUBLE WORKSHOP SUPPORT Formato confezione • Cod. SM01022N DESCRIZIONE Supporto doppio universale per sci e snowboard.",
+    "desc": "",
     "tags": [
       "Morse per sci e snowboard"
     ],
-    "productType": "Morse per sci e snowboard"
+    "productType": "Morse per sci e snowboard",
+    "specs": [],
+    "sku": [
+      "SM01022N"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2084,11 +4057,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/DOUBLE_WORKSHOP_VISE_958e0792-35fa-429f-a5ef-f7462993f45c.png?v=1761052322",
-    "desc": "Morsa doppia professionale per laboratorio di preparazione sci e snowboard. DOUBLE WORKSHOP VISE Formato confezione • Cod. SM01021N DESCRIZIONE Morsa doppia professionale per laboratorio di preparazione sci e snowboard.",
+    "desc": "",
     "tags": [
       "Morse per sci e snowboard"
     ],
-    "productType": "Morse per sci e snowboard"
+    "productType": "Morse per sci e snowboard",
+    "specs": [],
+    "sku": [
+      "SM01021N"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2097,11 +4075,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/SNOWBOARD_FREERIDE_SKI_VISE_c603bf5b-7725-4017-86a5-1dd3b75b0050.png?v=1761052320",
-    "desc": "Morsa universale per snowboard con piano di appoggio a larghezza variabile da 210 a 270 mm. SNOWBOARD - FREERIDE SKI VISE Formato confezione • Cod. SM01003N DESCRIZIONE Morsa universale per snowboard con piano di appoggio a larghezza…",
+    "desc": "",
     "tags": [
       "Morse per sci e snowboard"
     ],
-    "productType": "Morse per sci e snowboard"
+    "productType": "Morse per sci e snowboard",
+    "specs": [],
+    "sku": [
+      "SM01003N"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2110,11 +4093,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/SKI_VISE_CROSS_COUNTRY_WORLD_CUP_b140211a-aeed-4bea-85a8-b32197bbd99e.png?v=1761052317",
-    "desc": "Morsa a 3 pezzi per sci di fondo con aggancio centrale ad altezza variabile. SKI VISE CROSS COUNTRY Formato confezione • Cod. SM00670N DESCRIZIONE Morsa a 3 pezzi per sci di fondo con aggancio centrale ad altezza variabile.",
+    "desc": "",
     "tags": [
       "Morse per sci e snowboard"
     ],
-    "productType": "Morse per sci e snowboard"
+    "productType": "Morse per sci e snowboard",
+    "specs": [],
+    "sku": [
+      "SM00670N"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2123,11 +4111,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/BRAVO_SUPPORT_903f2579-cba4-47f8-b9b6-3600a2825a13.png?v=1761052315",
-    "desc": "Adattatore universale per mazze da sci 691-1070N-1110N-1110NW così saranno morse \"tutto in uno\": • Funziona con tutti i tipi di snowboard, sci larghi e sci da fondo; • Speciale gomma per afferrare lo snowboard e sci larghi durante…",
+    "desc": "",
     "tags": [
       "Morse per sci e snowboard"
     ],
-    "productType": "Morse per sci e snowboard"
+    "productType": "Morse per sci e snowboard",
+    "specs": [],
+    "sku": [
+      "SM00635"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2136,11 +4129,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/d0d354668f69293e040aa69de3140c78_45891a17-69dc-4e8d-9ebc-6996d2b3eeb0.jpg?v=1755614327",
-    "desc": "Morsa professionale a tre pezzi per sci oversize - larghezza ganasce 90 mm. - apertura max 155 mm. SKI VISE PRO \"WIDE OPENING\" Formato confezione • Cod. SM01110NW DESCRIZIONE Morsa professionale a tre pezzi per sci oversize - larghezza…",
+    "desc": "",
     "tags": [
       "Morse per sci e snowboard"
     ],
-    "productType": "Morse per sci e snowboard"
+    "productType": "Morse per sci e snowboard",
+    "specs": [],
+    "sku": [
+      "SM01110NW"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2149,11 +4147,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/SKI_VISE_PRO_WIDE_e2bab8ef-c8d4-47e0-b048-86795ef4790a.png?v=1761052313",
-    "desc": "Morsa professionale a tre pezzi per sci alpino - larghezza ganasce 90 mm. - apertura max 100 mm. SKI VISE PRO Formato confezione • Cod. SM01110N DESCRIZIONE Morsa professionale a tre pezzi per sci alpino - larghezza ganasce 90 mm. -…",
+    "desc": "",
     "tags": [
       "Morse per sci e snowboard"
     ],
-    "productType": "Morse per sci e snowboard"
+    "productType": "Morse per sci e snowboard",
+    "specs": [],
+    "sku": [
+      "SM01110N"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2162,11 +4165,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/SKI_VISE_RACING_568e8e0c-a32a-47b8-88fb-d578cc1aa997.png?v=1761052310",
-    "desc": "Morsa professionale a tre pezzi per sci alpino - larghezza ganasce 70 mm. - apertura max 100 mm. SKI VISE RACING Formato confezione • Cod. SM01070N DESCRIZIONE Morsa professionale a tre pezzi per sci alpino - larghezza ganasce 70 mm. -…",
+    "desc": "",
     "tags": [
       "Morse per sci e snowboard"
     ],
-    "productType": "Morse per sci e snowboard"
+    "productType": "Morse per sci e snowboard",
+    "specs": [],
+    "sku": [
+      "SM01070N"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2175,11 +4183,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/SKI_VISE_QUICK_e3b81193-2258-4320-b16f-f4abe44691d2.png?v=1761052307",
-    "desc": "Supporto universale per sci alpino a due pezzi a sbalzo esterno. SKI VISE QUICK Formato confezione • Cod. SM00690 DESCRIZIONE Supporto universale per sci alpino a due pezzi a sbalzo esterno.",
+    "desc": "",
     "tags": [
       "Morse per sci e snowboard"
     ],
-    "productType": "Morse per sci e snowboard"
+    "productType": "Morse per sci e snowboard",
+    "specs": [],
+    "sku": [
+      "SM00690"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2188,11 +4201,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/SKI_VISE_COMP_2_7d23adfb-f474-4046-9103-beb2d4d86fab.png?v=1761052304",
-    "desc": "Morsa universale per sci alpino a tre pezzi a sbalzo esterno - larghezza ganasce 30 mm. - apertura max 85 mm. SKI VISE COMP Formato confezione • Cod. SM00691 DESCRIZIONE Morsa universale per sci alpino a tre pezzi a sbalzo esterno -…",
+    "desc": "",
     "tags": [
       "Morse per sci e snowboard"
     ],
-    "productType": "Morse per sci e snowboard"
+    "productType": "Morse per sci e snowboard",
+    "specs": [],
+    "sku": [
+      "SM00691"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2201,11 +4219,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/DIGITAL_WAXING_IRON_T10A.35.png?v=1761037878",
-    "desc": "Ferro sciolinatore professionale da coppa del mondo, con impostazione digitale estremamente precisa della temperatura tramite microprocessore digitale. FERRO SCIOLINATORE DIGITALE PRO T10A.35 Formato confezione • Cod. KZ03000N AC 220V MAX…",
+    "desc": "",
     "tags": [
       "Ferri sciolinatori"
     ],
-    "productType": "Ferri sciolinatori"
+    "productType": "Ferri sciolinatori",
+    "specs": [],
+    "sku": [
+      "KZ03000N - AC 220V"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2214,11 +4237,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/DIGITAL_WAXING_IRON_T10A.15.png?v=1761037878",
-    "desc": "Ferro sciolinatore digitale potente e professionale. Il microprocessore digitale controlla la regolazione della temperatura fino a 200 ° C. FERRO SCIOLINATORE ELETTRONICO T10A.15 Formato confezione • Cod. KZ06000N AC 220V MAX TEMP. 200°C…",
+    "desc": "",
     "tags": [
       "Ferri sciolinatori"
     ],
-    "productType": "Ferri sciolinatori"
+    "productType": "Ferri sciolinatori",
+    "specs": [],
+    "sku": [
+      "KZ06000N - AC 220V"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2227,11 +4255,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/WAXING_IRON_T10B.15.png?v=1761037899",
-    "desc": "Ferro sciolinatore di prima scelta con manuale di facile settaggio della temperatura. FERRO SCIOLINATORE REGOLABILE T10B.15 Formato confezione • Cod. KZ05000N AC 220V MAX TEMP. 200°C DESCRIZIONE Ferro sciolinatore di prima scelta con…",
+    "desc": "",
     "tags": [
       "Ferri sciolinatori"
     ],
-    "productType": "Ferri sciolinatori"
+    "productType": "Ferri sciolinatori",
+    "specs": [],
+    "sku": [
+      "KZ05000N"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2240,11 +4273,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/GUMMY_STONE_ALLAROUND.png?v=1761037878",
-    "desc": "PIETRA GOMMA ALLAROUND Formato confezione • Cod. MP0015 DESCRIZIONE MP0015: Pietra gomma ALLAROUND",
+    "desc": "",
     "tags": [
       "Pietre"
     ],
-    "productType": "Pietre"
+    "productType": "Pietre",
+    "specs": [],
+    "sku": [
+      "MP0015"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2253,11 +4291,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/ALL_OXIDE_STONE.png?v=1761037877",
-    "desc": "Pietra in ossido di alluminio - grana media - lunghezza 140 mm. - sgrossatura elevata. PIETRA IN OSSIDO DI ALLUMINIO Formato confezione • Cod. BK00006 DESCRIZIONE Pietra in ossido di alluminio - grana media - lunghezza 140 mm. -…",
+    "desc": "",
     "tags": [
       "Pietre"
     ],
-    "productType": "Pietre"
+    "productType": "Pietre",
+    "specs": [],
+    "sku": [
+      "BK00006"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2266,11 +4309,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/NATURAL_STONE.png?v=1761037879",
-    "desc": "PIETRA NATURALE Formato confezione • Cod. MP0002 • Cod. MP0003 DESCRIZIONE MP0002: Pietra naturale - grana fine - lunghezza 90 mm. - super finitura. MP0003: Pietra naturale - grana media - lunghezza 90 mm. - prima finitura.",
+    "desc": "",
     "tags": [
       "Pietre"
     ],
-    "productType": "Pietre"
+    "productType": "Pietre",
+    "specs": [],
+    "sku": [
+      "MP0002"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2279,11 +4327,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/DIAMOND_1000gr.png?v=1761037877",
-    "desc": "WORLD CUP DIAMOND gr. 1000 Formato confezione • Cod. MP0304 - 100mm DESCRIZIONE Lima diamantata Diamond World Cup - differenti grana e lunghezza - supporto rigido: MP0304: Lima diamantata Diamond World Cup - grana 1000 - lunghezza 100 mm.…",
+    "desc": "",
     "tags": [
       "Diaface & diamond"
     ],
-    "productType": "Diaface & diamond"
+    "productType": "Diaface & diamond",
+    "specs": [],
+    "sku": [
+      "MP0314"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2292,11 +4345,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/DIAMOND_600gr.png?v=1761037877",
-    "desc": "WORLD CUP DIAMOND gr. 600 Formato confezione • Cod. MP0303 - 100mm DESCRIZIONE Lima diamantata Diamond World Cup - differenti grana e lunghezza - supporto rigido: MP0303: Lima diamantata Diamond World Cup - grana 600 - lunghezza 100 mm. -…",
+    "desc": "",
     "tags": [
       "Diaface & diamond"
     ],
-    "productType": "Diaface & diamond"
+    "productType": "Diaface & diamond",
+    "specs": [],
+    "sku": [
+      "MP0313"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2305,11 +4363,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/DIAMOND_400gr.png?v=1761037878",
-    "desc": "WORLD CUP DIAMOND gr. 400 Formato confezione • Cod. MP0302 - 100mm DESCRIZIONE Lima diamantata Diamond World Cup - differenti grana e lunghezza - supporto rigido: MP0302: Lima diamantata Diamond World Cup - grana 400 - lunghezza 100 mm. -…",
+    "desc": "",
     "tags": [
       "Diaface & diamond"
     ],
-    "productType": "Diaface & diamond"
+    "productType": "Diaface & diamond",
+    "specs": [],
+    "sku": [
+      "MP0312"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2318,11 +4381,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/DIAMOND_200gr.png?v=1761037877",
-    "desc": "WORLD CUP DIAMOND gr. 200 Formato confezione • Cod. MP0301 - 100mm DESCRIZIONE Lima diamantata Diamond World Cup - differenti grana e lunghezza - supporto rigido: MP0301: Lima diamantata Diamond World Cup - grana 200 - lunghezza 100 mm. -…",
+    "desc": "",
     "tags": [
       "Diaface & diamond"
     ],
-    "productType": "Diaface & diamond"
+    "productType": "Diaface & diamond",
+    "specs": [],
+    "sku": [
+      "MP0311"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2331,11 +4399,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/DIAMOND_100gr.png?v=1761037878",
-    "desc": "WORLD CUP DIAMOND gr. 100 Formato confezione • Cod. MP0300 - 100mm DESCRIZIONE Lima diamantata Diamond World Cup - differenti grana e lunghezza - supporto rigido: MP0300: Lima diamantata Diamond World Cup - grana 100 - lunghezza 100 mm. -…",
+    "desc": "",
     "tags": [
       "Diaface & diamond"
     ],
-    "productType": "Diaface & diamond"
+    "productType": "Diaface & diamond",
+    "specs": [],
+    "sku": [
+      "MP0310"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2344,11 +4417,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/DIAFACE_1500GR_d1b78ab9-e25e-46fb-a504-3415f14643b6.png?v=1761052299",
-    "desc": "DIAFACE gr. 1000 Formato confezione • Cod. MP0214 - 70mm • Cod. MP0204 - 100mm DESCRIZIONE Grana ultra-fine, utilizzata per una lucidatura estremamente liscia, solitamente utilizzata in contesti competitivi in cui è richiesta la massima…",
+    "desc": "",
     "tags": [
       "Diaface & diamond"
     ],
-    "productType": "Diaface & diamond"
+    "productType": "Diaface & diamond",
+    "specs": [],
+    "sku": [
+      "MP0214"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2357,11 +4435,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/DIAFACE_600GR_0c5a1774-6e03-44c5-a130-e693f002290d.png?v=1761052296",
-    "desc": "DIAFACE gr. 600 Formato confezione • Cod. MP0213 - 70mm • Cod. MP0203 - 100mm DESCRIZIONE Grana fine, ideale per la rifinitura finale dei bordi, assicurando una superficie liscia e affilata per prestazioni ottimali. Supporto in plastica.",
+    "desc": "",
     "tags": [
       "Diaface & diamond"
     ],
-    "productType": "Diaface & diamond"
+    "productType": "Diaface & diamond",
+    "specs": [],
+    "sku": [
+      "MP0213"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2370,11 +4453,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/DIAFACE_400GR_4546be8b-69c8-426e-9643-08149f35130f.png?v=1761052294",
-    "desc": "DIAFACE gr. 400 Formato confezione • Cod. MP0212 - 70mm • Cod. MP0202 - 100mm DESCRIZIONE Grana media, adatta per l’affilatura regolare dei bordi, offre un equilibrio tra rimozione del materiale e finitura. Supporto in plastica.",
+    "desc": "",
     "tags": [
       "Diaface & diamond"
     ],
-    "productType": "Diaface & diamond"
+    "productType": "Diaface & diamond",
+    "specs": [],
+    "sku": [
+      "MP0212"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2383,11 +4471,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/DIAFACE_200GR_22da1067-e1d7-48ef-840c-30e48b757903.png?v=1761052291",
-    "desc": "DIAFACE gr. 200 Formato confezione • 70mm - Cod. MP0211 • 100mm - Cod. MP0201 DESCRIZIONE Grana grossa, utilizzata per un’affilatura iniziale dopo aver rimosso danni importanti, preparando il filo per una finitura più fine. Supporto in…",
+    "desc": "",
     "tags": [
       "Diaface & diamond"
     ],
-    "productType": "Diaface & diamond"
+    "productType": "Diaface & diamond",
+    "specs": [],
+    "sku": [
+      "MP0211"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2396,11 +4489,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/DIAFACE_100GR_4d1b0789-3d46-4fdc-91f7-d1e7f161a67b.png?v=1761052288",
-    "desc": "DIAFACE gr. 100 Formato confezione • 70mm - Cod. MP0210 • 100mm - Cod. MP0200 DESCRIZIONE Grana molto grossa, ideale per rimuovere rapidamente materiale e correggere danni significativi o imperfezioni sui bordi. Supporto in plastica.",
+    "desc": "",
     "tags": [
       "Diaface & diamond"
     ],
-    "productType": "Diaface & diamond"
+    "productType": "Diaface & diamond",
+    "specs": [],
+    "sku": [
+      "MP0210"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2409,11 +4507,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/PROFESSIONAL_HARD_NO-CHROME_1b32788c-9f54-4d33-ad88-0cc4d64ef30d.png?v=1761576422",
-    "desc": "DESCRIZIONE Lima Icecut \"Professional\" in acciaio: •Cod. ML0511 - lunghezza 200 mm. - taglio bastardo •Cod. ML0512 - lunghezza 200 mm. - 2° taglio •Cod. ML0513 - lunghezza 150 mm. - taglio fine Grazie alla loro elevata precisione e alle…",
+    "desc": "",
     "tags": [
       "Lime sci"
     ],
-    "productType": "Lime sci"
+    "productType": "Lime sci",
+    "specs": [],
+    "sku": [
+      "ML0511 - ML0512 - ML0513"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2422,11 +4525,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/PROFESSIONAL_HARD_CHROME_4df50585-c795-4b13-8e1b-ea09bbada03f.png?v=1761576490",
-    "desc": "DESCRIZIONE Lima Icecut \"Professional\" in acciaio cromato: •Cod. ML0501 - lunghezza 200 mm. - taglio bastardo •Cod. ML0502 - lunghezza 200 mm. - 2° taglio •Cod. ML0503 - lunghezza 150 mm. - taglio fine Grazie alla loro elevata precisione e…",
+    "desc": "",
     "tags": [
       "Lime sci"
     ],
-    "productType": "Lime sci"
+    "productType": "Lime sci",
+    "specs": [],
+    "sku": [
+      "ML0501"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2435,11 +4543,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/PRO_RS_NO-CHROME.png?v=1761037878",
-    "desc": "Lima Icecut \"ProRS\" in acciaio non cromato - lunghezza 100 mm: • Cod. ML0525 - Coarse • Cod. ML0526 - Medium • Cod. ML0527 - Fine Queste lime beneficiano di dimensioni ideali e si adattano a un’affilatura molto precisa. Prodotte con un…",
+    "desc": "",
     "tags": [
       "Lime sci"
     ],
-    "productType": "Lime sci"
+    "productType": "Lime sci",
+    "specs": [],
+    "sku": [
+      "ML0525"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2448,11 +4561,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/FILE_BRUSH.png?v=1761037877",
-    "desc": "Spazzolino in ottone per lime. SPAZZOLA PER LIME Formato confezione • Cod. MTO100 DESCRIZIONE Spazzolino in ottone per lime. Lo spazzolino perfetto per la pulizia di tutti i tipi di lima",
+    "desc": "",
     "tags": [
       "Lime sci"
     ],
-    "productType": "Lime sci"
+    "productType": "Lime sci",
+    "specs": [],
+    "sku": [
+      "MTO100"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2461,11 +4579,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/BODY_FILE.png?v=1761037877",
-    "desc": "Formato confezione • Cod. ML0005 - 300mm DESCRIZIONE Lima a fresa in acciaio non cromato - lunghezza 300 mm. Lima radiale speciale studiata per sgrossatura sci e snowboard",
+    "desc": "",
     "tags": [
       "Lime sci"
     ],
-    "productType": "Lime sci"
+    "productType": "Lime sci",
+    "specs": [],
+    "sku": [
+      "ML0005"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2474,11 +4597,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/COMBI_FILE_MEDIUM_633c1049-5c17-4bca-a957-a63ebd39b559.png?v=1761037877",
-    "desc": "Realizzato in acciaio premium, questo è l'unica lima da sci con due tagli diversi LIMA COMBINATA Formato confezione • Cod. ML0530 - 80mm DESCRIZIONE Lima Combinata Realizzato in acciaio premium, questo è l'unica lima da sci con due tagli…",
+    "desc": "",
     "tags": [
       "Lime sci"
     ],
-    "productType": "Lime sci"
+    "productType": "Lime sci",
+    "specs": [],
+    "sku": [
+      "ML0530"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2487,11 +4615,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/HARD_CHROME_70aa550a-57ca-423c-92f8-cfa4d1202676.png?v=1761575711",
-    "desc": "Formato confezione • Cod. ML0004 - 200mm DESCRIZIONE Lima universale SUPER COARSE, con superfici cromate dure: soddisfa i requisiti tecnici degli skiman professionisti",
+    "desc": "",
     "tags": [
       "Lime sci"
     ],
-    "productType": "Lime sci"
+    "productType": "Lime sci",
+    "specs": [],
+    "sku": [
+      "ML0004"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2500,11 +4633,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/HARD_CHROME_70aa550a-57ca-423c-92f8-cfa4d1202676.png?v=1761575711",
-    "desc": "Lima Viiala in acciaio cromato - Hard Chrome - lunghezza 150 mm. - taglio grezzo(1). LIMA HARD CHROME COARSE Formato confezione • Cod. BK00010 - 150mm • Cod. ML0003 - 200mm DESCRIZIONE Lima Viiala in acciaio cromato - Hard Chrome -…",
+    "desc": "",
     "tags": [
       "Lime sci"
     ],
-    "productType": "Lime sci"
+    "productType": "Lime sci",
+    "specs": [],
+    "sku": [
+      "BK00010"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2513,11 +4651,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/HARD_CHROME_70aa550a-57ca-423c-92f8-cfa4d1202676.png?v=1761575711",
-    "desc": "Formato confezione • Cod. ML0004 - 200mm DESCRIZIONE Lima universale FINE, con superfici cromate dure: soddisfa i requisiti tecnici degli skiman professionisti",
+    "desc": "",
     "tags": [
       "Lime sci"
     ],
-    "productType": "Lime sci"
+    "productType": "Lime sci",
+    "specs": [],
+    "sku": [
+      "ML0001"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2526,11 +4669,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/SPECIAL_PROFI_ROLLER_PAD.png?v=1761037880",
-    "desc": "Rullo in speciale poliestere. Raccomandato per l'applicazione dei prodotti della nuova linea GM, il nuovo Boost GM liquid e le Basi GM Gel. E’ ottimo anche per l’applicazione delle cere perfluorurate FP4 o delle paraffine liquide HP3, LP2…",
+    "desc": "",
     "tags": [
       "Rulli in poliestere e in lana merino"
     ],
-    "productType": "Rulli in poliestere e in lana merino"
+    "productType": "Rulli in poliestere e in lana merino",
+    "specs": [],
+    "sku": [
+      "MTO088"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2539,11 +4687,22 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/POLYESTER_MERINO_WOOL_ROTO_SET_1.png?v=1761580940",
-    "desc": "POLYESTER & MERINO WOOL ROTO SET CODICE: 10CM - MTO085N / 14CM - MTO086N / 20CM - MTO087N",
+    "desc": "",
     "tags": [
       "Rulli in poliestere e in lana merino"
     ],
-    "productType": "Rulli in poliestere e in lana merino"
+    "productType": "Rulli in poliestere e in lana merino",
+    "specs": [],
+    "sku": [
+      "MTO086N-1",
+      "MTO086N-2",
+      "MTO086N-3"
+    ],
+    "format": [
+      "10CM",
+      "14CM",
+      "20CM"
+    ]
   },
   {
     "brand": "maplus",
@@ -2552,11 +4711,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/POLISHING_MERINO-WOOL_ROLLER.png?v=1761037880",
-    "desc": "Rullo in lana Merino (12 mm). Da utilizzare per la lucidatura delle cere perfluorurate FP4 sullo sci da fondo o sullo sci alpino. RULLO IN LANA MERINO 12mm • Cod. MTO072 - 10cm • Cod. MTO077 - 14cm • Cod. MTO082 - 20cm DESCRIZIONE Rullo in…",
+    "desc": "",
     "tags": [
       "Rulli in poliestere e in lana merino"
     ],
-    "productType": "Rulli in poliestere e in lana merino"
+    "productType": "Rulli in poliestere e in lana merino",
+    "specs": [],
+    "sku": [
+      "MTO072"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2565,11 +4729,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/POLISHING_MERINO-WOOL_ROLLER.png?v=1761037880",
-    "desc": "Rullo in lana Merino (5 mm). Da utilizzare per l'applicazione delle cere perfluorurate FP4 sullo sci da fondo o sullo sci alpino. RULLO IN LANA MERINO 5mm • Cod. MTO081 - 20cm DESCRIZIONE Rullo in lana Merino (5 mm). Da utilizzare per…",
+    "desc": "",
     "tags": [
       "Rulli in poliestere e in lana merino"
     ],
-    "productType": "Rulli in poliestere e in lana merino"
+    "productType": "Rulli in poliestere e in lana merino",
+    "specs": [],
+    "sku": [
+      "MTO076"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2578,11 +4747,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/SPREADING_POLYESTER_ROLLER.png?v=1761037879",
-    "desc": "Rullo in poliestere. Da utilizzare per l'applicazione delle cere perfluorurate FP4 o delle paraffine liquide HP3, LP2 e BP1 sullo sci da fondo o sullo sci alpino. RULLO IN POLIESTERE • Cod. MTO070 - 10cm • Cod. MTO075 - 14cm • Cod. MTO080…",
+    "desc": "",
     "tags": [
       "Rulli in poliestere e in lana merino"
     ],
-    "productType": "Rulli in poliestere e in lana merino"
+    "productType": "Rulli in poliestere e in lana merino",
+    "specs": [],
+    "sku": [
+      "MTO070"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2591,11 +4765,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/ROTO_KIT_10CM_2_f80d52fd-e273-4135-b7cc-feac87277d29.png?v=1762266865",
-    "desc": "ROTO KIT 10 CM - POLIESTERE Formato confezione • Cod. kit MTO066 (MTO040 + MTO041 + MTO070-12-13)",
+    "desc": "",
     "tags": [
       "Spazzole rotanti kit"
     ],
-    "productType": "Spazzole rotanti kit"
+    "productType": "Spazzole rotanti kit",
+    "specs": [],
+    "sku": [
+      "MT0066"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2604,11 +4783,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/ROTO_KIT_10CM_3_0ab3c0bf-028b-4044-9e30-5e4d85e2a2f5.png?v=1762266938",
-    "desc": "ROTO KIT 10 CM - OTTONE Formato confezione • Cod. kit MTO065 (MTO040 + MTO041 + MTO011-12-13) DESCRIZIONE Kit rotante cm 10 - Ottone.",
+    "desc": "",
     "tags": [
       "Spazzole rotanti kit"
     ],
-    "productType": "Spazzole rotanti kit"
+    "productType": "Spazzole rotanti kit",
+    "specs": [],
+    "sku": [
+      "MT0065"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2617,11 +4801,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/ROTO_KIT_10CM_1230a64a-3856-441d-b27e-f482fa05491c.png?v=1762266864",
-    "desc": "ROTO KIT 10 CM - SUGHERO Formato confezione • Cod. kit MTO060 (MTO040 + MTO041 + MTO022-12-13) DESCRIZIONE Kit rotante cm 10 - Sughero.",
+    "desc": "",
     "tags": [
       "Spazzole rotanti kit"
     ],
-    "productType": "Spazzole rotanti kit"
+    "productType": "Spazzole rotanti kit",
+    "specs": [],
+    "sku": [
+      "MT0060"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2630,12 +4819,19 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/MAPLUSTEX_EXTRA_FINE_2.png?v=1761037878",
-    "desc": "Grazie alle fibre speciali, rimuove i micropeli degli sci nordici dopo nuova strutturazione/levigatura e dona la finitura finale.",
+    "desc": "",
     "tags": [
       "Accessori",
       "Maplustex rollers"
     ],
-    "productType": "Spazzole rotanti"
+    "productType": "Spazzole rotanti",
+    "specs": [],
+    "sku": [
+      "MT0095RS"
+    ],
+    "format": [
+      "10 cm"
+    ]
   },
   {
     "brand": "maplus",
@@ -2644,12 +4840,19 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/MAPLUSTEX_FINE.png?v=1761037879",
-    "desc": "Grazie alla sua microlamina abrasiva, velocizza la soletta in tempi rapidi; consigliati solo tre passaggi dopo una nuova strutturazione con levigatura.",
+    "desc": "",
     "tags": [
       "Accessori",
       "Maplustex rollers"
     ],
-    "productType": "Spazzole rotanti"
+    "productType": "Spazzole rotanti",
+    "specs": [],
+    "sku": [
+      "MT0090RS"
+    ],
+    "format": [
+      "10 cm"
+    ]
   },
   {
     "brand": "maplus",
@@ -2658,11 +4861,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/ROTO_BRUSH_STEEL_2.png?v=1761037879",
-    "desc": "XC COMBI 1 • Cod. MTO049 - 14cm DESCRIZIONE XC Combi 1 - cm 14 (crine + nylon). Da utilizzare per la spazzolatura profonda e la lucidatura di qualsiasi tipo di paraffina sullo sci da fondo.",
+    "desc": "",
     "tags": [
       "Spazzole rotanti"
     ],
-    "productType": "Spazzole rotanti"
+    "productType": "Spazzole rotanti",
+    "specs": [],
+    "sku": [
+      "MTO049"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2671,11 +4879,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/ROTO_BRUSH_STEEL.png?v=1761037879",
-    "desc": "SPAZZOLA IN ACCIAIO • Cod. MTO017 - 10cm • Cod. MTO019 - 20cm DESCRIZIONE Da utilizzare per la prima spazzolatura di paraffine dure sullo sci di fondo, alpino e snowboard",
+    "desc": "",
     "tags": [
       "Spazzole rotanti"
     ],
-    "productType": "Spazzole rotanti"
+    "productType": "Spazzole rotanti",
+    "specs": [],
+    "sku": [
+      "MTO017"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2684,11 +4897,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/ROTO_BRUSH_CORK.png?v=1761037880",
-    "desc": "RULLO IN SUGHERO • Cod. MTO022 - 10cm • Cod. MTO024 - 14cm DESCRIZIONE Rullo in sughero. Da utilizzare per l'applicazione delle cere perfluorurate FP4 sullo sci da salto.",
+    "desc": "",
     "tags": [
       "Spazzole rotanti"
     ],
-    "productType": "Spazzole rotanti"
+    "productType": "Spazzole rotanti",
+    "specs": [],
+    "sku": [
+      "MTO022"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2697,11 +4915,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/ROTO_BRUSH_NYLON.png?v=1761037879",
-    "desc": "SPAZZOLA IN NYLON • Cod. MTO043 - 14cm • Cod. MTO015 - 20cm DESCRIZIONE Da utilizzare per la spazzolatura e lucidatura profonda di qualsiasi tipo di paraffina su sci di fondo e sci alpino, nonché snowboard.",
+    "desc": "",
     "tags": [
       "Spazzole rotanti"
     ],
-    "productType": "Spazzole rotanti"
+    "productType": "Spazzole rotanti",
+    "specs": [],
+    "sku": [
+      "MTO043"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2710,11 +4933,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/e7c0584255fa6f2981e510285a9e9e4f_4246ef3b-dbff-4462-afe5-c0ad656a78b2.jpg?v=1755614256",
-    "desc": "Spazzola in nylon - cm 10. Da utilizzare per la lucidatura di qualsiasi tipo di paraffina e cera perfluorurata sullo sci da fondo o sullo sci alpino. SPAZZOLA IN NYLON MORBIDO • Cod. MTO013 - 10cm DESCRIZIONE Spazzola in nylon - cm 10. Da…",
+    "desc": "",
     "tags": [
       "Spazzole rotanti"
     ],
-    "productType": "Spazzole rotanti"
+    "productType": "Spazzole rotanti",
+    "specs": [],
+    "sku": [
+      "MTO013"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2723,11 +4951,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/ROTO_BRUSH_HORSEHAIR.png?v=1761037879",
-    "desc": "SPAZZOLA IN CRINE • Cod. MTO042 - 14cm • Cod. MTO014 - 20cm DESCRIZIONE Da utilizzare per la spazzolatura e lucidatura profonda di qualsiasi tipo di paraffina su sci di fondo e sci alpino, nonché snowboard.",
+    "desc": "",
     "tags": [
       "Spazzole rotanti"
     ],
-    "productType": "Spazzole rotanti"
+    "productType": "Spazzole rotanti",
+    "specs": [],
+    "sku": [
+      "MTO042"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2736,11 +4969,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/d722f2a14a84b7ad8053262f61a6106b_c5af1963-086a-42c2-807f-9f448a4b34f1.jpg?v=1755614255",
-    "desc": "Spazzola in crine morbido - cm 10. Da utilizzare per la spazzolatura fine di qualsiasi tipo di paraffina e cera perfluorurata sullo sci da fondo o sullo sci alpino. SPAZZOLA IN CRINE MORBIDO • Cod. MTO016 - 10cm DESCRIZIONE Spazzola in…",
+    "desc": "",
     "tags": [
       "Spazzole rotanti"
     ],
-    "productType": "Spazzole rotanti"
+    "productType": "Spazzole rotanti",
+    "specs": [],
+    "sku": [
+      "MTO016"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2749,11 +4987,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/73608782f50eb6af17bb69bdcd662692_953326e4-1a4c-422a-9e3e-d0a4ce6bdc9c.jpg?v=1755614254",
-    "desc": "Spazzola rotante in crine duro - cm 10. Da utilizzare per la spazzolatura profonda di qualsiasi tipo di paraffina sullo sci da fondo o sullo sci alpino SPAZZOLA IN CRINE DURO • Cod. MTO012 - 10cm DESCRIZIONE Spazzola rotante in crine duro…",
+    "desc": "",
     "tags": [
       "Spazzole rotanti"
     ],
-    "productType": "Spazzole rotanti"
+    "productType": "Spazzole rotanti",
+    "specs": [],
+    "sku": [
+      "MTO012"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2762,11 +5005,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/948378d6a67ac0d7c7c6728581b072ab_2ec59b4b-522c-4312-904f-0d6889066272.jpg?v=1755614253",
-    "desc": "Valigia per spazzole rotanti con imbottitura per spazzole da 10 cm. VALIGIA PER SPAZZOLE ROTANTI • Cod. BCM0103 DESCRIZIONE Valigia per spazzole rotanti con imbottitura per spazzole da 10 cm. Dimensione: 38x28x9 cm.",
+    "desc": "",
     "tags": [
       "Spazzole rotanti"
     ],
-    "productType": "Spazzole rotanti"
+    "productType": "Spazzole rotanti",
+    "specs": [],
+    "sku": [
+      "BMC0103"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2775,11 +5023,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/938a195f8810cb9b31c6503221891897_e30069c2-a962-4cea-8ce0-7853bd66cd6e.jpg?v=1755614252",
-    "desc": "Asta esagonale standard per il trapano. NOMIC DRIVE SHAFT • Cod. MTO041 - 10cm • Cod. MTO047 - 14cm • Cod. MTO048 - 20cm DESCRIZIONE Asta esagonale standard per il trapano.",
+    "desc": "",
     "tags": [
       "Spazzole rotanti"
     ],
-    "productType": "Spazzole rotanti"
+    "productType": "Spazzole rotanti",
+    "specs": [],
+    "sku": [
+      "MTO041"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2788,11 +5041,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/QUICK_DRIVE_SHAFT_20b8509c-4334-4eb0-bc00-78eddd6630b7.png?v=1761052275",
-    "desc": "QUIK DRIVE SHAFT • Cod. MTO031 - 10cm • Cod. MTO032 - 14cm • Cod. MTO033 - 20cm DESCRIZIONE Albero di trasmissione rapido per impugnatura Roto.",
+    "desc": "",
     "tags": [
       "Spazzole rotanti"
     ],
-    "productType": "Spazzole rotanti"
+    "productType": "Spazzole rotanti",
+    "specs": [],
+    "sku": [
+      "MTO031"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2801,11 +5059,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/048731097de322302aff7e52151c991d_299bc4a5-74b3-45e4-b4c1-fb36dee46722.jpg?v=1755614251",
-    "desc": "Impugnatura compatta a sgancio rapido per l'asta del trapano. NOMIC GRIP • Cod. MTO040 DESCRIZIONE Impugnatura compatta a sgancio rapido per l'asta del trapano.",
+    "desc": "",
     "tags": [
       "Spazzole rotanti"
     ],
-    "productType": "Spazzole rotanti"
+    "productType": "Spazzole rotanti",
+    "specs": [],
+    "sku": [
+      "MTO040"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2814,11 +5077,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/QUICK_GRIP_ae148639-f23a-43aa-9b6d-d1b88ec005a0.png?v=1761052272",
-    "desc": "QUICK GRIP • Cod. MTO030 DESCRIZIONE Impugnatura a sgancio rapido per l'asta del trapano.",
+    "desc": "",
     "tags": [
       "Spazzole rotanti"
     ],
-    "productType": "Spazzole rotanti"
+    "productType": "Spazzole rotanti",
+    "specs": [],
+    "sku": [
+      "MTO030"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2827,11 +5095,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/OVAL_MANUAL_BRUSH_SOFT_HORSEHAIR.png?v=1761037879",
-    "desc": "SPAZZOLA MANUALE OVALE IN CRINE MORBIDO Formato confezione • Cod. MTO124 DESCRIZIONE Da utilizzare per la spazzolatura fine di qualsiasi tipo di paraffina.",
+    "desc": "",
     "tags": [
       "Spazzole manuali"
     ],
-    "productType": "Spazzole manuali"
+    "productType": "Spazzole manuali",
+    "specs": [],
+    "sku": [
+      "MTO124"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2840,11 +5113,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/OVAL_MANUAL_BRUSH_HARD_HORSEHAIR.png?v=1761037879",
-    "desc": "SPAZZOLA MANUALE OVALE IN CRINE DURO Formato confezione • Cod. MTO124 DESCRIZIONE Da utilizzare per la spazzolatura profonda di qualsiasi tipo di paraffina.",
+    "desc": "",
     "tags": [
       "Spazzole manuali"
     ],
-    "productType": "Spazzole manuali"
+    "productType": "Spazzole manuali",
+    "specs": [],
+    "sku": [
+      "MTO121"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2853,11 +5131,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/OVAL_MANUAL_BRUSH_SOFT_BRASS.png?v=1761037879",
-    "desc": "SPAZZOLA MANUALE OVALE IN OTTONE MORBIDO Formato confezione • Cod. MTO123 DESCRIZIONE Da utilizzare per la spazzolatura di qualsiasi tipo di paraffina morbida e media e durante le operazioni di pulizia della soletta.",
+    "desc": "",
     "tags": [
       "Spazzole manuali"
     ],
-    "productType": "Spazzole manuali"
+    "productType": "Spazzole manuali",
+    "specs": [],
+    "sku": [
+      "MTO123"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2866,11 +5149,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/OVAL_MANUAL_BRUSH_HARD_STEEL.png?v=1761037879",
-    "desc": "Formato confezione • Cod. MTO126 DESCRIZIONE Da utilizzare per la spazzolatura di qualsiasi tipo di paraffina dura e per accelerare la saturazione della soletta da sci in polietilene.",
+    "desc": "",
     "tags": [
       "Spazzole manuali"
     ],
-    "productType": "Spazzole manuali"
+    "productType": "Spazzole manuali",
+    "specs": [],
+    "sku": [
+      "MTO126"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2879,11 +5167,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/OVAL_MANUAL_BRUSH_SOFT_NYLON.png?v=1761037879",
-    "desc": "Formato confezione • Cod. MTO122 DESCRIZIONE Da utilizzare per la lucidatura profonda di qualsiasi tipo di paraffina.",
+    "desc": "",
     "tags": [
       "Spazzole manuali"
     ],
-    "productType": "Spazzole manuali"
+    "productType": "Spazzole manuali",
+    "specs": [],
+    "sku": [
+      "MTO122"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2892,11 +5185,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/OVAL_MANUAL_BRUSH_SOFT_NYLON.png?v=1761037879",
-    "desc": "Formato confezione • Cod. MTO125 DESCRIZIONE Da utilizzare con movimenti in avanti e indietro per la spazzolatura superficiale e la lucidatura di qualsiasi tipo di paraffina.",
+    "desc": "",
     "tags": [
       "Spazzole manuali"
     ],
-    "productType": "Spazzole manuali"
+    "productType": "Spazzole manuali",
+    "specs": [],
+    "sku": [
+      "MTO125"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2905,11 +5203,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/OVAL_MANUAL_BRUSH_HARD_HORSEHAIR.png?v=1761037879",
-    "desc": "SPAZZOLA MANUALE OVALE IN ACCIAIO MORBIDO Formato confezione • Cod. MTO127 DESCRIZIONE Da utilizzare per la prima spazzolatura di qualsiasi tipo di paraffina.",
+    "desc": "",
     "tags": [
       "Spazzole manuali"
     ],
-    "productType": "Spazzole manuali"
+    "productType": "Spazzole manuali",
+    "specs": [],
+    "sku": [
+      "MTO127"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2918,11 +5221,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/OVAL_MANUAL_BRUSH_HARD_STEEL.png?v=1761037879",
-    "desc": "SPAZZOLA MANUALE OVALE IN ACCIAIO DURO Formato confezione • Cod. MTO128 DESCRIZIONE Da utilizzare per la spazzolatura di qualsiasi tipo di paraffina dura e durante le operazioni di pulizia della base in polietilene.",
+    "desc": "",
     "tags": [
       "Spazzole manuali"
     ],
-    "productType": "Spazzole manuali"
+    "productType": "Spazzole manuali",
+    "specs": [],
+    "sku": [
+      "MTO128"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2931,11 +5239,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/MANUAL_BRUSH_SOFT_STEEL.png?v=1761037878",
-    "desc": "SPAZZOLA MANUALE IN ACCIAIO Formato confezione • Cod. MTO107 DESCRIZIONE Da utilizzare per la spazzolatura di qualsiasi tipo di sciolina dura.",
+    "desc": "",
     "tags": [
       "Spazzole manuali"
     ],
-    "productType": "Spazzole manuali"
+    "productType": "Spazzole manuali",
+    "specs": [],
+    "sku": [
+      "MTO107"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2944,11 +5257,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/MANUAL_BRUSH_SOFT_BRASS.png?v=1761037879",
-    "desc": "SPAZZOLA MANUALE IN OTTONE MORBIDO Formato confezione • Cod. MTO103 DESCRIZIONE Da utilizzare per la spazzolatura di qualsiasi tipo di paraffina morbida e media e durante le operazioni di pulizia della soletta.",
+    "desc": "",
     "tags": [
       "Spazzole manuali"
     ],
-    "productType": "Spazzole manuali"
+    "productType": "Spazzole manuali",
+    "specs": [],
+    "sku": [
+      "MTO103"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2957,11 +5275,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/MANUAL_BRUSH_HARD_BRASS.png?v=1761037879",
-    "desc": "SPAZZOLA MANUALE IN OTTONE DURO Formato confezione • Cod. MTO106 DESCRIZIONE Da utilizzare per la spazzolatura profonda di qualsiasi tipo di paraffina.",
+    "desc": "",
     "tags": [
       "Spazzole manuali"
     ],
-    "productType": "Spazzole manuali"
+    "productType": "Spazzole manuali",
+    "specs": [],
+    "sku": [
+      "MTO106"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2970,11 +5293,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/MANUAL_BRUSH_SOFT_NYLON.png?v=1761037879",
-    "desc": "SPAZZOLA MANUALE IN NYLON MORBIDO Formato confezione • Cod. MTO102 DESCRIZIONE Spazzola per la lucidatura profonda di tutti i tipi di scioline.",
+    "desc": "",
     "tags": [
       "Spazzole manuali"
     ],
-    "productType": "Spazzole manuali"
+    "productType": "Spazzole manuali",
+    "specs": [],
+    "sku": [
+      "MTO102"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2983,11 +5311,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/MANUAL_BRUSH_SOFT_NYLON.png?v=1761037879",
-    "desc": "SPAZZOLA MANUALE IN NYLON DURO Formato confezione • Cod. MTO105 DESCRIZIONE Spazzola per la lucidatura profonda di tutti i tipi di scioline.",
+    "desc": "",
     "tags": [
       "Spazzole manuali"
     ],
-    "productType": "Spazzole manuali"
+    "productType": "Spazzole manuali",
+    "specs": [],
+    "sku": [
+      "MTO105"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -2996,11 +5329,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/MANUAL_BRUSH_HARD_HORSEHAIR.png?v=1761037879",
-    "desc": "SPAZZOLA MANUALE IN CRINE MORBIDO Formato confezione • Cod. MTO104 DESCRIZIONE Da utilizzare per la spazzolatura profonda di qualsiasi tipo di sciolina, setole più corte per un’azione più aggressiva.",
+    "desc": "",
     "tags": [
       "Spazzole manuali"
     ],
-    "productType": "Spazzole manuali"
+    "productType": "Spazzole manuali",
+    "specs": [],
+    "sku": [
+      "MTO104"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3009,11 +5347,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/MANUAL_BRUSH_HARD_HORSEHAIR.png?v=1761037879",
-    "desc": "SPAZZOLA MANUALE IN CRINE DURO Formato confezione • Cod. MTO101 DESCRIZIONE Da utilizzare per la spazzolatura profonda di qualsiasi tipo di sciolina, setole più corte per un’azione più aggressiva.",
+    "desc": "",
     "tags": [
       "Spazzole manuali"
     ],
-    "productType": "Spazzole manuali"
+    "productType": "Spazzole manuali",
+    "specs": [],
+    "sku": [
+      "MTO101"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3022,11 +5365,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/THERMO_WAXING_COVER.png?v=1761037879",
-    "desc": "TERMOCOPERTA SNOWBOARD Formato confezione • Cod. MTO806N - AC 220Volt • Cod. MTO806NUS - AC 110Volt Termocoperta professionale per snowboard. Temperatura di esercizio: 55-60°C Dimensione: 1800x330 mm 55°C x 1,5 h per una rapida saturazione…",
+    "desc": "",
     "tags": [
       "Accessori per sciolinatura"
     ],
-    "productType": "Accessori per sciolinatura"
+    "productType": "Accessori per sciolinatura",
+    "specs": [],
+    "sku": [
+      "MTO805N - MTO805NUS"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3035,11 +5383,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/FELT_PAD.png?v=1761037877",
-    "desc": "Stenditore con feltro STENDITORE CON FELTRO Formato confezione • Cod. MTO118 - 135x42x39mm DESCRIZIONE Stenditore con feltro",
+    "desc": "",
     "tags": [
       "Accessori per sciolinatura"
     ],
-    "productType": "Accessori per sciolinatura"
+    "productType": "Accessori per sciolinatura",
+    "specs": [],
+    "sku": [
+      "MTO118"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3048,11 +5401,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/PLEXY_SCRAPER.png?v=1761037879",
-    "desc": "MTO511 - Raschietto PLEXY. Dimensioni: 130x60x4mm. MTO518 - Raschietto PLEXY. Dimensioni: 130x60x5mm. RASCHIETTO PLEXY Formato confezione • Cod. MTO511 • Cod. MTO518 DESCRIZIONE MTO511 - Raschietto PLEXY. Dimensioni: 130x60x4mm. MTO518 -…",
+    "desc": "",
     "tags": [
       "Accessori per sciolinatura"
     ],
-    "productType": "Accessori per sciolinatura"
+    "productType": "Accessori per sciolinatura",
+    "specs": [],
+    "sku": [
+      "MTO511"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3061,11 +5419,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/CLAMPING_FOR_THERMO_COVER.png?v=1761037877",
-    "desc": "Pinza blocca-sci per qualsiasi termocoperta professionale. PINZA BLOCCA-SCI PER TERMOCOPERTA Formato confezione • Cod. MTO802 DESCRIZIONE Pinza blocca-sci per qualsiasi termocoperta professionale.",
+    "desc": "",
     "tags": [
       "Accessori per sciolinatura"
     ],
-    "productType": "Accessori per sciolinatura"
+    "productType": "Accessori per sciolinatura",
+    "specs": [],
+    "sku": [
+      "MTO802"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3074,11 +5437,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/THERMO_WAXING_COVER.png?v=1761037879",
-    "desc": "TERMOCOPERTA SCI ALPINO CON LEGASCI Formato confezione • Cod. MTO801N - AC 220Volt • Cod. MTO801NUS - AC 110Volt DESCRIZIONE Termocoperta professionale per sci alpino con legasci. Temperatura di esercizio: 55-60°C. Dimensione: 2300x140mm.…",
+    "desc": "",
     "tags": [
       "Accessori per sciolinatura"
     ],
-    "productType": "Accessori per sciolinatura"
+    "productType": "Accessori per sciolinatura",
+    "specs": [],
+    "sku": [
+      "MTO801N - AC 220V"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3087,11 +5455,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/PTFE_TAPE.png?v=1761037878",
-    "desc": "Rotolo in teflon per isolare il ferro sciolinatore dalla soletta. Dimensione: 0,13x 10 mt. ROTOLO PTFE Formato confezione • Cod. MTO901 DESCRIZIONE Rotolo in PTFE per isolare il ferro sciolinatore dalla soletta. Dimensione: 0,13x 10 mt.",
+    "desc": "",
     "tags": [
       "Accessori per sciolinatura"
     ],
-    "productType": "Accessori per sciolinatura"
+    "productType": "Accessori per sciolinatura",
+    "specs": [],
+    "sku": [
+      "MTO901"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3100,11 +5473,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/GROOVE_SCRAPER_41aecd24-38c9-45a2-b8ad-e678067a50e8.png?v=1761052229",
-    "desc": "SPATOLA PER CANALINE Formato confezione • Cod. MTO512 - 140mm DESCRIZIONE Raschietto per rimuovere l’eccesso di sciolina dalla scanalatura dello sci nordico.",
+    "desc": "",
     "tags": [
       "Accessori per sciolinatura"
     ],
-    "productType": "Accessori per sciolinatura"
+    "productType": "Accessori per sciolinatura",
+    "specs": [],
+    "sku": [
+      "MTO512"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3113,11 +5491,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/NORDIC_SCRAPER.png?v=1761037877",
-    "desc": "SPATOLA NORDICO Formato confezione • Cod. MTO510 DESCRIZIONE Raschietto con multi-scanalature per la pulizia dello sci.",
+    "desc": "",
     "tags": [
       "Accessori per sciolinatura"
     ],
-    "productType": "Accessori per sciolinatura"
+    "productType": "Accessori per sciolinatura",
+    "specs": [],
+    "sku": [
+      "MTO510"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3126,11 +5509,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/SYNTHETIC_CORK.png?v=1761037879",
-    "desc": "Stenditore in sughero sintetico per scioline di tenuta. Dimensione: 70x50x35 mm. STENDITORE IN SUGHERO SINTETICO Formato confezione • Cod. MTO113 - 70x50x35mm DESCRIZIONE Stenditore in sughero sintetico per scioline di tenuta. Dimensione:…",
+    "desc": "",
     "tags": [
       "Accessori per sciolinatura"
     ],
-    "productType": "Accessori per sciolinatura"
+    "productType": "Accessori per sciolinatura",
+    "specs": [],
+    "sku": [
+      "MTO113"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3139,11 +5527,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/CORK_NYLON_BRUSH.png?v=1761037878",
-    "desc": "Spazzola-Stenditore in nylon-sughero per prodotti liquidi e in polvere. SPAZZOLA/STENDITORE NYLON-SUGHERO Formato confezione • Cod. MTO111 - 75x55x34mm DESCRIZIONE Spazzola-Stenditore in nylon-sughero per prodotti liquidi e in polvere.",
+    "desc": "",
     "tags": [
       "Accessori per sciolinatura"
     ],
-    "productType": "Accessori per sciolinatura"
+    "productType": "Accessori per sciolinatura",
+    "specs": [],
+    "sku": [
+      "MTO111"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3152,11 +5545,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/CORK.png?v=1761037877",
-    "desc": "STENDITORE IN SUGHERO Formato confezione • Cod. MTO110 - 70x50x35mm DESCRIZIONE Stenditore in sughero per prodotti liquidi e in polvere.",
+    "desc": "",
     "tags": [
       "Accessori per sciolinatura"
     ],
-    "productType": "Accessori per sciolinatura"
+    "productType": "Accessori per sciolinatura",
+    "specs": [],
+    "sku": [
+      "MTO110"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3165,11 +5563,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/STEEL_STRUCTURE_BRUSH.png?v=1761037878",
-    "desc": "Spazzola in acciaio rigido per strutturare la soletta. Da utilizzare con elevata professionalità per velocizzare la soletta durante le operazioni di saturazione della stessa. SPAZZOLA IN ACCIAIO DURO Formato confezione • Cod. BK00130…",
+    "desc": "",
     "tags": [
       "Ski lab accessori"
     ],
-    "productType": "Ski lab accessori"
+    "productType": "Ski lab accessori",
+    "specs": [],
+    "sku": [
+      "BK00130"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3178,11 +5581,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/ffb67c0cbdf3cc4dd2a13b69ce367cd4_b435a60d-ead4-4473-b532-c27b06085f51.jpg?v=1755614201",
-    "desc": "Scotch brite roller 16 cm SCOTCH BRITE ROLLER Formato confezione • 16cm - Cod. SV00027 DESCRIZIONE Scotch brite roller 16 cm.",
+    "desc": "",
     "tags": [
       "Sciolinatrice e Spazzolatrice a rulli"
     ],
-    "productType": "Sciolinatrice e Spazzolatrice a rulli"
+    "productType": "Sciolinatrice e Spazzolatrice a rulli",
+    "specs": [],
+    "sku": [
+      "SV00027"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3191,11 +5599,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/358873fad4914931314b94f2036b503a_e9aa8f31-99e7-462c-a34f-b3b1de97f1a8.jpg?v=1755614200",
-    "desc": "Singola pelle in lana merino 10mm. SPAZZOLA NYLON/HORSEHAIR 10mm • 16cm - Cod. SV00026 DESCRIZIONE Singola pelle in lana merino 10mm.",
+    "desc": "",
     "tags": [
       "Sciolinatrice e Spazzolatrice a rulli"
     ],
-    "productType": "Sciolinatrice e Spazzolatrice a rulli"
+    "productType": "Sciolinatrice e Spazzolatrice a rulli",
+    "specs": [],
+    "sku": [
+      "SV00026"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3204,11 +5617,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/42121f00ffc451d0c288e11c1f28cbd4_b1efa023-448a-4849-a5e2-cb5d9c37c11b.jpg?v=1755614200",
-    "desc": "Spazzola in nylon 10mm. SPAZZOLA NYLON 10mm • 16cm - Cod. SV00024 DESCRIZIONE Spazzola in nylon 10mm.",
+    "desc": "",
     "tags": [
       "Sciolinatrice e Spazzolatrice a rulli"
     ],
-    "productType": "Sciolinatrice e Spazzolatrice a rulli"
+    "productType": "Sciolinatrice e Spazzolatrice a rulli",
+    "specs": [],
+    "sku": [
+      "SV00024"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3217,11 +5635,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/51a3864ed3ad604d2340c3f8fe249f94_093079b0-6368-4077-8d5e-771d88c9a75c.jpg?v=1755614198",
-    "desc": "Spazzola in crine 10mm. SPAZZOLA IN CRINE 10mm • 16cm - Cod. SV00023 DESCRIZIONE Spazzola in crine 10mm.",
+    "desc": "",
     "tags": [
       "Sciolinatrice e Spazzolatrice a rulli"
     ],
-    "productType": "Sciolinatrice e Spazzolatrice a rulli"
+    "productType": "Sciolinatrice e Spazzolatrice a rulli",
+    "specs": [],
+    "sku": [
+      "SV00023"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3230,11 +5653,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/ROTO_BRUSH_BRASS.png?v=1761037880",
-    "desc": "SPAZZOLA IN OTTONE • 16cm - Cod. SV00022 DESCRIZIONE Da utilizzare per la prima spazzolatura di paraffine morbide e medie su sci di fondo, alpino e snowboard.",
+    "desc": "",
     "tags": [
       "Sciolinatrice e Spazzolatrice a rulli"
     ],
-    "productType": "Sciolinatrice e Spazzolatrice a rulli"
+    "productType": "Sciolinatrice e Spazzolatrice a rulli",
+    "specs": [],
+    "sku": [
+      "SV00022"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3243,11 +5671,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/3707d8f2be163bd14c78cf07586f13bb_159103fc-ea04-4052-a0d4-8d77a5d90e45.jpg?v=1755614196",
-    "desc": "Singola pelle in lana merino. SINGOLA PELLE IN LANA MERINO • 14cm - Cod. SV00021 DESCRIZIONE Singola pelle in lana merino.",
+    "desc": "",
     "tags": [
       "Sciolinatrice e Spazzolatrice a rulli"
     ],
-    "productType": "Sciolinatrice e Spazzolatrice a rulli"
+    "productType": "Sciolinatrice e Spazzolatrice a rulli",
+    "specs": [],
+    "sku": [
+      "SV00021"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3256,11 +5689,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/780149ddfa09fbd86eb140fe6810d770_f1142f83-0355-4298-8b43-778e7915adf6.jpg?v=1755614196",
-    "desc": "Singola pelle in lana merino. ROLLER FOR MERINO WOOL LEATHER • 14cm - Cod. SV00029 DESCRIZIONE Singola pelle in lana merino.",
+    "desc": "",
     "tags": [
       "Sciolinatrice e Spazzolatrice a rulli"
     ],
-    "productType": "Sciolinatrice e Spazzolatrice a rulli"
+    "productType": "Sciolinatrice e Spazzolatrice a rulli",
+    "specs": [],
+    "sku": [
+      "SV00029"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3269,11 +5707,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/0d0c19531d6e29f793ed165732978408_a7c28034-5391-475b-bdfa-29721f41d85f.jpg?v=1755614195",
-    "desc": "Affilatore elettrico per spatole in plexiglass regolabile in altezza e larghezza di taglio e trasformatore AC/DC. SCIOLINATORE • Cod. SV00030N Dimensione: 154X58X100 mm Peso: 1,5 Kg Voltaggio AC 110-220V / DC12V Assorbimento 0.1 Kw…",
+    "desc": "",
     "tags": [
       "SCIOLINATORE"
     ],
-    "productType": "SCIOLINATORE"
+    "productType": "SCIOLINATORE",
+    "specs": [],
+    "sku": [
+      "SV00030N"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3282,11 +5725,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/350_TANK_WITH_SILICON_ROLLER.png?v=1761037877",
-    "desc": "Vaschetta singola con rullo in silicone (mod. 350). VASCHETTA 350 CON RULLO IN SILICONE • Cod. SV00009 DESCRIZIONE Vaschetta singola con rullo in silicone (mod. 350).",
+    "desc": "",
     "tags": [
       "Hot box accessori"
     ],
-    "productType": "Hot box accessori"
+    "productType": "Hot box accessori",
+    "specs": [],
+    "sku": [
+      "SV00009"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3295,11 +5743,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/140_TANK_COVER.png?v=1761037877",
-    "desc": "Coperchio per vaschetta. VASCHETTA 160 CON RULLO STANDARD • Cod. SV00012 DESCRIZIONE Coperchio per vaschetta.",
+    "desc": "",
     "tags": [
       "Hot box accessori"
     ],
-    "productType": "Hot box accessori"
+    "productType": "Hot box accessori",
+    "specs": [],
+    "sku": [
+      "SV00012"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3308,11 +5761,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/aaa082d2257ab65aecf61c2340e9c5b9_d2764cc1-83d3-451f-ad6a-67d3bd49c109.jpg?v=1755614190",
-    "desc": "Vaschetta per cera singola con rullo standard. VASCHETTA 160 CON RULLO STANDARD • Cod. SV00011 DESCRIZIONE Vaschetta per cera singola con rullo standard.",
+    "desc": "",
     "tags": [
       "Hot box accessori"
     ],
-    "productType": "Hot box accessori"
+    "productType": "Hot box accessori",
+    "specs": [],
+    "sku": [
+      "SV00011"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3321,11 +5779,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/140_TANK_COVER.png?v=1761037877",
-    "desc": "Coperchio per vaschetta. COPERCHIO PER VASCHETTA 140 • Cod. SV00006 DESCRIZIONE Coperchio per vaschetta.",
+    "desc": "",
     "tags": [
       "Hot box accessori"
     ],
-    "productType": "Hot box accessori"
+    "productType": "Hot box accessori",
+    "specs": [],
+    "sku": [
+      "SV00006"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3334,11 +5797,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/140_TANK_WITH_SKI_WAX_SCRAPERS.png?v=1761037877",
-    "desc": "Vaschetta singola con spatola in acciaio. VASCHETTA 140 CON SPATOLA IN ACCIAIO • Cod. SV00004 DESCRIZIONE Vaschetta singola con spatola in acciaio.",
+    "desc": "",
     "tags": [
       "Hot box accessori"
     ],
-    "productType": "Hot box accessori"
+    "productType": "Hot box accessori",
+    "specs": [],
+    "sku": [
+      "SV00004"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3347,11 +5815,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/SPARE_BODY_FILE_2.png?v=1761640953",
-    "desc": "Vaschetta Cross Country Roller. VASCHETTA COUNTRY ROLLER 140 • Cod. SV00003 DESCRIZIONE Vaschetta Cross Country Roller.",
+    "desc": "",
     "tags": [
       "Hot box accessori"
     ],
-    "productType": "Hot box accessori"
+    "productType": "Hot box accessori",
+    "specs": [],
+    "sku": [
+      "SV00003"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3360,11 +5833,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/140_TANK_WITH_STANDARD_ROLLER.png?v=1761037878",
-    "desc": "Vaschetta per cera singola con rullo standard. VASCHETTA 140 CON RULLO STANDARD • Cod. SV00002 DESCRIZIONE Vaschetta per cera singola con rullo standard.",
+    "desc": "",
     "tags": [
       "Hot box accessori"
     ],
-    "productType": "Hot box accessori"
+    "productType": "Hot box accessori",
+    "specs": [],
+    "sku": [
+      "SV00002"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3373,11 +5851,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/HOTBOX_350_6b96b36a-7904-4dd4-8fde-b1f106e9c29a.png?v=1761052034",
-    "desc": "Sciolinatrice manuale a caldo per sci e snowboard con vaschetta intercambiabile e doppia temperatura d’esercizio. HOTBOX 350 • Cod. SV00008 Dimensione: 420X198x100 mm Peso: 6 Kg Voltaggio 220V/50Hz Disponibile a 110V Assorbimento 1 Kw…",
+    "desc": "",
     "tags": [
       "Hot box"
     ],
-    "productType": "Hot box"
+    "productType": "Hot box",
+    "specs": [],
+    "sku": [
+      "SV00008"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3386,11 +5869,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/HOTBOX_160_47b90197-779a-4f89-a985-c9019f74696d.png?v=1761052032",
-    "desc": "Sciolinatrice manuale a caldo per sci e snowboard con vaschetta intercambiabile e doppia temperatura d’esercizio. HOTBOX 160 • Cod. SV00010 Dimensione: 225X198x100 mm Peso: 4 Kg Voltaggio 220V/50Hz Disponibile a 110V Assorbimento 0.7 Kw…",
+    "desc": "",
     "tags": [
       "Hot box"
     ],
-    "productType": "Hot box"
+    "productType": "Hot box",
+    "specs": [],
+    "sku": [
+      "SV00010"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3399,11 +5887,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/HOTBOX_140_7a4260be-08ac-4d6f-b133-54f18e4cc1a3.png?v=1761052029",
-    "desc": "Sciolinatrice manuale a caldo per sci e snowboard con vaschetta intercambiabile e doppia temperatura d’esercizio. HOTBOX 140 • Cod. SV00001 Dimensione: 205X198x100 mm Peso: 3 Kg Voltaggio 220V/50Hz Disponibile a 110V Assorbimento 0.7 Kw…",
+    "desc": "",
     "tags": [
       "Hot box"
     ],
-    "productType": "Hot box"
+    "productType": "Hot box",
+    "specs": [],
+    "sku": [
+      "SV00001"
+    ],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3412,12 +5905,32 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "xc-line",
     "lineTitle": "XC Line",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/KLISTER_K15_UNIVERSAL.png?v=1761037880",
-    "desc": "Previene la formazione di ghiaccio.",
+    "desc": "",
     "tags": [
       "Grip Wax",
       "XC Line"
     ],
-    "productType": "KLISTER"
+    "productType": "KLISTER",
+    "specs": [
+      {
+        "labelNo": "Lufttemperatur",
+        "labelEn": "Air temperature",
+        "valueNo": "-5° / +5 °C",
+        "valueEn": "-5° / +5 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Omdannet snø",
+        "valueEn": "Transformed snow"
+      }
+    ],
+    "sku": [
+      "MW0K15"
+    ],
+    "format": [
+      "60 g"
+    ]
   },
   {
     "brand": "maplus",
@@ -3426,12 +5939,32 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "xc-line",
     "lineTitle": "XC Line",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/KLISTER_K14_SILVER_59e5aa9f-b049-4139-be80-732a0740b4f2.png?v=1761052026",
-    "desc": "Ottimo per ridurre l’attrito e aumentare la scorrevolezza su neve molto abrasiva.",
+    "desc": "",
     "tags": [
       "Grip Wax",
       "XC Line"
     ],
-    "productType": "KLISTER"
+    "productType": "KLISTER",
+    "specs": [
+      {
+        "labelNo": "Lufttemperatur",
+        "labelEn": "Air temperature",
+        "valueNo": "0° / +5 °C",
+        "valueEn": "0° / +5 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Neve asciutta prima di bagnarsi",
+        "valueEn": "Neve asciutta prima di bagnarsi"
+      }
+    ],
+    "sku": [
+      "MW0K14"
+    ],
+    "format": [
+      "60 g"
+    ]
   },
   {
     "brand": "maplus",
@@ -3445,7 +5978,27 @@ export const PRODUCTS: Product[] = [
       "Grip Wax",
       "XC Line"
     ],
-    "productType": "KLISTER"
+    "productType": "KLISTER",
+    "specs": [
+      {
+        "labelNo": "Lufttemperatur",
+        "labelEn": "Air temperature",
+        "valueNo": "-1° / +4 °C",
+        "valueEn": "-1° / +4 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Neve dura, aggressiva, tendente al bagnato",
+        "valueEn": "Neve dura, aggressiva, tendente al bagnato"
+      }
+    ],
+    "sku": [
+      "MW0K13"
+    ],
+    "format": [
+      "60 g"
+    ]
   },
   {
     "brand": "maplus",
@@ -3459,7 +6012,27 @@ export const PRODUCTS: Product[] = [
       "Grip Wax",
       "XC Line"
     ],
-    "productType": "KLISTER"
+    "productType": "KLISTER",
+    "specs": [
+      {
+        "labelNo": "Lufttemperatur",
+        "labelEn": "Air temperature",
+        "valueNo": "-3° / +3 °C",
+        "valueEn": "-3° / +3 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Neve poco bagnata",
+        "valueEn": "Neve poco bagnata"
+      }
+    ],
+    "sku": [
+      "MW0K12"
+    ],
+    "format": [
+      "60 g"
+    ]
   },
   {
     "brand": "maplus",
@@ -3473,7 +6046,27 @@ export const PRODUCTS: Product[] = [
       "Grip Wax",
       "XC Line"
     ],
-    "productType": "KLISTER"
+    "productType": "KLISTER",
+    "specs": [
+      {
+        "labelNo": "Lufttemperatur",
+        "labelEn": "Air temperature",
+        "valueNo": "-4° / 0 °C",
+        "valueEn": "-4° / 0 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Omdannet snø",
+        "valueEn": "Transformed snow"
+      }
+    ],
+    "sku": [
+      "MW0K11"
+    ],
+    "format": [
+      "60 g"
+    ]
   },
   {
     "brand": "maplus",
@@ -3482,12 +6075,32 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "xc-line",
     "lineTitle": "XC Line",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/KLISTER_K10_GREEN.png?v=1761037878",
-    "desc": "Deve sempre essere usato come primo strato (base klister) per tutte le scioline klister, indipendentemente dalla temperatura.",
+    "desc": "",
     "tags": [
       "Grip Wax",
       "XC Line"
     ],
-    "productType": "KLISTER"
+    "productType": "KLISTER",
+    "specs": [
+      {
+        "labelNo": "Lufttemperatur",
+        "labelEn": "Air temperature",
+        "valueNo": "-7° / -1 °C",
+        "valueEn": "-7° / -1 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Omdannet snø",
+        "valueEn": "Transformed snow"
+      }
+    ],
+    "sku": [
+      "MW0K10"
+    ],
+    "format": [
+      "60 g"
+    ]
   },
   {
     "brand": "maplus",
@@ -3501,7 +6114,27 @@ export const PRODUCTS: Product[] = [
       "Grip Wax",
       "XC Line"
     ],
-    "productType": "STICK"
+    "productType": "STICK",
+    "specs": [
+      {
+        "labelNo": "Lufttemperatur",
+        "labelEn": "Air temperature",
+        "valueNo": "0° / +4 °C",
+        "valueEn": "0° / +4 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Tutte le condizioni",
+        "valueEn": "Tutte le condizioni"
+      }
+    ],
+    "sku": [
+      "MW0S16"
+    ],
+    "format": [
+      "45 g"
+    ]
   },
   {
     "brand": "maplus",
@@ -3515,7 +6148,27 @@ export const PRODUCTS: Product[] = [
       "Grip Wax",
       "XC Line"
     ],
-    "productType": "STICK"
+    "productType": "STICK",
+    "specs": [
+      {
+        "labelNo": "Lufttemperatur",
+        "labelEn": "Air temperature",
+        "valueNo": "-2° / +1 °C",
+        "valueEn": "-2° / +1 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Condizioni critiche da “No Wax”",
+        "valueEn": "Condizioni critiche da “No Wax”"
+      }
+    ],
+    "sku": [
+      "MW0S15"
+    ],
+    "format": [
+      "45 g"
+    ]
   },
   {
     "brand": "maplus",
@@ -3529,7 +6182,27 @@ export const PRODUCTS: Product[] = [
       "Grip Wax",
       "XC Line"
     ],
-    "productType": "STICK"
+    "productType": "STICK",
+    "specs": [
+      {
+        "labelNo": "Lufttemperatur",
+        "labelEn": "Air temperature",
+        "valueNo": "-3° / -1 °C",
+        "valueEn": "-3° / -1 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Neve nuova e cadente",
+        "valueEn": "Neve nuova e cadente"
+      }
+    ],
+    "sku": [
+      "MW0S14"
+    ],
+    "format": [
+      "45 g"
+    ]
   },
   {
     "brand": "maplus",
@@ -3543,7 +6216,27 @@ export const PRODUCTS: Product[] = [
       "Grip Wax",
       "XC Line"
     ],
-    "productType": "STICK"
+    "productType": "STICK",
+    "specs": [
+      {
+        "labelNo": "Lufttemperatur",
+        "labelEn": "Air temperature",
+        "valueNo": "-5° / -3 °C",
+        "valueEn": "-5° / -3 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Omdannet snø",
+        "valueEn": "Transformed snow"
+      }
+    ],
+    "sku": [
+      "MW0S13"
+    ],
+    "format": [
+      "45 g"
+    ]
   },
   {
     "brand": "maplus",
@@ -3557,7 +6250,27 @@ export const PRODUCTS: Product[] = [
       "Grip Wax",
       "XC Line"
     ],
-    "productType": "STICK"
+    "productType": "STICK",
+    "specs": [
+      {
+        "labelNo": "Lufttemperatur",
+        "labelEn": "Air temperature",
+        "valueNo": "-10° / -6 °C",
+        "valueEn": "-10° / -6 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Neve nuova e cadente, poco trasformata",
+        "valueEn": "Neve nuova e cadente, poco trasformata"
+      }
+    ],
+    "sku": [
+      "MW0S12"
+    ],
+    "format": [
+      "45 g"
+    ]
   },
   {
     "brand": "maplus",
@@ -3566,12 +6279,32 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "xc-line",
     "lineTitle": "XC Line",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/GRIPWAX_GREEN_S11_a719366e-8682-402d-89fd-632d1f2eea3d.png?v=1761052009",
-    "desc": "Stick base da applicare sempre come primo strato di scioline solide.",
+    "desc": "",
     "tags": [
       "Grip Wax",
       "XC Line"
     ],
-    "productType": "STICK"
+    "productType": "STICK",
+    "specs": [
+      {
+        "labelNo": "Lufttemperatur",
+        "labelEn": "Air temperature",
+        "valueNo": "-16° / -8 °C",
+        "valueEn": "-16° / -8 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Omdannet snø",
+        "valueEn": "Transformed snow"
+      }
+    ],
+    "sku": [
+      "MW0S11"
+    ],
+    "format": [
+      "45 g"
+    ]
   },
   {
     "brand": "maplus",
@@ -3580,12 +6313,32 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "xc-line",
     "lineTitle": "XC Line",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/GRIPWAX_BASE_S10_ffbbebc4-3b9b-4f66-9428-a82019d361ea.png?v=1761052006",
-    "desc": "Stick Base",
+    "desc": "",
     "tags": [
       "Grip Wax",
       "XC Line"
     ],
-    "productType": "STICK"
+    "productType": "STICK",
+    "specs": [
+      {
+        "labelNo": "Lufttemperatur",
+        "labelEn": "Air temperature",
+        "valueNo": "Qualsiasi",
+        "valueEn": "Qualsiasi"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Da utilizzare come base prima delle altre stick",
+        "valueEn": "Da utilizzare come base prima delle altre stick"
+      }
+    ],
+    "sku": [
+      "MW0S10"
+    ],
+    "format": [
+      "45 g"
+    ]
   },
   {
     "brand": "maplus",
@@ -3594,14 +6347,17 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "voks",
     "lineTitle": "Voks (annet)",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/UNIVERSAL_SKIN_SPRAY_923f0426-cec6-4d00-a9ed-a273b1aef18e.png?v=1761052003",
-    "desc": "Polimero spray universale per la protezione della pelle da ghiaccio e sporco che migliora le proprietà di scorrimento. Per tutte le condizioni di neve. UNIVERSAL SKIN SPRAY Formato confezione: • Cod. MW0745 - 250ml Per tutti i tipi di neve…",
+    "desc": "",
     "tags": [
       "250 ml",
       "Liquido",
       "TOURING SKIN & BASE WAX",
       "Tutti i tipi di neve"
     ],
-    "productType": "TOURING SKIN & BASE WAX"
+    "productType": "TOURING SKIN & BASE WAX",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3610,14 +6366,30 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "voks",
     "lineTitle": "Voks (annet)",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/UNIVERSAL_TOUR_1653f0eb-7bae-41b8-b6a7-215fcf4f55e0.png?v=1761051998",
-    "desc": "Paraffina universale liquida di alta qualità per uso sportivo sulle pelli da sci alpinismo e sulle solette degli sci con qualunque tipo di neve. Il prodotto è dotato di un tappo applicatore in feltro che permette una rapida sciolinatura…",
+    "desc": "",
     "tags": [
       "12x75 ml",
       "Liquido",
       "TOURING SKIN & BASE WAX",
       "Tutti i tipi di neve"
     ],
-    "productType": "TOURING SKIN & BASE WAX"
+    "productType": "TOURING SKIN & BASE WAX",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "-15 ° / 0 °C",
+        "valueEn": "-15 ° / 0 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Alle snøtyper",
+        "valueEn": "All snow types"
+      }
+    ],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3626,13 +6398,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/ANTI_ICE_SPRAY_4a9da6f7-f57a-4177-ac84-ffc74c1c44af.png?v=1761052001",
-    "desc": "Speciale spray siliconico realizzato per evitare che ghiaccino le scioline di tenuta o per evitare che si formi ghiaccio sulla zona di tenuta degli sci squamati. E’ anche utile per evitare che si formi ghiaccio sulla serigrafia e sui…",
+    "desc": "",
     "tags": [
       "150 ml",
       "ANTI-ICE",
       "Spray"
     ],
-    "productType": "ANTI-ICE"
+    "productType": "ANTI-ICE",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3641,7 +6416,7 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "voks",
     "lineTitle": "Voks (annet)",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/UNIVERSAL_LIQUID_PARAFFIN.png?v=1761037899",
-    "desc": "UNIVERSAL Per tutti i tipi di neve Formato confezione • Cod. MW0715 - 1lt • Cod. MW0716 - 4,9lt DESCRIZIONE Paraffina universale liquida per uso sportivo con qualunque tipo di neve. E’ un prodotto particolarmente adatto a noleggi e…",
+    "desc": "",
     "tags": [
       "1 lt - 4",
       "9 lt",
@@ -3649,7 +6424,10 @@ export const PRODUCTS: Product[] = [
       "Liquido",
       "Tutti i tipi di neve"
     ],
-    "productType": "LIQUID"
+    "productType": "LIQUID",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3658,13 +6436,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/78.png?v=1761657453",
-    "desc": "UNIVERSAL HOT • Cod. MW0711 - 5kg • Cod. MW0713 - 20kg Per tutti i tipi di neve –5°/0°C DESCRIZIONE Paraffina universale granulare. Prodotto indicato per noleggi e laboratori. Utilizzare applicazione a caldo con macchine sciolinatrici…",
+    "desc": "",
     "tags": [
       "1kg - 5 kg - 20 kg",
       "GRANULAR",
       "Solida"
     ],
-    "productType": "GRANULAR"
+    "productType": "GRANULAR",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3673,14 +6454,17 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/77.png?v=1761657463",
-    "desc": "UNIVERSAL COLD Formato confezione • Cod. MW0710 - 5kg • Cod. MW0712 - 20kg Per tutti i tipi di neve –15°/-5°C DESCRIZIONE Paraffina universale solida per uso sportivo da -15° a -5°C. E’ un prodotto particolarmente adatto a noleggi e…",
+    "desc": "",
     "tags": [
       "1kg - 5 kg - 20 kg",
       "GRANULAR",
       "Solida",
       "Tutti i tipi di neve"
     ],
-    "productType": "GRANULAR"
+    "productType": "GRANULAR",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3689,13 +6473,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "voks",
     "lineTitle": "Voks (annet)",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/90701d02ae3da0e5a21abbd900c25748_c003da28-a63b-4dcd-adf7-a2a4f218f3c7.jpg?v=1755614159",
-    "desc": "Paraffina fluorurata universale solida per uso sportivo da -5° a +0° C. E’ un prodotto particolarmente adatto a noleggi e laboratori. YELLOW FLUORO Formato confezione • Cod. MW0706N - 100gr • Cod. MW0708N - 1kg Per tutti i tipi di neve…",
+    "desc": "",
     "tags": [
       "100 gr - 1 kg",
       "SOLID FLUORINATED PARAFFIN",
       "Solida"
     ],
-    "productType": "SOLID FLUORINATED PARAFFIN"
+    "productType": "SOLID FLUORINATED PARAFFIN",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3704,13 +6491,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "voks",
     "lineTitle": "Voks (annet)",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/22c02097e4438bd2f2f3fe4a6a3ab0e1_673ec5e8-7afc-44bd-8b3d-880470390e49.jpg?v=1755614157",
-    "desc": "Paraffina fluorurata universale solida per uso sportivo da -15° a -5°C. E’ un prodotto particolarmente adatto a noleggi e laboratori. RED FLUORO Formato confezione • Cod. MW0705N - 100gr • Cod. MW0707N - 1kg Per tutti i tipi di neve…",
+    "desc": "",
     "tags": [
       "100 gr - 1 kg",
       "SOLID FLUORINATED PARAFFIN",
       "Solida"
     ],
-    "productType": "SOLID FLUORINATED PARAFFIN"
+    "productType": "SOLID FLUORINATED PARAFFIN",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3719,14 +6509,17 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "voks",
     "lineTitle": "Voks (annet)",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/75.png?v=1761657464",
-    "desc": "YELLOW Formato confezione • Cod. MW0701 - 100gr • Cod. MW0703 - 1kg Per tutti i tipi di neve –5°/0°C 110/120°C DESCRIZIONE Paraffina universale solida per uso sportivo da -5° a +0° C. E’ un prodotto particolarmente adatto a noleggi e…",
+    "desc": "",
     "tags": [
       "100 gr - 1 kg",
       "SOLID PARAFFIN",
       "Solida",
       "Tutti i tipi di neve"
     ],
-    "productType": "SOLID PARAFFIN"
+    "productType": "SOLID PARAFFIN",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3735,14 +6528,30 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "voks",
     "lineTitle": "Voks (annet)",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/UNIVERSAL_LIQUID_2.png?v=1761037900",
-    "desc": "DISPLAY BOX CREAM Formato confezione • Cod. MW0725N - 12x75ml Per tutti i tipi di neve –15°/0°C DESCRIZIONE Cera universale di alta qualità glide. Ideale per lo sport e il tempo libero in tutte le condizioni. Applicazione rapida con tappo…",
+    "desc": "",
     "tags": [
       "12 x 75 ml",
       "Liquido",
       "Super glide wax line",
       "Tutti i tipi di neve"
     ],
-    "productType": "Super glide wax line"
+    "productType": "Super glide wax line",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "-15 ° / 0 °C",
+        "valueEn": "-15 ° / 0 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Alle snøtyper",
+        "valueEn": "All snow types"
+      }
+    ],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3751,14 +6560,30 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "voks",
     "lineTitle": "Voks (annet)",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/UNIVERSAL_CREAM.png?v=1761037899",
-    "desc": "Cera universale super glide in crema. Ideale per l'allenamento e il tempo libero e in tutte le condizioni climatiche. UNIVERSAL CREAM Formato confezione • Cod. MW0727N - 250ml Per tutti i tipi di neve –15°/0°C DESCRIZIONE Cera universale…",
+    "desc": "",
     "tags": [
       "250 ml",
       "Solida",
       "Super glide wax line",
       "Tutti i tipi di neve"
     ],
-    "productType": "Super glide wax line"
+    "productType": "Super glide wax line",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "-15 ° / 0 °C",
+        "valueEn": "-15 ° / 0 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Alle snøtyper",
+        "valueEn": "All snow types"
+      }
+    ],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3767,14 +6592,30 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "voks",
     "lineTitle": "Voks (annet)",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/80.png?v=1761657465",
-    "desc": "DISPLAY BOX LIQUID Formato confezione • Cod. MW0720N - 12 x 75ml Per tutti i tipi di neve –15°/0°C DESCRIZIONE Paraffina liquida universale di alta qualità per uso sportivo e tempo libero. Dotata di applicatore con cappuccio in feltro per…",
+    "desc": "",
     "tags": [
       "12 x 75 ml",
       "Liquido",
       "Super glide wax line",
       "Tutti i tipi di neve"
     ],
-    "productType": "Super glide wax line"
+    "productType": "Super glide wax line",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "-15 ° / 0 °C",
+        "valueEn": "-15 ° / 0 °C"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Alle snøtyper",
+        "valueEn": "All snow types"
+      }
+    ],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3783,14 +6624,17 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "bp10",
     "lineTitle": "BP10",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/SKIN_GLICE_TOP_KIT_6361d5db-ed02-4da7-b6d1-2b20171c16f7.png?v=1761051994",
-    "desc": "Paraffina liquida universale di alta qualità per allenamento, uso sportivo e tempo libero. SKIN & GLIDE TOP KIT Formato confezione • Cod. MW0830 - 75ml - Temp. Neve: da - 22°C a -8°C • Cod. MW0831 - 75ml - Temp. Neve: da - 9°C a -2°C •…",
+    "desc": "",
     "tags": [
       "75 ml",
       "GLIDING KIT",
       "Liquido",
       "Tutti i tipi di neve"
     ],
-    "productType": "GLIDING KIT"
+    "productType": "GLIDING KIT",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3799,7 +6643,7 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "voks",
     "lineTitle": "Voks (annet)",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/BP10_HOT_KIT_c7e18ad7-b55e-442c-802c-273b087a5e91.png?v=1761051991",
-    "desc": "Paraffina liquida per allenamento ed uso sportivo con qualunque tipo di neve da -3° a 0°C. BP1 HOT Formato confezione • Cod. MW0832 - 75ml • Cod. MW0835 - 150ml • Cod. MW0838 - 0,5lt Per tutti i tipi di neve –3°/0°C DESCRIZIONE Paraffina…",
+    "desc": "",
     "tags": [
       "5 lt",
       "75 ml - 150 ml - 0",
@@ -3807,7 +6651,10 @@ export const PRODUCTS: Product[] = [
       "Liquido",
       "Tutti i tipi di neve"
     ],
-    "productType": "BP1 HYDROCARBON PARAFFIN"
+    "productType": "BP1 HYDROCARBON PARAFFIN",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3816,7 +6663,7 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "voks",
     "lineTitle": "Voks (annet)",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/9653b574708b7a6469e28ee67a57dc73_6a4af3fe-cfb2-4d06-bdb1-6d9d08320704.jpg?v=1755614142",
-    "desc": "Paraffina liquida per allenamento ed uso sportivo con qualunque tipo di neve da -9° a -2°C. ma non bagnata. E’ utilizzabile come prodotto universale da allenamento. BP1 MED Formato confezione • Cod. MW0831 - 75ml • Cod. MW0834 - 150ml •…",
+    "desc": "",
     "tags": [
       "5 lt",
       "75 ml - 150 ml - 0",
@@ -3824,7 +6671,10 @@ export const PRODUCTS: Product[] = [
       "Liquido",
       "Tutti i tipi di neve"
     ],
-    "productType": "BP1 HYDROCARBON PARAFFIN"
+    "productType": "BP1 HYDROCARBON PARAFFIN",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3833,7 +6683,7 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "voks",
     "lineTitle": "Voks (annet)",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/c6db11a71571f6269d8aa754fc40212f_d52a8af1-dd0e-4b89-a9ab-de0caf2bb0d8.jpg?v=1755614140",
-    "desc": "Paraffina liquida per allenamento ed uso sportivo con qualunque tipo di neve da -22° a -8°C. Per uso agonistico va utilizzata con umidità dell’aria BP1 COLD Formato confezione • Cod. MW0830 - 75ml • Cod. MW0833 - 150ml • Cod. MW0836 -…",
+    "desc": "",
     "tags": [
       "5 lt",
       "75 ml - 150 ml - 0",
@@ -3841,7 +6691,10 @@ export const PRODUCTS: Product[] = [
       "Liquido",
       "Tutti i tipi di neve"
     ],
-    "productType": "BP1 HYDROCARBON PARAFFIN"
+    "productType": "BP1 HYDROCARBON PARAFFIN",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3850,7 +6703,7 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "voks",
     "lineTitle": "Voks (annet)",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/47b9371a5ec847a6416d19e09506ac86_cf0e9f88-8003-4843-8eb6-d13b62d05379.jpg?v=1755614140",
-    "desc": "Paraffina liquida a basso contenuto di fluoro per uso agonistico come prodotto finale o come base per sovrapporre le cere per fluorurate FP4. Da utilizzare con qualunque tipo di neve umida o bagnata da -3° a 0°C. Umidità dell'aria da 30% a…",
+    "desc": "",
     "tags": [
       "5 lt",
       "75 ml - 150 ml - 0",
@@ -3858,7 +6711,10 @@ export const PRODUCTS: Product[] = [
       "LP2 FLUORINATED PARAFFIN",
       "Tutti i tipi di neve"
     ],
-    "productType": "LP2 FLUORINATED PARAFFIN"
+    "productType": "LP2 FLUORINATED PARAFFIN",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3867,7 +6723,7 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "voks",
     "lineTitle": "Voks (annet)",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/fe392f78a62c6fc460cf8c2a182b395f_6b55e07c-c0ee-4881-9c73-0b8da7da6843.jpg?v=1755614138",
-    "desc": "Paraffina liquida a basso contenuto di fluoro per uso agonistico come prodotto finale o come base per sovrapporre le cere per fluorurate FP4. Da utilizzare con qualunque tipo di neve da -9° a -2°C. ma non bagnata. Umidità dell’aria da 30%…",
+    "desc": "",
     "tags": [
       "5 lt",
       "75 ml - 150 ml - 0",
@@ -3875,7 +6731,10 @@ export const PRODUCTS: Product[] = [
       "LP2 FLUORINATED PARAFFIN",
       "Tutti i tipi di neve"
     ],
-    "productType": "LP2 FLUORINATED PARAFFIN"
+    "productType": "LP2 FLUORINATED PARAFFIN",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3884,7 +6743,7 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "voks",
     "lineTitle": "Voks (annet)",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/817a0b87c8b4a5b09390d4c2ae24ca96_9ba21608-3205-40fb-b21d-f578d7ee9991.jpg?v=1755614137",
-    "desc": "Paraffina liquida a basso contenuto di fluoro per uso agonistico come prodotto finale o come base per sovrapporre le cere per fluorurate FP4. Da utilizzare con qualunque tipo di neve da -22° a -8°C. Umidità dell'aria da 30% a 60%. LP2 COLD…",
+    "desc": "",
     "tags": [
       "5 lt",
       "75 ml - 150 ml - 0",
@@ -3892,7 +6751,10 @@ export const PRODUCTS: Product[] = [
       "LP2 FLUORINATED PARAFFIN",
       "Tutti i tipi di neve"
     ],
-    "productType": "LP2 FLUORINATED PARAFFIN"
+    "productType": "LP2 FLUORINATED PARAFFIN",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3901,7 +6763,7 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "voks",
     "lineTitle": "Voks (annet)",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/bc5983b67a44bcede801e2ff363b54e0_bdddf5aa-c7b2-463b-b351-65a115b9727a.jpg?v=1755614136",
-    "desc": "Paraffina liquida ad alto contenuto di fluoro per uso agonistico come prodotto finale o come prodotto di base per sovrapporre le cere per fluorurate FP4. Da utilizzare con qualunque tipo di neve umida o bagnata da -3° a 0°C. Umidità…",
+    "desc": "",
     "tags": [
       "5 lt",
       "75 ml - 0",
@@ -3909,7 +6771,10 @@ export const PRODUCTS: Product[] = [
       "Liquido",
       "Tutti i tipi di neve"
     ],
-    "productType": "HP3 HIGH FLUORINATED PARAFFIN"
+    "productType": "HP3 HIGH FLUORINATED PARAFFIN",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3918,7 +6783,7 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "voks",
     "lineTitle": "Voks (annet)",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/bc04f87b1442e82a9d7828879f80552b_86b3fea6-2558-4a4d-85e9-6a01174b8090.jpg?v=1755614135",
-    "desc": "Paraffina liquida ad alto contenuto di fluoro per uso agonistico come prodotto finale o come prodotto di base per sovrapporre le cere per fluorurate FP4. Da utilizzare con qualunque tipo di neve da -9° a -2°C. ma non bagnata. Umidità…",
+    "desc": "",
     "tags": [
       "5 lt",
       "75 ml - 0",
@@ -3926,7 +6791,10 @@ export const PRODUCTS: Product[] = [
       "Liquido",
       "Tutti i tipi di neve"
     ],
-    "productType": "HP3 HIGH FLUORINATED PARAFFIN"
+    "productType": "HP3 HIGH FLUORINATED PARAFFIN",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3935,7 +6803,7 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "voks",
     "lineTitle": "Voks (annet)",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/c82e68ecc91a6115905b52a4dab0ec5b_faf6d008-2432-46d9-8df5-86e29b598c1e.jpg?v=1755614134",
-    "desc": "Paraffina liquida ad alto contenuto di fluoro per uso agonistico come prodotto finale o come prodotto di base per sovrapporre le cere per fluorurate FP4. Da utilizzare con qualunque tipo di neve da -22° a -8°C. Umidità dell'aria da 60% a…",
+    "desc": "",
     "tags": [
       "5 lt",
       "75 ml - 0",
@@ -3943,7 +6811,10 @@ export const PRODUCTS: Product[] = [
       "Liquido",
       "Tutti i tipi di neve"
     ],
-    "productType": "HP3 HIGH FLUORINATED PARAFFIN"
+    "productType": "HP3 HIGH FLUORINATED PARAFFIN",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3952,7 +6823,7 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/CLEAN_1LT.png?v=1761037878",
-    "desc": "CLEAN Formato confezione • Cod. MW0755 - 150ml • Cod. MW0756 - 0,5lt • Cod. MW0757 - 1lt • Cod. MW0758 - 4,9lt DESCRIZIONE Solvente pulitore per solette. Rimuove i residui di scioline e acceleratori. Prepara la soletta ad una nuova…",
+    "desc": "",
     "tags": [
       "0",
       "5 lt - 1 lt - 4",
@@ -3960,7 +6831,15 @@ export const PRODUCTS: Product[] = [
       "CLEAN",
       "Liquido"
     ],
-    "productType": "CLEAN"
+    "productType": "CLEAN",
+    "specs": [],
+    "sku": [],
+    "format": [
+      "150ML",
+      "0.5L",
+      "1L",
+      "4.9 L"
+    ]
   },
   {
     "brand": "maplus",
@@ -3969,13 +6848,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessori",
     "lineTitle": "Tilbehør",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/36fdb1a35cd2f54f95cf2119fb5bc7ed_ad5a2f1a-b08c-4efd-b76e-bca513a90029.jpg?v=1755614131",
-    "desc": "Detergente liquido per eliminare i residui di paraffine (incluse le fluorurate) e lo sporco raccolto durante l’attività. CLEAN SPRAY Formato confezione • Cod. MW0755 - 150ml DESCRIZIONE Detergente liquido per eliminare i residui di…",
+    "desc": "",
     "tags": [
       "150 ml",
       "CLEAN",
       "Liquido"
     ],
-    "productType": "CLEAN"
+    "productType": "CLEAN",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -3984,14 +6866,17 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "voks",
     "lineTitle": "Voks (annet)",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/39eee751af30032eeece2f48de2de4ba_dd0735d9-180f-40f5-ada6-d16ed64b792d.jpg?v=1755614130",
-    "desc": "Detergente liquido per eliminare i residui di cere perfluorurate e lo sporco raccolto durante l’attività. FLUORCLEAN Formato confezione • Cod. MW0751N - 0,5 lt • Cod. MW0752N - 1lt DESCRIZIONE Detergente liquido per eliminare i residui di…",
+    "desc": "",
     "tags": [
       "0",
       "5 lt - 1 lt",
       "FLUORCLEAN",
       "Liquido"
     ],
-    "productType": "FLUORCLEAN"
+    "productType": "FLUORCLEAN",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -4000,13 +6885,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "voks",
     "lineTitle": "Voks (annet)",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/9ecd376e5371efaef9aad9bc9143aed8_35c4b4a7-c98c-4b4e-9ce3-9720ea6ecc5e.jpg?v=1755614129",
-    "desc": "Detergente liquido per eliminare i residui di cere perfluorurate e lo sporco raccolto durante l’attività. FLUORCLEAN SPRAY Formato confezione • Cod. MW0750N - 150ml DESCRIZIONE Detergente liquido per eliminare i residui di cere…",
+    "desc": "",
     "tags": [
       "150 ml",
       "FLUORCLEAN",
       "Liquido"
     ],
-    "productType": "FLUORCLEAN"
+    "productType": "FLUORCLEAN",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -4015,12 +6903,42 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "racing-base",
     "lineTitle": "Racing Base",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/ARCTIC_BASE_SOLID_40ea5da3-a838-4d19-8be7-62eb0023d5d1.png?v=1761746149",
-    "desc": "Prodotto di alta qualità. Le paraffine base MAPLUS sono studiate per offrire la migliore preparazione e protezione delle solette, garantendo ottima saturazione, resistenza all’usura e alte prestazioni. Applicazione a caldo, penetrazione…",
+    "desc": "",
     "tags": [
       "Racing base",
       "Solid Racing Base"
     ],
-    "productType": "RACING BASE PARAFFIN"
+    "productType": "RACING BASE PARAFFIN",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "-30° / -10 °C",
+        "valueEn": "-30° / -10 °C"
+      },
+      {
+        "labelNo": "Vokstype",
+        "labelEn": "Wax type",
+        "valueNo": "Cera per climi gelidi",
+        "valueEn": "Cera per climi gelidi"
+      },
+      {
+        "labelNo": "Bruk",
+        "labelEn": "Application",
+        "valueNo": "160 °C",
+        "valueEn": "160 °C"
+      }
+    ],
+    "sku": [
+      "MW1000",
+      "MW0810",
+      "MW0820"
+    ],
+    "format": [
+      "100 g - Powder",
+      "250 g",
+      "1 kg (4x250g)"
+    ]
   },
   {
     "brand": "maplus",
@@ -4029,12 +6947,40 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "racing-base",
     "lineTitle": "Racing Base",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/SOFT_BASE_SOLID.png?v=1761037879",
-    "desc": "Prodotto di alta qualità. Le paraffine base MAPLUS sono studiate per offrire la migliore preparazione e protezione delle solette, garantendo ottima saturazione, resistenza all’usura e alte prestazioni. Applicazione a caldo, penetrazione…",
+    "desc": "",
     "tags": [
       "Racing base",
       "Solid Racing Base"
     ],
-    "productType": "RACING BASE PARAFFIN"
+    "productType": "RACING BASE PARAFFIN",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "-5° / 0 °C",
+        "valueEn": "-5° / 0 °C"
+      },
+      {
+        "labelNo": "Vokstype",
+        "labelEn": "Wax type",
+        "valueNo": "Cera da allenamento",
+        "valueEn": "Cera da allenamento"
+      },
+      {
+        "labelNo": "Bruk",
+        "labelEn": "Application",
+        "valueNo": "130 °C",
+        "valueEn": "130 °C"
+      }
+    ],
+    "sku": [
+      "MW0871",
+      "MW0876"
+    ],
+    "format": [
+      "250 g",
+      "1 kg (4x250g)"
+    ]
   },
   {
     "brand": "maplus",
@@ -4043,14 +6989,17 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "racing-base",
     "lineTitle": "Racing Base",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/fa55c8bad0e242eb7986dc1135b50adb_fd5eec08-921a-4bc5-8936-f11d4c4dcfe7.jpg?v=1755614126",
-    "desc": "Paraffina in polvere per allenamento ed uso agonistico. Da utilizzare per neve da -30° a -10°C. Per uso agonistico va utilizzata con umidità dell’aria ARCTIC BASE POWDER ADDITIVE Formato confezione • Cod. MW1000 - 100gr Tutti i tipi di…",
+    "desc": "",
     "tags": [
       "100 gr",
       "Polvere",
       "RACING BASE PARAFFIN",
       "Tutti i tipi di neve"
     ],
-    "productType": "RACING BASE PARAFFIN"
+    "productType": "RACING BASE PARAFFIN",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -4059,12 +7008,40 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "racing-base",
     "lineTitle": "Racing Base",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/MED_BASE_SOLID_f7b447bf-1f46-4211-90ab-ae3fa15918b6.png?v=1761051974",
-    "desc": "Le paraffine base MAPLUS sono studiate per offrire la migliore preparazione e protezione delle solette, garantendo ottima saturazione, resistenza all’usura e alte prestazioni. Applicazione a caldo, penetrazione profonda e mantenimento…",
+    "desc": "",
     "tags": [
       "Racing base",
       "Solid Racing Base"
     ],
-    "productType": "RACING BASE PARAFFIN"
+    "productType": "RACING BASE PARAFFIN",
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "-10° / -5 °C",
+        "valueEn": "-10° / -5 °C"
+      },
+      {
+        "labelNo": "Vokstype",
+        "labelEn": "Wax type",
+        "valueNo": "Cera da allenamento",
+        "valueEn": "Cera da allenamento"
+      },
+      {
+        "labelNo": "Bruk",
+        "labelEn": "Application",
+        "valueNo": "140 °C",
+        "valueEn": "140 °C"
+      }
+    ],
+    "sku": [
+      "MW0870",
+      "MW0875"
+    ],
+    "format": [
+      "250 g",
+      "1 kg (4x250g)"
+    ]
   },
   {
     "brand": "maplus",
@@ -4073,14 +7050,17 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "voks",
     "lineTitle": "Voks (annet)",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/01f1a05053c6242fcfa23075e5b963c1_b0e53b90-32af-42ee-8aa1-a23ab643be4f.jpg?v=1755614123",
-    "desc": "Paraffina solida a basso contenuto di fluoro per uso agonistico come prodotto finale o come prodotto di base per sovrapporre le cere perfluorurate FP4. Da utilizzare per neve da -4° a 0°C. Umidità dell'aria intermedia da 30% a 60%. LP2…",
+    "desc": "",
     "tags": [
       "100 gr - 250 gr - 1 kg",
       "LP2 FLUORINATED PARAFFIN",
       "Solida",
       "Tutti i tipi di neve"
     ],
-    "productType": "LP2 FLUORINATED PARAFFIN"
+    "productType": "LP2 FLUORINATED PARAFFIN",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -4089,14 +7069,17 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "voks",
     "lineTitle": "Voks (annet)",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/787ae9ec9023a82f5aa7e4c1a64f73cb_0b101de9-20ef-4436-8dbe-af141028460f.jpg?v=1755614122",
-    "desc": "Paraffina solida a basso contenuto di fluoro per uso agonistico come prodotto finale o come prodotto di base per sovrapporre le cere perfluorurate FP4. Da utilizzare per neve da -5° a -1°C. Umidità dell'aria da 30% a 60%. LP2 YELLOW…",
+    "desc": "",
     "tags": [
       "100 gr - 250 gr - 1 kg",
       "In trasformazione",
       "LP2 FLUORINATED PARAFFIN",
       "Solida"
     ],
-    "productType": "LP2 FLUORINATED PARAFFIN"
+    "productType": "LP2 FLUORINATED PARAFFIN",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -4105,14 +7088,17 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "voks",
     "lineTitle": "Voks (annet)",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/feb4274796d93ff716e9650163a77fb8_fa8e290a-c469-41e2-886e-1d7354de3814.jpg?v=1755614120",
-    "desc": "Paraffina solida a basso contenuto di fluoro per uso agonistico come prodotto finale o come prodotto di base per sovrapporre le cere perfluorurate FP4. Da utilizzare per neve da -7° a -3°C. Umidità dell'aria da 30% a 60%. LP2 RED Formato…",
+    "desc": "",
     "tags": [
       "100 gr - 250 gr - 1 kg",
       "LP2 FLUORINATED PARAFFIN",
       "Solida",
       "Tutti i tipi di neve"
     ],
-    "productType": "LP2 FLUORINATED PARAFFIN"
+    "productType": "LP2 FLUORINATED PARAFFIN",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -4121,14 +7107,17 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "voks",
     "lineTitle": "Voks (annet)",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/af2ef6a0e2c9c528b09655df79f3b312_4f25498e-bb96-4a41-bbea-e06a5bad05f1.jpg?v=1755614120",
-    "desc": "Paraffina solida a basso contenuto di fluoro per uso agonistico come prodotto finale o come prodotto di base per sovrapporre le cere perfluorurate FP4. Da utilizzare per neve da -12° -6°C. Umidità dell'aria da 20% a 60%. LP2 VIOLET Formato…",
+    "desc": "",
     "tags": [
       "100 gr - 250 gr - 1 kg",
       "LP2 FLUORINATED PARAFFIN",
       "Solida",
       "Tutti i tipi di neve"
     ],
-    "productType": "LP2 FLUORINATED PARAFFIN"
+    "productType": "LP2 FLUORINATED PARAFFIN",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -4137,14 +7126,17 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "voks",
     "lineTitle": "Voks (annet)",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/233826a67be66a810b23a263230da62e_4eefbd01-7d59-4aa8-8f36-f44898ec1dfe.jpg?v=1755614118",
-    "desc": "Paraffina solida a basso contenuto di fluoro per uso agonistico come prodotto finale o come prodotto di base per sovrapporre le cere perfluorurate FP4. Da utilizzare per neve da -25° a -10°C. Umidità dell'aria da 20% a 60%. LP2 BLUE…",
+    "desc": "",
     "tags": [
       "100 gr - 250 gr - 1 kg",
       "In trasformazione",
       "LP2 FLUORINATED PARAFFIN",
       "Solida"
     ],
-    "productType": "LP2 FLUORINATED PARAFFIN"
+    "productType": "LP2 FLUORINATED PARAFFIN",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -4153,14 +7145,17 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "voks",
     "lineTitle": "Voks (annet)",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/e2bf3b11df0b872112757f1c2fee6e32_c8b1f2ee-9524-4532-bd10-bfb919b9aeb5.jpg?v=1755614117",
-    "desc": "Paraffina in polvere a basso contenuto di fluoro per uso agonistico come prodotto finale o come prodotto di base per sovrapporre le cere perfluorurate FP4. Da utilizzare per neve da -30° -10°C. Umidità dell'aria da 20% a 60%. LP2 GREEN…",
+    "desc": "",
     "tags": [
       "100 gr",
       "Fine nuova",
       "LP2 FLUORINATED PARAFFIN",
       "Polvere"
     ],
-    "productType": "LP2 FLUORINATED PARAFFIN"
+    "productType": "LP2 FLUORINATED PARAFFIN",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -4169,7 +7164,7 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "voks",
     "lineTitle": "Voks (annet)",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/37a06e4a72d6cb27621f1ed829bbee81_a454e79c-04ce-4044-bbc5-c86212436fc7.jpg?v=1755614116",
-    "desc": "Paraffina solida ad alto contenuto di fluoro per uso agonistico come prodotto finale o come prodotto di base per sovrapporre le cere perfluorurate FP4. Da utilizzare per neve da -3° a 0°C. Umidità dell'aria da 60% a 100%. HP3 ORANGE 2 MOLY…",
+    "desc": "",
     "tags": [
       "50 gr - 250 gr - 1kg",
       "Bagnata",
@@ -4177,7 +7172,10 @@ export const PRODUCTS: Product[] = [
       "Solida",
       "Trasformata"
     ],
-    "productType": "HP3 HIGH FLUORINATED PARAFFIN"
+    "productType": "HP3 HIGH FLUORINATED PARAFFIN",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -4186,14 +7184,17 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "voks",
     "lineTitle": "Voks (annet)",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/8fe3e0f34d3083cba6fe73d62a783d7f_0c5d7fd4-d9c1-4fda-a3f8-4a208d0daa66.jpg?v=1755614115",
-    "desc": "Paraffina solida ad alto contenuto di fluoro per uso agonistico come prodotto finale o come prodotto di base per sovrapporre le cere perfluorurate FP4. Da utilizzare per neve da -3° a 0°C. Umidità dell'aria da 60% a 100%. HP3 ORANGE 2…",
+    "desc": "",
     "tags": [
       "50 gr - 250 gr - 1kg",
       "Bagnata",
       "HP3 HIGH FLUORINATED PARAFFIN",
       "Solida"
     ],
-    "productType": "HP3 HIGH FLUORINATED PARAFFIN"
+    "productType": "HP3 HIGH FLUORINATED PARAFFIN",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -4202,14 +7203,17 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "voks",
     "lineTitle": "Voks (annet)",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/8b6e33345ac8d5ffd9cf0d107a7d9e9d_c87aef01-1689-464b-9ca9-35c20ee666ca.jpg?v=1755614114",
-    "desc": "Paraffina solida ad alto contenuto di fluoro per uso agonistico come prodotto finale o come prodotto di base per sovrapporre le cere per fluorurate FP4. Da utilizzare per neve da -4° a 0°. Umidità dell'aria da 60% a 100%. HP3 ORANGE 1…",
+    "desc": "",
     "tags": [
       "50 gr - 250 gr - 1kg",
       "HP3 HIGH FLUORINATED PARAFFIN",
       "Solida",
       "Trasformata"
     ],
-    "productType": "HP3 HIGH FLUORINATED PARAFFIN"
+    "productType": "HP3 HIGH FLUORINATED PARAFFIN",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -4218,7 +7222,7 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "voks",
     "lineTitle": "Voks (annet)",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/19f9cefdfb07230a68581d617885a3af_bd3be593-2614-4c62-8545-67dd17c408ae.jpg?v=1755614113",
-    "desc": "Paraffina solida ad alto contenuto di fluoro per uso agonistico come prodotto finale o come prodotto di base per sovrapporre le cere per fluorurate FP4. Da utilizzare per neve da -5° a -1°C. Umidità dell'aria da 60% a 100%. HP3 YELLOW 2…",
+    "desc": "",
     "tags": [
       "50 gr - 250 gr - 1kg",
       "Bagnata",
@@ -4226,7 +7230,10 @@ export const PRODUCTS: Product[] = [
       "Solida",
       "Trasformata"
     ],
-    "productType": "HP3 HIGH FLUORINATED PARAFFIN"
+    "productType": "HP3 HIGH FLUORINATED PARAFFIN",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -4235,7 +7242,7 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "voks",
     "lineTitle": "Voks (annet)",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/6f43b5263fbba79c5962514b85d34738_3c906aa8-34a8-4a24-a4d7-036b12cb6435.jpg?v=1755614112",
-    "desc": "Paraffina solida ad alto contenuto di fluoro per uso agonistico come prodotto finale o come prodotto di base per sovrapporre le cere per fluorurate FP4. Da utilizzare per neve da -4° a 0°C. Umidità dell'aria da 60% a 100%. È la scelta…",
+    "desc": "",
     "tags": [
       "50 gr - 250 gr - 1kg",
       "Bagnata",
@@ -4243,7 +7250,10 @@ export const PRODUCTS: Product[] = [
       "Solida",
       "Trasformata"
     ],
-    "productType": "HP3 HIGH FLUORINATED PARAFFIN"
+    "productType": "HP3 HIGH FLUORINATED PARAFFIN",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -4252,7 +7262,7 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "voks",
     "lineTitle": "Voks (annet)",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/ccb4e23c8aa216f1e96d31ab209c036b_44d1c597-c84f-4d46-b7b6-e656993bc9fc.jpg?v=1755614111",
-    "desc": "Paraffina solida ad alto contenuto di fluoro per uso agonistico come prodotto finale o come prodotto di base per sovrapporre le cere perfluorurate FP4. Da utilizzare per neve da -7° a -3°C. Umidità dell'aria da 60% a 100%. HP3 RED Formato…",
+    "desc": "",
     "tags": [
       "50 gr - 250 gr - 1kg",
       "HP3 HIGH FLUORINATED PARAFFIN",
@@ -4260,7 +7270,10 @@ export const PRODUCTS: Product[] = [
       "Solida",
       "Trasformata"
     ],
-    "productType": "HP3 HIGH FLUORINATED PARAFFIN"
+    "productType": "HP3 HIGH FLUORINATED PARAFFIN",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -4269,14 +7282,17 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "voks",
     "lineTitle": "Voks (annet)",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/71f67488b0857639cee631943a3fc6fa_dc3764b3-c248-4e41-9c35-2434fdb4c49d.jpg?v=1755614110",
-    "desc": "Paraffina solida ad alto contenuto di fluoro per uso agonistico come prodotto finale o come prodotto di base per sovrapporre le cere perfluorurate FP4. Da utilizzare per neve da -12° a -6°C. Umidità dell'aria da 60% a 100%. HP3 VIOLET…",
+    "desc": "",
     "tags": [
       "50 gr - 250 gr - 1kg",
       "HP3 HIGH FLUORINATED PARAFFIN",
       "Solida",
       "Tutti i tipi di neve"
     ],
-    "productType": "HP3 HIGH FLUORINATED PARAFFIN"
+    "productType": "HP3 HIGH FLUORINATED PARAFFIN",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -4285,7 +7301,7 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "voks",
     "lineTitle": "Voks (annet)",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/9b2c4b44fb86522964124ed80d03c5e8_cd964223-f30c-413e-bf17-1832d3339c40.jpg?v=1755614109",
-    "desc": "Paraffina solida ad alto contenuto di fluoro e molibdeno per uso agonistico come prodotto finale o come prodotto di base per sovrapporre le cere per fluorurate FP4. Da utilizzare per neve da -25° a -10°C. Umidità dell’aria da 50% a 90%.…",
+    "desc": "",
     "tags": [
       "50 gr - 250 gr - 1kg",
       "HP3 HIGH FLUORINATED PARAFFIN",
@@ -4293,7 +7309,10 @@ export const PRODUCTS: Product[] = [
       "Solida",
       "Umida nuova"
     ],
-    "productType": "HP3 HIGH FLUORINATED PARAFFIN"
+    "productType": "HP3 HIGH FLUORINATED PARAFFIN",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -4302,14 +7321,17 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "voks",
     "lineTitle": "Voks (annet)",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/f4b6dca0e2911082f0eb6e1df1a0e11d_df20d45f-a6c4-4539-afeb-91b3cc3c5885.jpg?v=1755614107",
-    "desc": "Paraffina in polvere ad alto contenuto di fluoro per uso agonistico come prodotto finale o come prodotto di base per sovrapporre le cere perfluorurate FP4. Da utilizzare per neve da -30° a -10°C. con cristallo fine nuovo o conservato e…",
+    "desc": "",
     "tags": [
       "50 gr",
       "Fine nuova",
       "HP3 HIGH FLUORINATED PARAFFIN",
       "Polvere"
     ],
-    "productType": "HP3 HIGH FLUORINATED PARAFFIN"
+    "productType": "HP3 HIGH FLUORINATED PARAFFIN",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -4318,13 +7340,16 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "voks",
     "lineTitle": "Voks (annet)",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/e31ace2a15a7c70645ad83df9ecd43b0_16b3bff6-8551-4f89-974f-ea594b98b289.jpg?v=1755614106",
-    "desc": "Cera perfluorurata in polvere per uso agonistico. Da utilizzare per neve da -16°C. a -2°C. Umidità dell’aria da 40% a 80%. Ottima anche su neve righiacciata primaverile dura. FP4 SUPERMED Formato confezione • Cod. MW0843N - 30gr Per tutti…",
+    "desc": "",
     "tags": [
       "30 gr",
       "FP4 PERFLUORINATED POWDER WAX",
       "Polvere"
     ],
-    "productType": "FP4 PERFLUORINATED POWDER WAX"
+    "productType": "FP4 PERFLUORINATED POWDER WAX",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -4333,14 +7358,17 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "voks",
     "lineTitle": "Voks (annet)",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/d61d44254608dd06ccdd2ff02982d14d_7eb8465d-f394-4576-b49c-1dd1a37b19f4.jpg?v=1755614105",
-    "desc": "Cera perfluorurata in polvere per uso agonistico. Da utilizzare per neve da -3°C. a +0°C. Umidità dell'aria da 60% a 100%. FP4 HOT Formato confezione • Cod. MW0842N - 30gr Per tutti i tipi di neve –3°/0°C 60/100% 160°C DESCRIZIONE Cera…",
+    "desc": "",
     "tags": [
       "30gr",
       "FP4 PERFLUORINATED POWDER WAX",
       "Polvere",
       "Tutti i tipi di neve"
     ],
-    "productType": "FP4 PERFLUORINATED POWDER WAX"
+    "productType": "FP4 PERFLUORINATED POWDER WAX",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -4349,14 +7377,17 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "voks",
     "lineTitle": "Voks (annet)",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/184b7cb84d7b456c96a0bdfbbeaa5f14_a55eafb0-2216-4c32-9458-93b98dc34808.jpg?v=1755614104",
-    "desc": "Cera perfluorurata in polvere per uso agonistico. Da utilizzare per neve da -9°C. a -2°C. Umidità dell’aria da 60% a 100%. FP4 MED Formato confezione • Cod. MW0841N - 30gr Per tutti i tipi di neve –9°/–2°C 60/100% 160°C DESCRIZIONE Cera…",
+    "desc": "",
     "tags": [
       "30 gr",
       "FP4 PERFLUORINATED POWDER WAX",
       "Polvere",
       "Tutti i tipi di neve"
     ],
-    "productType": "FP4 PERFLUORINATED POWDER WAX"
+    "productType": "FP4 PERFLUORINATED POWDER WAX",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -4365,14 +7396,17 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "voks",
     "lineTitle": "Voks (annet)",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/9caa2793658f3cc387f216157300b1ce_ae59ac3b-ce7d-4635-b92b-9e30b1c2cf45.jpg?v=1755614103",
-    "desc": "Cera perfluorurata in polvere per uso agonistico. Da utilizzare per neve da -22°C. a -8°C. Umidità dell'aria da 30% a 70%. FP4 COLD Formato confezione • Cod. MW0840N - 30gr Per tutti i tipi di neve –22°/–8°C 30/70% 160°C DESCRIZIONE Cera…",
+    "desc": "",
     "tags": [
       "30 gr",
       "FP4 PERFLUORINATED POWDER WAX",
       "Polvere",
       "Tutti i tipi di neve"
     ],
-    "productType": "FP4 PERFLUORINATED POWDER WAX"
+    "productType": "FP4 PERFLUORINATED POWDER WAX",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -4381,14 +7415,17 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "bp10",
     "lineTitle": "BP10",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/94d43e327d9303539cb1e2aac7032668_f7e65c8d-9c8d-4ea5-818d-649f11dbdb55.jpg?v=1755614101",
-    "desc": "Paraffina solida per allenamento ed uso sportivo. Da utilizzare per neve da -3° a +9°C. E’ un ottimo prodotto di base per la saturazione delle solette da gara. Per uso agonistico va utilizzata con umidità dell’aria BP10 YELLOW Formato…",
+    "desc": "",
     "tags": [
       "100 gr - 250 gr - 1 kg",
       "BP10 - BASE PARAFFIN",
       "Solida",
       "Tutti i tipi di neve"
     ],
-    "productType": "BP10 - BASE PARAFFIN"
+    "productType": "BP10 - BASE PARAFFIN",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -4397,14 +7434,17 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "bp10",
     "lineTitle": "BP10",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/e0a70f72bdae9885bfc32d7cd19a26a1_157ffa97-215b-4a3e-8ec6-6b486611ac13.jpg?v=1755614099",
-    "desc": "Paraffina solida per allenamento ed uso sportivo. Da utilizzare per neve da -9° a -3°C. E’ un ottimo prodotto per la protezione delle solette da gara ed è utilizzabile come base universale da gara e da allenamento. Per uso agonistico va…",
+    "desc": "",
     "tags": [
       "100 gr - 250 gr - 1 kg",
       "BP10 - BASE PARAFFIN",
       "Solida",
       "Tutti i tipi di neve"
     ],
-    "productType": "BP10 - BASE PARAFFIN"
+    "productType": "BP10 - BASE PARAFFIN",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -4413,14 +7453,17 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "bp10",
     "lineTitle": "BP10",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/2fa67f482133f1c934235b73c2a03954_540879f6-dd6d-4f3e-8288-ae4bf62f790f.jpg?v=1755614098",
-    "desc": "Paraffina solida per allenamento ed uso sportivo. Da utilizzare per neve da -19° -9°C. Per uso agonistico va utilizzata con umidità dell’aria BP10 VIOLET Formato confezione • Cod. MW0300 - 100gr • Cod. MW0310 - 250gr • Cod. MW0320 - 1kg…",
+    "desc": "",
     "tags": [
       "100 gr - 250 gr - 1 kg",
       "BP10 - BASE PARAFFIN",
       "Solida",
       "Tutti i tipi di neve"
     ],
-    "productType": "BP10 - BASE PARAFFIN"
+    "productType": "BP10 - BASE PARAFFIN",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -4429,14 +7472,17 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "voks",
     "lineTitle": "Voks (annet)",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/ada9a09acea936d776a6f55c82778c43_ebc302d0-6e9e-43e6-b23b-cadcb5c99a09.jpg?v=1755614096",
-    "desc": "Paraffina solida a basso contenuto di fluoro per allenamento ed uso sportivo. Da utilizzare per neve da -3° a +9°C. E’ un ottimo prodotto di base per la saturazione delle solette da gara. LP15 YELLOW Formato confezione • Cod. MW0402N -…",
+    "desc": "",
     "tags": [
       "100 gr - 250 gr - 1 kg",
       "LP15 - LOW FLUORINATED BASE PARAFFIN",
       "Solida",
       "Tutti i tipi di neve"
     ],
-    "productType": "LP15 - LOW FLUORINATED BASE PARAFFIN"
+    "productType": "LP15 - LOW FLUORINATED BASE PARAFFIN",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -4445,14 +7491,17 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "voks",
     "lineTitle": "Voks (annet)",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/ffee2447b152494b43d9816faaea83c8_5eae5820-0a74-4cec-b35f-9e3372105f82.jpg?v=1755614094",
-    "desc": "Paraffina solida a basso contenuto di fluoro per allenamento ed uso sportivo. Da utilizzare per neve da -19° -9°C. Per uso agonistico va utilizzata con umidità dell’aria > 50%. Applicazione a caldo con ferro sciolinatore. LP15 VIOLET…",
+    "desc": "",
     "tags": [
       "100 gr - 250 gr - 1 kg",
       "LP15 - LOW FLUORINATED BASE PARAFFIN",
       "Solida",
       "Tutti i tipi di neve"
     ],
-    "productType": "LP15 - LOW FLUORINATED BASE PARAFFIN"
+    "productType": "LP15 - LOW FLUORINATED BASE PARAFFIN",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "maplus",
@@ -4461,14 +7510,17 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "voks",
     "lineTitle": "Voks (annet)",
     "image": "https://cdn.shopify.com/s/files/1/0908/2975/0608/files/2ff2ba0051687eef5ca0459cf942940c_5190e588-5f56-4f09-ab03-e81150818c51.jpg?v=1755614092",
-    "desc": "Paraffina solida a basso contenuto di fluoro per allenamento ed uso sportivo. Da utilizzare per neve da -9° a -3°C. E’ un ottimo prodotto per la protezione delle solette da gara ed è utilizzabile come base universale da gara e da…",
+    "desc": "",
     "tags": [
       "100 gr - 250 gr - 1 kg",
       "LP15 - LOW FLUORINATED BASE PARAFFIN",
       "Solida",
       "Tutti i tipi di neve"
     ],
-    "productType": "LP15 - LOW FLUORINATED BASE PARAFFIN"
+    "productType": "LP15 - LOW FLUORINATED BASE PARAFFIN",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "efb",
@@ -4477,9 +7529,12 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "apparel",
     "lineTitle": "Apparel",
     "image": "https://www.efbsport.it/wp-content/uploads/2026/04/Calza-EFB-Sport-1.webp",
-    "desc": "Leggera, morbida, traspirante: pensata per il piede della sciatrice — La Calza EFB‑Sport in Dayran è progettata per coccolare il piede della sciatrice. Super leggera e sottile, protegge dal freddo, riduce la sudorazione e mantiene il piede sempre asciutto e senza punti di…",
+    "desc": "",
     "tags": [],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "efb",
@@ -4488,9 +7543,12 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessories",
     "lineTitle": "Boot accessories",
     "image": "https://www.efbsport.it/wp-content/uploads/2021/10/26.png",
-    "desc": "Protezione, sicurezza e durata per le tacchette da ciclismo — Effebike è il salva tacchette progettato per proteggere le tacchette delle scarpe da ciclismo dall’usura causata dal contatto con il terreno. Il design antiscivolo garantisce maggiore sicurezza e aderenza durante la…",
+    "desc": "",
     "tags": [],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "efb",
@@ -4499,9 +7557,12 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "workshop",
     "lineTitle": "Workshop equipment",
     "image": "https://www.efbsport.it/wp-content/uploads/2026/03/Divaricatore.webp",
-    "desc": "Strumento professionale per l’allargamento controllato dello scarpone — Il Divaricatore per scarponi è uno strumento professionale progettato per allargare lo scafo dello scarpone in modo preciso e controllato. Dotato di telaio in alluminio e bloccaggio rapido della punta e del…",
+    "desc": "",
     "tags": [],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "efb",
@@ -4510,9 +7571,12 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "apparel",
     "lineTitle": "Apparel",
     "image": "https://www.efbsport.it/wp-content/uploads/2026/06/Felpa-EFBSPORT.webp",
-    "desc": "Felpe e Maglie EFBSPORT — Tessuti morbidi e resistenti, selezionati per garantire comfort quotidiano e lunga durata. Perfette per lavoro in laboratorio, attività outdoor e tempo libero. Felpe e maglie EFBSPORT pensate per chi cerca comfort, identità e praticità. Linee pulite,…",
+    "desc": "",
     "tags": [],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "efb",
@@ -4521,9 +7585,12 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "workshop",
     "lineTitle": "Workshop equipment",
     "image": "https://www.efbsport.it/wp-content/uploads/2026/03/Lunette.webp",
-    "desc": "Rinforzi in acciaio per protezione scarpone e trasmissione più rapida allo sci — Le Lunette Effeski sono rinforzi in acciaio progettati per proteggere la parte anteriore e posteriore dello scarpone e migliorare la trasmissione della forza allo sci. Acciaio ad alta resistenza,…",
+    "desc": "",
     "tags": [],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "efb",
@@ -4532,9 +7599,12 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "workshop",
     "lineTitle": "Workshop equipment",
     "image": "https://www.efbsport.it/wp-content/uploads/2024/11/macchina-per-fresatura.webp",
-    "desc": "Dispositivo professionale per fresare gli scarponi da sci — La macchina per fresatura è un dispositivo professionale progettato per fresare gli scarponi da sci che sono stati rialzati con piastre di sollevamento, riportandoli allo standard degli attacchi. Struttura in acciaio e…",
+    "desc": "",
     "tags": [],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "efb",
@@ -4543,9 +7613,12 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessories",
     "lineTitle": "Boot accessories",
     "image": "https://www.efbsport.it/wp-content/uploads/2026/04/EFFESKI-strap.webp",
-    "desc": "Effeski Strap — Effeski Strap migliora la trasmissione di forza e la sensibilità in fase di curva. Un accessorio indispensabile per sciatori evoluti, agonisti e bootfitter. Certificato e brevettato Standard Nero Effeski Strap è progettato per aumentare la precisione e la…",
+    "desc": "",
     "tags": [],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "efb",
@@ -4554,9 +7627,12 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessories",
     "lineTitle": "Boot accessories",
     "image": "https://www.efbsport.it/wp-content/uploads/2022/02/91.png",
-    "desc": "Rialzi: regolazione tecnica dell’altezza dello scarpone — I Rialzi permettono di modificare l’altezza dello scarpone da sci per migliorare postura, controllo e trasmissione della forza. Sono progettati per bootfitter, laboratori e sciatori che richiedono precisione e…",
+    "desc": "",
     "tags": [],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "efb",
@@ -4565,9 +7641,12 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "accessories",
     "lineTitle": "Boot accessories",
     "image": "https://www.efbsport.it/wp-content/uploads/2026/04/salvasuola-azzurro.webp",
-    "desc": "Salvasuola: Protezione tecnica per la suola dello scarpone — Massima aderenza, durata e sicurezza su ogni superficie. Realizzato in poliuretano termoplastico (TPU) ultra resistente. 9380 A (GMP) grado durezza 82 A, grado per estrusione e stampaggio ad iniezione; buona…",
+    "desc": "",
     "tags": [],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "efb",
@@ -4576,9 +7655,12 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "workshop",
     "lineTitle": "Workshop equipment",
     "image": "https://www.efbsport.it/wp-content/uploads/2026/04/Scanner-3D.webp",
-    "desc": "Scanner 3D — Scanner 3D laser rapido e affidabile, progettato per acquisire piedi, calchi e schiume fenoliche con precisione millimetrica e texture a colori. Ideale per laboratori, bootfitter e professionisti dell’analisi del piede. Struttura compatta in materiali tecnici ad…",
+    "desc": "",
     "tags": [],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "efb",
@@ -4587,9 +7669,12 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "insoles",
     "lineTitle": "Insoles",
     "image": "https://www.efbsport.it/wp-content/uploads/2026/06/Soletta-comfort-ski.webp",
-    "desc": "La soletta entry level che unisce comfort, precisione e controllo — La Soletta Comfort Ski è progettata per offrire il perfetto equilibrio tra comfort, precisione e controllo. Migliora la sensibilità dello scarpone e la risposta sugli sci, mantenendo un comfort costante per…",
+    "desc": "",
     "tags": [],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "efb",
@@ -4598,9 +7683,12 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "insoles",
     "lineTitle": "Insoles",
     "image": "https://www.efbsport.it/wp-content/uploads/2026/03/Custom-Bike.webp",
-    "desc": "Soletta tecnica per ciclismo: supporto, stabilità e controllo durante la pedalata — Soletta sviluppata per offrire supporto, stabilità e controllo durante la pedalata. La sua configurazione è studiata per adattarsi alle esigenze biomeccaniche del ciclista, migliorando comfort,…",
+    "desc": "",
     "tags": [],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "efb",
@@ -4609,9 +7697,12 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "insoles",
     "lineTitle": "Insoles",
     "image": "https://www.efbsport.it/wp-content/uploads/2026/04/CUSTOM-RACE-R1-2.webp",
-    "desc": "Soletta racing personalizzabile per massima stabilità e controllo — Custom Race R1 è una soletta per sci alpino completamente personalizzabile, progettata per le discipline di velocità. Offre stabilità torsionale, supporto mirato e una flessibilità ottimale per mantenere lo sci…",
+    "desc": "",
     "tags": [],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "efb",
@@ -4620,9 +7711,12 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "insoles",
     "lineTitle": "Insoles",
     "image": "https://www.efbsport.it/wp-content/uploads/2026/04/Custom-Ski-Race-1.webp",
-    "desc": "Soletta sviluppata per atleti Race: comfort superiore, stabilità e prestazioni ottimizzate — Le solette Custom Ski Race, sviluppate e testate da atleti del mondo Race, offrono un livello superiore di comfort e precisione durante l’attività sportiva. Progettate per ridurre…",
+    "desc": "",
     "tags": [],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "efb",
@@ -4631,9 +7725,12 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "insoles",
     "lineTitle": "Insoles",
     "image": "https://www.efbsport.it/wp-content/uploads/2026/04/Custom-Ski-Race-1.webp",
-    "desc": "Soletta sviluppata per atleti Race — Le solette Race Performance, offrono un livello superiore di comfort e precisione durante l’attività sportiva. Progettate per ridurre l’affaticamento e migliorare la percezione del contatto con il terreno, ottimizzano le prestazioni e…",
+    "desc": "",
     "tags": [],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "efb",
@@ -4642,9 +7739,12 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "insoles",
     "lineTitle": "Insoles",
     "image": "https://www.efbsport.it/wp-content/uploads/2026/03/Soletta-versatile.webp",
-    "desc": "Comfort, protezione e supporto per ogni tipo di sport — Soletta versatile progettata per adattarsi a ogni tipo di sport. Offre comfort, protezione e supporto ad ogni passo, aiutandoti a dare il massimo durante l’attività sportiva. Realizzata con materiali ad alte prestazioni,…",
+    "desc": "",
     "tags": [],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [],
+    "format": []
   },
   {
     "brand": "efb",
@@ -4653,9 +7753,12 @@ export const PRODUCTS: Product[] = [
     "lineHandle": "workshop",
     "lineTitle": "Workshop equipment",
     "image": "https://www.efbsport.it/wp-content/uploads/2026/03/SUPPORTO-SCARPONI-DA-BANCO.webp",
-    "desc": "Posizionamento ergonomico e bloccaggio stabile per lavorazioni precise — Supporto da banco progettato per garantire una posizione di lavoro ergonomica, stabile e precisa durante il montaggio dei lifter e altre lavorazioni tecniche sullo scarpone. Struttura robusta in acciaio e…",
+    "desc": "",
     "tags": [],
-    "productType": ""
+    "productType": "",
+    "specs": [],
+    "sku": [],
+    "format": []
   }
 ];
 

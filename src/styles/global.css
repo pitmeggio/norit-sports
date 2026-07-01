@@ -11,9 +11,9 @@
   --accent: #bf552c;
   --accent-ink: #9c4421;
   --accent-weak: rgba(191, 85, 44, 0.1);
-  --max: 1280px;
-  --max-wide: 1480px;
-  --pad: clamp(1.25rem, 4vw, 3rem);
+  --max: 1360px;
+  --max-wide: 1660px;
+  --pad: clamp(1.25rem, 5vw, 4.5rem);
   --radius: 4px;
   --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-display: "Inter Tight", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
@@ -2486,6 +2486,11 @@ p {
   font-size: 0.95rem;
   color: var(--ink);
   font-weight: 600;
+}
+
+.prod-techspecs__label {
+  margin: 0 0 0.6rem;
+  color: var(--accent-ink);
 }
 
 .prod-cta {

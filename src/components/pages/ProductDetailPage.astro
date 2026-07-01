@@ -30,9 +30,11 @@ const T = {
     line: "Serie",
     type: "Type",
     brand: "Merke",
+    format: "Format",
+    code: "Kode",
+    techSpecs: "Tekniske spesifikasjoner",
     related: "Andre produkter i samme serie",
     description: "Beskrivelse",
-    askInfoBody: (n: string) => `Hei, jeg ønsker mer info om: ${n}`,
   },
   en: {
     backToList: "Back to products",
@@ -41,9 +43,11 @@ const T = {
     line: "Line",
     type: "Type",
     brand: "Brand",
+    format: "Format",
+    code: "Code",
+    techSpecs: "Technical specifications",
     related: "More from the same line",
     description: "Description",
-    askInfoBody: (n: string) => `Hi, I'd like more info about: ${n}`,
   },
 }[lang];
 
@@ -81,7 +85,24 @@ const contactUrl = `${path(lang, "contact")}?product=${encodeURIComponent(produc
 
           {product.desc && <p class="lead prod-detail__desc">{product.desc}</p>}
 
-          <!-- Specs -->
+          <!-- Technical specs (factual product data from the manufacturer) -->
+          {
+            product.specs.length > 0 && (
+              <div class="prod-techspecs">
+                <p class="tech prod-techspecs__label">{T.techSpecs}</p>
+                <dl class="prod-specs">
+                  {product.specs.map((s) => (
+                    <div>
+                      <dt>{lang === "no" ? s.labelNo : s.labelEn}</dt>
+                      <dd>{lang === "no" ? s.valueNo : s.valueEn}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
+            )
+          }
+
+          <!-- Identity specs -->
           <dl class="prod-specs">
             <div>
               <dt>{T.brand}</dt>
@@ -92,10 +113,18 @@ const contactUrl = `${path(lang, "contact")}?product=${encodeURIComponent(produc
               <dd>{product.lineTitle}</dd>
             </div>
             {
-              product.productType && (
+              product.format.length > 0 && (
                 <div>
-                  <dt>{T.type}</dt>
-                  <dd>{product.productType}</dd>
+                  <dt>{T.format}</dt>
+                  <dd>{product.format.join(" · ")}</dd>
+                </div>
+              )
+            }
+            {
+              product.sku.length > 0 && (
+                <div>
+                  <dt>{T.code}</dt>
+                  <dd>{product.sku.join(" · ")}</dd>
                 </div>
               )
             }
