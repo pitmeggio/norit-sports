@@ -1,7 +1,8 @@
 ---
 import Base from "../../layouts/Base.astro";
 import PageHero from "../PageHero.astro";
-import { t, path, CATALOGS, type Lang } from "../../i18n/content";
+import MaplusLinesGrid from "../MaplusLinesGrid.astro";
+import { t, path, type Lang } from "../../i18n/content";
 
 interface Props {
   lang: Lang;
@@ -9,15 +10,6 @@ interface Props {
 const { lang } = Astro.props;
 const tr = t[lang];
 const m = tr.maplus;
-
-// Category tiles now go to the in-site product browser (filtered).
-// PDF catalogs are kept as a secondary "download" option below.
-const productsBase = `${path(lang, "maplus")}/${lang === "no" ? "produkter" : "products"}`;
-const cats = [
-  { title: m.catSki, desc: m.catSkiDesc, img: "/images/maplus/brush.jpg", href: productsBase, cta: lang === "no" ? "Se produkter" : "View products" },
-  { title: m.catBike, desc: m.catBikeDesc, img: "/images/bike-care.jpg", href: `${productsBase}?line=bike`, cta: lang === "no" ? "Se produkter" : "View products" },
-  { title: m.catTextile, desc: m.catTextileDesc, img: "/images/textile-care.jpg", href: `${productsBase}?line=textile`, cta: lang === "no" ? "Se produkter" : "View products" },
-];
 ---
 
 <Base lang={lang} current="maplus">
@@ -34,7 +26,7 @@ const cats = [
     <div class="container container--wide">
       <a class="btn btn--accent" href={`${path(lang, "maplus")}/${lang === "no" ? "produkter" : "products"}`}>
         {lang === "no" ? "Se hele MAPLUS-katalogen" : "Browse the full MAPLUS catalog"}
-        <span style="margin-left:0.5rem; font-family:var(--font-mono); font-size:0.72rem; opacity:0.85;">323 →</span>
+        <span style="margin-left:0.5rem; font-size:0.85rem; opacity:0.85;">323 →</span>
       </a>
     </div>
   </section>
@@ -78,25 +70,12 @@ const cats = [
     </figure>
   </section>
 
-  <!-- Category tiles (cinematic, same as home) -->
+  <!-- Official MAPLUS product lines (mirrors maplus.it) -->
   <section style="padding-block: clamp(3rem,6vw,5rem) 0;">
     <div class="container container--wide">
       <p class="eyebrow" data-reveal>{m.productsKicker}</p>
-      <h2 class="display" style="margin-top:1.4rem; margin-bottom:clamp(2rem,4vw,3rem);" data-reveal>{`${m.catSki} · ${m.catBike} · ${m.catTextile}`}</h2>
-    </div>
-    <div class="cat-grid">
-      {
-        cats.map((c, i) => (
-          <a class="cat-tile" href={c.href} data-reveal style={`--reveal-delay:${i * 80}ms;`}>
-            <img class="cat-tile__img" src={c.img} alt={c.title} loading="lazy" />
-            <div class="cat-tile__body">
-              <span class="cat-tile__num">{String(i + 1).padStart(2, "0")} / {String(cats.length).padStart(2, "0")}</span>
-              <h3 class="cat-tile__name">{c.title}</h3>
-              <span class="cat-tile__brand">{c.cta}</span>
-            </div>
-          </a>
-        ))
-      }
+      <h2 class="display" style="margin-top:1.4rem; margin-bottom:clamp(2rem,4vw,3rem);" data-reveal>{lang === "no" ? "Produktserier" : "Product lines"}</h2>
+      <MaplusLinesGrid lang={lang} />
     </div>
   </section>
 

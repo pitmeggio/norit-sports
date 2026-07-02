@@ -1,0 +1,42 @@
+---
+// Official MAPLUS product lines, mirroring maplus.it/pages/prodotti.
+// Each card deep-links into the filtered product browser.
+import { path, type Lang } from "../i18n/content";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const base = `${path(lang, "maplus")}/${lang === "no" ? "produkter" : "products"}`;
+
+// fit: "cover" for photography, "contain" for white-background collages
+const lines = [
+  { title: "Xcelerate", img: "/images/maplus/lines/xcelerate.jpg", handle: "xcelerate", fit: "contain" },
+  { title: "GM", img: "/images/maplus/lines/gm.jpg", handle: "gm", fit: "cover" },
+  { title: "BP10", img: "/images/maplus/lines/bp10.jpg", handle: "bp10", fit: "cover" },
+  { title: "Racing Base", img: "/images/maplus/lines/racing-base.jpg", handle: "racing-base", fit: "cover" },
+  { title: "XC Line", img: "/images/maplus/lines/xc-line.jpg", handle: "xc-line", fit: "cover" },
+  { title: "Blocks", img: "/images/maplus/lines/block-line.jpg", handle: "block-line", fit: "cover" },
+  { title: lang === "no" ? "Sykkel" : "Bike", img: "/images/maplus/lines/bike.jpg", handle: "bike", fit: "contain" },
+  { title: lang === "no" ? "Tekstilpleie" : "Textile care", img: "/images/maplus/lines/textile.jpg", handle: "textile", fit: "contain" },
+  { title: lang === "no" ? "Tilbehør" : "Accessories", img: "/images/maplus/brush.jpg", handle: "accessori", fit: "cover" },
+];
+---
+
+<div class="line-grid">
+  {
+    lines.map((l, i) => (
+      <a class="line-card" href={`${base}?line=${l.handle}`} data-reveal style={`--reveal-delay:${(i % 3) * 70}ms;`}>
+        <div class="line-card__media">
+          <img src={l.img} alt={l.title} loading="lazy" data-fit={l.fit} />
+        </div>
+        <div class="line-card__body">
+          <h3 class="line-card__title">{l.title}</h3>
+          <span class="line-card__arrow" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </div>
+      </a>
+    ))
+  }
+</div>

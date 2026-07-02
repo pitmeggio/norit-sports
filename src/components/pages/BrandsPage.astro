@@ -1,6 +1,7 @@
 ---
 import Base from "../../layouts/Base.astro";
 import PageHero from "../PageHero.astro";
+import MaplusLinesGrid from "../MaplusLinesGrid.astro";
 import { t, path, type Lang } from "../../i18n/content";
 
 interface Props {
@@ -10,23 +11,11 @@ const { lang } = Astro.props;
 const tr = t[lang];
 const b = tr.brandsIndex;
 
-const brands = [
-  {
-    name: "MAPLUS",
-    blurb: b.maplusBlurb,
-    logo: "/images/maplus-logo.webp",
-    photo: "/images/maplus/gm-lineup.jpg",
-    href: path(lang, "maplus"),
-    scope: lang === "no" ? "Norge" : "Norway",
-  },
-  {
-    name: "EFB Sport",
-    blurb: b.efbBlurb,
-    logo: "/images/efb/logo.webp",
-    photo: "/images/efb/insoles-hero.jpg",
-    href: path(lang, "efb"),
-    scope: lang === "no" ? "Skandinavia" : "Scandinavia",
-  },
+const efbBase = `${path(lang, "efb")}/${lang === "no" ? "produkter" : "products"}`;
+const efbLines = [
+  { title: tr.efb.catInsoles, img: "/images/efb/boots-insoles.jpg", href: `${efbBase}?line=insoles` },
+  { title: tr.efb.catAccessories, img: "/images/efb/cat-tracks.jpg", href: `${efbBase}?line=accessories` },
+  { title: tr.efb.catLab, img: "/images/efb/boot-stretcher.jpg", href: `${efbBase}?line=workshop` },
 ];
 ---
 
@@ -39,24 +28,53 @@ const brands = [
     metaRight={lang === "no" ? "DISTRIBUSJON I NORDEN" : "DISTRIBUTION IN THE NORDICS"}
   />
 
+  <!-- ── MAPLUS: brand header + official line grid ─────────────── -->
   <section class="section" style="padding-top:0;">
     <div class="container container--wide">
-      <div class="grid grid--2">
+      <div class="brand-head" data-reveal>
+        <div class="brand-head__left">
+          <div class="brand-head__logo">
+            <img src="/images/maplus-logo.webp" alt="MAPLUS" loading="lazy" />
+          </div>
+          <p class="brand-head__blurb">{b.maplusBlurb}</p>
+        </div>
+        <a class="brand-head__link" href={path(lang, "maplus")}>
+          {lang === "no" ? "Om merket" : "About the brand"}
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <MaplusLinesGrid lang={lang} />
+    </div>
+  </section>
+
+  <!-- ── EFB SPORT: brand header + categories ──────────────────── -->
+  <section class="section" style="background: var(--paper-2);">
+    <div class="container container--wide">
+      <div class="brand-head" data-reveal>
+        <div class="brand-head__left">
+          <div class="brand-head__logo">
+            <img src="/images/efb/logo.webp" alt="EFB Sport" loading="lazy" />
+          </div>
+          <p class="brand-head__blurb">{b.efbBlurb}</p>
+        </div>
+        <a class="brand-head__link" href={path(lang, "efb")}>
+          {lang === "no" ? "Om merket" : "About the brand"}
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <div class="line-grid">
         {
-          brands.map((br, i) => (
-            <a class="brand-card" href={br.href} data-reveal style={`--reveal-delay:${i * 120}ms;`}>
-              <div class="brand-card__photo">
-                <img src={br.photo} alt="" loading="lazy" />
+          efbLines.map((l, i) => (
+            <a class="line-card" href={l.href} data-reveal style={`--reveal-delay:${i * 70}ms;`}>
+              <div class="line-card__media">
+                <img src={l.img} alt={l.title} loading="lazy" />
               </div>
-              <div class="brand-card__body">
-                <div class="brand-card__logo">
-                  <img src={br.logo} alt={br.name} loading="lazy" />
-                </div>
-                <span class="tech">{lang === "no" ? "Distribusjon" : "Distribution"} · {br.scope}</span>
-                <p class="brand-card__blurb">{br.blurb}</p>
-                <span class="card__cta">
-                  {b.discoverLabel}
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <div class="line-card__body">
+                <h3 class="line-card__title">{l.title}</h3>
+                <span class="line-card__arrow" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </span>
               </div>
             </a>

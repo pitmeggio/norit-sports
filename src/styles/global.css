@@ -2513,3 +2513,125 @@ p {
     position: static;
   }
 }
+
+/* =====================================================================
+   BRAND LINE GRID (official MAPLUS lines, maplus.it-style)
+   ===================================================================== */
+
+.line-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  gap: clamp(1.5rem, 3vw, 2.5rem) clamp(1.25rem, 2.5vw, 2rem);
+}
+
+.line-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.line-card__media {
+  aspect-ratio: 4 / 3;
+  background: var(--paper-2);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.line-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.line-card__media img[data-fit="contain"] {
+  object-fit: contain;
+  padding: clamp(1rem, 3vw, 2rem);
+  background: #fff;
+}
+
+.line-card:hover .line-card__media img {
+  transform: scale(1.04);
+}
+
+.line-card__body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  padding: 0.9rem 0.2rem 0;
+}
+
+.line-card__title {
+  font-family: var(--font);
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.line-card__arrow {
+  color: var(--muted);
+  display: inline-flex;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.line-card:hover .line-card__arrow {
+  transform: translateX(4px);
+  color: var(--accent-ink);
+}
+
+/* Brand section header on the brands index (logo + blurb + CTA) */
+.brand-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-bottom: clamp(1.5rem, 3vw, 2rem);
+  border-bottom: 1px solid var(--line);
+  margin-bottom: clamp(1.8rem, 3.5vw, 2.6rem);
+}
+
+.brand-head__left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  max-width: 60ch;
+}
+
+.brand-head__logo {
+  height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.brand-head__logo img {
+  max-height: 100%;
+  max-width: 210px;
+  width: auto;
+  object-fit: contain;
+}
+
+.brand-head__blurb {
+  color: var(--ink-soft);
+  font-size: 1.02rem;
+}
+
+.brand-head__link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--accent-ink);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  transition: gap 0.3s ease;
+  white-space: nowrap;
+}
+
+.brand-head__link:hover {
+  gap: 0.75rem;
+}
