@@ -124,6 +124,41 @@ const orgJsonLd = {
           reveals.forEach((el) => io.observe(el));
         }
 
+        // ---- Progressive image loading (runs for everyone; opacity-only)
+        document.querySelectorAll<HTMLImageElement>('img[loading="lazy"]').forEach((img) => {
+          if (img.complete) return;
+          img.classList.add("lz");
+          img.addEventListener("load", () => img.classList.add("lz-in"), { once: true, signal });
+          img.addEventListener("error", () => img.classList.add("lz-in"), { once: true, signal });
+        });
+
+        // ---- Lazy application videos (runs for everyone; autoplay only without reduced motion)
+        document.querySelectorAll<HTMLElement>("[data-video-embed]").forEach((box) => {
+          const iframe = box.querySelector<HTMLIFrameElement>("iframe[data-yt]");
+          const id = box.dataset.videoId;
+          if (!iframe || !id) return;
+          const send = (func: string) =>
+            iframe.contentWindow?.postMessage(JSON.stringify({ event: "command", func, args: [] }), "*");
+          const io = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  if (!iframe.src) {
+                    const autoplay = reduce ? 0 : 1;
+                    iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=${autoplay}&mute=1&playsinline=1&rel=0&enablejsapi=1`;
+                  } else if (!reduce) {
+                    send("playVideo");
+                  }
+                } else if (iframe.src && !reduce) {
+                  send("pauseVideo");
+                }
+              });
+            },
+            { threshold: 0.35 }
+          );
+          io.observe(box);
+        });
+
         if (reduce) return;
 
 
@@ -155,16 +190,42 @@ const orgJsonLd = {
           counters.forEach((el) => cio.observe(el));
         }
 
-        // ---- Hero parallax
-        const heroImg = document.querySelector<HTMLElement>(".hero-cover__media img");
+        // ---- Hero parallax (immersive hero image drifts slower than scroll)
+        const heroImg = document.querySelector<HTMLElement>(".hero-im__media img");
         if (heroImg) {
           const updateParallax = () => {
-            const y = Math.min(window.scrollY, 700);
-            heroImg.style.setProperty("--py", y * 0.18 + "px");
+            const y = Math.min(window.scrollY, 900);
+            heroImg.style.setProperty("--py", y * 0.22 + "px");
           };
           window.addEventListener("scroll", updateParallax, { passive: true, signal });
           updateParallax();
         }
+
+        // ---- Light generic parallax on marked media (transform-only, rAF throttled)
+        const pEls = Array.from(document.querySelectorAll<HTMLElement>("[data-parallax]"));
+        if (pEls.length) {
+          let ticking = false;
+          const tickParallax = () => {
+            ticking = false;
+            const vh = window.innerHeight;
+            for (const el of pEls) {
+              const r = el.getBoundingClientRect();
+              if (r.bottom < -80 || r.top > vh + 80) continue;
+              const progress = (r.top + r.height / 2 - vh / 2) / vh; // -0.5..0.5 around center
+              const y = Math.max(-36, Math.min(36, progress * -44));
+              el.style.transform = `translate3d(0, ${y.toFixed(1)}px, 0) scale(1.1)`;
+            }
+          };
+          const onScrollP = () => {
+            if (!ticking) {
+              ticking = true;
+              requestAnimationFrame(tickParallax);
+            }
+          };
+          window.addEventListener("scroll", onScrollP, { passive: true, signal });
+          tickParallax();
+        }
+
 
         // ---- Magnetic buttons (data-magnetic)
         document.querySelectorAll<HTMLElement>("[data-magnetic]").forEach((btn) => {

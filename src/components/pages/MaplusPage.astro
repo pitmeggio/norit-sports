@@ -37,10 +37,10 @@ const m = tr.maplus;
       <p class="eyebrow" style="margin-bottom:1.2rem;" data-reveal>{m.brandKicker}</p>
       <h2 class="display" style="margin-bottom:clamp(2rem,4vw,3rem);" data-reveal>{m.brandTitle}</h2>
       <div class="brand-intro">
-        <figure class="brand-intro__media" data-reveal>
+        <figure class="brand-intro__media" data-reveal="left">
           <img src="/images/maplus/ski-scrape.jpg" alt="MAPLUS race service" loading="lazy" />
         </figure>
-        <div class="brand-intro__text" data-reveal style="--reveal-delay:120ms;">
+        <div class="brand-intro__text" data-reveal="right" style="--reveal-delay:120ms;">
           <p class="lead">{m.brandBody1}</p>
           <p>{m.brandBody2}</p>
           <dl class="facts" style="margin-top:1.4rem;">
@@ -68,7 +68,7 @@ const m = tr.maplus;
   <!-- Wide showcase of the actual MAPLUS wax range -->
   <section style="padding-block: 0 clamp(3rem,6vw,5rem);">
     <figure class="showcase" data-reveal>
-      <img src="/images/maplus/wax-blocks.jpg" alt="MAPLUS racing wax application" loading="lazy" />
+      <img src="/images/maplus/wax-blocks.jpg" alt="MAPLUS racing wax application" loading="lazy" data-parallax />
       <figcaption>MAPLUS · Race service</figcaption>
     </figure>
   </section>
@@ -88,9 +88,9 @@ const m = tr.maplus;
       <p class="eyebrow" data-reveal>{lang === "no" ? "Race service" : "Race service"}</p>
       <h2 class="display" style="margin-top:1.4rem; margin-bottom:clamp(2rem,4vw,3rem);" data-reveal>{lang === "no" ? "Fra verkstedet" : "From the workshop"}</h2>
       <div class="photo-strip">
-        <figure data-reveal><img src="/images/maplus/powder-pour.jpg" alt="MAPLUS racing powder" loading="lazy" /></figure>
-        <figure data-reveal style="--reveal-delay:80ms;"><img src="/images/maplus/factory.jpg" alt="MAFLON factory" loading="lazy" /></figure>
-        <figure data-reveal style="--reveal-delay:160ms;"><img src="/images/maplus/iron-drip.jpg" alt="Hot wax application" loading="lazy" /></figure>
+        <figure data-reveal="scale"><img src="/images/maplus/powder-pour.jpg" alt="MAPLUS racing powder" loading="lazy" /></figure>
+        <figure data-reveal="scale" style="--reveal-delay:80ms;"><img src="/images/maplus/factory.jpg" alt="MAFLON factory" loading="lazy" /></figure>
+        <figure data-reveal="scale" style="--reveal-delay:160ms;"><img src="/images/maplus/iron-drip.jpg" alt="Hot wax application" loading="lazy" /></figure>
       </div>
     </div>
   </section>
@@ -102,7 +102,7 @@ const m = tr.maplus;
       <h2 class="display" style="margin-top:1.4rem;" data-reveal>{lang === "no" ? "MAPLUS i verdenscupen" : "MAPLUS on the World Cup"}</h2>
       <p class="lead" style="margin-top:1rem; margin-bottom:clamp(2rem,4vw,3rem);" data-reveal>{lang === "no" ? "Produktene utvikles og testes sammen med utøvere på øverste internasjonale nivå." : "The products are developed and tested with athletes at the highest international level."}</p>
       <div class="athlete athlete--wide" data-reveal>
-        <img src="/images/maplus/hero-pellegrino.jpg" alt="Federico Pellegrino" loading="lazy" />
+        <img src="/images/maplus/hero-pellegrino.jpg" alt="Federico Pellegrino" loading="lazy" data-parallax />
         <div class="athlete__body">
           <div class="athlete__name">Federico Pellegrino</div>
           <div class="athlete__meta">{lang === "no" ? "Langrenn · Verdensmester i sprint" : "Cross-country · World sprint champion"}</div>

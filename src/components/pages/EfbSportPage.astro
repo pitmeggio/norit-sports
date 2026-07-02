@@ -43,10 +43,10 @@ const cats = [
       <p class="eyebrow" style="margin-bottom:1.2rem;" data-reveal>{e.brandKicker}</p>
       <h2 class="display" style="margin-bottom:clamp(2rem,4vw,3rem);" data-reveal>{e.brandTitle}</h2>
       <div class="brand-intro">
-        <figure class="brand-intro__media" data-reveal>
+        <figure class="brand-intro__media" data-reveal="left">
           <img src="/images/efb/insoles-hero.jpg" alt="EFB Sport custom insoles" loading="lazy" />
         </figure>
-        <div class="brand-intro__text" data-reveal style="--reveal-delay:120ms;">
+        <div class="brand-intro__text" data-reveal="right" style="--reveal-delay:120ms;">
           <p class="lead">{e.brandBody1}</p>
           <p>{e.brandBody2}</p>
           <dl class="facts" style="margin-top:1.4rem;">
@@ -74,7 +74,7 @@ const cats = [
   <!-- Hero product photo (cinematic insoles) -->
   <section style="padding-block: 0 clamp(3rem,6vw,5rem);">
     <figure class="showcase" data-reveal>
-      <img src="/images/efb/polishing-tools.jpg" alt="EFB Sport verkstedutstyr" loading="lazy" />
+      <img src="/images/efb/polishing-tools.jpg" alt="EFB Sport verkstedutstyr" loading="lazy" data-parallax />
       <figcaption>EFB Sport · Professional workshop</figcaption>
     </figure>
   </section>

@@ -2,6 +2,7 @@
 import Base from "../../layouts/Base.astro";
 import { t, path, type Lang } from "../../i18n/content";
 import { findProduct, productsByBrand, type ProductBrand } from "../../data/products";
+import { findProductVideo } from "../../data/videos";
 
 interface Props {
   lang: Lang;
@@ -74,6 +75,9 @@ const APPLY_IMG: Record<string, string> = {
 };
 const applyImg = APPLY_IMG[`${brand}:${product.lineHandle}`];
 const applyLabel = lang === "no" ? "I bruk" : "In use";
+
+const videoId = findProductVideo(product);
+const videoTitle = lang === "no" ? "Bruksvideo" : "Application video";
 ---
 
 <Base lang={lang} current={brand} title={`${product.title} | ${brandName} | Norit Sports`} description={product.desc.slice(0, 160) || `${product.title} — ${product.lineTitle} — ${brandName}.`} ogImage={product.image ?? "/images/hero.webp"}>
@@ -160,11 +164,29 @@ const applyLabel = lang === "no" ? "I bruk" : "In use";
         </div>
       </div>
 
+      <!-- Application video: lazy, autoplays muted when scrolled into view -->
+      {
+        videoId && (
+          <section class="prod-video" data-video-embed data-video-id={videoId} data-reveal>
+            <p class="eyebrow">{videoTitle}</p>
+            <div class="prod-video__frame">
+              <iframe
+                data-yt
+                title={`${product.title} · ${videoTitle}`}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              />
+            </div>
+          </section>
+        )
+      }
+
       <!-- Application photo: the product family in real use -->
       {
         applyImg && (
           <figure class="prod-apply" data-reveal>
-            <img src={applyImg} alt={`${product.lineTitle} ${applyLabel}`} loading="lazy" />
+            <img src={applyImg} alt={`${product.lineTitle} ${applyLabel}`} loading="lazy" data-parallax />
             <figcaption>{brandName} · {applyLabel}</figcaption>
           </figure>
         )
