@@ -1,5 +1,6 @@
 ---
 import { t, path, type Lang, type RouteKey } from "../i18n/content";
+import { MAPLUS_LINE_DEFS, EFB_LINE_DEFS, lineTitle } from "../data/lines";
 
 interface Props {
   lang: Lang;
@@ -7,19 +8,28 @@ interface Props {
 }
 const { lang, current } = Astro.props;
 const tr = t[lang];
-const other: Lang = lang === "no" ? "en" : "no";
 
-const links: { key: RouteKey; label: string }[] = [
-  { key: "brands", label: tr.nav.brands },
+const simpleLinks: { key: RouteKey; label: string }[] = [
   { key: "videos", label: tr.nav.videos },
   { key: "retail", label: tr.nav.retail },
   { key: "partner", label: tr.nav.partner },
   { key: "contact", label: tr.nav.contact },
 ];
+
+const maplusBase = `${path(lang, "maplus")}/${lang === "no" ? "produkter" : "products"}`;
+const efbBase = `${path(lang, "efb")}/${lang === "no" ? "produkter" : "products"}`;
+
+const brandsActive =
+  current === "brands" || current === "maplus" || current === "efb";
+
+const T = {
+  no: { all: "Alle produkter", about: "Om merket", explore: "Utforsk" },
+  en: { all: "All products", about: "About the brand", explore: "Explore" },
+}[lang];
 ---
 
 <header class="site-header">
-  <div class="container site-header__inner">
+  <div class="container container--wide site-header__inner">
     <a class="brand" href={path(lang, "home")}>Norit <span>Sports</span></a>
 
     <button class="nav-toggle" aria-label="Menu" aria-expanded="false" data-nav-toggle>
@@ -27,17 +37,67 @@ const links: { key: RouteKey; label: string }[] = [
     </button>
 
     <nav class="nav" id="primary-nav">
+      <!-- Merker: link + Db-style mega panel on hover -->
+      <div class="nav-item nav-item--mega">
+        <a href={path(lang, "brands")} aria-current={brandsActive ? "page" : undefined} aria-haspopup="true">
+          {tr.nav.brands}
+        </a>
+
+        <div class="mega" role="region" aria-label={tr.nav.brands}>
+          <div class="container container--wide mega__inner">
+            <div class="mega__col">
+              <p class="mega__heading">MAPLUS</p>
+              <ul class="mega__list">
+                <li><a class="mega__all" href={maplusBase}>{T.all}</a></li>
+                {
+                  MAPLUS_LINE_DEFS.map((l) => (
+                    <li>
+                      <a href={`${maplusBase}?line=${l.handle}`}>{lineTitle(l, lang)}</a>
+                    </li>
+                  ))
+                }
+                <li><a class="mega__about" href={path(lang, "maplus")}>{T.about} →</a></li>
+              </ul>
+            </div>
+
+            <div class="mega__col">
+              <p class="mega__heading">EFB Sport</p>
+              <ul class="mega__list">
+                <li><a class="mega__all" href={efbBase}>{T.all}</a></li>
+                {
+                  EFB_LINE_DEFS.map((l) => (
+                    <li>
+                      <a href={`${efbBase}?line=${l.handle}`}>{lineTitle(l, lang)}</a>
+                    </li>
+                  ))
+                }
+                <li><a class="mega__about" href={path(lang, "efb")}>{T.about} →</a></li>
+              </ul>
+            </div>
+
+            <div class="mega__promos">
+              <a class="mega__promo" href={path(lang, "maplus")}>
+                <img src="/images/maplus/iron.jpg" alt="" loading="lazy" />
+                <span class="mega__promo-text">
+                  <strong>MAPLUS</strong>
+                  <span>{T.explore} →</span>
+                </span>
+              </a>
+              <a class="mega__promo" href={path(lang, "efb")}>
+                <img src="/images/efb/insoles-hero.jpg" alt="" loading="lazy" />
+                <span class="mega__promo-text">
+                  <strong>EFB Sport</strong>
+                  <span>{T.explore} →</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {
-        links.map((l) => (
-          <a
-            href={path(lang, l.key)}
-            aria-current={
-              current === l.key ||
-              (l.key === "brands" && (current === "maplus" || current === "efb"))
-                ? "page"
-                : undefined
-            }
-          >
+        simpleLinks.map((l) => (
+          <a href={path(lang, l.key)} aria-current={current === l.key ? "page" : undefined}>
             {l.label}
           </a>
         ))
@@ -59,6 +119,11 @@ const links: { key: RouteKey; label: string }[] = [
       const open = nav?.getAttribute("data-open") === "true";
       nav?.setAttribute("data-open", (!open).toString());
       toggle.setAttribute("aria-expanded", (!open).toString());
+    });
+
+    // Close mega on Escape (hover/focus handled in CSS)
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") (document.activeElement as HTMLElement | null)?.blur();
     });
   });
 </script>
