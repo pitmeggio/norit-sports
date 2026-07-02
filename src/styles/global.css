@@ -11,8 +11,8 @@
   --accent: #bf552c;
   --accent-ink: #9c4421;
   --accent-weak: rgba(191, 85, 44, 0.1);
-  --max: 1360px;
-  --max-wide: 1660px;
+  --max: 1440px;
+  --max-wide: 1800px;
   --pad: clamp(1.25rem, 5vw, 4.5rem);
   --radius: 4px;
   --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -29,6 +29,9 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  /* fluid root: every rem-based size grows with the viewport,
+     so text reads right on laptops AND big desktop monitors */
+  font-size: clamp(16px, 14px + 0.2vw, 20px);
 }
 
 body {
@@ -37,7 +40,7 @@ body {
   color: var(--ink);
   background: var(--paper);
   line-height: 1.65;
-  font-size: 17.5px;
+  font-size: 1.06rem;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
@@ -2821,5 +2824,122 @@ p {
 
   .nav-item--mega {
     display: contents;
+  }
+}
+
+/* =====================================================================
+   EDITORIAL PHOTO STRIP + ATHLETES + PRODUCT BANNER
+   ===================================================================== */
+
+/* Three-up editorial strip (mixed portrait shots) */
+.photo-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1rem, 1.6vw, 1.5rem);
+}
+
+.photo-strip figure {
+  margin: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+}
+
+.photo-strip img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.photo-strip figure:hover img {
+  transform: scale(1.04);
+}
+
+/* Athletes (World Cup) */
+.athletes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1rem, 1.6vw, 1.5rem);
+}
+
+.athlete {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  display: block;
+  background: var(--dark);
+}
+
+.athlete img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.athlete:hover img {
+  transform: scale(1.03);
+}
+
+.athlete::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.65) 100%);
+}
+
+.athlete__body {
+  position: absolute;
+  left: clamp(1.2rem, 2vw, 1.8rem);
+  bottom: clamp(1.1rem, 2vw, 1.6rem);
+  z-index: 1;
+  color: #fff;
+}
+
+.athlete__name {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.05;
+}
+
+.athlete__meta {
+  margin-top: 0.3rem;
+  font-size: 0.92rem;
+  opacity: 0.9;
+}
+
+/* Slim wide banner on product list pages */
+.prod-banner {
+  margin: 0 0 clamp(1.75rem, 3vw, 2.5rem);
+  border-radius: var(--radius);
+  overflow: hidden;
+  aspect-ratio: 21 / 6;
+}
+
+.prod-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 760px) {
+  .photo-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-strip figure {
+    aspect-ratio: 4 / 3;
+  }
+
+  .athletes {
+    grid-template-columns: 1fr;
+  }
+
+  .prod-banner {
+    aspect-ratio: 16 / 9;
   }
 }

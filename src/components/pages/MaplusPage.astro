@@ -79,6 +79,44 @@ const m = tr.maplus;
     </div>
   </section>
 
+  <!-- Editorial photo strip: race service in action -->
+  <section style="padding-block: clamp(3rem,6vw,5rem) 0;">
+    <div class="container container--wide">
+      <p class="eyebrow" data-reveal>{lang === "no" ? "Race service" : "Race service"}</p>
+      <h2 class="display" style="margin-top:1.4rem; margin-bottom:clamp(2rem,4vw,3rem);" data-reveal>{lang === "no" ? "Fra verkstedet" : "From the workshop"}</h2>
+      <div class="photo-strip">
+        <figure data-reveal><img src="/images/maplus/powder-pour.jpg" alt="MAPLUS racing powder" loading="lazy" /></figure>
+        <figure data-reveal style="--reveal-delay:80ms;"><img src="/images/maplus/factory.jpg" alt="MAFLON factory" loading="lazy" /></figure>
+        <figure data-reveal style="--reveal-delay:160ms;"><img src="/images/maplus/iron-drip.jpg" alt="Hot wax application" loading="lazy" /></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Athletes: MAPLUS on the World Cup -->
+  <section style="padding-block: clamp(3rem,6vw,5rem) 0;">
+    <div class="container container--wide">
+      <p class="eyebrow" data-reveal>{lang === "no" ? "Utøvere" : "Athletes"}</p>
+      <h2 class="display" style="margin-top:1.4rem;" data-reveal>{lang === "no" ? "MAPLUS i verdenscupen" : "MAPLUS on the World Cup"}</h2>
+      <p class="lead" style="margin-top:1rem; margin-bottom:clamp(2rem,4vw,3rem);" data-reveal>{lang === "no" ? "Produktene utvikles og testes sammen med utøvere på øverste internasjonale nivå." : "The products are developed and tested with athletes at the highest international level."}</p>
+      <div class="athletes">
+        <div class="athlete" data-reveal>
+          <img src="/images/maplus/hero-pellegrino.jpg" alt="Federico Pellegrino" loading="lazy" style="object-position: 30% center;" />
+          <div class="athlete__body">
+            <div class="athlete__name">Federico Pellegrino</div>
+            <div class="athlete__meta">{lang === "no" ? "Langrenn · Verdensmester i sprint" : "Cross-country · World sprint champion"}</div>
+          </div>
+        </div>
+        <div class="athlete" data-reveal style="--reveal-delay:100ms;">
+          <img src="/images/maplus/casse-lab.jpg" alt="Mattia Casse" loading="lazy" />
+          <div class="athlete__body">
+            <div class="athlete__name">Mattia Casse</div>
+            <div class="athlete__meta">{lang === "no" ? "Alpint · Verdenscupvinner i utfor" : "Alpine · World Cup downhill winner"}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Videos CTA on dark band -->
   <section class="pros" style="padding-block: clamp(4rem,8vw,6rem);">
     <div class="container container--wide">

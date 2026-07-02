@@ -15,6 +15,7 @@ const products = productsByBrand(brand);
 const lines = brand === "maplus" ? MAPLUS_LINES : EFB_LINES;
 const brandName = brand === "maplus" ? "MAPLUS" : "EFB Sport";
 const brandRoute: RouteKey = brand;
+const bannerImg = brand === "maplus" ? "/images/maplus/gm-corduroy.jpg" : "/images/efb/polishing-tools.jpg";
 
 const t_label = {
   no: {
@@ -55,6 +56,11 @@ const t_label = {
 
   <section class="section" style="padding-top:0;">
     <div class="container container--wide">
+      <!-- Brand mood banner -->
+      <figure class="prod-banner" data-reveal>
+        <img src={bannerImg} alt={brandName} loading="eager" />
+      </figure>
+
       <!-- Filter bar -->
       <div class="prod-filters" data-prod-filters>
         <button class="filter" data-line="all" aria-pressed="true">{t_label.all} <span class="prod-filters__count">({products.length})</span></button>
