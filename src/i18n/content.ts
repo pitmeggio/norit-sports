@@ -339,7 +339,7 @@ export const t: Record<Lang, Dict> = {
       brandBody1:
         "MAPLUS er en spesialisert divisjon av det italienske kjemikonsernet MAFLON S.p.A., grunnlagt i 1996 ut fra Mazza-familiens lidenskap for ski og mestring av kjemi.",
       brandBody2:
-        "Fra racingvoks til pulver, glidere og vedlikeholdsprodukter for ski, sykkel og tekstil forener MAPLUS italiensk håndverk med kjemisk presisjon. Som offisiell leverandør i verdenscupen brukes produktene av topputøvere som Federico Pellegrino og Mattia Casse.",
+        "Fra racingvoks til pulver, glidere og vedlikeholdsprodukter for ski, sykkel og tekstil forener MAPLUS italiensk håndverk med kjemisk presisjon. Som offisiell leverandør i verdenscupen brukes produktene av topputøvere som Federico Pellegrino.",
       facts: [
         { value: "1996", label: "Grunnlagt" },
         { value: "Made in Italy", label: "Utviklet og produsert" },
@@ -615,7 +615,7 @@ export const t: Record<Lang, Dict> = {
       brandBody1:
         "MAPLUS is a specialized division of the Italian chemical group MAFLON S.p.A., founded in 1996 out of the Mazza family's passion for skiing and mastery of chemistry.",
       brandBody2:
-        "From racing waxes to powders, glides and maintenance products for ski, bike and textile, MAPLUS combines Italian craftsmanship with chemical precision. As an official World Cup supplier, its products are trusted by elite athletes such as Federico Pellegrino and Mattia Casse.",
+        "From racing waxes to powders, glides and maintenance products for ski, bike and textile, MAPLUS combines Italian craftsmanship with chemical precision. As an official World Cup supplier, its products are trusted by elite athletes such as Federico Pellegrino.",
       facts: [
         { value: "1996", label: "Founded" },
         { value: "Made in Italy", label: "Developed & produced" },

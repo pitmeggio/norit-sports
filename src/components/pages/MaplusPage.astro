@@ -98,20 +98,11 @@ const m = tr.maplus;
       <p class="eyebrow" data-reveal>{lang === "no" ? "Utøvere" : "Athletes"}</p>
       <h2 class="display" style="margin-top:1.4rem;" data-reveal>{lang === "no" ? "MAPLUS i verdenscupen" : "MAPLUS on the World Cup"}</h2>
       <p class="lead" style="margin-top:1rem; margin-bottom:clamp(2rem,4vw,3rem);" data-reveal>{lang === "no" ? "Produktene utvikles og testes sammen med utøvere på øverste internasjonale nivå." : "The products are developed and tested with athletes at the highest international level."}</p>
-      <div class="athletes">
-        <div class="athlete" data-reveal>
-          <img src="/images/maplus/hero-pellegrino.jpg" alt="Federico Pellegrino" loading="lazy" style="object-position: 30% center;" />
-          <div class="athlete__body">
-            <div class="athlete__name">Federico Pellegrino</div>
-            <div class="athlete__meta">{lang === "no" ? "Langrenn · Verdensmester i sprint" : "Cross-country · World sprint champion"}</div>
-          </div>
-        </div>
-        <div class="athlete" data-reveal style="--reveal-delay:100ms;">
-          <img src="/images/maplus/casse-lab.jpg" alt="Mattia Casse" loading="lazy" />
-          <div class="athlete__body">
-            <div class="athlete__name">Mattia Casse</div>
-            <div class="athlete__meta">{lang === "no" ? "Alpint · Verdenscupvinner i utfor" : "Alpine · World Cup downhill winner"}</div>
-          </div>
+      <div class="athlete athlete--wide" data-reveal>
+        <img src="/images/maplus/hero-pellegrino.jpg" alt="Federico Pellegrino" loading="lazy" />
+        <div class="athlete__body">
+          <div class="athlete__name">Federico Pellegrino</div>
+          <div class="athlete__meta">{lang === "no" ? "Langrenn · Verdensmester i sprint" : "Cross-country · World sprint champion"}</div>
         </div>
       </div>
     </div>

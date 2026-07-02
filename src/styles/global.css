@@ -2943,3 +2943,22 @@ p {
     aspect-ratio: 16 / 9;
   }
 }
+
+/* Single-athlete wide card (landscape hero shot) */
+.athlete--wide {
+  aspect-ratio: 21 / 9;
+}
+
+.athlete--wide img {
+  object-position: center 30%;
+}
+
+@media (max-width: 760px) {
+  .athlete--wide {
+    aspect-ratio: 4 / 5;
+  }
+
+  .athlete--wide img {
+    object-position: 30% center;
+  }
+}
