@@ -61,7 +61,7 @@ const contactUrl = `${path(lang, "contact")}?product=${encodeURIComponent(produc
       <nav class="prod-breadcrumb">
         <a href={path(lang, brand)}>{brandName}</a>
         <span aria-hidden="true">›</span>
-        <a href={`${path(lang, brand)}/`}>{lang === "no" ? "Produkter" : "Products"}</a>
+        <a href={`${path(lang, brand)}/${lang === "no" ? "produkter" : "products"}`}>{lang === "no" ? "Produkter" : "Products"}</a>
         <span aria-hidden="true">›</span>
         <span class="prod-breadcrumb__current">{product.title}</span>
       </nav>
@@ -145,7 +145,7 @@ const contactUrl = `${path(lang, "contact")}?product=${encodeURIComponent(produc
             <p class="eyebrow">{T.related}</p>
             <div class="prod-grid prod-grid--related">
               {related.map((p) => (
-                <a class="prod-card" href={`${path(lang, brand)}/${p.slug}`}>
+                <a class="prod-card" href={`${path(lang, brand)}/${lang === "no" ? "produkter" : "products"}/${p.slug}`}>
                   <div class="prod-card__media">
                     {p.image ? (
                       <img src={p.image} alt={p.title} loading="lazy" />

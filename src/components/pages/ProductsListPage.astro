@@ -78,7 +78,7 @@ const t_label = {
           products.map((p, i) => (
             <a
               class="prod-card"
-              href={`${path(lang, brand)}/${p.slug}`}
+              href={`${path(lang, brand)}/${lang === "no" ? "produkter" : "products"}/${p.slug}`}
               data-line={p.lineHandle}
               data-search={`${p.title} ${p.lineTitle} ${p.tags.join(" ")}`.toLowerCase()}
             >

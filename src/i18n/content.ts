@@ -201,27 +201,27 @@ export const t: Record<Lang, Dict> = {
     },
     meta: {
       home: {
-        title: "Norit Sports – Skandinavisk distributør av sportsmerker",
+        title: "Norit Sports | Skandinavisk distributør av sportsmerker",
         description:
           "Norit Sports er et norsk distribusjonsselskap for tekniske, ytelsesdrevne sportsmerker. Offisiell distributør av MAPLUS skipreparering.",
       },
       brands: {
-        title: "Merker – Offisielle distribuerte merker | Norit Sports",
+        title: "Merker | Offisielle distribuerte merker | Norit Sports",
         description:
           "Norit Sports er offisiell norsk distributør for MAPLUS (skipreparering) og EFB Sport (bootfitting og tilpassede såler).",
       },
       maplus: {
-        title: "MAPLUS – Skipreparering, sykkelpleie og tekstilpleie | Norit Sports",
+        title: "MAPLUS | Skipreparering, sykkelpleie og tekstilpleie | Norit Sports",
         description:
           "Utforsk hele MAPLUS-utvalget: høytytende skipreparering, sykkelvedlikehold og tekstilpleie. Offisiell norsk distributør.",
       },
       efb: {
-        title: "EFB Sport – Bootfitting og tilpassede såler | Norit Sports",
+        title: "EFB Sport | Bootfitting og tilpassede såler | Norit Sports",
         description:
           "EFB Sport: italienske tekniske løsninger for bootfitting, tilpassede såler og verkstedutstyr for skiverksteder. Offisiell skandinavisk distributør.",
       },
       videos: {
-        title: "Tekniske videoer – MAPLUS bruksmetoder | Norit Sports",
+        title: "Tekniske videoer | MAPLUS bruksmetoder | Norit Sports",
         description:
           "Oppdag MAPLUS-bruksmetoder, produkttips og teknikker for konkurranseforberedelse innen langrenn og alpint.",
       },
@@ -231,17 +231,17 @@ export const t: Record<Lang, Dict> = {
           "Vil du føre MAPLUS i butikken? Bli forhandler og få teknisk støtte og markedsmateriell. Se hvor du kan kjøpe MAPLUS.",
       },
       partner: {
-        title: "Samarbeid med oss – for merker og lag | Norit Sports",
+        title: "Samarbeid med oss | for merker og lag | Norit Sports",
         description:
           "Vil du inn på det skandinaviske markedet, eller trenger laget ditt teknisk støtte? Samarbeid med Norit Sports.",
       },
       contact: {
-        title: "Kontakt – Norit Sports",
+        title: "Kontakt | Norit Sports",
         description:
           "Kontakt Norit Sports for produktspørsmål, teknisk veiledning eller forhandlersamarbeid.",
       },
       privacy: {
-        title: "Personvern – Norit Sports",
+        title: "Personvern | Norit Sports",
         description:
           "Slik behandler Norit Sports personopplysninger fra kontaktskjema og nyhetsbrev.",
       },
@@ -267,7 +267,7 @@ export const t: Record<Lang, Dict> = {
       ticker: ["Presisjon", "Innovasjon", "Pålitelighet", "Skipreparering", "Sykkel", "Tekstil", "Skandinavia"],
       strip: ["Offisiell MAPLUS-distributør", "Teknisk støtte for lag og utøvere"],
       imHeroTitle: "Profesjonelt utstyr for utøvere og teknikere.",
-      imHeroSub: "Norit Sports distribuerer utvalgte tekniske sportsmerker i Skandinavia – alpint, langrenn og bootfitting på høyeste nivå.",
+      imHeroSub: "Norit Sports distribuerer utvalgte tekniske sportsmerker i Skandinavia. Spesialisert på alpint, langrenn, sykkel og bootfitting på høyeste nivå.",
       imHeroPrimary: "Utforsk merkene",
       imHeroSecondary: "Bli forhandler",
       imHeroMetaLeft: "NORIT · EST. NORGE",
@@ -398,9 +398,9 @@ export const t: Record<Lang, Dict> = {
       productsKicker: "Utforsk utvalget",
       productsTitle: "Såler · Tilbehør · Verkstedutstyr",
       catInsoles: "Tilpassede såler",
-      catInsolesDesc: "Custom Ski Race og Race R1 – såler tilpasset hver fot for maksimal ytelse og komfort på ski.",
+      catInsolesDesc: "Custom Ski Race og Race R1. Såler tilpasset hver fot for maksimal ytelse og komfort på ski.",
       catAccessories: "Tilbehør til skistøvler",
-      catAccessoriesDesc: "Sålebeskyttere, høyderegulering og bootlifts – tekniske detaljer som beskytter og forbedrer skistøvelen din.",
+      catAccessoriesDesc: "Sålebeskyttere, høyderegulering og bootlifts. Tekniske detaljer som beskytter og forbedrer skistøvelen din.",
       catLab: "Verkstedutstyr",
       catLabDesc: "Støvelstativer, spredere, malere, stropper og fresemaskiner: alt et profesjonelt bootfitting-verksted trenger.",
       visitSite: "Besøk efbsport.it",
@@ -428,7 +428,7 @@ export const t: Record<Lang, Dict> = {
     partner: {
       kicker: "Samarbeid med oss",
       intro:
-        "Norit Sports bygger broen mellom tekniske sportsmerker og det skandinaviske markedet – og støtter lagene og utøverne som bruker dem.",
+        "Norit Sports bygger broen mellom tekniske sportsmerker og det skandinaviske markedet, og støtter lagene og utøverne som bruker dem.",
       brandsTitle: "For merker",
       brandsBody:
         "Vil du inn på det skandinaviske markedet? Vi tilbyr teknisk distribusjon, utøversamarbeid og posisjonering i butikk over hele Skandinavia.",
@@ -439,7 +439,7 @@ export const t: Record<Lang, Dict> = {
       ],
       teamsTitle: "For lag og utøvere",
       teamsBody:
-        "Vi støtter lag og utøvere med produkter, teknisk service og prepareringskompetanse på høyeste nivå – i trening og konkurranse.",
+        "Vi støtter lag og utøvere med produkter, teknisk service og prepareringskompetanse på høyeste nivå, i trening og konkurranse.",
       teamsPoints: [
         "Produkter og teknisk støtte",
         "Prepareringskompetanse",
@@ -477,27 +477,27 @@ export const t: Record<Lang, Dict> = {
     },
     meta: {
       home: {
-        title: "Norit Sports – Scandinavian distributor of sports brands",
+        title: "Norit Sports | Scandinavian distributor of sports brands",
         description:
           "Norit Sports is a Norwegian distribution company for technical, performance-driven sports brands. Official distributor of MAPLUS ski preparation.",
       },
       brands: {
-        title: "Brands – Officially distributed brands | Norit Sports",
+        title: "Brands | Officially distributed brands | Norit Sports",
         description:
           "Norit Sports is the official Norwegian distributor for MAPLUS (ski tuning) and EFB Sport (bootfitting & custom insoles).",
       },
       maplus: {
-        title: "MAPLUS – Ski tuning, bike care and textile care | Norit Sports",
+        title: "MAPLUS | Ski tuning, bike care and textile care | Norit Sports",
         description:
           "Explore the full range of MAPLUS: high-performance ski tuning, bike maintenance and textile care. Official Norwegian distributor.",
       },
       efb: {
-        title: "EFB Sport – Bootfitting & custom insoles | Norit Sports",
+        title: "EFB Sport | Bootfitting & custom insoles | Norit Sports",
         description:
           "EFB Sport: Italian technical solutions for bootfitting, custom insoles and workshop equipment for ski shops. Official Scandinavian distributor.",
       },
       videos: {
-        title: "Technical videos – MAPLUS application methods | Norit Sports",
+        title: "Technical videos | MAPLUS application methods | Norit Sports",
         description:
           "Discover MAPLUS application methods, product tips and race-prep techniques for cross-country and alpine skiing.",
       },
@@ -507,17 +507,17 @@ export const t: Record<Lang, Dict> = {
           "Want to carry MAPLUS in your store? Become a retailer and get technical support and marketing materials. See where to buy MAPLUS.",
       },
       partner: {
-        title: "Collaborate with us – for brands and teams | Norit Sports",
+        title: "Collaborate with us | for brands and teams | Norit Sports",
         description:
           "Looking to enter the Scandinavian market, or does your team need technical support? Partner with Norit Sports.",
       },
       contact: {
-        title: "Contact – Norit Sports",
+        title: "Contact | Norit Sports",
         description:
           "Contact Norit Sports for product questions, technical guidance or retail partnerships.",
       },
       privacy: {
-        title: "Privacy – Norit Sports",
+        title: "Privacy | Norit Sports",
         description:
           "How Norit Sports processes personal data from the contact form and newsletter.",
       },
@@ -543,7 +543,7 @@ export const t: Record<Lang, Dict> = {
       ticker: ["Precision", "Innovation", "Reliability", "Ski tuning", "Bike", "Textile", "Scandinavia"],
       strip: ["Official MAPLUS distributor", "Technical support for teams and athletes"],
       imHeroTitle: "Professional equipment for athletes and technicians.",
-      imHeroSub: "Norit Sports distributes selected technical sports brands across Scandinavia — alpine, cross-country and bootfitting at the highest level.",
+      imHeroSub: "Norit Sports distributes selected technical sports brands across Scandinavia. Specialized in alpine skiing, cross-country, bike and bootfitting at the highest level.",
       imHeroPrimary: "Explore the brands",
       imHeroSecondary: "Become a retailer",
       imHeroMetaLeft: "NORIT · EST. NORWAY",
@@ -674,9 +674,9 @@ export const t: Record<Lang, Dict> = {
       productsKicker: "Explore the range",
       productsTitle: "Insoles · Accessories · Lab equipment",
       catInsoles: "Custom insoles",
-      catInsolesDesc: "Custom Ski Race and Race R1 — insoles shaped to each foot for maximum performance and comfort on snow.",
+      catInsolesDesc: "Custom Ski Race and Race R1. Insoles shaped to each foot for maximum performance and comfort on snow.",
       catAccessories: "Ski boot accessories",
-      catAccessoriesDesc: "Salvasuola Effeski, lifts and risers — technical details that protect and improve your ski boot.",
+      catAccessoriesDesc: "Salvasuola Effeski, lifts and risers. Technical details that protect and improve your ski boot.",
       catLab: "Workshop equipment",
       catLabDesc: "Boot stands, spreaders, lunettes, straps and milling machines: everything a professional bootfitting lab needs.",
       visitSite: "Visit efbsport.it",
@@ -704,7 +704,7 @@ export const t: Record<Lang, Dict> = {
     partner: {
       kicker: "Collaborate with us",
       intro:
-        "Norit Sports bridges technical sports brands and the Scandinavian market – and supports the teams and athletes who use them.",
+        "Norit Sports bridges technical sports brands and the Scandinavian market, and supports the teams and athletes who use them.",
       brandsTitle: "For brands",
       brandsBody:
         "Looking to enter the Scandinavian market? We offer technical distribution, athlete partnerships and retail positioning across Scandinavia.",
@@ -715,7 +715,7 @@ export const t: Record<Lang, Dict> = {
       ],
       teamsTitle: "For teams and athletes",
       teamsBody:
-        "We support teams and athletes with products, technical service and preparation expertise at the highest level – in training and competition.",
+        "We support teams and athletes with products, technical service and preparation expertise at the highest level, in training and competition.",
       teamsPoints: [
         "Products and technical support",
         "Preparation expertise",

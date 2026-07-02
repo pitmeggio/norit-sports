@@ -1,5 +1,5 @@
-// Auto-generated from MAPLUS Shopify API + product pages + EFB Sport scrape (2026-07-01).
-// Specs are factual product data (temperature, snow type, size). Regenerate via _scrape/ scripts.
+// Auto-generated from MAPLUS Shopify API + product pages + EFB Sport scrape (2026-07-02).
+// Specs are factual manufacturer data, translated NO/EN. Regenerate via _scrape/ scripts.
 
 export type ProductBrand = "maplus" | "efb";
 
@@ -242,14 +242,8 @@ export const PRODUCTS: Product[] = [
       {
         "labelNo": "Snø-temperatur",
         "labelEn": "Snow temperature",
-        "valueNo": "-8° / -22℃",
-        "valueEn": "-8° / -22℃"
-      },
-      {
-        "labelNo": "Snøtype",
-        "labelEn": "Snow type",
-        "valueNo": "Per nevi trasformate o cadenti",
-        "valueEn": "Per nevi trasformate o cadenti"
+        "valueNo": "TIPO DI NEVE",
+        "valueEn": "TIPO DI NEVE"
       }
     ],
     "sku": [
@@ -275,14 +269,8 @@ export const PRODUCTS: Product[] = [
       {
         "labelNo": "Snø-temperatur",
         "labelEn": "Snow temperature",
-        "valueNo": "-2° / -9℃",
-        "valueEn": "-2° / -9℃"
-      },
-      {
-        "labelNo": "Snøtype",
-        "labelEn": "Snow type",
-        "valueNo": "Per nevi trasformate o cadenti",
-        "valueEn": "Per nevi trasformate o cadenti"
+        "valueNo": "TIPO DI NEVE",
+        "valueEn": "TIPO DI NEVE"
       }
     ],
     "sku": [
@@ -308,14 +296,8 @@ export const PRODUCTS: Product[] = [
       {
         "labelNo": "Snø-temperatur",
         "labelEn": "Snow temperature",
-        "valueNo": "0° / -3℃",
-        "valueEn": "0° / -3℃"
-      },
-      {
-        "labelNo": "Snøtype",
-        "labelEn": "Snow type",
-        "valueNo": "Per nevi trasformate o cadenti",
-        "valueEn": "Per nevi trasformate o cadenti"
+        "valueNo": "TIPO DI NEVE",
+        "valueEn": "TIPO DI NEVE"
       }
     ],
     "sku": [
@@ -341,14 +323,8 @@ export const PRODUCTS: Product[] = [
       {
         "labelNo": "Snø-temperatur",
         "labelEn": "Snow temperature",
-        "valueNo": "-7° / -14℃",
-        "valueEn": "-7° / -14℃"
-      },
-      {
-        "labelNo": "Snøtype",
-        "labelEn": "Snow type",
-        "valueNo": "Per nevi trasformate o cadenti",
-        "valueEn": "Per nevi trasformate o cadenti"
+        "valueNo": "TIPO DI NEVE",
+        "valueEn": "TIPO DI NEVE"
       }
     ],
     "sku": [
@@ -372,14 +348,8 @@ export const PRODUCTS: Product[] = [
       {
         "labelNo": "Snø-temperatur",
         "labelEn": "Snow temperature",
-        "valueNo": "-4° / -10℃",
-        "valueEn": "-4° / -10℃"
-      },
-      {
-        "labelNo": "Snøtype",
-        "labelEn": "Snow type",
-        "valueNo": "Per nevi trasformate o cadenti",
-        "valueEn": "Per nevi trasformate o cadenti"
+        "valueNo": "TIPO DI NEVE",
+        "valueEn": "TIPO DI NEVE"
       }
     ],
     "sku": [
@@ -403,14 +373,8 @@ export const PRODUCTS: Product[] = [
       {
         "labelNo": "Snø-temperatur",
         "labelEn": "Snow temperature",
-        "valueNo": "0° / -3℃",
-        "valueEn": "0° / -3℃"
-      },
-      {
-        "labelNo": "Snøtype",
-        "labelEn": "Snow type",
-        "valueNo": "Per nevi trasformate o cadenti",
-        "valueEn": "Per nevi trasformate o cadenti"
+        "valueNo": "TIPO DI NEVE",
+        "valueEn": "TIPO DI NEVE"
       }
     ],
     "sku": [
@@ -434,14 +398,8 @@ export const PRODUCTS: Product[] = [
       {
         "labelNo": "Snø-temperatur",
         "labelEn": "Snow temperature",
-        "valueNo": "-7° / -14℃",
-        "valueEn": "-7° / -14℃"
-      },
-      {
-        "labelNo": "Snøtype",
-        "labelEn": "Snow type",
-        "valueNo": "Per nevi trasformate o cadenti",
-        "valueEn": "Per nevi trasformate o cadenti"
+        "valueNo": "TIPO DI NEVE",
+        "valueEn": "TIPO DI NEVE"
       }
     ],
     "sku": [
@@ -465,14 +423,8 @@ export const PRODUCTS: Product[] = [
       {
         "labelNo": "Snø-temperatur",
         "labelEn": "Snow temperature",
-        "valueNo": "-4° / -10℃",
-        "valueEn": "-4° / -10℃"
-      },
-      {
-        "labelNo": "Snøtype",
-        "labelEn": "Snow type",
-        "valueNo": "Per nevi trasformate o cadenti",
-        "valueEn": "Per nevi trasformate o cadenti"
+        "valueNo": "TIPO DI NEVE",
+        "valueEn": "TIPO DI NEVE"
       }
     ],
     "sku": [
@@ -496,14 +448,8 @@ export const PRODUCTS: Product[] = [
       {
         "labelNo": "Snø-temperatur",
         "labelEn": "Snow temperature",
-        "valueNo": "0° / -3℃",
-        "valueEn": "0° / -3℃"
-      },
-      {
-        "labelNo": "Snøtype",
-        "labelEn": "Snow type",
-        "valueNo": "Per nevi trasformate o cadenti",
-        "valueEn": "Per nevi trasformate o cadenti"
+        "valueNo": "TIPO DI NEVE",
+        "valueEn": "TIPO DI NEVE"
       }
     ],
     "sku": [
@@ -527,14 +473,8 @@ export const PRODUCTS: Product[] = [
       {
         "labelNo": "Snø-temperatur",
         "labelEn": "Snow temperature",
-        "valueNo": "-7° / -14℃",
-        "valueEn": "-7° / -14℃"
-      },
-      {
-        "labelNo": "Snøtype",
-        "labelEn": "Snow type",
-        "valueNo": "Per nevi trasformate o cadenti",
-        "valueEn": "Per nevi trasformate o cadenti"
+        "valueNo": "TIPO DI NEVE",
+        "valueEn": "TIPO DI NEVE"
       }
     ],
     "sku": [
@@ -558,14 +498,8 @@ export const PRODUCTS: Product[] = [
       {
         "labelNo": "Snø-temperatur",
         "labelEn": "Snow temperature",
-        "valueNo": "-4° / -10℃",
-        "valueEn": "-4° / -10℃"
-      },
-      {
-        "labelNo": "Snøtype",
-        "labelEn": "Snow type",
-        "valueNo": "Per nevi trasformate o cadenti",
-        "valueEn": "Per nevi trasformate o cadenti"
+        "valueNo": "TIPO DI NEVE",
+        "valueEn": "TIPO DI NEVE"
       }
     ],
     "sku": [
@@ -589,14 +523,8 @@ export const PRODUCTS: Product[] = [
       {
         "labelNo": "Snø-temperatur",
         "labelEn": "Snow temperature",
-        "valueNo": "0° / -3℃",
-        "valueEn": "0° / -3℃"
-      },
-      {
-        "labelNo": "Snøtype",
-        "labelEn": "Snow type",
-        "valueNo": "Per nevi trasformate o cadenti",
-        "valueEn": "Per nevi trasformate o cadenti"
+        "valueNo": "TIPO DI NEVE",
+        "valueEn": "TIPO DI NEVE"
       }
     ],
     "sku": [
@@ -629,8 +557,8 @@ export const PRODUCTS: Product[] = [
       {
         "labelNo": "Snøtype",
         "labelEn": "Snow type",
-        "valueNo": "Per nevi trasformate o cadenti",
-        "valueEn": "Per nevi trasformate o cadenti"
+        "valueNo": "Omdannet eller fallende snø",
+        "valueEn": "Transformed or falling snow"
       },
       {
         "labelNo": "Bruk",
@@ -666,8 +594,8 @@ export const PRODUCTS: Product[] = [
       {
         "labelNo": "Snøtype",
         "labelEn": "Snow type",
-        "valueNo": "Per nevi trasformate o cadenti",
-        "valueEn": "Per nevi trasformate o cadenti"
+        "valueNo": "Omdannet eller fallende snø",
+        "valueEn": "Transformed or falling snow"
       },
       {
         "labelNo": "Bruk",
@@ -1598,7 +1526,14 @@ export const PRODUCTS: Product[] = [
       "XC Line"
     ],
     "productType": "",
-    "specs": [],
+    "specs": [
+      {
+        "labelNo": "Lufttemperatur",
+        "labelEn": "Air temperature",
+        "valueNo": "TIPO DI NEVE",
+        "valueEn": "TIPO DI NEVE"
+      }
+    ],
     "sku": [
       "MW0SK050"
     ],
@@ -1750,20 +1685,7 @@ export const PRODUCTS: Product[] = [
       "BP10 Performance Kits"
     ],
     "productType": "",
-    "specs": [
-      {
-        "labelNo": "Snø-temperatur",
-        "labelEn": "Snow temperature",
-        "valueNo": "-9° / -2 °C",
-        "valueEn": "-9° / -2 °C"
-      },
-      {
-        "labelNo": "Luftfuktighet",
-        "labelEn": "Humidity",
-        "valueNo": "<40%",
-        "valueEn": "<40%"
-      }
-    ],
+    "specs": [],
     "sku": [
       "MW0202"
     ],
@@ -1784,20 +1706,7 @@ export const PRODUCTS: Product[] = [
       "BP10 Performance Kits"
     ],
     "productType": "",
-    "specs": [
-      {
-        "labelNo": "Snø-temperatur",
-        "labelEn": "Snow temperature",
-        "valueNo": "-3° / 0 °C",
-        "valueEn": "-3° / 0 °C"
-      },
-      {
-        "labelNo": "Luftfuktighet",
-        "labelEn": "Humidity",
-        "valueNo": "<40%",
-        "valueEn": "<40%"
-      }
-    ],
+    "specs": [],
     "sku": [
       "MW0203"
     ],
@@ -2856,8 +2765,8 @@ export const PRODUCTS: Product[] = [
       {
         "labelNo": "Tørketid",
         "labelEn": "Drying time",
-        "valueNo": "Circa 40 min",
-        "valueEn": "Circa 40 min"
+        "valueNo": "Ca. 40 min",
+        "valueEn": "Approx. 40 min"
       }
     ],
     "sku": [
@@ -2902,8 +2811,8 @@ export const PRODUCTS: Product[] = [
       {
         "labelNo": "Tørketid",
         "labelEn": "Drying time",
-        "valueNo": "Circa 40 min",
-        "valueEn": "Circa 40 min"
+        "valueNo": "Ca. 40 min",
+        "valueEn": "Approx. 40 min"
       }
     ],
     "sku": [
@@ -2948,8 +2857,8 @@ export const PRODUCTS: Product[] = [
       {
         "labelNo": "Tørketid",
         "labelEn": "Drying time",
-        "valueNo": "Circa 40 min",
-        "valueEn": "Circa 40 min"
+        "valueNo": "Ca. 40 min",
+        "valueEn": "Approx. 40 min"
       }
     ],
     "sku": [
@@ -2979,8 +2888,8 @@ export const PRODUCTS: Product[] = [
       {
         "labelNo": "Snøtype",
         "labelEn": "Snow type",
-        "valueNo": "Per nevi trasformate o cadentiPer nevi molto abrasive, water-injected, ghiacciate",
-        "valueEn": "Per nevi trasformate o cadentiPer nevi molto abrasive, water-injected, ghiacciate"
+        "valueNo": "Omdannet eller fallende snøPer nevi molto abrasive, water-injected, ghiacciate",
+        "valueEn": "Transformed or falling snowPer nevi molto abrasive, water-injected, ghiacciate"
       },
       {
         "labelNo": "Bruk",
@@ -3019,8 +2928,8 @@ export const PRODUCTS: Product[] = [
       {
         "labelNo": "Snøtype",
         "labelEn": "Snow type",
-        "valueNo": "Per nevi trasformate o cadentiPer nevi molto fredde, siano esse più o meno umide",
-        "valueEn": "Per nevi trasformate o cadentiPer nevi molto fredde, siano esse più o meno umide"
+        "valueNo": "Omdannet eller fallende snøPer nevi molto fredde, siano esse più o meno umide",
+        "valueEn": "Transformed or falling snowPer nevi molto fredde, siano esse più o meno umide"
       },
       {
         "labelNo": "Bruk",
@@ -3058,8 +2967,8 @@ export const PRODUCTS: Product[] = [
       {
         "labelNo": "Snøtype",
         "labelEn": "Snow type",
-        "valueNo": "Per nevi trasformate o cadentiPer nevi trasformate o cadenti",
-        "valueEn": "Per nevi trasformate o cadentiPer nevi trasformate o cadenti"
+        "valueNo": "Omdannet eller fallende snøOmdannet eller fallende snø",
+        "valueEn": "Transformed or falling snowTransformed or falling snow"
       },
       {
         "labelNo": "Bruk",
@@ -3097,8 +3006,8 @@ export const PRODUCTS: Product[] = [
       {
         "labelNo": "Snøtype",
         "labelEn": "Snow type",
-        "valueNo": "Per nevi trasformate o cadentiPer condizioni intermedie, nevi da fini a trasformate",
-        "valueEn": "Per nevi trasformate o cadentiPer condizioni intermedie, nevi da fini a trasformate"
+        "valueNo": "Omdannet eller fallende snøPer condizioni intermedie, nevi da fini a trasformate",
+        "valueEn": "Transformed or falling snowPer condizioni intermedie, nevi da fini a trasformate"
       },
       {
         "labelNo": "Bruk",
@@ -5712,7 +5621,32 @@ export const PRODUCTS: Product[] = [
       "SCIOLINATORE"
     ],
     "productType": "SCIOLINATORE",
-    "specs": [],
+    "specs": [
+      {
+        "labelNo": "Dimensjoner",
+        "labelEn": "Dimensions",
+        "valueNo": "154X58X100 mm",
+        "valueEn": "154X58X100 mm"
+      },
+      {
+        "labelNo": "Vekt",
+        "labelEn": "Weight",
+        "valueNo": "1,5 Kg",
+        "valueEn": "1,5 Kg"
+      },
+      {
+        "labelNo": "Spenning",
+        "labelEn": "Voltage",
+        "valueNo": "AC 110-220V / DC12V",
+        "valueEn": "AC 110-220V / DC12V"
+      },
+      {
+        "labelNo": "Effekt",
+        "labelEn": "Power consumption",
+        "valueNo": "0.1 Kw",
+        "valueEn": "0.1 Kw"
+      }
+    ],
     "sku": [
       "SV00030N"
     ],
@@ -5856,7 +5790,50 @@ export const PRODUCTS: Product[] = [
       "Hot box"
     ],
     "productType": "Hot box",
-    "specs": [],
+    "specs": [
+      {
+        "labelNo": "Dimensjoner",
+        "labelEn": "Dimensions",
+        "valueNo": "420X198x100 mm",
+        "valueEn": "420X198x100 mm"
+      },
+      {
+        "labelNo": "Vekt",
+        "labelEn": "Weight",
+        "valueNo": "6 Kg",
+        "valueEn": "6 Kg"
+      },
+      {
+        "labelNo": "Spenning",
+        "labelEn": "Voltage",
+        "valueNo": "220V/50Hz",
+        "valueEn": "220V/50Hz"
+      },
+      {
+        "labelNo": "Tilgjengelig i",
+        "labelEn": "Available in",
+        "valueNo": "110V",
+        "valueEn": "110V"
+      },
+      {
+        "labelNo": "Effekt",
+        "labelEn": "Power consumption",
+        "valueNo": "1 Kw",
+        "valueEn": "1 Kw"
+      },
+      {
+        "labelNo": "Driftstemperatur",
+        "labelEn": "Operating temperature",
+        "valueNo": "110° - 140° C",
+        "valueEn": "110° - 140° C"
+      },
+      {
+        "labelNo": "Rullebredde",
+        "labelEn": "Roller width",
+        "valueNo": "330mm",
+        "valueEn": "330mm"
+      }
+    ],
     "sku": [
       "SV00008"
     ],
@@ -5874,7 +5851,50 @@ export const PRODUCTS: Product[] = [
       "Hot box"
     ],
     "productType": "Hot box",
-    "specs": [],
+    "specs": [
+      {
+        "labelNo": "Dimensjoner",
+        "labelEn": "Dimensions",
+        "valueNo": "225X198x100 mm",
+        "valueEn": "225X198x100 mm"
+      },
+      {
+        "labelNo": "Vekt",
+        "labelEn": "Weight",
+        "valueNo": "4 Kg",
+        "valueEn": "4 Kg"
+      },
+      {
+        "labelNo": "Spenning",
+        "labelEn": "Voltage",
+        "valueNo": "220V/50Hz",
+        "valueEn": "220V/50Hz"
+      },
+      {
+        "labelNo": "Tilgjengelig i",
+        "labelEn": "Available in",
+        "valueNo": "110V",
+        "valueEn": "110V"
+      },
+      {
+        "labelNo": "Effekt",
+        "labelEn": "Power consumption",
+        "valueNo": "0.7 Kw",
+        "valueEn": "0.7 Kw"
+      },
+      {
+        "labelNo": "Driftstemperatur",
+        "labelEn": "Operating temperature",
+        "valueNo": "110° - 140° C",
+        "valueEn": "110° - 140° C"
+      },
+      {
+        "labelNo": "Rullebredde",
+        "labelEn": "Roller width",
+        "valueNo": "150mm",
+        "valueEn": "150mm"
+      }
+    ],
     "sku": [
       "SV00010"
     ],
@@ -5892,7 +5912,50 @@ export const PRODUCTS: Product[] = [
       "Hot box"
     ],
     "productType": "Hot box",
-    "specs": [],
+    "specs": [
+      {
+        "labelNo": "Dimensjoner",
+        "labelEn": "Dimensions",
+        "valueNo": "205X198x100 mm",
+        "valueEn": "205X198x100 mm"
+      },
+      {
+        "labelNo": "Vekt",
+        "labelEn": "Weight",
+        "valueNo": "3 Kg",
+        "valueEn": "3 Kg"
+      },
+      {
+        "labelNo": "Spenning",
+        "labelEn": "Voltage",
+        "valueNo": "220V/50Hz",
+        "valueEn": "220V/50Hz"
+      },
+      {
+        "labelNo": "Tilgjengelig i",
+        "labelEn": "Available in",
+        "valueNo": "110V",
+        "valueEn": "110V"
+      },
+      {
+        "labelNo": "Effekt",
+        "labelEn": "Power consumption",
+        "valueNo": "0.7 Kw",
+        "valueEn": "0.7 Kw"
+      },
+      {
+        "labelNo": "Driftstemperatur",
+        "labelEn": "Operating temperature",
+        "valueNo": "110° - 140° C",
+        "valueEn": "110° - 140° C"
+      },
+      {
+        "labelNo": "Rullebredde",
+        "labelEn": "Roller width",
+        "valueNo": "120mm",
+        "valueEn": "120mm"
+      }
+    ],
     "sku": [
       "SV00001"
     ],
@@ -5921,8 +5984,8 @@ export const PRODUCTS: Product[] = [
       {
         "labelNo": "Snøtype",
         "labelEn": "Snow type",
-        "valueNo": "Omdannet snø",
-        "valueEn": "Transformed snow"
+        "valueNo": "Omdannet snø, dura ghiacciata, fine, grossa, bagnata",
+        "valueEn": "Transformed snow, dura ghiacciata, fine, grossa, bagnata"
       }
     ],
     "sku": [
@@ -6057,8 +6120,8 @@ export const PRODUCTS: Product[] = [
       {
         "labelNo": "Snøtype",
         "labelEn": "Snow type",
-        "valueNo": "Omdannet snø",
-        "valueEn": "Transformed snow"
+        "valueNo": "Omdannet snø, fine con binario compatto",
+        "valueEn": "Transformed snow, fine con binario compatto"
       }
     ],
     "sku": [
@@ -6091,8 +6154,8 @@ export const PRODUCTS: Product[] = [
       {
         "labelNo": "Snøtype",
         "labelEn": "Snow type",
-        "valueNo": "Omdannet snø",
-        "valueEn": "Transformed snow"
+        "valueNo": "Ottima da base per Omdannet snø e ghiacciata",
+        "valueEn": "Ottima da base per Transformed snow e ghiacciata"
       }
     ],
     "sku": [
@@ -6295,8 +6358,8 @@ export const PRODUCTS: Product[] = [
       {
         "labelNo": "Snøtype",
         "labelEn": "Snow type",
-        "valueNo": "Omdannet snø",
-        "valueEn": "Transformed snow"
+        "valueNo": "Meglio in Omdannet snø e dura",
+        "valueEn": "Meglio in Transformed snow e dura"
       }
     ],
     "sku": [
@@ -7532,7 +7595,26 @@ export const PRODUCTS: Product[] = [
     "desc": "",
     "tags": [],
     "productType": "",
-    "specs": [],
+    "specs": [
+      {
+        "labelNo": "Materiale",
+        "labelEn": "Material",
+        "valueNo": "Laget i Dayran, en myk, pustende og komfortabel teknisk fiber som holder foten tørr og beskyttet.",
+        "valueEn": "Made from Dayran, a soft, breathable and comfortable technical fibre that keeps the foot dry and protected."
+      },
+      {
+        "labelNo": "Størrelse",
+        "labelEn": "Size",
+        "valueNo": "Standardstørrelser; kontrollert elastisitet som følger fotens form uten trykkpunkter.",
+        "valueEn": "Standard sizes; controlled elasticity that follows the foot without pressure points."
+      },
+      {
+        "labelNo": "Farger",
+        "labelEn": "Colours",
+        "valueNo": "Standardfarge.",
+        "valueEn": "Standard colour."
+      }
+    ],
     "sku": [],
     "format": []
   },
@@ -7546,7 +7628,26 @@ export const PRODUCTS: Product[] = [
     "desc": "",
     "tags": [],
     "productType": "",
-    "specs": [],
+    "specs": [
+      {
+        "labelNo": "Materiale",
+        "labelEn": "Material",
+        "valueNo": "Ultra slitesterk TPU (termoplastisk polyuretan), fleksibel og slitasjebestandig.",
+        "valueEn": "Ultra-durable TPU (thermoplastic polyurethane), flexible and abrasion resistant."
+      },
+      {
+        "labelNo": "Kompatibilitet",
+        "labelEn": "Compatibility",
+        "valueNo": "Look Keo og Shimano SPD-SL.",
+        "valueEn": "Look Keo and Shimano SPD-SL."
+      },
+      {
+        "labelNo": "Farger",
+        "labelEn": "Colours",
+        "valueNo": "Gul, svart, hvit, fuksia, grønn, oransje, blå og rød.",
+        "valueEn": "Yellow, black, white, fuchsia, green, orange, blue and red."
+      }
+    ],
     "sku": [],
     "format": []
   },
@@ -7560,7 +7661,26 @@ export const PRODUCTS: Product[] = [
     "desc": "",
     "tags": [],
     "productType": "",
-    "specs": [],
+    "specs": [
+      {
+        "labelNo": "Materiale",
+        "labelEn": "Material",
+        "valueNo": "Ramme i høyfast aluminium, låsespaker i stål for rask og sikker fiksering.",
+        "valueEn": "High-strength aluminium frame with steel snap levers for fast, secure locking."
+      },
+      {
+        "labelNo": "Størrelse",
+        "labelEn": "Size",
+        "valueNo": "Passer skistøvler fra 230 mm til 360 mm takket være justerbart system.",
+        "valueEn": "Fits ski boots from 230 mm to 360 mm thanks to the extendable adjustment system."
+      },
+      {
+        "labelNo": "Finish",
+        "labelEn": "Finish",
+        "valueNo": "Aluminium/svart.",
+        "valueEn": "Aluminium/black."
+      }
+    ],
     "sku": [],
     "format": []
   },
@@ -7574,7 +7694,20 @@ export const PRODUCTS: Product[] = [
     "desc": "",
     "tags": [],
     "productType": "",
-    "specs": [],
+    "specs": [
+      {
+        "labelNo": "Materiale",
+        "labelEn": "Material",
+        "valueNo": "Myke og slitesterke tekstiler valgt for daglig komfort og lang levetid.",
+        "valueEn": "Soft, durable fabrics chosen for everyday comfort and long life."
+      },
+      {
+        "labelNo": "Bruk",
+        "labelEn": "Use",
+        "valueNo": "Perfekte for verkstedarbeid, friluftsliv og fritid.",
+        "valueEn": "Perfect for workshop days, outdoor activities and leisure."
+      }
+    ],
     "sku": [],
     "format": []
   },
@@ -7588,7 +7721,26 @@ export const PRODUCTS: Product[] = [
     "desc": "",
     "tags": [],
     "productType": "",
-    "specs": [],
+    "specs": [
+      {
+        "labelNo": "Materiale",
+        "labelEn": "Material",
+        "valueNo": "Høyfast stål som forsterker kontaktsonen mot støvelens binding.",
+        "valueEn": "High-strength steel reinforcing the boot binding contact zone."
+      },
+      {
+        "labelNo": "Kompatibilitet",
+        "labelEn": "Compatibility",
+        "valueNo": "Passer de fleste alpinstøvler; monteres av bootfitter.",
+        "valueEn": "Fits most alpine ski boots; installed by a bootfitter."
+      },
+      {
+        "labelNo": "Finish",
+        "labelEn": "Finish",
+        "valueNo": "Naturlig stål.",
+        "valueEn": "Natural steel."
+      }
+    ],
     "sku": [],
     "format": []
   },
@@ -7602,7 +7754,26 @@ export const PRODUCTS: Product[] = [
     "desc": "",
     "tags": [],
     "productType": "",
-    "specs": [],
+    "specs": [
+      {
+        "labelNo": "Materiale",
+        "labelEn": "Material",
+        "valueNo": "Stålkonstruksjon og mekaniske presisjonskomponenter for intensiv verkstedbruk.",
+        "valueEn": "Steel structure and high-precision mechanical components for intensive workshop use."
+      },
+      {
+        "labelNo": "Størrelse",
+        "labelEn": "Size",
+        "valueNo": "Fungerer med støvler hevet på løfteplater; justerbar etter behov.",
+        "valueEn": "Works with boots raised on lifting plates; adjustable to the customer needs."
+      },
+      {
+        "labelNo": "Finish",
+        "labelEn": "Finish",
+        "valueNo": "Metall/svart, profesjonell verkstedstandard.",
+        "valueEn": "Metal/black, professional workshop standard."
+      }
+    ],
     "sku": [],
     "format": []
   },
@@ -7616,7 +7787,26 @@ export const PRODUCTS: Product[] = [
     "desc": "",
     "tags": [],
     "productType": "",
-    "specs": [],
+    "specs": [
+      {
+        "labelNo": "Materiale",
+        "labelEn": "Material",
+        "valueNo": "Sertifisert og patentert.",
+        "valueEn": "Certified and patented."
+      },
+      {
+        "labelNo": "Størrelse",
+        "labelEn": "Size",
+        "valueNo": "Standard.",
+        "valueEn": "Standard."
+      },
+      {
+        "labelNo": "Farger",
+        "labelEn": "Colours",
+        "valueNo": "Svart.",
+        "valueEn": "Black."
+      }
+    ],
     "sku": [],
     "format": []
   },
@@ -7630,7 +7820,26 @@ export const PRODUCTS: Product[] = [
     "desc": "",
     "tags": [],
     "productType": "",
-    "specs": [],
+    "specs": [
+      {
+        "labelNo": "Materiale",
+        "labelEn": "Material",
+        "valueNo": "Nylon PA6, valgt for holdbarhet, stivhet, slagfasthet og slitestyrke.",
+        "valueEn": "Nylon PA6, chosen for durability, stiffness, impact strength and wear resistance."
+      },
+      {
+        "labelNo": "Størrelse",
+        "labelEn": "Size",
+        "valueNo": "Fra 3 mm til 5 mm.",
+        "valueEn": "From 3 mm to 5 mm."
+      },
+      {
+        "labelNo": "Farger",
+        "labelEn": "Colours",
+        "valueNo": "Blå, gul, grønn, oransje, svart, hvit, rød, lyseblå og fuksia.",
+        "valueEn": "Blue, yellow, green, orange, black, white, red, light blue and fuchsia."
+      }
+    ],
     "sku": [],
     "format": []
   },
@@ -7644,7 +7853,26 @@ export const PRODUCTS: Product[] = [
     "desc": "",
     "tags": [],
     "productType": "",
-    "specs": [],
+    "specs": [
+      {
+        "labelNo": "Materiale",
+        "labelEn": "Material",
+        "valueNo": "Ultra slitesterk termoplastisk polyuretan (TPU), hardhet 82 A; god fleksibilitet ved lave temperaturer.",
+        "valueEn": "Ultra-durable thermoplastic polyurethane (TPU), 82 A hardness; stays flexible at low temperatures."
+      },
+      {
+        "labelNo": "Størrelse",
+        "labelEn": "Size",
+        "valueNo": "Justerbar fra 20 (250 mm) til 33 (360 mm).",
+        "valueEn": "Adjustable from 20 (250 mm) to 33 (360 mm)."
+      },
+      {
+        "labelNo": "Farger",
+        "labelEn": "Colours",
+        "valueNo": "Blå, rød, grønn, gul, oransje, magenta, svart, lyseblå og hvit.",
+        "valueEn": "Blue, red, green, yellow, orange, magenta, black, light blue and white."
+      }
+    ],
     "sku": [],
     "format": []
   },
@@ -7658,7 +7886,26 @@ export const PRODUCTS: Product[] = [
     "desc": "",
     "tags": [],
     "productType": "",
-    "specs": [],
+    "specs": [
+      {
+        "labelNo": "Materiale",
+        "labelEn": "Material",
+        "valueNo": "Kompakt konstruksjon i tekniske materialer med integrert laser og kameraer.",
+        "valueEn": "Compact build in technical materials with integrated laser and cameras."
+      },
+      {
+        "labelNo": "Dimensjoner",
+        "labelEn": "Dimensions",
+        "valueNo": "455 × 212 × 55 mm. Skannevolum: 330 × 140 × 80 mm.",
+        "valueEn": "455 × 212 × 55 mm. Scan volume: 330 × 140 × 80 mm."
+      },
+      {
+        "labelNo": "Finish",
+        "labelEn": "Finish",
+        "valueNo": "Svart/grå.",
+        "valueEn": "Black/grey."
+      }
+    ],
     "sku": [],
     "format": []
   },
@@ -7686,7 +7933,26 @@ export const PRODUCTS: Product[] = [
     "desc": "",
     "tags": [],
     "productType": "",
-    "specs": [],
+    "specs": [
+      {
+        "labelNo": "Materiale",
+        "labelEn": "Material",
+        "valueNo": "Teknisk flerlagsstruktur med anatomisk støtte, utviklet for sykkelbiomekanikk.",
+        "valueEn": "Multi-layer technical structure with anatomic support, designed for cycling biomechanics."
+      },
+      {
+        "labelNo": "Passform",
+        "labelEn": "Fit",
+        "valueNo": "100 % custom, formet på syklistens fot for presisjon og stabilitet.",
+        "valueEn": "100% custom, moulded on the cyclist foot for precision and stability."
+      },
+      {
+        "labelNo": "Farger",
+        "labelEn": "Colours",
+        "valueNo": "Variantene vist på bildene.",
+        "valueEn": "The variants shown in the photos."
+      }
+    ],
     "sku": [],
     "format": []
   },
@@ -7700,7 +7966,26 @@ export const PRODUCTS: Product[] = [
     "desc": "",
     "tags": [],
     "productType": "",
-    "specs": [],
+    "specs": [
+      {
+        "labelNo": "Materiale",
+        "labelEn": "Material",
+        "valueNo": "Høytetthets komposittstruktur med medial karboninnlegg for torsjonsstabilitet og målrettet støtte.",
+        "valueEn": "High-density composite structure with a medial carbon insert for torsional stability and targeted support."
+      },
+      {
+        "labelNo": "Passform",
+        "labelEn": "Fit",
+        "valueNo": "Lages på mål, formet direkte på utøverens fot.",
+        "valueEn": "Made to measure, moulded directly on the athlete foot."
+      },
+      {
+        "labelNo": "Finish",
+        "labelEn": "Finish",
+        "valueNo": "Grå/svart med differensierte funksjonssoner.",
+        "valueEn": "Grey/black with differentiated functional zones."
+      }
+    ],
     "sku": [],
     "format": []
   },
@@ -7714,7 +7999,20 @@ export const PRODUCTS: Product[] = [
     "desc": "",
     "tags": [],
     "productType": "",
-    "specs": [],
+    "specs": [
+      {
+        "labelNo": "Materiale",
+        "labelEn": "Material",
+        "valueNo": "Flerlagsstruktur med stabiliserende forsterkning, dempende topplag og antibakterielt mikrofibertrekk. Bakparti i lett, varmeisolerende polystyren.",
+        "valueEn": "Multi-layer structure with stabilising reinforcement, cushioning top layer and antibacterial microfibre cover. Light, heat-insulating polystyrene rear section."
+      },
+      {
+        "labelNo": "Passform",
+        "labelEn": "Fit",
+        "valueNo": "Formet på utøverens fot for absolutt presisjon.",
+        "valueEn": "Moulded on the athlete foot for absolute precision."
+      }
+    ],
     "sku": [],
     "format": []
   },
@@ -7728,7 +8026,20 @@ export const PRODUCTS: Product[] = [
     "desc": "",
     "tags": [],
     "productType": "",
-    "specs": [],
+    "specs": [
+      {
+        "labelNo": "Materiale",
+        "labelEn": "Material",
+        "valueNo": "Flerlagsstruktur med stabiliserende forsterkning, dempende topplag og antibakterielt mikrofibertrekk. Bakparti i lett, varmeisolerende polystyren.",
+        "valueEn": "Multi-layer structure with stabilising reinforcement, cushioning top layer and antibacterial microfibre cover. Light, heat-insulating polystyrene rear section."
+      },
+      {
+        "labelNo": "Passform",
+        "labelEn": "Fit",
+        "valueNo": "Formet på utøverens fot for absolutt presisjon.",
+        "valueEn": "Moulded on the athlete foot for absolute precision."
+      }
+    ],
     "sku": [],
     "format": []
   },
@@ -7742,7 +8053,26 @@ export const PRODUCTS: Product[] = [
     "desc": "",
     "tags": [],
     "productType": "",
-    "specs": [],
+    "specs": [
+      {
+        "labelNo": "Materiale",
+        "labelEn": "Material",
+        "valueNo": "Høytytende materialer som demper støt og øker komforten under aktivitet.",
+        "valueEn": "High-performance materials that absorb impacts and improve comfort during activity."
+      },
+      {
+        "labelNo": "Størrelse",
+        "labelEn": "Size",
+        "valueNo": "Standardstørrelser, passer de fleste sportssko. Ikke en custom-såle.",
+        "valueEn": "Standard sizes, fits most sports footwear. Not a custom insole."
+      },
+      {
+        "labelNo": "Farger",
+        "labelEn": "Colours",
+        "valueNo": "Standard.",
+        "valueEn": "Standard."
+      }
+    ],
     "sku": [],
     "format": []
   },
@@ -7756,7 +8086,26 @@ export const PRODUCTS: Product[] = [
     "desc": "",
     "tags": [],
     "productType": "",
-    "specs": [],
+    "specs": [
+      {
+        "labelNo": "Materiale",
+        "labelEn": "Material",
+        "valueNo": "Robust stålkonstruksjon og tekniske komponenter for profesjonell verkstedbruk.",
+        "valueEn": "Robust steel structure and technical components for professional workshop use."
+      },
+      {
+        "labelNo": "Kompatibilitet",
+        "labelEn": "Compatibility",
+        "valueNo": "Alle skistøvelstørrelser, med justerbart låsesystem.",
+        "valueEn": "All ski boot sizes, with adjustable clamping system."
+      },
+      {
+        "labelNo": "Finish",
+        "labelEn": "Finish",
+        "valueNo": "Svart/grå.",
+        "valueEn": "Black/grey."
+      }
+    ],
     "sku": [],
     "format": []
   }
