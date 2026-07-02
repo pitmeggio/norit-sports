@@ -11,9 +11,9 @@
   --accent: #bf552c;
   --accent-ink: #9c4421;
   --accent-weak: rgba(191, 85, 44, 0.1);
-  --max: 1440px;
-  --max-wide: 1800px;
-  --pad: clamp(1.25rem, 5vw, 4.5rem);
+  --max: 2600px;
+  --max-wide: 2600px;
+  --pad: clamp(1.25rem, 3vw, 3.5rem);
   --radius: 4px;
   --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-display: "Inter Tight", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
@@ -99,7 +99,6 @@ p {
   line-height: 1.02;
   letter-spacing: -0.02em;
   font-weight: 650;
-  max-width: 30ch;
 }
 
 .display--xxl {
@@ -1280,7 +1279,7 @@ p {
 .form {
   display: grid;
   gap: 1rem;
-  max-width: 520px;
+  max-width: 46rem;
 }
 
 .field {
@@ -2448,6 +2447,8 @@ p {
   background: var(--paper-2);
   border-radius: var(--radius);
   aspect-ratio: 4 / 5;
+  max-height: min(80vh, 980px);
+  width: 100%;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -2996,7 +2997,7 @@ p {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   gap: clamp(2rem, 4vw, 4rem);
-  align-items: start;
+  align-items: center;
 }
 
 .brand-intro__media {
@@ -3004,6 +3005,8 @@ p {
   border-radius: var(--radius);
   overflow: hidden;
   aspect-ratio: 4 / 5;
+  max-height: min(82vh, 940px);
+  width: 100%;
 }
 
 .brand-intro__media img {
@@ -3108,6 +3111,8 @@ img.lz-in {
 .prod-video__frame {
   position: relative;
   aspect-ratio: 16 / 9;
+  width: min(100%, 1560px);
+  margin-inline: auto;
   border-radius: var(--radius);
   overflow: hidden;
   background: var(--dark);
