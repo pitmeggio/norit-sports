@@ -96,7 +96,7 @@ p {
   line-height: 1.02;
   letter-spacing: -0.02em;
   font-weight: 650;
-  max-width: 20ch;
+  max-width: 30ch;
 }
 
 .display--xxl {
@@ -133,7 +133,7 @@ p {
 }
 
 .section {
-  padding-block: clamp(4.5rem, 10vw, 9rem);
+  padding-block: clamp(3.5rem, 7vw, 6.5rem);
 }
 
 .kicker {
@@ -1917,22 +1917,24 @@ p {
 
 /* Page hero (unified header pattern for non-home pages) */
 .page-hero {
-  padding-block: clamp(4rem, 8vw, 7rem) clamp(2.5rem, 5vw, 4rem);
+  padding-block: clamp(2.5rem, 5vw, 4rem) clamp(1.5rem, 3vw, 2.5rem);
 }
 
 .page-hero__title {
-  margin-top: 1.4rem;
-  max-width: 18ch;
+  margin-top: 0.9rem;
+  max-width: none;
+  font-size: clamp(2.6rem, 5vw, 4.5rem);
 }
 
 .page-hero__lead {
-  margin-top: 1.5rem;
-  max-width: 56ch;
+  margin-top: 1rem;
+  max-width: 70ch;
+  font-size: clamp(1.02rem, 1.4vw, 1.2rem);
 }
 
 .page-hero__meta {
-  margin-top: clamp(2rem, 4vw, 3rem);
-  padding-top: clamp(1.2rem, 2vw, 1.6rem);
+  margin-top: clamp(1.4rem, 2.5vw, 2rem);
+  padding-top: clamp(1rem, 1.6vw, 1.3rem);
   border-top: 1px solid var(--line);
   display: flex;
   flex-wrap: wrap;
@@ -2294,9 +2296,9 @@ p {
 /* Product grid — Db-style: spacious cards, no hairline borders */
 .prod-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
-  gap: clamp(1.5rem, 3vw, 2.75rem) clamp(1.25rem, 2.5vw, 2rem);
-  margin-top: clamp(2rem, 4vw, 3rem);
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr));
+  gap: clamp(1.75rem, 3vw, 2.5rem) clamp(1rem, 1.6vw, 1.5rem);
+  margin-top: clamp(1.75rem, 3vw, 2.5rem);
 }
 
 .prod-grid--related {
@@ -2520,8 +2522,8 @@ p {
 
 .line-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
-  gap: clamp(1.5rem, 3vw, 2.5rem) clamp(1.25rem, 2.5vw, 2rem);
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr));
+  gap: clamp(1.75rem, 3vw, 2.5rem) clamp(1rem, 1.6vw, 1.5rem);
 }
 
 .line-card {
@@ -2531,7 +2533,7 @@ p {
 }
 
 .line-card__media {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1 / 1;
   background: var(--paper-2);
   border-radius: var(--radius);
   overflow: hidden;
