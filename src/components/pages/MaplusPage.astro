@@ -14,7 +14,7 @@ const m = tr.maplus;
 // PDF catalogs are kept as a secondary "download" option below.
 const productsBase = `${path(lang, "maplus")}/${lang === "no" ? "produkter" : "products"}`;
 const cats = [
-  { title: m.catSki, desc: m.catSkiDesc, img: "/images/ski-1.webp", href: productsBase, cta: lang === "no" ? "Se produkter" : "View products" },
+  { title: m.catSki, desc: m.catSkiDesc, img: "/images/maplus/brush.jpg", href: productsBase, cta: lang === "no" ? "Se produkter" : "View products" },
   { title: m.catBike, desc: m.catBikeDesc, img: "/images/bike-care.jpg", href: `${productsBase}?line=bike`, cta: lang === "no" ? "Se produkter" : "View products" },
   { title: m.catTextile, desc: m.catTextileDesc, img: "/images/textile-care.jpg", href: `${productsBase}?line=textile`, cta: lang === "no" ? "Se produkter" : "View products" },
 ];
@@ -72,9 +72,9 @@ const cats = [
 
   <!-- Wide showcase of the actual MAPLUS wax range -->
   <section style="padding-block: 0 clamp(3rem,6vw,5rem);">
-    <figure class="showcase showcase--product" data-reveal>
-      <img src="/images/racing-preparation.webp" alt="MAPLUS Xcelerate Pro racing wax line" loading="lazy" />
-      <figcaption>MAPLUS · Xcelerate Pro racing line</figcaption>
+    <figure class="showcase" data-reveal>
+      <img src="/images/maplus/iron.jpg" alt="MAPLUS waxing iron in action" loading="lazy" />
+      <figcaption>MAPLUS · Race service</figcaption>
     </figure>
   </section>
 

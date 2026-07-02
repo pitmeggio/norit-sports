@@ -281,7 +281,7 @@ export const t: Record<Lang, Dict> = {
       catEyebrow: "Produkter",
       catTitle: "Et utvalg bygget for ytelse.",
       cats: [
-        { name: "Skipreparering", brand: "MAPLUS", img: "/images/ski-1.webp", brandKey: "maplus" },
+        { name: "Skipreparering", brand: "MAPLUS", img: "/images/maplus/brush.jpg", brandKey: "maplus" },
         { name: "Sykkelpleie", brand: "MAPLUS", img: "/images/bike-care.jpg", brandKey: "maplus" },
         { name: "Tekstilpleie", brand: "MAPLUS", img: "/images/textile-care.jpg", brandKey: "maplus" },
         { name: "Tilpassede såler", brand: "EFB Sport", img: "/images/efb/insoles-hero.jpg", brandKey: "efb" },
@@ -557,7 +557,7 @@ export const t: Record<Lang, Dict> = {
       catEyebrow: "Products",
       catTitle: "A range built for performance.",
       cats: [
-        { name: "Ski tuning", brand: "MAPLUS", img: "/images/ski-1.webp", brandKey: "maplus" },
+        { name: "Ski tuning", brand: "MAPLUS", img: "/images/maplus/brush.jpg", brandKey: "maplus" },
         { name: "Bike care", brand: "MAPLUS", img: "/images/bike-care.jpg", brandKey: "maplus" },
         { name: "Textile care", brand: "MAPLUS", img: "/images/textile-care.jpg", brandKey: "maplus" },
         { name: "Custom insoles", brand: "EFB Sport", img: "/images/efb/insoles-hero.jpg", brandKey: "efb" },
