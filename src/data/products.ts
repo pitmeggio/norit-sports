@@ -242,8 +242,14 @@ export const PRODUCTS: Product[] = [
       {
         "labelNo": "Snø-temperatur",
         "labelEn": "Snow temperature",
-        "valueNo": "TIPO DI NEVE",
-        "valueEn": "TIPO DI NEVE"
+        "valueNo": "-8° / -22℃",
+        "valueEn": "-8° / -22℃"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Omdannet eller fallende snø",
+        "valueEn": "Transformed or falling snow"
       }
     ],
     "sku": [
@@ -269,8 +275,14 @@ export const PRODUCTS: Product[] = [
       {
         "labelNo": "Snø-temperatur",
         "labelEn": "Snow temperature",
-        "valueNo": "TIPO DI NEVE",
-        "valueEn": "TIPO DI NEVE"
+        "valueNo": "-2° / -9℃",
+        "valueEn": "-2° / -9℃"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Omdannet eller fallende snø",
+        "valueEn": "Transformed or falling snow"
       }
     ],
     "sku": [
@@ -296,8 +308,14 @@ export const PRODUCTS: Product[] = [
       {
         "labelNo": "Snø-temperatur",
         "labelEn": "Snow temperature",
-        "valueNo": "TIPO DI NEVE",
-        "valueEn": "TIPO DI NEVE"
+        "valueNo": "0° / -3℃",
+        "valueEn": "0° / -3℃"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Omdannet eller fallende snø",
+        "valueEn": "Transformed or falling snow"
       }
     ],
     "sku": [
@@ -323,8 +341,14 @@ export const PRODUCTS: Product[] = [
       {
         "labelNo": "Snø-temperatur",
         "labelEn": "Snow temperature",
-        "valueNo": "TIPO DI NEVE",
-        "valueEn": "TIPO DI NEVE"
+        "valueNo": "-7° / -14℃",
+        "valueEn": "-7° / -14℃"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Omdannet eller fallende snø",
+        "valueEn": "Transformed or falling snow"
       }
     ],
     "sku": [
@@ -348,8 +372,14 @@ export const PRODUCTS: Product[] = [
       {
         "labelNo": "Snø-temperatur",
         "labelEn": "Snow temperature",
-        "valueNo": "TIPO DI NEVE",
-        "valueEn": "TIPO DI NEVE"
+        "valueNo": "-4° / -10℃",
+        "valueEn": "-4° / -10℃"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Omdannet eller fallende snø",
+        "valueEn": "Transformed or falling snow"
       }
     ],
     "sku": [
@@ -373,8 +403,14 @@ export const PRODUCTS: Product[] = [
       {
         "labelNo": "Snø-temperatur",
         "labelEn": "Snow temperature",
-        "valueNo": "TIPO DI NEVE",
-        "valueEn": "TIPO DI NEVE"
+        "valueNo": "0° / -3℃",
+        "valueEn": "0° / -3℃"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Omdannet eller fallende snø",
+        "valueEn": "Transformed or falling snow"
       }
     ],
     "sku": [
@@ -398,8 +434,14 @@ export const PRODUCTS: Product[] = [
       {
         "labelNo": "Snø-temperatur",
         "labelEn": "Snow temperature",
-        "valueNo": "TIPO DI NEVE",
-        "valueEn": "TIPO DI NEVE"
+        "valueNo": "-7° / -14℃",
+        "valueEn": "-7° / -14℃"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Omdannet eller fallende snø",
+        "valueEn": "Transformed or falling snow"
       }
     ],
     "sku": [
@@ -423,8 +465,14 @@ export const PRODUCTS: Product[] = [
       {
         "labelNo": "Snø-temperatur",
         "labelEn": "Snow temperature",
-        "valueNo": "TIPO DI NEVE",
-        "valueEn": "TIPO DI NEVE"
+        "valueNo": "-4° / -10℃",
+        "valueEn": "-4° / -10℃"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Omdannet eller fallende snø",
+        "valueEn": "Transformed or falling snow"
       }
     ],
     "sku": [
@@ -448,8 +496,14 @@ export const PRODUCTS: Product[] = [
       {
         "labelNo": "Snø-temperatur",
         "labelEn": "Snow temperature",
-        "valueNo": "TIPO DI NEVE",
-        "valueEn": "TIPO DI NEVE"
+        "valueNo": "0° / -3℃",
+        "valueEn": "0° / -3℃"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Omdannet eller fallende snø",
+        "valueEn": "Transformed or falling snow"
       }
     ],
     "sku": [
@@ -473,8 +527,14 @@ export const PRODUCTS: Product[] = [
       {
         "labelNo": "Snø-temperatur",
         "labelEn": "Snow temperature",
-        "valueNo": "TIPO DI NEVE",
-        "valueEn": "TIPO DI NEVE"
+        "valueNo": "-7° / -14℃",
+        "valueEn": "-7° / -14℃"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Omdannet eller fallende snø",
+        "valueEn": "Transformed or falling snow"
       }
     ],
     "sku": [
@@ -498,8 +558,14 @@ export const PRODUCTS: Product[] = [
       {
         "labelNo": "Snø-temperatur",
         "labelEn": "Snow temperature",
-        "valueNo": "TIPO DI NEVE",
-        "valueEn": "TIPO DI NEVE"
+        "valueNo": "-4° / -10℃",
+        "valueEn": "-4° / -10℃"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Omdannet eller fallende snø",
+        "valueEn": "Transformed or falling snow"
       }
     ],
     "sku": [
@@ -523,8 +589,14 @@ export const PRODUCTS: Product[] = [
       {
         "labelNo": "Snø-temperatur",
         "labelEn": "Snow temperature",
-        "valueNo": "TIPO DI NEVE",
-        "valueEn": "TIPO DI NEVE"
+        "valueNo": "0° / -3℃",
+        "valueEn": "0° / -3℃"
+      },
+      {
+        "labelNo": "Snøtype",
+        "labelEn": "Snow type",
+        "valueNo": "Omdannet eller fallende snø",
+        "valueEn": "Transformed or falling snow"
       }
     ],
     "sku": [
@@ -1526,14 +1598,7 @@ export const PRODUCTS: Product[] = [
       "XC Line"
     ],
     "productType": "",
-    "specs": [
-      {
-        "labelNo": "Lufttemperatur",
-        "labelEn": "Air temperature",
-        "valueNo": "TIPO DI NEVE",
-        "valueEn": "TIPO DI NEVE"
-      }
-    ],
+    "specs": [],
     "sku": [
       "MW0SK050"
     ],
@@ -1685,7 +1750,20 @@ export const PRODUCTS: Product[] = [
       "BP10 Performance Kits"
     ],
     "productType": "",
-    "specs": [],
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "-9° / -2 °C",
+        "valueEn": "-9° / -2 °C"
+      },
+      {
+        "labelNo": "Luftfuktighet",
+        "labelEn": "Humidity",
+        "valueNo": "<40%",
+        "valueEn": "<40%"
+      }
+    ],
     "sku": [
       "MW0202"
     ],
@@ -1706,7 +1784,20 @@ export const PRODUCTS: Product[] = [
       "BP10 Performance Kits"
     ],
     "productType": "",
-    "specs": [],
+    "specs": [
+      {
+        "labelNo": "Snø-temperatur",
+        "labelEn": "Snow temperature",
+        "valueNo": "-3° / 0 °C",
+        "valueEn": "-3° / 0 °C"
+      },
+      {
+        "labelNo": "Luftfuktighet",
+        "labelEn": "Humidity",
+        "valueNo": "<40%",
+        "valueEn": "<40%"
+      }
+    ],
     "sku": [
       "MW0203"
     ],
@@ -5621,32 +5712,7 @@ export const PRODUCTS: Product[] = [
       "SCIOLINATORE"
     ],
     "productType": "SCIOLINATORE",
-    "specs": [
-      {
-        "labelNo": "Dimensjoner",
-        "labelEn": "Dimensions",
-        "valueNo": "154X58X100 mm",
-        "valueEn": "154X58X100 mm"
-      },
-      {
-        "labelNo": "Vekt",
-        "labelEn": "Weight",
-        "valueNo": "1,5 Kg",
-        "valueEn": "1,5 Kg"
-      },
-      {
-        "labelNo": "Spenning",
-        "labelEn": "Voltage",
-        "valueNo": "AC 110-220V / DC12V",
-        "valueEn": "AC 110-220V / DC12V"
-      },
-      {
-        "labelNo": "Effekt",
-        "labelEn": "Power consumption",
-        "valueNo": "0.1 Kw",
-        "valueEn": "0.1 Kw"
-      }
-    ],
+    "specs": [],
     "sku": [
       "SV00030N"
     ],
@@ -5790,50 +5856,7 @@ export const PRODUCTS: Product[] = [
       "Hot box"
     ],
     "productType": "Hot box",
-    "specs": [
-      {
-        "labelNo": "Dimensjoner",
-        "labelEn": "Dimensions",
-        "valueNo": "420X198x100 mm",
-        "valueEn": "420X198x100 mm"
-      },
-      {
-        "labelNo": "Vekt",
-        "labelEn": "Weight",
-        "valueNo": "6 Kg",
-        "valueEn": "6 Kg"
-      },
-      {
-        "labelNo": "Spenning",
-        "labelEn": "Voltage",
-        "valueNo": "220V/50Hz",
-        "valueEn": "220V/50Hz"
-      },
-      {
-        "labelNo": "Tilgjengelig i",
-        "labelEn": "Available in",
-        "valueNo": "110V",
-        "valueEn": "110V"
-      },
-      {
-        "labelNo": "Effekt",
-        "labelEn": "Power consumption",
-        "valueNo": "1 Kw",
-        "valueEn": "1 Kw"
-      },
-      {
-        "labelNo": "Driftstemperatur",
-        "labelEn": "Operating temperature",
-        "valueNo": "110° - 140° C",
-        "valueEn": "110° - 140° C"
-      },
-      {
-        "labelNo": "Rullebredde",
-        "labelEn": "Roller width",
-        "valueNo": "330mm",
-        "valueEn": "330mm"
-      }
-    ],
+    "specs": [],
     "sku": [
       "SV00008"
     ],
@@ -5851,50 +5874,7 @@ export const PRODUCTS: Product[] = [
       "Hot box"
     ],
     "productType": "Hot box",
-    "specs": [
-      {
-        "labelNo": "Dimensjoner",
-        "labelEn": "Dimensions",
-        "valueNo": "225X198x100 mm",
-        "valueEn": "225X198x100 mm"
-      },
-      {
-        "labelNo": "Vekt",
-        "labelEn": "Weight",
-        "valueNo": "4 Kg",
-        "valueEn": "4 Kg"
-      },
-      {
-        "labelNo": "Spenning",
-        "labelEn": "Voltage",
-        "valueNo": "220V/50Hz",
-        "valueEn": "220V/50Hz"
-      },
-      {
-        "labelNo": "Tilgjengelig i",
-        "labelEn": "Available in",
-        "valueNo": "110V",
-        "valueEn": "110V"
-      },
-      {
-        "labelNo": "Effekt",
-        "labelEn": "Power consumption",
-        "valueNo": "0.7 Kw",
-        "valueEn": "0.7 Kw"
-      },
-      {
-        "labelNo": "Driftstemperatur",
-        "labelEn": "Operating temperature",
-        "valueNo": "110° - 140° C",
-        "valueEn": "110° - 140° C"
-      },
-      {
-        "labelNo": "Rullebredde",
-        "labelEn": "Roller width",
-        "valueNo": "150mm",
-        "valueEn": "150mm"
-      }
-    ],
+    "specs": [],
     "sku": [
       "SV00010"
     ],
@@ -5912,50 +5892,7 @@ export const PRODUCTS: Product[] = [
       "Hot box"
     ],
     "productType": "Hot box",
-    "specs": [
-      {
-        "labelNo": "Dimensjoner",
-        "labelEn": "Dimensions",
-        "valueNo": "205X198x100 mm",
-        "valueEn": "205X198x100 mm"
-      },
-      {
-        "labelNo": "Vekt",
-        "labelEn": "Weight",
-        "valueNo": "3 Kg",
-        "valueEn": "3 Kg"
-      },
-      {
-        "labelNo": "Spenning",
-        "labelEn": "Voltage",
-        "valueNo": "220V/50Hz",
-        "valueEn": "220V/50Hz"
-      },
-      {
-        "labelNo": "Tilgjengelig i",
-        "labelEn": "Available in",
-        "valueNo": "110V",
-        "valueEn": "110V"
-      },
-      {
-        "labelNo": "Effekt",
-        "labelEn": "Power consumption",
-        "valueNo": "0.7 Kw",
-        "valueEn": "0.7 Kw"
-      },
-      {
-        "labelNo": "Driftstemperatur",
-        "labelEn": "Operating temperature",
-        "valueNo": "110° - 140° C",
-        "valueEn": "110° - 140° C"
-      },
-      {
-        "labelNo": "Rullebredde",
-        "labelEn": "Roller width",
-        "valueNo": "120mm",
-        "valueEn": "120mm"
-      }
-    ],
+    "specs": [],
     "sku": [
       "SV00001"
     ],

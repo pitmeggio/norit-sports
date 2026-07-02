@@ -52,6 +52,28 @@ const T = {
 }[lang];
 
 const contactUrl = `${path(lang, "contact")}?product=${encodeURIComponent(product.title)}&brand=${brand}`;
+
+// Application photo per line: shows the product family in real use
+const APPLY_IMG: Record<string, string> = {
+  // MAPLUS
+  "maplus:xcelerate": "/images/maplus/powder-pour.jpg",
+  "maplus:gm": "/images/maplus/wax-blocks.jpg",
+  "maplus:bp10": "/images/maplus/iron-drip.jpg",
+  "maplus:racing-base": "/images/maplus/iron.jpg",
+  "maplus:xc-line": "/images/maplus/brush.jpg",
+  "maplus:block-line": "/images/maplus/wax-blocks.jpg",
+  "maplus:voks": "/images/maplus/iron-drip.jpg",
+  "maplus:bike": "/images/bike-care.jpg",
+  "maplus:textile": "/images/textile-care.jpg",
+  "maplus:accessori": "/images/maplus/iron-scrape.jpg",
+  // EFB
+  "efb:insoles": "/images/efb/boots-insoles.jpg",
+  "efb:accessories": "/images/efb/cat-tracks.jpg",
+  "efb:workshop": "/images/efb/workshop.jpg",
+  "efb:apparel": "/images/efb/hero.webp",
+};
+const applyImg = APPLY_IMG[`${brand}:${product.lineHandle}`];
+const applyLabel = lang === "no" ? "I bruk" : "In use";
 ---
 
 <Base lang={lang} current={brand} title={`${product.title} | ${brandName} | Norit Sports`} description={product.desc.slice(0, 160) || `${product.title} — ${product.lineTitle} — ${brandName}.`} ogImage={product.image ?? "/images/hero.webp"}>
@@ -137,6 +159,16 @@ const contactUrl = `${path(lang, "contact")}?product=${encodeURIComponent(produc
           </div>
         </div>
       </div>
+
+      <!-- Application photo: the product family in real use -->
+      {
+        applyImg && (
+          <figure class="prod-apply" data-reveal>
+            <img src={applyImg} alt={`${product.lineTitle} ${applyLabel}`} loading="lazy" />
+            <figcaption>{brandName} · {applyLabel}</figcaption>
+          </figure>
+        )
+      }
 
       <!-- Related products in same line -->
       {

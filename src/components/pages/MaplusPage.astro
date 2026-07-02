@@ -31,14 +31,17 @@ const m = tr.maplus;
     </div>
   </section>
 
-  <!-- Brand story (editorial layout, parallels home story) -->
+  <!-- Brand intro: heading on top, photo beside text (no dead whitespace) -->
   <section class="story" style="padding-top:0;">
     <div class="container container--wide">
-      <p class="eyebrow" style="margin-bottom:clamp(2rem,4vw,3rem);" data-reveal>{m.brandKicker}</p>
-      <div class="story__inner">
-        <h2 class="story__quote" data-reveal>{m.brandTitle}</h2>
-        <div class="story__aside" data-reveal style="--reveal-delay:120ms;">
-          <p>{m.brandBody1}</p>
+      <p class="eyebrow" style="margin-bottom:1.2rem;" data-reveal>{m.brandKicker}</p>
+      <h2 class="display" style="margin-bottom:clamp(2rem,4vw,3rem);" data-reveal>{m.brandTitle}</h2>
+      <div class="brand-intro">
+        <figure class="brand-intro__media" data-reveal>
+          <img src="/images/maplus/ski-scrape.jpg" alt="MAPLUS race service" loading="lazy" />
+        </figure>
+        <div class="brand-intro__text" data-reveal style="--reveal-delay:120ms;">
+          <p class="lead">{m.brandBody1}</p>
           <p>{m.brandBody2}</p>
           <dl class="facts" style="margin-top:1.4rem;">
             {

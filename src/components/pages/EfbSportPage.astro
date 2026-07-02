@@ -37,14 +37,17 @@ const cats = [
     </div>
   </section>
 
-  <!-- Brand story -->
+  <!-- Brand intro: heading on top, photo beside text -->
   <section class="story" style="padding-top:0;">
     <div class="container container--wide">
-      <p class="eyebrow" style="margin-bottom:clamp(2rem,4vw,3rem);" data-reveal>{e.brandKicker}</p>
-      <div class="story__inner">
-        <h2 class="story__quote" data-reveal>{e.brandTitle}</h2>
-        <div class="story__aside" data-reveal style="--reveal-delay:120ms;">
-          <p>{e.brandBody1}</p>
+      <p class="eyebrow" style="margin-bottom:1.2rem;" data-reveal>{e.brandKicker}</p>
+      <h2 class="display" style="margin-bottom:clamp(2rem,4vw,3rem);" data-reveal>{e.brandTitle}</h2>
+      <div class="brand-intro">
+        <figure class="brand-intro__media" data-reveal>
+          <img src="/images/efb/insoles-hero.jpg" alt="EFB Sport custom insoles" loading="lazy" />
+        </figure>
+        <div class="brand-intro__text" data-reveal style="--reveal-delay:120ms;">
+          <p class="lead">{e.brandBody1}</p>
           <p>{e.brandBody2}</p>
           <dl class="facts" style="margin-top:1.4rem;">
             {
