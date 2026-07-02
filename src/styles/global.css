@@ -232,8 +232,13 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 72px;
+  height: 76px;
   gap: 1.5rem;
+  /* full-bleed: span the whole viewport with side padding only */
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+  padding-inline: clamp(1.25rem, 3vw, 3.5rem);
 }
 
 .brand {
@@ -2650,6 +2655,19 @@ p {
 .nav-item--mega {
   /* static so .mega spans the full header width */
   position: static;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+}
+
+.nav-item--mega > a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.nav {
+  align-self: stretch;
 }
 
 .mega {
@@ -2663,17 +2681,30 @@ p {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-6px);
-  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
+  /* generous close delay so the pointer can travel into the panel */
+  transition: opacity 0.16s ease 0.18s, transform 0.16s ease 0.18s, visibility 0s linear 0.34s;
   pointer-events: none;
   z-index: 60;
 }
 
+/* invisible bridge covering any sub-pixel gap between bar and panel */
+.mega::before {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: 0;
+  right: 0;
+  height: 14px;
+}
+
 .nav-item--mega:hover .mega,
-.nav-item--mega:focus-within .mega {
+.nav-item--mega:focus-within .mega,
+.mega:hover {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
   pointer-events: auto;
+  transition-delay: 0s;
 }
 
 .mega__inner {
@@ -2681,6 +2712,10 @@ p {
   grid-template-columns: minmax(180px, 0.8fr) minmax(200px, 0.9fr) minmax(0, 1.6fr);
   gap: clamp(2rem, 4vw, 4rem);
   padding-block: clamp(1.8rem, 3vw, 2.6rem);
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+  padding-inline: clamp(1.25rem, 3vw, 3.5rem);
 }
 
 .mega__heading {
