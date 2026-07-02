@@ -44,7 +44,7 @@ const brands = [
       <div class="grid grid--2">
         {
           brands.map((br, i) => (
-            <a class="brand-card" href={br.href} data-cursor={lang === "no" ? "Utforsk" : "Explore"} data-reveal style={`--reveal-delay:${i * 120}ms;`}>
+            <a class="brand-card" href={br.href} data-reveal style={`--reveal-delay:${i * 120}ms;`}>
               <div class="brand-card__photo">
                 <img src={br.photo} alt="" loading="lazy" />
               </div>

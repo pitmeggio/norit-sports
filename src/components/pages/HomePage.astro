@@ -22,7 +22,7 @@ const h = tr.home;
       <h1 class="hero-im__title">{h.imHeroTitle}</h1>
       <p class="hero-im__sub">{h.imHeroSub}</p>
       <div class="hero-im__actions">
-        <a class="btn btn--light" data-magnetic href={path(lang, "brands")}>{h.imHeroPrimary}</a>
+        <a class="btn btn--light" href={path(lang, "brands")}>{h.imHeroPrimary}</a>
         <a class="btn btn--ghost-light" href={path(lang, "retail")}>{h.imHeroSecondary}</a>
       </div>
     </div>
@@ -68,7 +68,7 @@ const h = tr.home;
             <div class="cat-grid">
               {
                 brandCats.map((c, i) => (
-                  <a class="cat-tile" href={path(lang, c.brandKey)} data-cursor={lang === "no" ? "Utforsk" : "Explore"} data-reveal style={`--reveal-delay:${i * 80}ms;`}>
+                  <a class="cat-tile" href={path(lang, c.brandKey)} data-reveal style={`--reveal-delay:${i * 80}ms;`}>
                     <img class="cat-tile__img" src={c.img} alt={c.name} loading="lazy" />
                     <div class="cat-tile__body">
                       <span class="cat-tile__num">{String(i + 1).padStart(2, "0")} / {String(brandCats.length).padStart(2, "0")}</span>
@@ -90,7 +90,7 @@ const h = tr.home;
       <p class="eyebrow" data-reveal>{h.brandsEyebrow}</p>
       <h2 class="display" style="margin-top:1.4rem; margin-bottom:clamp(2rem,4vw,3rem);" data-reveal>{h.brandsSectionTitle}</h2>
       <div class="grid grid--2">
-        <a class="brand-card" href={path(lang, "maplus")} data-cursor={lang === "no" ? "Utforsk" : "Explore"} data-reveal>
+        <a class="brand-card" href={path(lang, "maplus")} data-reveal>
           <div class="brand-card__photo">
             <img src="/images/maplus/gm-lineup.jpg" alt="" loading="lazy" />
           </div>
@@ -105,7 +105,7 @@ const h = tr.home;
             </span>
           </div>
         </a>
-        <a class="brand-card" href={path(lang, "efb")} data-cursor={lang === "no" ? "Utforsk" : "Explore"} data-reveal style="--reveal-delay:120ms;">
+        <a class="brand-card" href={path(lang, "efb")} data-reveal style="--reveal-delay:120ms;">
           <div class="brand-card__photo">
             <img src="/images/efb/insoles-hero.jpg" alt="" loading="lazy" />
           </div>
@@ -159,7 +159,7 @@ const h = tr.home;
         <h2 class="closing__title" style="margin-top:1.6rem;" data-reveal>{h.closingTitle}</h2>
       </div>
       <div class="closing__aside" data-reveal style="--reveal-delay:120ms;">
-        <a class="btn btn--accent" data-magnetic href={path(lang, "contact")}>{h.closingButton}</a>
+        <a class="btn btn--accent" href={path(lang, "contact")}>{h.closingButton}</a>
         <p class="tech" style="color:rgba(255,255,255,0.6);">{h.closingSecondary}</p>
       </div>
     </div>

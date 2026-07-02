@@ -78,10 +78,6 @@ const orgJsonLd = {
     <ClientRouter />
   </head>
   <body>
-    <div class="grain" aria-hidden="true"></div>
-    <div class="scroll-bar" aria-hidden="true"></div>
-    <div class="cursor" aria-hidden="true"></div>
-
     <Header lang={lang} current={current} />
     <main>
       <slot />
@@ -130,17 +126,6 @@ const orgJsonLd = {
 
         if (reduce) return;
 
-        // ---- Scroll progress bar
-        const bar = document.querySelector<HTMLElement>(".scroll-bar");
-        if (bar) {
-          const updateBar = () => {
-            const max = document.documentElement.scrollHeight - window.innerHeight;
-            const pct = max > 0 ? window.scrollY / max : 0;
-            bar.style.transform = `scaleX(${pct})`;
-          };
-          window.addEventListener("scroll", updateBar, { passive: true, signal });
-          updateBar();
-        }
 
         // ---- Animated counters: any element with data-count
         const counters = document.querySelectorAll<HTMLElement>("[data-count]");
@@ -202,53 +187,6 @@ const orgJsonLd = {
           );
         });
 
-        // ---- Custom cursor pill over data-cursor elements (non-touch only)
-        const cursor = document.querySelector<HTMLElement>(".cursor");
-        if (cursor && window.matchMedia("(hover: hover)").matches) {
-          let cx = 0,
-            cy = 0,
-            tx = 0,
-            ty = 0,
-            rafId = 0;
-          const onMove = (e: MouseEvent) => {
-            tx = e.clientX;
-            ty = e.clientY;
-            if (!rafId) {
-              rafId = requestAnimationFrame(tick);
-            }
-          };
-          const tick = () => {
-            cx += (tx - cx) * 0.25;
-            cy += (ty - cy) * 0.25;
-            cursor.style.left = cx + "px";
-            cursor.style.top = cy + "px";
-            if (Math.abs(tx - cx) > 0.3 || Math.abs(ty - cy) > 0.3) {
-              rafId = requestAnimationFrame(tick);
-            } else {
-              rafId = 0;
-            }
-          };
-          document.addEventListener("mousemove", onMove, { passive: true, signal });
-
-          document.querySelectorAll<HTMLElement>("[data-cursor]").forEach((el) => {
-            const label = el.dataset.cursor || "View";
-            el.addEventListener(
-              "mouseenter",
-              () => {
-                cursor.textContent = label;
-                cursor.classList.add("is-active");
-              },
-              { signal }
-            );
-            el.addEventListener(
-              "mouseleave",
-              () => {
-                cursor.classList.remove("is-active");
-              },
-              { signal }
-            );
-          });
-        }
       }
 
       document.addEventListener("astro:page-load", init);
