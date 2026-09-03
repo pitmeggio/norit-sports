@@ -63,9 +63,15 @@ const t_label = {
     clear: "Clear",
   },
 }[lang];
+
+const crumbs = [
+  { name: "Norit Sports", url: path(lang, "home") },
+  { name: brandName, url: path(lang, brand) },
+  { name: lang === "no" ? "Produkter" : "Products", url: `${path(lang, brand)}/${lang === "no" ? "produkter" : "products"}` },
+];
 ---
 
-<Base lang={lang} current={brandRoute} title={t_label.title + " | Norit Sports"} description={t_label.intro}>
+<Base lang={lang} current={brandRoute} title={t_label.title + " | Norit Sports"} description={t_label.intro} breadcrumbs={crumbs}>
   <PageHero
     eyebrow={t_label.eyebrow}
     title={t_label.title}

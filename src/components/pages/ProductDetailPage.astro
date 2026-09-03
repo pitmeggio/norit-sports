@@ -86,11 +86,19 @@ const highlights = HIGHLIGHT.map((label) => product.specs.find((s) => s.labelEn 
   .filter((s): s is NonNullable<typeof s> => Boolean(s))
   .slice(0, 3);
 
+const productsPath = `${path(lang, brand)}/${lang === "no" ? "produkter" : "products"}`;
+const crumbs = [
+  { name: "Norit Sports", url: path(lang, "home") },
+  { name: brandName, url: path(lang, brand) },
+  { name: lang === "no" ? "Produkter" : "Products", url: productsPath },
+  { name: title, url: `${productsPath}/${product.slug}` },
+];
+
 const videoId = findProductVideo(product);
 const videoTitle = lang === "no" ? "Bruksvideo" : "Application video";
 ---
 
-<Base lang={lang} current={brand} title={`${title} | ${brandName} | Norit Sports`} description={product.desc.slice(0, 160) || `${title}. ${lineName}. ${brandName}.`} ogImage={product.image ?? "/images/hero.webp"}>
+<Base lang={lang} current={brand} title={`${title} | ${brandName} | Norit Sports`} description={product.desc.slice(0, 160) || `${title}. ${lineName}. ${brandName}.`} ogImage={product.image ?? "/images/hero.webp"} breadcrumbs={crumbs}>
   <article class="prod-detail">
     <div class="container container--wide">
       <!-- Breadcrumb -->

@@ -10,9 +10,15 @@ interface Props {
 const { lang } = Astro.props;
 const tr = t[lang];
 const m = tr.maplus;
+
+const crumbs = [
+  { name: "Norit Sports", url: path(lang, "home") },
+  { name: lang === "no" ? "Merker" : "Brands", url: path(lang, "brands") },
+  { name: "MAPLUS", url: path(lang, "maplus") },
+];
 ---
 
-<Base lang={lang} current="maplus">
+<Base lang={lang} current="maplus" breadcrumbs={crumbs}>
   <PageHero
     eyebrow={m.kicker}
     title="MAPLUS"

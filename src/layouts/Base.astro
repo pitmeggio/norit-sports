@@ -5,14 +5,18 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { t, path, COMPANY, CLOUDFLARE_ANALYTICS_TOKEN, type Lang, type RouteKey } from "../i18n/content";
 
+/** One step of the trail Google shows in place of the raw URL. */
+export type Crumb = { name: string; url: string };
+
 interface Props {
   lang: Lang;
   current: RouteKey;
   ogImage?: string;
   title?: string;
   description?: string;
+  breadcrumbs?: Crumb[];
 }
-const { lang, current, ogImage = "/images/hero.webp", title, description } = Astro.props;
+const { lang, current, ogImage = "/images/hero.webp", title, description, breadcrumbs } = Astro.props;
 const tr = t[lang];
 const defaultMeta = tr.meta[current];
 const meta = {
@@ -42,6 +46,31 @@ const orgJsonLd = {
   },
   description: meta.description,
 };
+
+// Tells search engines what to call the site, and which language version this is.
+const siteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: COMPANY.name,
+  alternateName: "Norit",
+  url: site.href,
+  inLanguage: lang === "no" ? "nb-NO" : "en",
+  publisher: { "@type": "Organization", name: COMPANY.name, url: site.href },
+};
+
+// Renders as a breadcrumb trail under the result instead of the bare URL.
+const breadcrumbJsonLd = breadcrumbs?.length
+  ? {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: breadcrumbs.map((c, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: c.name,
+        item: new URL(c.url, site).href,
+      })),
+    }
+  : null;
 ---
 
 <!doctype html>
@@ -74,6 +103,8 @@ const orgJsonLd = {
     />
 
     <script type="application/ld+json" set:html={JSON.stringify(orgJsonLd)} />
+    <script type="application/ld+json" set:html={JSON.stringify(siteJsonLd)} />
+    {breadcrumbJsonLd && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />}
 
     <ClientRouter />
   </head>

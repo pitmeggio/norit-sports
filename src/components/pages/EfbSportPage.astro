@@ -16,9 +16,15 @@ const cats = [
   { title: e.catAccessories, desc: e.catAccessoriesDesc, img: "/images/efb/cat-tracks.jpg", href: `${productsBase}?line=accessories` },
   { title: e.catLab, desc: e.catLabDesc, img: "/images/efb/boot-stretcher.jpg", href: `${productsBase}?line=workshop` },
 ];
+
+const crumbs = [
+  { name: "Norit Sports", url: path(lang, "home") },
+  { name: lang === "no" ? "Merker" : "Brands", url: path(lang, "brands") },
+  { name: "EFB Sport", url: path(lang, "efb") },
+];
 ---
 
-<Base lang={lang} current="efb">
+<Base lang={lang} current="efb" breadcrumbs={crumbs}>
   <PageHero
     eyebrow={e.kicker}
     title="EFB Sport"
