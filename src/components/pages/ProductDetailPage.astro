@@ -80,6 +80,12 @@ const applyLabel = lang === "no" ? "I bruk" : "In use";
 const title = productTitle(product, lang);
 const lineName = productLineTitle(product, lang);
 
+// The specs a buyer scans first; the rest stay in the full table below.
+const HIGHLIGHT = ["Snow temperature", "Air temperature", "Snow type", "Humidity", "Size", "Fit"];
+const highlights = HIGHLIGHT.map((label) => product.specs.find((s) => s.labelEn === label))
+  .filter((s): s is NonNullable<typeof s> => Boolean(s))
+  .slice(0, 3);
+
 const videoId = findProductVideo(product);
 const videoTitle = lang === "no" ? "Bruksvideo" : "Application video";
 ---
@@ -114,6 +120,19 @@ const videoTitle = lang === "no" ? "Bruksvideo" : "Application video";
           <h1 class="prod-detail__title">{title}</h1>
 
           {product.desc && <p class="lead prod-detail__desc">{product.desc}</p>}
+
+          {
+            highlights.length > 0 && (
+              <ul class="prod-highlights">
+                {highlights.map((s) => (
+                  <li>
+                    <span class="prod-highlights__label">{specLabel(s, lang)}</span>
+                    <span class="prod-highlights__value">{specValue(s, lang)}</span>
+                  </li>
+                ))}
+              </ul>
+            )
+          }
 
           <!-- Technical specs (factual product data from the manufacturer) -->
           {

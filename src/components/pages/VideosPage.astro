@@ -1,7 +1,10 @@
 ---
 import Base from "../../layouts/Base.astro";
 import PageHero from "../PageHero.astro";
-import { t, VIDEOS, type Lang } from "../../i18n/content";
+import { t, VIDEOS, path, type Lang } from "../../i18n/content";
+import { productsByBrand } from "../../data/products";
+import { findProductVideo } from "../../data/videos";
+import { lineLabel } from "../../data/product-i18n";
 
 interface Props {
   lang: Lang;
@@ -11,6 +14,30 @@ const tr = t[lang];
 const v = tr.videos;
 
 const categories = Array.from(new Set(VIDEOS.map((x) => x.category)));
+
+// Each video shows how a product family is applied: link it back to that family
+// in the catalog, so a video can be acted on instead of just watched.
+const catalogBase = `${path(lang, "maplus")}/${lang === "no" ? "produkter" : "products"}`;
+const byVideo = new Map<string, Map<string, number>>();
+for (const p of productsByBrand("maplus")) {
+  const id = findProductVideo(p);
+  if (!id) continue;
+  const lines = byVideo.get(id) ?? new Map<string, number>();
+  lines.set(p.lineHandle, (lines.get(p.lineHandle) ?? 0) + 1);
+  byVideo.set(id, lines);
+}
+// A video can match products across lines; link the line it mostly belongs to,
+// and count only that line so the number matches what the link opens.
+const linkedProducts = new Map<string, { line: string; count: number }>();
+for (const [id, lines] of byVideo) {
+  const [line, count] = [...lines.entries()].sort((a, b) => b[1] - a[1])[0];
+  linkedProducts.set(id, { line, count });
+}
+
+const T = {
+  no: { watch: "Spill av", products: "produkter i denne serien", seeLine: "Se serien" },
+  en: { watch: "Play", products: "products in this line", seeLine: "View the line" },
+}[lang];
 ---
 
 <Base lang={lang} current="videos">
@@ -25,36 +52,56 @@ const categories = Array.from(new Set(VIDEOS.map((x) => x.category)));
   <section class="section" style="padding-top:0;">
     <div class="container container--wide">
       <div class="filters" role="group" aria-label="Filter" style="margin-top:0;">
-        <button class="filter" data-filter="all" aria-pressed="true">{v.all}</button>
+        <button class="filter" data-filter="all" aria-pressed="true">
+          {v.all} <span class="prod-filters__count">({VIDEOS.length})</span>
+        </button>
         {
           categories.map((c) => (
             <button class="filter" data-filter={c} aria-pressed="false">
-              {v.categories[c]}
+              {v.categories[c]}{" "}
+              <span class="prod-filters__count">({VIDEOS.filter((x) => x.category === c).length})</span>
             </button>
           ))
         }
       </div>
 
-      <div class="grid grid--3" style="margin-top:2.5rem;" id="video-grid">
+      <div class="video-grid" id="video-grid">
         {
-          VIDEOS.map((item) => (
-            <article class="video-card" data-category={item.category} data-reveal>
-              <div class="video-card__frame">
-                <iframe
-                  src={`https://www.youtube-nocookie.com/embed/${item.id}`}
-                  title={item.title}
-                  loading="lazy"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerpolicy="strict-origin-when-cross-origin"
-                  allowfullscreen
-                />
-              </div>
-              <div class="video-card__body">
-                <h3>{item.title}</h3>
-                <span class="video-card__cat">{v.categories[item.category]}</span>
-              </div>
-            </article>
-          ))
+          VIDEOS.map((item, i) => {
+            const linked = linkedProducts.get(item.id);
+            return (
+              <article class="video-card" data-category={item.category} data-reveal style={`--reveal-delay:${(i % 3) * 70}ms;`}>
+                <div class="video-card__frame">
+                  {/* Cover first, player on demand: ten live embeds would cost
+                      megabytes of third-party script before anything is watched. */}
+                  <button class="video-card__cover" data-yt-facade data-video-id={item.id} type="button" aria-label={`${T.watch}: ${item.title}`}>
+                    <img
+                      src={`https://i.ytimg.com/vi/${item.id}/hqdefault.jpg`}
+                      alt=""
+                      loading={i < 3 ? "eager" : "lazy"}
+                      width="480"
+                      height="360"
+                    />
+                    <span class="video-card__play" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5.5v13l11-6.5z" /></svg>
+                    </span>
+                  </button>
+                </div>
+                <div class="video-card__body">
+                  <div>
+                    <h3>{item.title}</h3>
+                    <span class="video-card__cat">{v.categories[item.category]}</span>
+                  </div>
+                  {linked && (
+                    <a class="video-card__link" href={`${catalogBase}?line=${linked.line}`}>
+                      {lineLabel("maplus", linked.line, linked.line, lang)}
+                      <span class="video-card__count">{linked.count} →</span>
+                    </a>
+                  )}
+                </div>
+              </article>
+            );
+          })
         }
       </div>
     </div>
@@ -63,16 +110,32 @@ const categories = Array.from(new Set(VIDEOS.map((x) => x.category)));
 
 <script>
   document.addEventListener("astro:page-load", () => {
-    const buttons = document.querySelectorAll<HTMLButtonElement>(".filter");
+    const buttons = document.querySelectorAll<HTMLButtonElement>(".filters .filter");
     const cards = document.querySelectorAll<HTMLElement>("#video-grid [data-category]");
     buttons.forEach((btn) => {
       btn.addEventListener("click", () => {
         const f = btn.dataset.filter;
-        buttons.forEach((b) => b.setAttribute("aria-pressed", (b === btn).toString()));
+        buttons.forEach((b) => b.setAttribute("aria-pressed", String(b === btn)));
         cards.forEach((c) => {
-          const show = f === "all" || c.dataset.category === f;
-          c.style.display = show ? "" : "none";
+          c.style.display = f === "all" || c.dataset.category === f ? "" : "none";
         });
+      });
+    });
+
+    // Swap the cover for the real player only once the visitor asks for it.
+    document.querySelectorAll<HTMLElement>("[data-yt-facade]").forEach((facade) => {
+      facade.addEventListener("click", () => {
+        const id = facade.dataset.videoId;
+        if (!id) return;
+        const frame = facade.parentElement;
+        if (!frame) return;
+        const iframe = document.createElement("iframe");
+        iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
+        iframe.title = facade.getAttribute("aria-label") ?? "";
+        iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+        iframe.referrerPolicy = "strict-origin-when-cross-origin";
+        iframe.allowFullscreen = true;
+        frame.replaceChildren(iframe);
       });
     });
   });

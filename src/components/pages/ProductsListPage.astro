@@ -3,7 +3,18 @@ import Base from "../../layouts/Base.astro";
 import PageHero from "../PageHero.astro";
 import { t, path, type Lang, type RouteKey } from "../../i18n/content";
 import { productsByBrand, MAPLUS_LINES, EFB_LINES, type ProductBrand } from "../../data/products";
-import { productTitle, productLineTitle, lineLabel } from "../../data/product-i18n";
+import { productTitle, productLineTitle, lineLabel, specValue } from "../../data/product-i18n";
+
+// The one fact that decides a purchase in a 323-item wax catalog is the snow
+// temperature window, so surface it on the card instead of one click deeper.
+const KEY_LABELS = ["Snow temperature", "Air temperature", "Size", "Material"];
+function keyFact(p: (typeof products)[number]): string | null {
+  for (const label of KEY_LABELS) {
+    const hit = p.specs.find((s) => s.labelEn === label);
+    if (hit) return specValue(hit, lang);
+  }
+  return null;
+}
 
 interface Props {
   lang: Lang;
@@ -30,6 +41,10 @@ const t_label = {
     products: "produkter",
     askInfo: "Be om info",
     backToBrand: `Tilbake til ${brandName}`,
+    search: "Søk i katalogen",
+    searchPlaceholder: "Søk etter produkt, serie eller kode",
+    noResults: "Ingen produkter passer søket.",
+    clear: "Nullstill",
   },
   en: {
     eyebrow: "Products",
@@ -42,6 +57,10 @@ const t_label = {
     products: "products",
     askInfo: "Request info",
     backToBrand: `Back to ${brandName}`,
+    search: "Search the catalog",
+    searchPlaceholder: "Search by product, line or code",
+    noResults: "No products match your search.",
+    clear: "Clear",
   },
 }[lang];
 ---
@@ -61,6 +80,12 @@ const t_label = {
       <figure class="prod-banner" data-reveal>
         <img src={bannerImg} alt={brandName} loading="eager" />
       </figure>
+
+      <!-- Search -->
+      <div class="prod-search">
+        <svg class="prod-search__icon" viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input type="search" id="prod-search" data-prod-search placeholder={t_label.searchPlaceholder} aria-label={t_label.search} autocomplete="off" />
+      </div>
 
       <!-- Filter bar -->
       <div class="prod-filters" data-prod-filters>
@@ -99,11 +124,14 @@ const t_label = {
               <div class="prod-card__body">
                 <span class="tech prod-card__line">{productLineTitle(p, lang)}</span>
                 <h3 class="prod-card__title">{productTitle(p, lang)}</h3>
+                {keyFact(p) && <span class="prod-card__fact">{keyFact(p)}</span>}
               </div>
             </a>
           ))
         }
       </div>
+
+      <p class="prod-empty" data-prod-empty hidden>{t_label.noResults}</p>
     </div>
   </section>
 </Base>
@@ -113,23 +141,46 @@ const t_label = {
     const filters = document.querySelectorAll("[data-prod-filters] .filter");
     const cards = document.querySelectorAll(".prod-card");
     const counter = document.querySelector("[data-prod-count]");
+    const search = document.querySelector("[data-prod-search]");
+    const empty = document.querySelector("[data-prod-empty]");
     const total = cards.length;
+    let currentLine = "all";
+    let query = "";
 
-    function applyFilter(filterValue) {
+    function render() {
       let active = null;
       filters.forEach((b) => {
-        const match = b.dataset.line === filterValue;
+        const match = b.dataset.line === currentLine;
         b.setAttribute("aria-pressed", String(match));
         if (match) active = b;
       });
       let visible = 0;
       cards.forEach((c) => {
-        const show = filterValue === "all" || c.dataset.line === filterValue;
+        const inLine = currentLine === "all" || c.dataset.line === currentLine;
+        const inQuery = !query || (c.dataset.search || "").includes(query);
+        const show = inLine && inQuery;
         c.style.display = show ? "" : "none";
         if (show) visible++;
       });
       if (counter) counter.textContent = `${allText} ${visible} ${ofText} ${total} ${productsText}`;
+      if (empty) empty.hidden = visible > 0;
       return active;
+    }
+
+    function applyFilter(filterValue) {
+      currentLine = filterValue;
+      return render();
+    }
+
+    if (search) {
+      let timer;
+      search.addEventListener("input", () => {
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+          query = search.value.trim().toLowerCase();
+          render();
+        }, 120);
+      });
     }
 
     filters.forEach((btn) => {
