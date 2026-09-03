@@ -55,26 +55,41 @@ const T = {
 
 const contactUrl = `${path(lang, "contact")}?product=${encodeURIComponent(productTitle(product, lang))}&brand=${brand}`;
 
-// Application photo per line: shows the product family in real use
-const APPLY_IMG: Record<string, string> = {
-  // MAPLUS
-  "maplus:xcelerate": "/images/maplus/powder-pour.jpg",
-  "maplus:gm": "/images/maplus/wax-blocks.jpg",
-  "maplus:bp10": "/images/maplus/iron-drip.jpg",
-  "maplus:racing-base": "/images/maplus/iron.jpg",
-  "maplus:xc-line": "/images/maplus/brush.jpg",
-  "maplus:block-line": "/images/maplus/wax-blocks.jpg",
-  "maplus:voks": "/images/maplus/iron-drip.jpg",
-  "maplus:bike": "/images/bike-care.jpg",
-  "maplus:textile": "/images/textile-care.jpg",
-  "maplus:accessori": "/images/maplus/iron-scrape.jpg",
-  // EFB
-  "efb:insoles": "/images/efb/boots-insoles.jpg",
-  "efb:accessories": "/images/efb/cat-tracks.jpg",
-  "efb:workshop": "/images/efb/workshop.jpg",
-  "efb:apparel": "/images/efb/hero.webp",
+// Application photo. The pools hold only landscape or square shots: the wide
+// 16:7 frame turned portrait photos into an unreadable dark sliver. Picking by
+// slug keeps each product on a stable image while neighbouring products differ.
+const APPLY_POOL: Record<string, string[]> = {
+  maplus: [
+    "/images/maplus/iron.jpg",
+    "/images/maplus/brush.jpg",
+    "/images/maplus/gm-lineup.jpg",
+    "/images/maplus/ski-scrape.jpg",
+    "/images/maplus/wax-blocks.jpg",
+  ],
+  efb: [
+    "/images/efb/polishing-tools.jpg",
+    "/images/efb/boot-stretcher.jpg",
+    "/images/efb/cat-tracks.jpg",
+    "/images/efb/hero.webp",
+  ],
 };
-const applyImg = APPLY_IMG[`${brand}:${product.lineHandle}`];
+
+// Lines whose own subject beats a generic workshop shot.
+const APPLY_BY_LINE: Record<string, string> = {
+  "maplus:bike": "/images/bike-care.jpg",
+};
+
+function pickApplyImage(brandKey: string, lineHandle: string, slug: string): string {
+  const fixed = APPLY_BY_LINE[`${brandKey}:${lineHandle}`];
+  if (fixed) return fixed;
+  const pool = APPLY_POOL[brandKey] ?? [];
+  if (pool.length === 0) return "";
+  let hash = 0;
+  for (let i = 0; i < slug.length; i++) hash = (hash * 31 + slug.charCodeAt(i)) >>> 0;
+  return pool[hash % pool.length];
+}
+
+const applyImg = pickApplyImage(brand, product.lineHandle, product.slug);
 const applyLabel = lang === "no" ? "I bruk" : "In use";
 
 const title = productTitle(product, lang);
