@@ -3,6 +3,7 @@ import Base from "../../layouts/Base.astro";
 import PageHero from "../PageHero.astro";
 import { t, path, type Lang, type RouteKey } from "../../i18n/content";
 import { productsByBrand, MAPLUS_LINES, EFB_LINES, type ProductBrand } from "../../data/products";
+import { productTitle, productLineTitle, lineLabel } from "../../data/product-i18n";
 
 interface Props {
   lang: Lang;
@@ -69,7 +70,7 @@ const t_label = {
             const cnt = products.filter((p) => p.lineHandle === l.handle).length;
             return (
               <button class="filter" data-line={l.handle} aria-pressed="false">
-                {l.title} <span class="prod-filters__count">({cnt})</span>
+                {lineLabel(brand, l.handle, l.title, lang)} <span class="prod-filters__count">({cnt})</span>
               </button>
             );
           })
@@ -86,18 +87,18 @@ const t_label = {
               class="prod-card"
               href={`${path(lang, brand)}/${lang === "no" ? "produkter" : "products"}/${p.slug}`}
               data-line={p.lineHandle}
-              data-search={`${p.title} ${p.lineTitle} ${p.tags.join(" ")}`.toLowerCase()}
+              data-search={`${productTitle(p, lang)} ${p.title} ${productLineTitle(p, lang)} ${p.tags.join(" ")}`.toLowerCase()}
             >
               <div class="prod-card__media">
                 {p.image ? (
-                  <img src={p.image} alt={p.title} loading={i < 12 ? "eager" : "lazy"} />
+                  <img src={p.image} alt={productTitle(p, lang)} loading={i < 12 ? "eager" : "lazy"} />
                 ) : (
                   <span class="prod-card__noimg">{brandName}</span>
                 )}
               </div>
               <div class="prod-card__body">
-                <span class="tech prod-card__line">{p.lineTitle}</span>
-                <h3 class="prod-card__title">{p.title}</h3>
+                <span class="tech prod-card__line">{productLineTitle(p, lang)}</span>
+                <h3 class="prod-card__title">{productTitle(p, lang)}</h3>
               </div>
             </a>
           ))

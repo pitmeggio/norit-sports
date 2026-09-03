@@ -3,6 +3,7 @@ import Base from "../../layouts/Base.astro";
 import { t, path, type Lang } from "../../i18n/content";
 import { findProduct, productsByBrand, type ProductBrand } from "../../data/products";
 import { findProductVideo } from "../../data/videos";
+import { productTitle, productLineTitle, specLabel, specValue, formatValue } from "../../data/product-i18n";
 
 interface Props {
   lang: Lang;
@@ -52,7 +53,7 @@ const T = {
   },
 }[lang];
 
-const contactUrl = `${path(lang, "contact")}?product=${encodeURIComponent(product.title)}&brand=${brand}`;
+const contactUrl = `${path(lang, "contact")}?product=${encodeURIComponent(productTitle(product, lang))}&brand=${brand}`;
 
 // Application photo per line: shows the product family in real use
 const APPLY_IMG: Record<string, string> = {
@@ -76,11 +77,14 @@ const APPLY_IMG: Record<string, string> = {
 const applyImg = APPLY_IMG[`${brand}:${product.lineHandle}`];
 const applyLabel = lang === "no" ? "I bruk" : "In use";
 
+const title = productTitle(product, lang);
+const lineName = productLineTitle(product, lang);
+
 const videoId = findProductVideo(product);
 const videoTitle = lang === "no" ? "Bruksvideo" : "Application video";
 ---
 
-<Base lang={lang} current={brand} title={`${product.title} | ${brandName} | Norit Sports`} description={product.desc.slice(0, 160) || `${product.title} — ${product.lineTitle} — ${brandName}.`} ogImage={product.image ?? "/images/hero.webp"}>
+<Base lang={lang} current={brand} title={`${title} | ${brandName} | Norit Sports`} description={product.desc.slice(0, 160) || `${title}. ${lineName}. ${brandName}.`} ogImage={product.image ?? "/images/hero.webp"}>
   <article class="prod-detail">
     <div class="container container--wide">
       <!-- Breadcrumb -->
@@ -89,7 +93,7 @@ const videoTitle = lang === "no" ? "Bruksvideo" : "Application video";
         <span aria-hidden="true">›</span>
         <a href={`${path(lang, brand)}/${lang === "no" ? "produkter" : "products"}`}>{lang === "no" ? "Produkter" : "Products"}</a>
         <span aria-hidden="true">›</span>
-        <span class="prod-breadcrumb__current">{product.title}</span>
+        <span class="prod-breadcrumb__current">{title}</span>
       </nav>
 
       <div class="prod-detail__grid">
@@ -97,7 +101,7 @@ const videoTitle = lang === "no" ? "Bruksvideo" : "Application video";
         <figure class="prod-detail__media" data-reveal>
           {
             product.image ? (
-              <img src={product.image} alt={product.title} fetchpriority="high" />
+              <img src={product.image} alt={title} fetchpriority="high" />
             ) : (
               <span class="prod-card__noimg">{brandName}</span>
             )
@@ -106,8 +110,8 @@ const videoTitle = lang === "no" ? "Bruksvideo" : "Application video";
 
         <!-- Info -->
         <div class="prod-detail__info" data-reveal style="--reveal-delay:120ms;">
-          <span class="eyebrow">{product.lineTitle}</span>
-          <h1 class="prod-detail__title">{product.title}</h1>
+          <span class="eyebrow">{lineName}</span>
+          <h1 class="prod-detail__title">{title}</h1>
 
           {product.desc && <p class="lead prod-detail__desc">{product.desc}</p>}
 
@@ -119,8 +123,8 @@ const videoTitle = lang === "no" ? "Bruksvideo" : "Application video";
                 <dl class="prod-specs">
                   {product.specs.map((s) => (
                     <div>
-                      <dt>{lang === "no" ? s.labelNo : s.labelEn}</dt>
-                      <dd>{lang === "no" ? s.valueNo : s.valueEn}</dd>
+                      <dt>{specLabel(s, lang)}</dt>
+                      <dd>{specValue(s, lang)}</dd>
                     </div>
                   ))}
                 </dl>
@@ -136,13 +140,13 @@ const videoTitle = lang === "no" ? "Bruksvideo" : "Application video";
             </div>
             <div>
               <dt>{T.line}</dt>
-              <dd>{product.lineTitle}</dd>
+              <dd>{lineName}</dd>
             </div>
             {
               product.format.length > 0 && (
                 <div>
                   <dt>{T.format}</dt>
-                  <dd>{product.format.join(" · ")}</dd>
+                  <dd>{product.format.map((f) => formatValue(f, lang)).join(" · ")}</dd>
                 </div>
               )
             }
@@ -172,7 +176,7 @@ const videoTitle = lang === "no" ? "Bruksvideo" : "Application video";
             <div class="prod-video__frame">
               <iframe
                 data-yt
-                title={`${product.title} · ${videoTitle}`}
+                title={`${title} · ${videoTitle}`}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
@@ -186,7 +190,7 @@ const videoTitle = lang === "no" ? "Bruksvideo" : "Application video";
       {
         applyImg && (
           <figure class="prod-apply" data-reveal>
-            <img src={applyImg} alt={`${product.lineTitle} ${applyLabel}`} loading="lazy" data-parallax />
+            <img src={applyImg} alt={`${lineName} ${applyLabel}`} loading="lazy" data-parallax />
             <figcaption>{brandName} · {applyLabel}</figcaption>
           </figure>
         )
@@ -202,14 +206,14 @@ const videoTitle = lang === "no" ? "Bruksvideo" : "Application video";
                 <a class="prod-card" href={`${path(lang, brand)}/${lang === "no" ? "produkter" : "products"}/${p.slug}`}>
                   <div class="prod-card__media">
                     {p.image ? (
-                      <img src={p.image} alt={p.title} loading="lazy" />
+                      <img src={p.image} alt={productTitle(p, lang)} loading="lazy" />
                     ) : (
                       <span class="prod-card__noimg">{brandName}</span>
                     )}
                   </div>
                   <div class="prod-card__body">
-                    <span class="tech prod-card__line">{p.lineTitle}</span>
-                    <h3 class="prod-card__title">{p.title}</h3>
+                    <span class="tech prod-card__line">{productLineTitle(p, lang)}</span>
+                    <h3 class="prod-card__title">{productTitle(p, lang)}</h3>
                   </div>
                 </a>
               ))}

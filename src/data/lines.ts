@@ -16,7 +16,7 @@ export const MAPLUS_LINE_DEFS: LineDef[] = [
   { handle: "bp10", no: "BP10", en: "BP10", img: "/images/maplus/lines/bp10.jpg", fit: "cover" },
   { handle: "racing-base", no: "Racing Base", en: "Racing Base", img: "/images/maplus/lines/racing-base.jpg", fit: "cover" },
   { handle: "xc-line", no: "XC Line", en: "XC Line", img: "/images/maplus/lines/xc-line.jpg", fit: "cover" },
-  { handle: "block-line", no: "Blocks", en: "Blocks", img: "/images/maplus/lines/block-line.jpg", fit: "cover" },
+  { handle: "block-line", no: "Blokker", en: "Blocks", img: "/images/maplus/lines/block-line.jpg", fit: "cover" },
   { handle: "bike", no: "Sykkel", en: "Bike", img: "/images/maplus/lines/bike.jpg", fit: "contain" },
   { handle: "textile", no: "Tekstilpleie", en: "Textile care", img: "/images/maplus/lines/textile.jpg", fit: "contain" },
   { handle: "accessori", no: "Tilbehør", en: "Accessories", img: "/images/maplus/brush.jpg", fit: "cover" },

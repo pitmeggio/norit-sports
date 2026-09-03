@@ -8,6 +8,7 @@ interface Props {
 const { lang } = Astro.props;
 const tr = t[lang];
 const year = new Date().getFullYear();
+const orgLabel = lang === "no" ? "Org.nr" : "Company reg. no.";
 ---
 
 <footer class="site-footer">
@@ -25,7 +26,7 @@ const year = new Date().getFullYear();
       <div>
         <h4>{tr.footer.info}</h4>
         <p>{COMPANY.address}</p>
-        <p>org. nr {COMPANY.orgNr}</p>
+        <p>{orgLabel} {COMPANY.orgNr}</p>
         <p><a href={`mailto:${COMPANY.email}`}>{COMPANY.email}</a></p>
         <p><a href={`tel:${COMPANY.phone.replace(/\s/g, "")}`}>{COMPANY.phone}</a></p>
       </div>
@@ -46,7 +47,7 @@ const year = new Date().getFullYear();
       <span>© {year} Norit Sports</span>
       <span class="footer-bottom__links">
         <a href={path(lang, "privacy")}>{tr.privacyNav}</a>
-        <span>org. nr {COMPANY.orgNr}</span>
+        <span>{orgLabel} {COMPANY.orgNr}</span>
       </span>
     </div>
   </div>

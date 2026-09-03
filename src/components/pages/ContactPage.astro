@@ -62,7 +62,7 @@ const formAction = CONTACT_ENDPOINT || `mailto:${COMPANY.email}`;
               <dd>{COMPANY.address}</dd>
             </div>
             <div>
-              <dt>Org. nr</dt>
+              <dt>{lang === "no" ? "Org.nr" : "Company reg. no."}</dt>
               <dd>{COMPANY.orgNr}</dd>
             </div>
             <div>
