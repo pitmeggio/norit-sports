@@ -1,6 +1,7 @@
 ---
 import Base from "../../layouts/Base.astro";
 import { t, path, type Lang } from "../../i18n/content";
+import Photo from "../Photo.astro";
 
 interface Props {
   lang: Lang;
@@ -14,7 +15,7 @@ const h = tr.home;
   <!-- ─────────────────────────────────── HERO (immersive, full-bleed) -->
   <section class="hero-im">
     <div class="hero-im__media">
-      <img src="/images/maplus/hero-iron.jpg" alt="" fetchpriority="high" />
+      <Photo src="/images/maplus/hero-iron.jpg" alt="" sizes="100vw" loading="eager" fetchpriority="high" />
     </div>
 
     <div class="hero-im__inner">
@@ -69,7 +70,7 @@ const h = tr.home;
               {
                 brandCats.map((c, i) => (
                   <a class="cat-tile" href={path(lang, c.brandKey)} data-reveal style={`--reveal-delay:${i * 80}ms;`}>
-                    <img class="cat-tile__img" src={c.img} alt={c.name} loading="lazy" />
+                    <Photo class="cat-tile__img" src={c.img} alt={c.name} sizes="(max-width: 760px) 100vw, 33vw" maxWidth={1200} />
                     <div class="cat-tile__body">
                       <span class="cat-tile__num">{String(i + 1).padStart(2, "0")} / {String(brandCats.length).padStart(2, "0")}</span>
                       <h3 class="cat-tile__name">{c.name}</h3>
@@ -92,7 +93,7 @@ const h = tr.home;
       <div class="grid grid--2">
         <a class="brand-card" href={path(lang, "maplus")} data-reveal>
           <div class="brand-card__photo">
-            <img src="/images/maplus/gm-lineup.jpg" alt="" loading="lazy" />
+            <Photo src="/images/maplus/gm-lineup.jpg" alt="" sizes="(max-width: 760px) 100vw, 50vw" maxWidth={1600} />
           </div>
           <div class="brand-card__body">
             <div class="brand-card__logo">
@@ -107,7 +108,7 @@ const h = tr.home;
         </a>
         <a class="brand-card" href={path(lang, "efb")} data-reveal style="--reveal-delay:120ms;">
           <div class="brand-card__photo">
-            <img src="/images/efb/insoles-hero.jpg" alt="" loading="lazy" />
+            <Photo src="/images/efb/insoles-hero.jpg" alt="" sizes="(max-width: 760px) 100vw, 50vw" maxWidth={1600} />
           </div>
           <div class="brand-card__body">
             <div class="brand-card__logo">
@@ -152,7 +153,7 @@ const h = tr.home;
 
   <!-- ─────────────────────────────────── CLOSING CTA -->
   <section class="closing">
-    <img class="closing__bg" src="/images/ski-2.webp" alt="" loading="lazy" />
+    <Photo class="closing__bg" src="/images/ski-2.webp" alt="" sizes="100vw" />
     <div class="container container--wide closing__inner">
       <div>
         <p class="eyebrow eyebrow--light" data-reveal>{h.closingEyebrow}</p>

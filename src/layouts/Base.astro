@@ -109,8 +109,9 @@ const breadcrumbJsonLd = breadcrumbs?.length
     <ClientRouter />
   </head>
   <body>
+    <a class="skip-link" href="#main">{lang === "no" ? "Hopp til innholdet" : "Skip to content"}</a>
     <Header lang={lang} current={current} />
-    <main>
+    <main id="main">
       <slot />
     </main>
     <Footer lang={lang} />

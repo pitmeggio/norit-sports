@@ -4,6 +4,7 @@ import { t, path, type Lang } from "../../i18n/content";
 import { findProduct, productsByBrand, type ProductBrand } from "../../data/products";
 import { findProductVideo } from "../../data/videos";
 import { productTitle, productLineTitle, specLabel, specValue, formatValue } from "../../data/product-i18n";
+import Photo from "../Photo.astro";
 
 interface Props {
   lang: Lang;
@@ -232,7 +233,7 @@ const videoTitle = lang === "no" ? "Bruksvideo" : "Application video";
       {
         applyImg && (
           <figure class="prod-apply" data-reveal>
-            <img src={applyImg} alt={`${lineName} ${applyLabel}`} loading="lazy" data-parallax />
+            <Photo src={applyImg} alt={`${lineName} ${applyLabel}`} sizes="100vw" data-parallax />
             <figcaption>{brandName} · {applyLabel}</figcaption>
           </figure>
         )

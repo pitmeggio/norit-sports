@@ -3,6 +3,7 @@
 // Each card deep-links into the filtered product browser.
 import { path, type Lang } from "../i18n/content";
 import { MAPLUS_LINE_DEFS, lineTitle } from "../data/lines";
+import Photo from "./Photo.astro";
 
 interface Props {
   lang: Lang;
@@ -16,7 +17,7 @@ const base = `${path(lang, "maplus")}/${lang === "no" ? "produkter" : "products"
     MAPLUS_LINE_DEFS.map((l, i) => (
       <a class="line-card" href={`${base}?line=${l.handle}`} data-reveal style={`--reveal-delay:${(i % 3) * 70}ms;`}>
         <div class="line-card__media">
-          <img src={l.img} alt={lineTitle(l, lang)} loading="lazy" data-fit={l.fit ?? "cover"} />
+          <Photo src={l.img} alt={lineTitle(l, lang)} sizes="(max-width: 760px) 50vw, 22vw" maxWidth={900} data-fit={l.fit ?? "cover"} />
         </div>
         <div class="line-card__body">
           <h3 class="line-card__title">{lineTitle(l, lang)}</h3>

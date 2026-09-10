@@ -4,6 +4,7 @@ import PageHero from "../PageHero.astro";
 import { t, path, type Lang, type RouteKey } from "../../i18n/content";
 import { productsByBrand, MAPLUS_LINES, EFB_LINES, type ProductBrand } from "../../data/products";
 import { productTitle, productLineTitle, lineLabel, specValue } from "../../data/product-i18n";
+import Photo from "../Photo.astro";
 
 // The one fact that decides a purchase in a 323-item wax catalog is the snow
 // temperature window, so surface it on the card instead of one click deeper.
@@ -84,7 +85,7 @@ const crumbs = [
     <div class="container container--wide">
       <!-- Brand mood banner -->
       <figure class="prod-banner" data-reveal>
-        <img src={bannerImg} alt={brandName} loading="eager" />
+        <Photo src={bannerImg} alt={brandName} sizes="100vw" loading="eager" />
       </figure>
 
       <!-- Search -->

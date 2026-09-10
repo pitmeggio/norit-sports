@@ -2,6 +2,7 @@
 import Base from "../../layouts/Base.astro";
 import PageHero from "../PageHero.astro";
 import { t, path, type Lang } from "../../i18n/content";
+import Photo from "../Photo.astro";
 
 interface Props {
   lang: Lang;
@@ -50,7 +51,7 @@ const crumbs = [
       <h2 class="display" style="margin-bottom:clamp(2rem,4vw,3rem);" data-reveal>{e.brandTitle}</h2>
       <div class="brand-intro">
         <figure class="brand-intro__media" data-reveal="left">
-          <img src="/images/efb/insoles-hero.jpg" alt="EFB Sport custom insoles" loading="lazy" />
+          <Photo src="/images/efb/insoles-hero.jpg" alt="EFB Sport custom insoles" sizes="(max-width: 760px) 100vw, 45vw" maxWidth={1600} />
         </figure>
         <div class="brand-intro__text" data-reveal="right" style="--reveal-delay:120ms;">
           <p class="lead">{e.brandBody1}</p>
@@ -80,7 +81,7 @@ const crumbs = [
   <!-- Hero product photo (cinematic insoles) -->
   <section style="padding-block: 0 clamp(3rem,6vw,5rem);">
     <figure class="showcase" data-reveal>
-      <img src="/images/efb/polishing-tools.jpg" alt="EFB Sport verkstedutstyr" loading="lazy" data-parallax />
+      <Photo src="/images/efb/polishing-tools.jpg" alt="EFB Sport verkstedutstyr" sizes="100vw" data-parallax />
       <figcaption>EFB Sport · Professional workshop</figcaption>
     </figure>
   </section>
@@ -95,7 +96,7 @@ const crumbs = [
       {
         cats.map((c, i) => (
           <a class="cat-tile" href={c.href} data-reveal style={`--reveal-delay:${i * 80}ms;`}>
-            <img class="cat-tile__img" src={c.img} alt={c.title} loading="lazy" />
+            <Photo class="cat-tile__img" src={c.img} alt={c.title} sizes="(max-width: 760px) 100vw, 33vw" maxWidth={1200} />
             <div class="cat-tile__body">
               <span class="cat-tile__num">{String(i + 1).padStart(2, "0")} / {String(cats.length).padStart(2, "0")}</span>
               <h3 class="cat-tile__name">{c.title}</h3>

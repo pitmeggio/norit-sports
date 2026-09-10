@@ -1,6 +1,7 @@
 ---
 import { t, path, type Lang, type RouteKey } from "../i18n/content";
 import { MAPLUS_LINE_DEFS, EFB_LINE_DEFS, lineTitle } from "../data/lines";
+import Photo from "./Photo.astro";
 
 interface Props {
   lang: Lang;
@@ -77,14 +78,14 @@ const T = {
 
             <div class="mega__promos">
               <a class="mega__promo" href={path(lang, "maplus")}>
-                <img src="/images/maplus/iron.jpg" alt="" loading="lazy" />
+                <Photo src="/images/maplus/iron.jpg" alt="" sizes="20vw" maxWidth={700} />
                 <span class="mega__promo-text">
                   <strong>MAPLUS</strong>
                   <span>{T.explore} →</span>
                 </span>
               </a>
               <a class="mega__promo" href={path(lang, "efb")}>
-                <img src="/images/efb/insoles-hero.jpg" alt="" loading="lazy" />
+                <Photo src="/images/efb/insoles-hero.jpg" alt="" sizes="20vw" maxWidth={700} />
                 <span class="mega__promo-text">
                   <strong>EFB Sport</strong>
                   <span>{T.explore} →</span>

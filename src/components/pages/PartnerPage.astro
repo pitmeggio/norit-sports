@@ -2,6 +2,7 @@
 import Base from "../../layouts/Base.astro";
 import PageHero from "../PageHero.astro";
 import { t, path, type Lang } from "../../i18n/content";
+import Photo from "../Photo.astro";
 
 interface Props {
   lang: Lang;
@@ -25,11 +26,11 @@ const p = tr.partner;
       <div class="grid grid--2">
         <article class="brand-card" data-reveal>
           <div class="brand-card__photo">
-            <img src="/images/generic.webp" alt="" loading="lazy" />
+            <Photo src="/images/generic.webp" alt="" sizes="(max-width: 760px) 100vw, 50vw" maxWidth={1600} />
           </div>
           <div class="brand-card__body">
             <span class="tech">01 / 02</span>
-            <h3 style="font-family:var(--font-display); font-size:clamp(1.5rem,2.4vw,2rem); letter-spacing:-0.02em;">{p.brandsTitle}</h3>
+            <h2 style="font-family:var(--font-display); font-size:clamp(1.5rem,2.4vw,2rem); letter-spacing:-0.02em;">{p.brandsTitle}</h2>
             <p class="brand-card__blurb">{p.brandsBody}</p>
             <ul class="ticks" style="margin-top:0.6rem;">
               {p.brandsPoints.map((pt) => <li>{pt}</li>)}
@@ -39,11 +40,11 @@ const p = tr.partner;
 
         <article class="brand-card" data-reveal style="--reveal-delay:130ms;">
           <div class="brand-card__photo">
-            <img src="/images/ski-2.webp" alt="" loading="lazy" />
+            <Photo src="/images/ski-2.webp" alt="" sizes="(max-width: 760px) 100vw, 50vw" maxWidth={1400} />
           </div>
           <div class="brand-card__body">
             <span class="tech">02 / 02</span>
-            <h3 style="font-family:var(--font-display); font-size:clamp(1.5rem,2.4vw,2rem); letter-spacing:-0.02em;">{p.teamsTitle}</h3>
+            <h2 style="font-family:var(--font-display); font-size:clamp(1.5rem,2.4vw,2rem); letter-spacing:-0.02em;">{p.teamsTitle}</h2>
             <p class="brand-card__blurb">{p.teamsBody}</p>
             <ul class="ticks" style="margin-top:0.6rem;">
               {p.teamsPoints.map((pt) => <li>{pt}</li>)}
@@ -56,7 +57,7 @@ const p = tr.partner;
 
   <!-- Closing dark CTA -->
   <section class="closing">
-    <img class="closing__bg" src="/images/ski-2.webp" alt="" loading="lazy" />
+    <Photo class="closing__bg" src="/images/ski-2.webp" alt="" sizes="100vw" />
     <div class="container container--wide closing__inner">
       <div>
         <p class="eyebrow eyebrow--light" data-reveal>{lang === "no" ? "La oss snakke" : "Let's talk"}</p>
