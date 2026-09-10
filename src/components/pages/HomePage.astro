@@ -44,8 +44,50 @@ const h = tr.home;
     </div>
   </section>
 
-  <!-- ─────────────────────────────────── CATEGORIES (two brand blocks) -->
+  <!-- ─────────────────────────────────── DISTRIBUTED BRANDS -->
   <section class="section section--flush-bottom">
+    <div class="container container--wide">
+      <p class="eyebrow" data-reveal>{h.brandsEyebrow}</p>
+      <h2 class="display u-mt u-mb-lg" data-reveal>{h.brandsSectionTitle}</h2>
+      <div class="grid grid--2">
+        <a class="brand-card" href={path(lang, "maplus")} data-reveal>
+          <div class="brand-card__photo">
+            <Photo src="/images/maplus/gm-lineup.jpg" alt="" sizes="(max-width: 760px) 100vw, 50vw" maxWidth={1600} />
+          </div>
+          <div class="brand-card__body">
+            <div class="brand-card__logo">
+              <img src="/images/maplus-logo.webp" alt="" loading="lazy" />
+            </div>
+            <h3 class="brand-card__name">MAPLUS</h3>
+            <p class="brand-card__blurb">{tr.brandsIndex.maplusBlurb}</p>
+            <span class="card__cta">
+              {tr.brandsIndex.discoverLabel}
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </a>
+        <a class="brand-card" href={path(lang, "efb")} data-reveal style="--reveal-delay:120ms;">
+          <div class="brand-card__photo">
+            <Photo src="/images/efb/insoles-hero.jpg" alt="" sizes="(max-width: 760px) 100vw, 50vw" maxWidth={1600} />
+          </div>
+          <div class="brand-card__body">
+            <div class="brand-card__logo">
+              <img src="/images/efb/logo.webp" alt="" loading="lazy" />
+            </div>
+            <h3 class="brand-card__name">EFB Sport</h3>
+            <p class="brand-card__blurb">{tr.brandsIndex.efbBlurb}</p>
+            <span class="card__cta">
+              {tr.brandsIndex.discoverLabel}
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────── CATEGORIES (what the brands cover) -->
+  <section class="section">
     <div class="container container--wide">
       <p class="eyebrow" data-reveal>{h.catEyebrow}</p>
       <h2 class="display u-mt u-mb-lg" data-reveal>{h.catTitle}</h2>
@@ -83,46 +125,6 @@ const h = tr.home;
         );
       })
     }
-  </section>
-
-  <!-- ─────────────────────────────────── DISTRIBUTED BRANDS -->
-  <section class="section">
-    <div class="container container--wide">
-      <p class="eyebrow" data-reveal>{h.brandsEyebrow}</p>
-      <h2 class="display u-mt u-mb-lg" data-reveal>{h.brandsSectionTitle}</h2>
-      <div class="grid grid--2">
-        <a class="brand-card" href={path(lang, "maplus")} data-reveal>
-          <div class="brand-card__photo">
-            <Photo src="/images/maplus/gm-lineup.jpg" alt="" sizes="(max-width: 760px) 100vw, 50vw" maxWidth={1600} />
-          </div>
-          <div class="brand-card__body">
-            <div class="brand-card__logo">
-              <img src="/images/maplus-logo.webp" alt="MAPLUS" loading="lazy" />
-            </div>
-            <p class="brand-card__blurb">{tr.brandsIndex.maplusBlurb}</p>
-            <span class="card__cta">
-              {tr.brandsIndex.discoverLabel}
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-          </div>
-        </a>
-        <a class="brand-card" href={path(lang, "efb")} data-reveal style="--reveal-delay:120ms;">
-          <div class="brand-card__photo">
-            <Photo src="/images/efb/insoles-hero.jpg" alt="" sizes="(max-width: 760px) 100vw, 50vw" maxWidth={1600} />
-          </div>
-          <div class="brand-card__body">
-            <div class="brand-card__logo">
-              <img src="/images/efb/logo.webp" alt="EFB Sport" loading="lazy" />
-            </div>
-            <p class="brand-card__blurb">{tr.brandsIndex.efbBlurb}</p>
-            <span class="card__cta">
-              {tr.brandsIndex.discoverLabel}
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-          </div>
-        </a>
-      </div>
-    </div>
   </section>
 
   <!-- ─────────────────────────────────── FOR PROFESSIONALS (dark band) -->
