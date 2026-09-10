@@ -34,7 +34,7 @@ const h = tr.home;
   <!-- ─────────────────────────────────── STORY -->
   <section class="story">
     <div class="container container--wide">
-      <p class="eyebrow" style="margin-bottom:clamp(2rem,4vw,3rem);" data-reveal>{h.storyEyebrow}</p>
+      <p class="eyebrow" class="section-head__title" data-reveal>{h.storyEyebrow}</p>
       <div class="story__inner">
         <h2 class="story__quote" data-reveal set:html={h.storyQuote} />
         <div class="story__aside" data-reveal style="--reveal-delay:120ms;">
@@ -45,10 +45,10 @@ const h = tr.home;
   </section>
 
   <!-- ─────────────────────────────────── CATEGORIES (two brand blocks) -->
-  <section style="padding-block: clamp(3rem,6vw,5rem) 0;">
+  <section class="section section--flush-bottom">
     <div class="container container--wide">
       <p class="eyebrow" data-reveal>{h.catEyebrow}</p>
-      <h2 class="display" style="margin-top:1.4rem; margin-bottom:clamp(2rem,4vw,3rem);" data-reveal>{h.catTitle}</h2>
+      <h2 class="display" class="section-head__title" data-reveal>{h.catTitle}</h2>
     </div>
 
     {
@@ -89,7 +89,7 @@ const h = tr.home;
   <section class="section">
     <div class="container container--wide">
       <p class="eyebrow" data-reveal>{h.brandsEyebrow}</p>
-      <h2 class="display" style="margin-top:1.4rem; margin-bottom:clamp(2rem,4vw,3rem);" data-reveal>{h.brandsSectionTitle}</h2>
+      <h2 class="display" class="section-head__title" data-reveal>{h.brandsSectionTitle}</h2>
       <div class="grid grid--2">
         <a class="brand-card" href={path(lang, "maplus")} data-reveal>
           <div class="brand-card__photo">

@@ -29,7 +29,7 @@ const crumbs = [
   />
 
   <!-- Quick CTA to full catalog -->
-  <section style="padding-block: 0 clamp(2rem,4vw,3rem);">
+  <section class="section section--tight section--flush-top">
     <div class="container container--wide">
       <a class="btn btn--accent" href={`${path(lang, "maplus")}/${lang === "no" ? "produkter" : "products"}`}>
         {lang === "no" ? "Se hele MAPLUS-katalogen" : "Browse the full MAPLUS catalog"}
@@ -39,10 +39,10 @@ const crumbs = [
   </section>
 
   <!-- Brand intro: heading on top, photo beside text (no dead whitespace) -->
-  <section class="story" style="padding-top:0;">
+  <section class="story section--flush-top">
     <div class="container container--wide">
-      <p class="eyebrow" style="margin-bottom:1.2rem;" data-reveal>{m.brandKicker}</p>
-      <h2 class="display" style="margin-bottom:clamp(2rem,4vw,3rem);" data-reveal>{m.brandTitle}</h2>
+      <p class="eyebrow" class="section-head__eyebrow" data-reveal>{m.brandKicker}</p>
+      <h2 class="display" class="section-head__title" data-reveal>{m.brandTitle}</h2>
       <div class="brand-intro">
         <figure class="brand-intro__media" data-reveal="left">
           <Photo src="/images/maplus/ski-scrape.jpg" alt="MAPLUS race service" sizes="(max-width: 760px) 100vw, 45vw" maxWidth={1600} />
@@ -50,7 +50,7 @@ const crumbs = [
         <div class="brand-intro__text" data-reveal="right" style="--reveal-delay:120ms;">
           <p class="lead">{m.brandBody1}</p>
           <p>{m.brandBody2}</p>
-          <dl class="facts" style="margin-top:1.4rem;">
+          <dl class="facts" class="section-head__title section-head__title--flush">
             {
               m.facts.map((f) => {
                 const num = f.value.match(/^(\d+)(.*)$/);
@@ -73,7 +73,7 @@ const crumbs = [
   </section>
 
   <!-- Wide showcase of the actual MAPLUS wax range -->
-  <section style="padding-block: 0 clamp(3rem,6vw,5rem);">
+  <section class="section section--flush-top">
     <figure class="showcase" data-reveal>
       <Photo src="/images/maplus/wax-blocks.jpg" alt="MAPLUS racing wax application" sizes="100vw" data-parallax />
       <figcaption>MAPLUS · Race service</figcaption>
@@ -81,19 +81,19 @@ const crumbs = [
   </section>
 
   <!-- Official MAPLUS product lines (mirrors maplus.it) -->
-  <section style="padding-block: clamp(3rem,6vw,5rem) 0;">
+  <section class="section section--flush-bottom">
     <div class="container container--wide">
       <p class="eyebrow" data-reveal>{m.productsKicker}</p>
-      <h2 class="display" style="margin-top:1.4rem; margin-bottom:clamp(2rem,4vw,3rem);" data-reveal>{lang === "no" ? "Produktserier" : "Product lines"}</h2>
+      <h2 class="display" class="section-head__title" data-reveal>{lang === "no" ? "Produktserier" : "Product lines"}</h2>
       <MaplusLinesGrid lang={lang} />
     </div>
   </section>
 
   <!-- Editorial photo strip: race service in action -->
-  <section style="padding-block: clamp(3rem,6vw,5rem) 0;">
+  <section class="section section--flush-bottom">
     <div class="container container--wide">
       <p class="eyebrow" data-reveal>{lang === "no" ? "Race service" : "Race service"}</p>
-      <h2 class="display" style="margin-top:1.4rem; margin-bottom:clamp(2rem,4vw,3rem);" data-reveal>{lang === "no" ? "Fra verkstedet" : "From the workshop"}</h2>
+      <h2 class="display" class="section-head__title" data-reveal>{lang === "no" ? "Fra verkstedet" : "From the workshop"}</h2>
       <div class="photo-strip">
         <figure data-reveal="scale"><Photo src="/images/maplus/powder-pour.jpg" alt="MAPLUS racing powder" sizes="(max-width: 760px) 100vw, 33vw" maxWidth={900} /></figure>
         <figure data-reveal="scale" style="--reveal-delay:80ms;"><Photo src="/images/maplus/factory.jpg" alt="MAFLON factory" sizes="(max-width: 760px) 100vw, 33vw" maxWidth={900} /></figure>
@@ -103,11 +103,11 @@ const crumbs = [
   </section>
 
   <!-- Athletes: MAPLUS on the World Cup -->
-  <section style="padding-block: clamp(3rem,6vw,5rem) 0;">
+  <section class="section section--flush-bottom">
     <div class="container container--wide">
       <p class="eyebrow" data-reveal>{lang === "no" ? "Utøvere" : "Athletes"}</p>
-      <h2 class="display" style="margin-top:1.4rem;" data-reveal>{lang === "no" ? "MAPLUS i verdenscupen" : "MAPLUS on the World Cup"}</h2>
-      <p class="lead" style="margin-top:1rem; margin-bottom:clamp(2rem,4vw,3rem);" data-reveal>{lang === "no" ? "Produktene utvikles og testes sammen med utøvere på øverste internasjonale nivå." : "The products are developed and tested with athletes at the highest international level."}</p>
+      <h2 class="display" class="section-head__title section-head__title--flush" data-reveal>{lang === "no" ? "MAPLUS i verdenscupen" : "MAPLUS on the World Cup"}</h2>
+      <p class="lead" class="section-head__lead" data-reveal>{lang === "no" ? "Produktene utvikles og testes sammen med utøvere på øverste internasjonale nivå." : "The products are developed and tested with athletes at the highest international level."}</p>
       <div class="athlete athlete--wide" data-reveal>
         <Photo src="/images/maplus/hero-pellegrino.jpg" alt="Federico Pellegrino" sizes="100vw" data-parallax />
         <div class="athlete__body">
@@ -119,7 +119,7 @@ const crumbs = [
   </section>
 
   <!-- Videos CTA on dark band -->
-  <section class="pros" style="padding-block: clamp(4rem,8vw,6rem);">
+  <section class="pros">
     <div class="container container--wide">
       <p class="eyebrow eyebrow--light" data-reveal>{m.videosTitle}</p>
       <div class="pros__head" style="margin-top:1.6rem;">

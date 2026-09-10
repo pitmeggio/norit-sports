@@ -21,9 +21,9 @@ const r = tr.retail;
   />
 
   <!-- Why partner — editorial story layout -->
-  <section class="story" style="padding-top:0;">
+  <section class="story section--flush-top">
     <div class="container container--wide">
-      <p class="eyebrow" style="margin-bottom:clamp(2rem,4vw,3rem);" data-reveal>{r.becomeKicker}</p>
+      <p class="eyebrow" class="section-head__title" data-reveal>{r.becomeKicker}</p>
       <div class="story__inner">
         <h2 class="story__quote" data-reveal>{r.becomeWhy}</h2>
         <div class="story__aside" data-reveal style="--reveal-delay:120ms;">
@@ -41,7 +41,7 @@ const r = tr.retail;
   <section class="section bg-alt">
     <div class="container container--wide">
       <p class="eyebrow" data-reveal>{r.kicker}</p>
-      <h2 class="display" style="margin-top:1.4rem;" data-reveal>{r.whereTitle}</h2>
+      <h2 class="display" class="section-head__title section-head__title--flush" data-reveal>{r.whereTitle}</h2>
 
       {
         RETAILERS.length > 0 ? (

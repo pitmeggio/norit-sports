@@ -35,7 +35,7 @@ const crumbs = [
   />
 
   <!-- Quick CTA to full catalog -->
-  <section style="padding-block: 0 clamp(2rem,4vw,3rem);">
+  <section class="section section--tight section--flush-top">
     <div class="container container--wide">
       <a class="btn btn--accent" href={`${path(lang, "efb")}/${lang === "no" ? "produkter" : "products"}`}>
         {lang === "no" ? "Se hele EFB Sport-katalogen" : "Browse the full EFB Sport catalog"}
@@ -45,10 +45,10 @@ const crumbs = [
   </section>
 
   <!-- Brand intro: heading on top, photo beside text -->
-  <section class="story" style="padding-top:0;">
+  <section class="story section--flush-top">
     <div class="container container--wide">
-      <p class="eyebrow" style="margin-bottom:1.2rem;" data-reveal>{e.brandKicker}</p>
-      <h2 class="display" style="margin-bottom:clamp(2rem,4vw,3rem);" data-reveal>{e.brandTitle}</h2>
+      <p class="eyebrow" class="section-head__eyebrow" data-reveal>{e.brandKicker}</p>
+      <h2 class="display" class="section-head__title" data-reveal>{e.brandTitle}</h2>
       <div class="brand-intro">
         <figure class="brand-intro__media" data-reveal="left">
           <Photo src="/images/efb/insoles-hero.jpg" alt="EFB Sport custom insoles" sizes="(max-width: 760px) 100vw, 45vw" maxWidth={1600} />
@@ -56,7 +56,7 @@ const crumbs = [
         <div class="brand-intro__text" data-reveal="right" style="--reveal-delay:120ms;">
           <p class="lead">{e.brandBody1}</p>
           <p>{e.brandBody2}</p>
-          <dl class="facts" style="margin-top:1.4rem;">
+          <dl class="facts" class="section-head__title section-head__title--flush">
             {
               e.facts.map((f) => {
                 const num = f.value.match(/^(\d+)(.*)$/);
@@ -79,7 +79,7 @@ const crumbs = [
   </section>
 
   <!-- Hero product photo (cinematic insoles) -->
-  <section style="padding-block: 0 clamp(3rem,6vw,5rem);">
+  <section class="section section--flush-top">
     <figure class="showcase" data-reveal>
       <Photo src="/images/efb/polishing-tools.jpg" alt="EFB Sport verkstedutstyr" sizes="100vw" data-parallax />
       <figcaption>EFB Sport · Professional workshop</figcaption>
@@ -87,10 +87,10 @@ const crumbs = [
   </section>
 
   <!-- Category tiles -->
-  <section style="padding-block: clamp(3rem,6vw,5rem) 0;">
+  <section class="section section--flush-bottom">
     <div class="container container--wide">
       <p class="eyebrow" data-reveal>{e.productsKicker}</p>
-      <h2 class="display" style="margin-top:1.4rem; margin-bottom:clamp(2rem,4vw,3rem);" data-reveal>{e.productsTitle}</h2>
+      <h2 class="display" class="section-head__title" data-reveal>{e.productsTitle}</h2>
     </div>
     <div class="cat-grid">
       {
@@ -109,7 +109,7 @@ const crumbs = [
   </section>
 
   <!-- Retail CTA on dark -->
-  <section class="pros" style="padding-block: clamp(4rem,8vw,6rem);">
+  <section class="pros">
     <div class="container container--wide">
       <p class="eyebrow eyebrow--light" data-reveal>{tr.nav.retail}</p>
       <div class="pros__head" style="margin-top:1.6rem;">

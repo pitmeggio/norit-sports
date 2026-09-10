@@ -81,7 +81,7 @@ const crumbs = [
     metaRight={`${lines.length} ${lang === "no" ? "SERIER" : "LINES"}`}
   />
 
-  <section class="section" style="padding-top:0;">
+  <section class="section section--flush-top">
     <div class="container container--wide">
       <!-- Brand mood banner -->
       <figure class="prod-banner" data-reveal>
@@ -109,7 +109,7 @@ const crumbs = [
         }
       </div>
 
-      <p class="tech prod-count" data-prod-count style="margin-top:1.4rem;">{t_label.showing} {products.length} {t_label.of} {products.length}</p>
+      <p class="tech prod-count" data-prod-count class="section-head__title section-head__title--flush">{t_label.showing} {products.length} {t_label.of} {products.length}</p>
 
       <!-- Product grid -->
       <div class="prod-grid" id="prod-grid">
