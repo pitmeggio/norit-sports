@@ -112,6 +112,7 @@ const crumbs = [
       <p class="tech prod-count u-mt" data-prod-count >{t_label.showing} {products.length} {t_label.of} {products.length}</p>
 
       <!-- Product grid -->
+      <h2 class="sr-only">{lang === "no" ? "Produktliste" : "Product list"}</h2>
       <div class="prod-grid" id="prod-grid">
         {
           products.map((p, i) => (

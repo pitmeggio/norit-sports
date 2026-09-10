@@ -24,7 +24,8 @@ const formAction = CONTACT_ENDPOINT || `mailto:${COMPANY.email}`;
   <section class="section section--flush-top">
     <div class="container container--wide">
       <div class="split" style="align-items:start;">
-        <form
+        <h2 class="sr-only">{lang === "no" ? "Kontaktskjema" : "Contact form"}</h2>
+          <form
           class="form" data-contact
           action={formAction}
           method="post"

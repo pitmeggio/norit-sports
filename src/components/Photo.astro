@@ -33,6 +33,11 @@ const {
 } = Astro.props;
 
 const asset = localImage(src);
+
+// Astro's Image drops alt="" entirely, which is worse than declaring the image
+// decorative: assistive tech falls back to announcing the file name. Marking
+// the role keeps those images correctly ignored.
+const decorative = alt === "";
 ---
 
 {
@@ -47,6 +52,7 @@ const asset = localImage(src);
       loading={loading}
       decoding="async"
       class={className}
+      role={decorative ? "presentation" : undefined}
       {...rest}
     />
   ) : (

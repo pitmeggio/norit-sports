@@ -226,9 +226,9 @@ export const t: Record<Lang, Dict> = {
           "Oppdag MAPLUS-bruksmetoder, produkttips og teknikker for konkurranseforberedelse innen langrenn og alpint.",
       },
       retail: {
-        title: "Bli forhandler & hvor kjøpe MAPLUS | Norit Sports",
+        title: "Bli forhandler | MAPLUS og EFB Sport | Norit Sports",
         description:
-          "Vil du føre MAPLUS i butikken? Bli forhandler og få teknisk støtte og markedsmateriell. Se hvor du kan kjøpe MAPLUS.",
+          "Før MAPLUS og EFB Sport i butikken din. Konkurransedyktige betingelser, teknisk opplæring og markedsstøtte fra offisiell distributør i Skandinavia.",
       },
       partner: {
         title: "Samarbeid med oss | for merker og lag | Norit Sports",
@@ -408,20 +408,20 @@ export const t: Record<Lang, Dict> = {
     retail: {
       kicker: "Forhandlere",
       intro:
-        "Vil du føre MAPLUS i butikken din? Vi støtter forhandlere med produkter, teknisk kompetanse og markedsmateriell.",
+        "Vil du føre MAPLUS eller EFB Sport i butikken din? Vi støtter forhandlere med produkter, teknisk kompetanse og markedsmateriell.",
       becomeKicker: "For butikker",
-      becomeTitle: "Bli MAPLUS-forhandler",
-      becomeWhy: "Hvorfor føre MAPLUS",
+      becomeTitle: "Bli forhandler",
+      becomeWhy: "Hvorfor føre merkene våre",
       becomeBody:
-        "Som offisiell norsk distributør gjør vi det enkelt å føre MAPLUS. Du får et komplett sortiment, faglig støtte og materiell som hjelper deg å selge.",
+        "Som offisiell distributør gjør vi det enkelt å føre merkene våre: MAPLUS i Norge, EFB Sport i hele Skandinavia. Du får et komplett sortiment, faglig støtte og materiell som hjelper deg å selge.",
       points: [
         "Konkurransedyktige betingelser",
         "Teknisk opplæring og support",
         "Markedsstøtte og materiell",
         "Tett oppfølging gjennom sesongen",
       ],
-      cta: "Ta kontakt",
-      whereTitle: "Hvor kjøpe MAPLUS",
+      cta: "Søk forhandleravtale",
+      whereTitle: "Hvor kjøpe",
       whereEmpty: "Ta kontakt, så hjelper vi deg å finne nærmeste forhandler.",
       visit: "Besøk",
     },
@@ -502,9 +502,9 @@ export const t: Record<Lang, Dict> = {
           "Discover MAPLUS application methods, product tips and race-prep techniques for cross-country and alpine skiing.",
       },
       retail: {
-        title: "Become a retailer & where to buy MAPLUS | Norit Sports",
+        title: "Become a retailer | MAPLUS and EFB Sport | Norit Sports",
         description:
-          "Want to carry MAPLUS in your store? Become a retailer and get technical support and marketing materials. See where to buy MAPLUS.",
+          "Stock MAPLUS and EFB Sport in your store. Competitive terms, technical training and marketing support from the official Scandinavian distributor.",
       },
       partner: {
         title: "Collaborate with us | for brands and teams | Norit Sports",
@@ -684,20 +684,20 @@ export const t: Record<Lang, Dict> = {
     retail: {
       kicker: "Retailers",
       intro:
-        "Want to carry MAPLUS in your store? We support retailers with products, technical expertise and marketing materials.",
+        "Want to carry MAPLUS or EFB Sport in your store? We support retailers with products, technical expertise and marketing materials.",
       becomeKicker: "For stores",
-      becomeTitle: "Become a MAPLUS retailer",
-      becomeWhy: "Why stock MAPLUS",
+      becomeTitle: "Become a retailer",
+      becomeWhy: "Why stock our brands",
       becomeBody:
-        "As the official Norwegian distributor, we make it easy to stock MAPLUS. You get a complete range, expert support and materials that help you sell.",
+        "As the official distributor we make it easy to stock our brands: MAPLUS in Norway, EFB Sport across Scandinavia. You get a complete range, expert support and materials that help you sell.",
       points: [
         "Competitive terms",
         "Technical training and support",
         "Marketing support and materials",
         "Close follow-up throughout the season",
       ],
-      cta: "Get in touch",
-      whereTitle: "Where to buy MAPLUS",
+      cta: "Apply for a retail account",
+      whereTitle: "Where to buy",
       whereEmpty: "Get in touch and we'll help you find your nearest retailer.",
       visit: "Visit",
     },
