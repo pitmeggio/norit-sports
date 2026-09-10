@@ -50,6 +50,7 @@ const r = tr.retail;
               <article class="retailer" data-reveal style={`--reveal-delay:${i * 80}ms;`}>
                 <h3>{shop.name}</h3>
                 <p class="retailer__city">{shop.city}</p>
+                {shop.note && <p class="retailer__note">{shop.note[lang]}</p>}
                 {shop.url && (
                   <a class="card__cta" href={shop.url} target="_blank" rel="noopener">
                     {r.visit}

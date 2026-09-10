@@ -756,8 +756,21 @@ export const CONTACT_ENDPOINT = "https://formspree.io/f/xqejervo";
 // Retailers that stock MAPLUS. Populate with real stores to show them on the
 // /forhandlere (retail) page. Empty = the page shows a "contact us to find your
 // nearest retailer" message instead of a list.
-export type Retailer = { name: string; city: string; url?: string };
-export const RETAILERS: Retailer[] = [];
+export type Retailer = { name: string; city: string; url?: string; note?: { no: string; en: string } };
+export const RETAILERS: Retailer[] = [
+  {
+    name: "Sporten Beitostølen",
+    city: "Beitostølen",
+    url: "https://sportenbeitostolen.no",
+    note: { no: "Langrenn og friluftsliv", en: "Cross-country and outdoor" },
+  },
+  {
+    name: "Skimore Oslo",
+    city: "Oslo",
+    url: "https://oslo.skimore.no/en",
+    note: { no: "Skibutikk og utleie", en: "Ski shop and rental" },
+  },
+];
 
 // Cloudflare Web Analytics (cookieless, privacy-friendly). Paste the token from
 // your Cloudflare dashboard → Web Analytics → (site) → "JS snippet". Leave empty

@@ -1653,6 +1653,12 @@ p {
   font-size: 1.15rem;
 }
 
+.retailer__note {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  margin-top: 0.3rem;
+}
+
 .retailer__city {
   color: var(--muted);
   font-size: 0.9rem;
