@@ -3503,12 +3503,12 @@ img.lz-in {
 }
 
 /* ---------------------------------------------------------------- *
- * Retailer map
+ * Retailer map (Leaflet)
  * ---------------------------------------------------------------- */
 .retail-where {
   display: grid;
-  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
-  gap: clamp(2rem, 5vw, 4.5rem);
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: clamp(2rem, 4vw, 3.5rem);
   align-items: start;
   margin-top: var(--space-6);
 }
@@ -3519,50 +3519,94 @@ img.lz-in {
   top: calc(76px + var(--space-4));
 }
 
-.retail-map__svg {
+.retail-map__canvas {
   width: 100%;
-  height: auto;
-  max-height: 68vh;
-  display: block;
-  overflow: visible;
+  aspect-ratio: 4 / 5;
+  max-height: 70vh;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--paper-2);
+  display: grid;
+  place-items: center;
 }
 
-.retail-map__land {
-  /* --paper-2 on --paper is a two-percent difference: the shape has to be
-     readable, not merely present. */
-  fill: #e4e2dd;
-  stroke: #cdcac3;
-  stroke-width: 1.5;
-  stroke-linejoin: round;
+.retail-map__loading {
+  font-size: 0.9rem;
+  color: var(--muted);
 }
 
-.retail-map__halo {
-  fill: var(--accent);
-  opacity: 0.16;
-}
-
-.retail-map__dot {
-  stroke: var(--paper);
-  stroke-width: 3;
-}
-
-.retail-map__dot {
-  fill: var(--accent);
-}
-
-.retail-map__label {
+/* Leaflet ships its own chrome; bring it into the palette. */
+.retail-map__canvas .leaflet-container {
+  width: 100%;
+  height: 100%;
+  background: var(--paper-2);
   font-family: var(--font);
-  font-size: 26px;
+  font-size: 0.9rem;
+}
+
+.retail-map__canvas .leaflet-control-zoom a {
+  border-radius: 0;
+  color: var(--ink);
+  border-color: var(--line);
+}
+
+.retail-map__canvas .leaflet-control-attribution {
+  background: rgba(251, 251, 250, 0.85);
+  font-size: 0.7rem;
+}
+
+/* OpenStreetMap's standard style is far more saturated than this palette.
+   Pulling the colour out lets the map sit in the page without shouting, while
+   the pins stay full strength because they are drawn outside the tile layer. */
+.retail-map__canvas .leaflet-tile-pane {
+  filter: grayscale(0.9) contrast(0.92) brightness(1.06);
+}
+
+.retail-pin__dot {
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px rgba(20, 17, 15, 0.35);
+}
+
+.retail-map__canvas .leaflet-popup-content-wrapper {
+  border-radius: var(--radius);
+  box-shadow: 0 12px 32px -16px rgba(20, 17, 15, 0.45);
+}
+
+.retail-map__canvas .leaflet-popup-content {
+  margin: 0.9rem 1.1rem;
+  display: grid;
+  gap: 0.25rem;
+  line-height: 1.45;
+}
+
+.retail-pop__name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.retail-pop__city,
+.retail-pop__note {
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+}
+
+.retail-pop__link {
+  margin-top: 0.35rem;
+  font-size: 0.85rem;
   font-weight: 500;
-  fill: var(--ink);
+  color: var(--accent-ink);
 }
 
 .retail-map figcaption {
   margin-top: var(--space-3);
 }
 
-/* The list is the substance; below the two-column breakpoint it leads and the
-   map follows at a size that still reads. */
 @media (max-width: 860px) {
   .retail-where {
     grid-template-columns: 1fr;
@@ -3573,12 +3617,8 @@ img.lz-in {
     order: 2;
   }
 
-  .retail-map__svg {
-    max-height: 52vh;
-    margin-inline: auto;
-  }
-
-  .retail-map__label {
-    font-size: 32px;
+  .retail-map__canvas {
+    aspect-ratio: 1 / 1;
+    max-height: 60vh;
   }
 }

@@ -1,50 +1,129 @@
 ---
-// Where the retailers are, drawn rather than embedded.
+// Interactive retailer map.
 //
-// A Google or OSM iframe would mean a third-party request, a tracking cookie
-// and a heavy widget on a page that otherwise loads in a few kilobytes, and the
-// privacy page states the site sets no cookies. This is an inline SVG: no
-// script, no request, no cookie, and it scales cleanly at any size.
+// Leaflet is vendored in public/vendor rather than pulled from a CDN, so no
+// third-party script runs on the site. Tiles come straight from OpenStreetMap:
+// free, no API key, no cookie, which keeps the privacy page accurate. CARTO's
+// Positron basemap would suit the palette better but now watermarks every tile
+// unless you hold a key, so the tiles are desaturated in CSS instead.
+//
+// The library only loads on this page, and only once the map approaches the
+// viewport, so every other page keeps its small payload.
 import { RETAILERS, type Lang } from "../i18n/content";
-import { NORWAY_PATH, MAP_W, MAP_H, project } from "../data/norway-map";
 
 interface Props {
   lang: Lang;
 }
 const { lang } = Astro.props;
 
-const pins = RETAILERS.filter((r) => r.lat != null && r.lng != null).map((r) => ({
-  ...r,
-  ...project(r.lng!, r.lat!),
+const points = RETAILERS.filter((r) => r.lat != null && r.lng != null).map((r) => ({
+  name: r.name,
+  city: r.city,
+  url: r.url ?? null,
+  note: r.note ? r.note[lang] : null,
+  lat: r.lat!,
+  lng: r.lng!,
 }));
 
 const T = {
-  no: { label: "Forhandlerkart", caption: "Forhandlere i Norge" },
-  en: { label: "Retailer map", caption: "Retailers in Norway" },
+  no: { caption: "Forhandlere i Norge", visit: "Besøk nettsted", loading: "Laster kart …" },
+  en: { caption: "Retailers in Norway", visit: "Visit website", loading: "Loading map …" },
 }[lang];
 ---
 
 {
-  pins.length > 0 && (
+  points.length > 0 && (
     <figure class="retail-map" data-reveal>
-      <svg
-        class="retail-map__svg"
-        viewBox={`0 0 ${MAP_W} ${MAP_H}`}
-        role="img"
-        aria-label={`${T.caption}: ${pins.map((p) => p.city).join(", ")}`}
+      <div
+        class="retail-map__canvas"
+        data-retail-map
+        data-points={JSON.stringify(points)}
+        data-visit={T.visit}
+        role="application"
+        aria-label={T.caption}
       >
-        <path class="retail-map__land" d={NORWAY_PATH} />
-        {pins.map((p) => (
-          <g class="retail-map__pin">
-            <circle class="retail-map__halo" cx={p.x} cy={p.y} r="26" />
-            <circle class="retail-map__dot" cx={p.x} cy={p.y} r="7" />
-            <text class="retail-map__label" x={p.x + 20} y={p.y + 6}>
-              {p.city}
-            </text>
-          </g>
-        ))}
-      </svg>
+        <span class="retail-map__loading">{T.loading}</span>
+      </div>
       <figcaption class="tech">{T.caption}</figcaption>
     </figure>
   )
 }
+
+<script>
+  // Loaded per page, on approach. Keeps Leaflet off every other route.
+  function initRetailMap() {
+    const box = document.querySelector<HTMLElement>("[data-retail-map]");
+    if (!box || box.dataset.ready) return;
+
+    const load = () => {
+      if (box.dataset.ready) return;
+      box.dataset.ready = "1";
+
+      const css = document.createElement("link");
+      css.rel = "stylesheet";
+      css.href = "/vendor/leaflet/leaflet.css";
+      document.head.appendChild(css);
+
+      const js = document.createElement("script");
+      js.src = "/vendor/leaflet/leaflet.js";
+      js.onload = () => build(box);
+      document.body.appendChild(js);
+    };
+
+    // The map is this section's content, not decoration, so it loads with the
+    // page rather than waiting on an observer that a background tab suspends.
+    if ("requestIdleCallback" in window) {
+      (window as any).requestIdleCallback(load, { timeout: 1200 });
+    } else {
+      setTimeout(load, 200);
+    }
+  }
+
+  function build(box: HTMLElement) {
+    const L = (window as any).L;
+    if (!L) return;
+    const points = JSON.parse(box.dataset.points || "[]");
+    const visit = box.dataset.visit || "Visit";
+    box.textContent = "";
+
+    const map = L.map(box, { scrollWheelZoom: false, attributionControl: true });
+
+    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 19,
+      attribution:
+        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    }).addTo(map);
+
+    // A plain dot in the brand colour instead of Leaflet's blue pin, and it
+    // costs no image request.
+    const icon = L.divIcon({
+      className: "retail-pin",
+      html: '<span class="retail-pin__dot"></span>',
+      iconSize: [18, 18],
+      iconAnchor: [9, 9],
+      popupAnchor: [0, -10],
+    });
+
+    const markers = points.map((p: any) => {
+      const link = p.url
+        ? `<a class="retail-pop__link" href="${p.url}" target="_blank" rel="noopener">${visit}</a>`
+        : "";
+      return L.marker([p.lat, p.lng], { icon, title: p.name })
+        .addTo(map)
+        .bindPopup(
+          `<strong class="retail-pop__name">${p.name}</strong>` +
+            `<span class="retail-pop__city">${p.city}</span>` +
+            (p.note ? `<span class="retail-pop__note">${p.note}</span>` : "") +
+            link
+        );
+    });
+
+    if (markers.length === 1) {
+      map.setView(markers[0].getLatLng(), 9);
+    } else {
+      map.fitBounds(L.featureGroup(markers).getBounds(), { padding: [50, 50], maxZoom: 9 });
+    }
+  }
+
+  document.addEventListener("astro:page-load", initRetailMap);
+</script>
