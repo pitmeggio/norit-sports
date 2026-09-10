@@ -3501,3 +3501,84 @@ img.lz-in {
 .section--flush-bottom {
   padding-bottom: 0;
 }
+
+/* ---------------------------------------------------------------- *
+ * Retailer map
+ * ---------------------------------------------------------------- */
+.retail-where {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: start;
+  margin-top: var(--space-6);
+}
+
+.retail-map {
+  margin: 0;
+  position: sticky;
+  top: calc(76px + var(--space-4));
+}
+
+.retail-map__svg {
+  width: 100%;
+  height: auto;
+  max-height: 68vh;
+  display: block;
+  overflow: visible;
+}
+
+.retail-map__land {
+  /* --paper-2 on --paper is a two-percent difference: the shape has to be
+     readable, not merely present. */
+  fill: #e4e2dd;
+  stroke: #cdcac3;
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+}
+
+.retail-map__halo {
+  fill: var(--accent);
+  opacity: 0.16;
+}
+
+.retail-map__dot {
+  stroke: var(--paper);
+  stroke-width: 3;
+}
+
+.retail-map__dot {
+  fill: var(--accent);
+}
+
+.retail-map__label {
+  font-family: var(--font);
+  font-size: 26px;
+  font-weight: 500;
+  fill: var(--ink);
+}
+
+.retail-map figcaption {
+  margin-top: var(--space-3);
+}
+
+/* The list is the substance; below the two-column breakpoint it leads and the
+   map follows at a size that still reads. */
+@media (max-width: 860px) {
+  .retail-where {
+    grid-template-columns: 1fr;
+  }
+
+  .retail-map {
+    position: static;
+    order: 2;
+  }
+
+  .retail-map__svg {
+    max-height: 52vh;
+    margin-inline: auto;
+  }
+
+  .retail-map__label {
+    font-size: 32px;
+  }
+}

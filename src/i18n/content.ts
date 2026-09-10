@@ -756,19 +756,31 @@ export const CONTACT_ENDPOINT = "https://formspree.io/f/xqejervo";
 // Retailers that stock MAPLUS. Populate with real stores to show them on the
 // /forhandlere (retail) page. Empty = the page shows a "contact us to find your
 // nearest retailer" message instead of a list.
-export type Retailer = { name: string; city: string; url?: string; note?: { no: string; en: string } };
+export type Retailer = {
+  name: string;
+  city: string;
+  url?: string;
+  note?: { no: string; en: string };
+  /** Coordinates place the shop on the retailer map. Omit and it is listed only. */
+  lat?: number;
+  lng?: number;
+};
 export const RETAILERS: Retailer[] = [
   {
     name: "Sporten Beitostølen",
     city: "Beitostølen",
     url: "https://sportenbeitostolen.no",
     note: { no: "Langrenn og friluftsliv", en: "Cross-country and outdoor" },
+    lat: 61.2489,
+    lng: 8.9036,
   },
   {
     name: "Skimore Oslo",
     city: "Oslo",
     url: "https://oslo.skimore.no/en",
     note: { no: "Skibutikk og utleie", en: "Ski shop and rental" },
+    lat: 59.9139,
+    lng: 10.7522,
   },
 ];
 

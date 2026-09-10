@@ -1,0 +1,50 @@
+---
+// Where the retailers are, drawn rather than embedded.
+//
+// A Google or OSM iframe would mean a third-party request, a tracking cookie
+// and a heavy widget on a page that otherwise loads in a few kilobytes, and the
+// privacy page states the site sets no cookies. This is an inline SVG: no
+// script, no request, no cookie, and it scales cleanly at any size.
+import { RETAILERS, type Lang } from "../i18n/content";
+import { NORWAY_PATH, MAP_W, MAP_H, project } from "../data/norway-map";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+
+const pins = RETAILERS.filter((r) => r.lat != null && r.lng != null).map((r) => ({
+  ...r,
+  ...project(r.lng!, r.lat!),
+}));
+
+const T = {
+  no: { label: "Forhandlerkart", caption: "Forhandlere i Norge" },
+  en: { label: "Retailer map", caption: "Retailers in Norway" },
+}[lang];
+---
+
+{
+  pins.length > 0 && (
+    <figure class="retail-map" data-reveal>
+      <svg
+        class="retail-map__svg"
+        viewBox={`0 0 ${MAP_W} ${MAP_H}`}
+        role="img"
+        aria-label={`${T.caption}: ${pins.map((p) => p.city).join(", ")}`}
+      >
+        <path class="retail-map__land" d={NORWAY_PATH} />
+        {pins.map((p) => (
+          <g class="retail-map__pin">
+            <circle class="retail-map__halo" cx={p.x} cy={p.y} r="26" />
+            <circle class="retail-map__dot" cx={p.x} cy={p.y} r="7" />
+            <text class="retail-map__label" x={p.x + 20} y={p.y + 6}>
+              {p.city}
+            </text>
+          </g>
+        ))}
+      </svg>
+      <figcaption class="tech">{T.caption}</figcaption>
+    </figure>
+  )
+}

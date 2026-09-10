@@ -2,6 +2,7 @@
 import Base from "../../layouts/Base.astro";
 import PageHero from "../PageHero.astro";
 import { t, path, RETAILERS, type Lang } from "../../i18n/content";
+import RetailerMap from "../RetailerMap.astro";
 
 interface Props {
   lang: Lang;
@@ -43,6 +44,9 @@ const r = tr.retail;
       <p class="eyebrow" data-reveal>{r.kicker}</p>
       <h2 class="display u-mt" data-reveal>{r.whereTitle}</h2>
 
+      <div class="retail-where">
+        <RetailerMap lang={lang} />
+
       {
         RETAILERS.length > 0 ? (
           <div class="grid grid--3" style="margin-top:2.5rem;">
@@ -67,6 +71,7 @@ const r = tr.retail;
           </div>
         )
       }
+      </div>
     </div>
   </section>
 </Base>
