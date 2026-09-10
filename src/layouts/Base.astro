@@ -106,6 +106,12 @@ const breadcrumbJsonLd = breadcrumbs?.length
     <script type="application/ld+json" set:html={JSON.stringify(siteJsonLd)} />
     {breadcrumbJsonLd && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />}
 
+    <script is:inline>
+      // Set before paint: the reveal animation only hides content once we know
+      // JavaScript is running to bring it back.
+      document.documentElement.classList.add("js-ready");
+    </script>
+
     <ClientRouter />
   </head>
   <body>

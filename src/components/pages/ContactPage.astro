@@ -25,8 +25,7 @@ const formAction = CONTACT_ENDPOINT || `mailto:${COMPANY.email}`;
     <div class="container container--wide">
       <div class="split" style="align-items:start;">
         <form
-          class="form"
-          data-contact
+          class="form" data-contact
           action={formAction}
           method="post"
           enctype={CONTACT_ENDPOINT ? undefined : "text/plain"}

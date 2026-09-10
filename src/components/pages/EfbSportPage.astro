@@ -47,8 +47,8 @@ const crumbs = [
   <!-- Brand intro: heading on top, photo beside text -->
   <section class="story section--flush-top">
     <div class="container container--wide">
-      <p class="eyebrow" class="section-head__eyebrow" data-reveal>{e.brandKicker}</p>
-      <h2 class="display" class="section-head__title" data-reveal>{e.brandTitle}</h2>
+      <p class="eyebrow u-mb" data-reveal>{e.brandKicker}</p>
+      <h2 class="display u-mt u-mb-lg" data-reveal>{e.brandTitle}</h2>
       <div class="brand-intro">
         <figure class="brand-intro__media" data-reveal="left">
           <Photo src="/images/efb/insoles-hero.jpg" alt="EFB Sport custom insoles" sizes="(max-width: 760px) 100vw, 45vw" maxWidth={1600} />
@@ -56,7 +56,7 @@ const crumbs = [
         <div class="brand-intro__text" data-reveal="right" style="--reveal-delay:120ms;">
           <p class="lead">{e.brandBody1}</p>
           <p>{e.brandBody2}</p>
-          <dl class="facts" class="section-head__title section-head__title--flush">
+          <dl class="facts u-mt" >
             {
               e.facts.map((f) => {
                 const num = f.value.match(/^(\d+)(.*)$/);
@@ -90,7 +90,7 @@ const crumbs = [
   <section class="section section--flush-bottom">
     <div class="container container--wide">
       <p class="eyebrow" data-reveal>{e.productsKicker}</p>
-      <h2 class="display" class="section-head__title" data-reveal>{e.productsTitle}</h2>
+      <h2 class="display u-mt u-mb-lg" data-reveal>{e.productsTitle}</h2>
     </div>
     <div class="cat-grid">
       {
