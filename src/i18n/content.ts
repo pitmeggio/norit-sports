@@ -369,6 +369,7 @@ export const t: Record<Lang, Dict> = {
         "Base wax": "Grunnvoks",
         "Xcelerate Pro Line": "Xcelerate Pro Line",
         "GM line": "GM-serien",
+        "Cross country": "Langrenn",
         Cleaner: "Rens",
       },
     },
@@ -645,6 +646,7 @@ export const t: Record<Lang, Dict> = {
         "Base wax": "Base wax",
         "Xcelerate Pro Line": "Xcelerate Pro Line",
         "GM line": "GM line",
+        "Cross country": "Cross-country",
         Cleaner: "Cleaner",
       },
     },
@@ -798,7 +800,7 @@ export const CATALOGS = {
 export type VideoItem = {
   id: string;
   title: string;
-  category: "Base wax" | "Xcelerate Pro Line" | "GM line" | "Cleaner";
+  category: "Base wax" | "Xcelerate Pro Line" | "GM line" | "Cross country" | "Cleaner";
 };
 
 export const VIDEOS: VideoItem[] = [
@@ -811,5 +813,13 @@ export const VIDEOS: VideoItem[] = [
   { id: "gXZjTl_2QPw", title: "Xcelerate Pro solid", category: "Xcelerate Pro Line" },
   { id: "WjSV6ZFUhIo", title: "GM powder", category: "GM line" },
   { id: "uzT8v7A-2tA", title: "GM Boost liquid", category: "GM line" },
+  { id: "VbfdMMHDX1k", title: "Universal wax cream", category: "Base wax" },
+  { id: "tVN678ASwJo", title: "Solid wax", category: "Cross country" },
+  { id: "tV4u5y3o4jk", title: "GM Boost liquid", category: "Cross country" },
+  { id: "a2ThONoq0_c", title: "Speed block", category: "Cross country" },
+  { id: "bvuByaXuKbE", title: "GM Boost block", category: "Cross country" },
+  { id: "PfNM74dtiRw", title: "Speed 2 + GM Solid hot", category: "Cross country" },
+  { id: "wy2yfCND090", title: "Grip wax stick + klister", category: "Cross country" },
+  { id: "AoCTsqiR45w", title: "Grip wax klister", category: "Cross country" },
   { id: "B1aSVShTado", title: "Ski cleaning", category: "Cleaner" },
 ];

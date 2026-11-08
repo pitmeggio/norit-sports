@@ -6,6 +6,16 @@ import type { Product } from "./products";
 type VideoRule = { pattern: RegExp; id: string };
 
 const RULES: VideoRule[] = [
+  // --- Cross-country. Checked first: these products do not collide with the
+  // alpine patterns below, and MAPLUS films them separately.
+  // In MAPLUS's naming the K series is klister and the S series are sticks,
+  // which is the opposite of what the letters suggest.
+  { pattern: /\bk1[0-5]\b/, id: "AoCTsqiR45w" },
+  { pattern: /\bs1[0-6]\b/, id: "wy2yfCND090" },
+  { pattern: /grip.?wax/, id: "wy2yfCND090" },
+  { pattern: /gm[- ]boost[- ]solid/, id: "bvuByaXuKbE" },
+  { pattern: /\bspeed[- ][12]\b/, id: "a2ThONoq0_c" },
+  { pattern: /universal.*cream/, id: "VbfdMMHDX1k" },
   // Xcelerate Pro family
   { pattern: /xcelerate.*powder|powder.*xcelerate/, id: "vbe4kuXwBMM" },
   { pattern: /xcelerate.*liquid|liquid.*xcelerate/, id: "-7kJ9CBJfqE" },
